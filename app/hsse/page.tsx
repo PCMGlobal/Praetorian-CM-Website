@@ -1,143 +1,110 @@
-﻿import Navbar from "../components/Navbar";
-import Footer from "@/app/components/Footer";
+import type { Metadata } from "next";
+import Link from "next/link";
 
-export default function HSSE() {
+export const metadata: Metadata = {
+  title: "HSSE | Praetorian Construction Management",
+  description: "Zero harm is the only acceptable outcome. Praetorian embeds HSSE leadership directly into the owner's team.",
+};
+
+export default function HSSEPage() {
   return (
     <main>
-      <Navbar />
-
-      {/* Page Hero */}
-      <div style={{ backgroundColor: "#003E52", marginTop: "72px" }} className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#B06533" }}>Safety First</div>
-          <h1 className="text-5xl font-bold text-white mb-6">Health, Safety, Security &amp; Environment</h1>
-          <p className="text-xl max-w-3xl leading-relaxed" style={{ color: "#98999B" }}>
-            At Praetorian Construction Management, HSSE is not a programme we implement, it is a value we live. The safety of our people, our clients, and the communities in which we work is our first priority on every project.
-          </p>
-        </div>
-      </div>
-
-      {/* HSSE Commitment */}
-      <div className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 gap-16 items-center mb-20">
-            <div>
-              <div className="w-12 h-1 mb-6 rounded" style={{ backgroundColor: "#B06533" }}></div>
-              <h2 className="text-3xl font-bold mb-6" style={{ color: "#003E52" }}>Our Commitment to Safety</h2>
-              <p className="text-gray-500 leading-relaxed mb-4">
-                Praetorian Construction Management is committed to providing a safe and healthy work environment for all personnel on every project we manage. Our HSSE management system is designed to identify, assess, and control hazards before work begins.
-              </p>
-              <p className="text-gray-500 leading-relaxed mb-4">
-                We believe that all incidents are preventable. Our teams are empowered to stop work whenever they identify an unsafe condition, and we foster a culture where safety observations and near-miss reporting are encouraged and valued.
-              </p>
-              <p className="text-gray-500 leading-relaxed">
-                Our HSSE professionals bring experience from remote mining sites, industrial facilities, and complex construction environments across Canada and internationally.
-              </p>
+      <div>
+          <section style={{ position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1400&auto=format&fit=crop&q=80)' }}></div>
+            <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.72) 48%,rgba(0,15,22,.4) 100%)' }}></div>
+            <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: 'clamp(40px,5vw,72px) clamp(16px,4vw,44px)' }}>
+              <Link href="/" style={{ background: 'none', border: '0', padding: '0', color: '#e3ab7c', fontSize: '13px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
+                Home
+              </Link>
+              <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginTop: '22px' }}>Health, Safety, Security, and Environment</div>
+              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '24ch' }}>Zero harm isn't a target. It's the only acceptable outcome.</h1>
+              <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '62ch', color: '#c3d0d4', margin: '18px 0 0' }}>Praetorian embeds HSSE leadership directly into the owner's team. Safety culture starts at the top, and that means us.</p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              {[
-                { number: "0", label: "Lost Time Incidents Target" },
-                { number: "100%", label: "Sites with Active HSSE Plans" },
-                { number: "20+", label: "Years Safety Experience" },
-                { number: "6", label: "Countries Operated In" },
-              ].map((stat) => (
-                <div key={stat.label} className="p-8 rounded-lg text-center" style={{ backgroundColor: "#F7F7F7" }}>
-                  <div className="text-4xl font-bold mb-2" style={{ color: "#B06533" }}>{stat.number}</div>
-                  <div className="text-sm font-medium" style={{ color: "#003E52" }}>{stat.label}</div>
-                </div>
-              ))}
+          </section>
+   
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,2.6vw,32px)' }}>
+              <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><path d="M12 3l8 3v6c0 5-3.4 8.2-8 9-4.6-.8-8-4-8-9V6l8-3Z" /><path d="m9 12 2 2 4-4" /></svg>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>H&amp;S Policy Statement</h4>
+                <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>Our policy is unambiguous: no task is so urgent that it cannot be performed safely. Every Praetorian engagement begins with a documented safety framework aligned to the owner's standards and the jurisdiction's regulatory requirements.</p>
+              </div>
+              <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><path d="M12 8v4l3 3" /></svg>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>Project HSSE Approach</h4>
+                <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>From pre-mobilisation planning through final demobilisation, Praetorian integrates HSSE into every stage gate. Our field leaders run toolbox talks, hazard assessments, and incident investigations as core delivery.</p>
+              </div>
+              <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>Owner's Team Culture</h4>
+                <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>Site culture follows the owner's team lead. Praetorian personnel are expected to stop unsafe work, engage contractors directly, and escalate immediately, from first induction to handover.</p>
+              </div>
+              <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>Regulatory Compliance</h4>
+                <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>Praetorian operates across multiple jurisdictions, Canada, USA, South America, and Eurasia. Our teams understand the local regulatory frameworks and ensure execution meets or exceeds applicable mining safety codes.</p>
+              </div>
+              <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z" /><path d="M14 2v6h6M9 13h6M9 17h4" /></svg>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>Incident Management</h4>
+                <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>When incidents occur, Praetorian leads root cause analysis, corrective action tracking, and lessons-learned dissemination. Transparency with the owner is non-negotiable.</p>
+              </div>
+              <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" /><path d="M9 22V12h6v10" /></svg>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>Environment &amp; Community</h4>
+                <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>Environmental stewardship and community engagement are embedded in our HSSE framework. Praetorian teams maintain the social licence to operate throughout the project lifecycle.</p>
+              </div>
             </div>
-          </div>
-
-          {/* HSSE Pillars */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold" style={{ color: "#003E52" }}>Our HSSE Framework</h2>
-          </div>
-          <div className="grid grid-cols-4 gap-6">
-            {[
-              {
-                letter: "H",
-                title: "Health",
-                items: ["Occupational health monitoring", "Fitness for work programmes", "Mental health and wellness", "Medical emergency response", "Hygiene and exposure controls"],
-              },
-              {
-                letter: "S",
-                title: "Safety",
-                items: ["Hazard identification and control", "Work permit systems", "Stop work authority", "Incident investigation", "Safety leadership programmes"],
-              },
-              {
-                letter: "S",
-                title: "Security",
-                items: ["Site access control", "Personnel tracking", "Threat and risk assessment", "Emergency response planning", "Security protocol development"],
-              },
-              {
-                letter: "E",
-                title: "Environment",
-                items: ["Environmental impact assessment", "Spill prevention and response", "Waste management", "Regulatory compliance", "Environmental monitoring"],
-              },
-            ].map((pillar) => (
-              <div key={pillar.title} className="rounded-lg overflow-hidden shadow-sm">
-                <div className="p-6 text-center" style={{ backgroundColor: "#003E52" }}>
-                  <div className="text-4xl font-bold mb-1" style={{ color: "#B06533" }}>{pillar.letter}</div>
-                  <div className="text-white font-semibold">{pillar.title}</div>
+          </section>
+          <section style={{ background: '#003E52' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(420px,1fr))' }}>
+              <div style={{ position: 'relative', minHeight: '400px', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 28s ease-in-out infinite alternate' }}>
+                  <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1586161148512-64a1b3dac527?w=1200&auto=format&fit=crop&q=80)' }} ></div>
                 </div>
-                <div className="p-6 bg-white">
-                  <ul className="space-y-3">
-                    {pillar.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-gray-500">
-                        <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5" style={{ backgroundColor: "#B06533" }}></div>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.4),rgba(0,15,22,0))' }}></div>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', padding: 'clamp(40px,5vw,66px)' }}>
+                <div data-reveal="right" style={{ maxWidth: '44ch' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>Our commitment</div>
+                  <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '12px 0 16px', color: '#fff', lineHeight: '1.1' }}>HSSE oversight isn't a checkbox. It's embedded leadership.</h2>
+                  <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0 0 24px' }}>From toolbox talk to turnover, Praetorian's owner's team culture sets the standard that contractors are held to. We don't audit from the sidelines, we lead from the front.</p>
+                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#B06533', color: '#fff', textDecoration: 'none', minHeight: '46px', padding: '0 22px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '14px' }}>Speak with Our Team</Link>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* HSSE Standards */}
-      <div className="py-24" style={{ backgroundColor: "#F7F7F7" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4" style={{ color: "#003E52" }}>Standards and Compliance</h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: "#98999B" }}>
-              Praetorian operates in compliance with applicable regulatory requirements and industry best practice standards across all jurisdictions.
-            </p>
-          </div>
-          <div className="grid grid-cols-3 gap-8">
-            {[
-              { title: "Regulatory Compliance", desc: "Full compliance with provincial and federal occupational health and safety regulations across all Canadian jurisdictions, and applicable regulations in international operating environments." },
-              { title: "Industry Standards", desc: "Our HSSE management system aligns with internationally recognised standards including ISO 45001 occupational health and safety, and ISO 14001 environmental management." },
-              { title: "Client Requirements", desc: "We adapt our HSSE programmes to meet and exceed client-specific requirements, integrating seamlessly with owner HSSE management systems on every project." },
-              { title: "Incident Reporting", desc: "Transparent and timely incident reporting to clients, regulatory authorities, and other stakeholders in accordance with applicable requirements and Praetorian protocols." },
-              { title: "Audits and Inspections", desc: "Regular internal and third-party HSSE audits and field inspections to verify compliance, identify improvement opportunities, and drive continuous performance improvement." },
-              { title: "Training and Competency", desc: "Mandatory HSSE orientation, role-specific training, and competency verification for all Praetorian personnel and subcontractors working on our projects." },
-            ].map((item) => (
-              <div key={item.title} className="bg-white p-8 rounded-lg shadow-sm">
-                <div className="w-10 h-1 mb-4 rounded" style={{ backgroundColor: "#B06533" }}></div>
-                <h3 className="text-lg font-bold mb-3" style={{ color: "#003E52" }}>{item.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+            </div>
+          </section>
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
+            <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>By the numbers</div>
+            <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>Safety record across global operations</h2>
+            <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: '0', border: '1px solid #e4e6e7' }}>
+              <div data-reveal="" style={{ padding: '28px 24px', borderRight: '1px solid #e4e6e7' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(32px,3.2vw,44px)', color: '#003E52' }}>6<span style={{ color: '#B06533' }}>+</span></div>
+                <div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#7d8288', marginTop: '6px' }}>Countries of operation</div>
+                <p style={{ fontSize: '13.5px', color: '#5b6266', margin: '10px 0 0', lineHeight: '1.5' }}>Consistent HSSE standards applied across every jurisdiction Praetorian has operated in.</p>
               </div>
-            ))}
-          </div>
+              <div data-reveal="" style={{ padding: '28px 24px', borderRight: '1px solid #e4e6e7' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(32px,3.2vw,44px)', color: '#003E52' }}>20<span style={{ color: '#B06533' }}>+</span></div>
+                <div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#7d8288', marginTop: '6px' }}>Years of safe delivery</div>
+                <p style={{ fontSize: '13.5px', color: '#5b6266', margin: '10px 0 0', lineHeight: '1.5' }}>A track record built project by project, site by site, across four continents.</p>
+              </div>
+              <div data-reveal="" style={{ padding: '28px 24px', borderRight: '1px solid #e4e6e7' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(32px,3.2vw,44px)', color: '#003E52' }}>100<span style={{ color: '#B06533' }}>%</span></div>
+                <div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#7d8288', marginTop: '6px' }}>Owner's team integration</div>
+                <p style={{ fontSize: '13.5px', color: '#5b6266', margin: '10px 0 0', lineHeight: '1.5' }}>Every Praetorian engagement includes embedded HSSE leadership, no exceptions.</p>
+              </div>
+              <div data-reveal="" style={{ padding: '28px 24px' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(32px,3.2vw,44px)', color: '#003E52' }}>Zero</div>
+                <div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#7d8288', marginTop: '6px' }}>Acceptable harm threshold</div>
+                <p style={{ fontSize: '13.5px', color: '#5b6266', margin: '10px 0 0', lineHeight: '1.5' }}>No task is so urgent it cannot be performed safely. No outcome justifies a lost-time injury.</p>
+              </div>
+            </div>
+            <p style={{ fontSize: '12px', color: '#8b9095', marginTop: '14px', fontStyle: 'italic' }}>Safety metrics are available to qualified clients on request. Content to be confirmed with Femi before publication.</p>
+          </section>
         </div>
-      </div>
-
-      {/* CTA Band */}
-      <div className="py-20" style={{ backgroundColor: "#003E52" }}>
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Questions About Our HSSE Programme?</h2>
-          <p className="text-lg mb-8" style={{ color: "#98999B" }}>
-            Contact our team to discuss how Praetorian manages health, safety, security, and environment on capital projects.
-          </p>
-          <a href="/contact" style={{ backgroundColor: "#B06533" }} className="inline-block px-10 py-4 text-white font-semibold rounded hover:opacity-90">
-            Contact Us
-          </a>
-        </div>
-      </div>
-      <Footer />
     </main>
   );
 }

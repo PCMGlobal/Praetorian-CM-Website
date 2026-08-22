@@ -1,136 +1,114 @@
-﻿import Navbar from "../components/Navbar";
-import Footer from "@/app/components/Footer";
+import type { Metadata } from "next";
+import Link from "next/link";
 
-export default function About() {
+export const metadata: Metadata = {
+  title: "About Us | Praetorian Construction Management",
+  description: "Mining construction and project management specialists with experience across industrial sectors worldwide.",
+};
+
+export default function AboutPage() {
   return (
     <main>
-      <Navbar />
-
-      {/* Page Hero */}
-      <div style={{ backgroundColor: "#003E52", marginTop: "72px" }} className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#B06533" }}>Who We Are</div>
-          <h1 className="text-5xl font-bold text-white mb-6">About Praetorian</h1>
-          <p className="text-xl max-w-3xl leading-relaxed" style={{ color: "#98999B" }}>
-            Praetorian Construction Management is a project management firm specialising in complex capital programmes across mining, energy, and infrastructure sectors in Canada and internationally.
-          </p>
-        </div>
-      </div>
-
-      {/* Mission, Vision, Values */}
-      <div id="pcml-mission" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-3 gap-12 mb-20">
-            <div>
-              <div className="w-10 h-1 mb-6 rounded" style={{ backgroundColor: "#B06533" }}></div>
-              <h2 className="text-2xl font-bold mb-4" style={{ color: "#003E52" }}>Our Mission</h2>
-              <p className="text-gray-500 leading-relaxed">
-                To deliver world-class project management services that protect owner interests, drive programme performance, and create lasting value across every project we support.
-              </p>
+      <div>
+          <section style={{ position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1582280871722-424e91cbee8b?w=1400&auto=format&fit=crop&q=80)' }}></div>
+            <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.72) 48%,rgba(0,15,22,.4) 100%)' }}></div>
+            <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: 'clamp(40px,5vw,72px) clamp(16px,4vw,44px)' }}>
+              <Link href="/" style={{ background: 'none', border: '0', padding: '0', color: '#e3ab7c', fontSize: '13px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
+                Home
+              </Link>
+              <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginTop: '22px' }}>About Us</div>
+              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '26ch' }}>Mining construction and project management specialists.</h1>
+              <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '70ch', color: '#c3d0d4', margin: '18px 0 0' }}>Praetorian Construction Management has experience in a diverse field of industrial construction including: mining, petrochemical, power, refineries, dams, roadways, water treatment plants, natural gas pipelines and compressor stations, forestry and marine.</p>
             </div>
-            <div>
-              <div className="w-10 h-1 mb-6 rounded" style={{ backgroundColor: "#B06533" }}></div>
-              <h2 className="text-2xl font-bold mb-4" style={{ color: "#003E52" }}>Our Vision</h2>
-              <p className="text-gray-500 leading-relaxed">
-                To be the most trusted project management partner for capital project owners in the mining, energy, and infrastructure sectors across Canada and internationally.
-              </p>
+          </section>
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
+            <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Who we are</div>
+            <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 16px', color: '#003E52' }}>Who We Are</h2>
+            <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 18px' }}>We are mining construction and project management specialists. While our project experience spans most major industrial sectors, we have developed a reputation as an expert in the mining sector.</p>
+            <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 44px' }}>Given our team's unique project management skills, Praetorian offers a complete portfolio of services from reviewing a project's feasibility through to mine operations. We have both the experience and tools for establishing project control systems, contract management, purchasing services and construction management.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(20px,2.6vw,28px)' }}>
+              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #003E52', background: '#f7f7f7' }}>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', color: '#003E52', margin: '0 0 12px' }}>Leadership and Teamwork</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>We build leaders who lead their team using effective communication and a focus on continuous improvement to achieve team excellence. Through this, we are able to provide exceptional and reliable project management services to our clients.</p>
+              </div>
+              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #B06533', background: '#f7f7f7' }}>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', color: '#003E52', margin: '0 0 12px' }}>Balanced Approach</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Our team comprises of roughly one-third Trades, one-third Technologists and one-third Engineers which provides a balanced approach to managing projects and the contractors who deliver the projects. Our team excels in both technical expertise and the soft skills required to lead.</p>
+              </div>
+              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #98999B', background: '#f7f7f7' }}>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', color: '#003E52', margin: '0 0 12px' }}>Footprints and Cultural Sensitivity</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>We have worked on projects across Canada, US, Central and South America and Eurasia. We have an understanding of various cultures and are able to work efficiently while being sensitive to the local culture.</p>
+              </div>
             </div>
-            <div>
-              <div className="w-10 h-1 mb-6 rounded" style={{ backgroundColor: "#B06533" }}></div>
-              <h2 className="text-2xl font-bold mb-4" style={{ color: "#003E52" }}>Our Values</h2>
-              <ul className="space-y-2 text-gray-500">
-                {["Integrity in everything we do", "Excellence in project delivery", "Safety above all else", "Accountability to our clients", "Collaboration with all stakeholders"].map((v) => (
-                  <li key={v} className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: "#B06533" }}></div>
-                    {v}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Company Story */}
-          <div className="grid grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6" style={{ color: "#003E52" }}>Built on Experience</h2>
-              <p className="text-gray-500 leading-relaxed mb-4">
-                Praetorian Construction Management was founded on the principle that project owners deserve independent, experienced, and accountable project management support throughout the lifecycle of their capital programmes.
-              </p>
-              <p className="text-gray-500 leading-relaxed mb-4">
-                With more than 20 years of experience and a portfolio spanning mining, energy, oil and gas, and heavy civil sectors, our team has delivered results on some of the most complex capital projects in Canada and internationally.
-              </p>
-              <p className="text-gray-500 leading-relaxed">
-                Headquartered in Edmonton, Alberta, Praetorian operates across Canada and has delivered projects in six countries, bringing consistent standards of project controls, safety, and delivery performance to every engagement.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-6">
-              {[
-                { number: "20+", label: "Years of Experience" },
-                { number: "60+", label: "Projects Delivered" },
-                { number: "6", label: "Countries" },
-                { number: "CA$3.6B+", label: "Portfolio Value" },
-              ].map((stat) => (
-                <div key={stat.label} className="p-8 rounded-lg text-center" style={{ backgroundColor: "#F7F7F7" }}>
-                  <div className="text-4xl font-bold mb-2" style={{ color: "#B06533" }}>{stat.number}</div>
-                  <div className="text-sm font-medium" style={{ color: "#003E52" }}>{stat.label}</div>
+          </section>
+          <section id="pcml-mission" style={{ background: '#f7f7f7', padding: 'clamp(46px,6vw,84px) 0' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
+              <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Mission, Vision and Goals</div>
+              <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>Mission, Vision and Goals</h2>
+              <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 'clamp(20px,2.6vw,30px)' }}>
+                <div data-reveal="" style={{ background: '#fff', padding: '28px 26px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #003E52' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.15em', textTransform: 'uppercase', color: '#003E52', marginBottom: '14px' }}>Mission</div>
+                  <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Provide exceptional reliable project management services to select clients in the resource sector through team excellence, leadership, effective communications and a focus on continuous improvement.</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Management Team */}
-      <div id="pcml-management" className="py-24" style={{ backgroundColor: "#F7F7F7" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#B06533" }}>Leadership</div>
-            <h2 className="text-4xl font-bold" style={{ color: "#003E52" }}>Management Team</h2>
-          </div>
-          <div className="grid grid-cols-3 gap-8">
-            {[
-              { name: "Brad Walter", title: "President", bio: "Brad brings extensive experience in capital project delivery across mining and energy sectors, leading Praetorian's strategic direction and client relationships." },
-              { name: "Femi Farinu", title: "VP Technical Services", bio: "Femi leads Praetorian's technical delivery teams, overseeing project controls, scheduling, and technology innovation including the Praetorian IQ platform." },
-              { name: "Michael Cullerton", title: "CEO / CFO", bio: "Michael oversees Praetorian's financial operations and corporate governance, bringing deep expertise in capital project finance and business management." },
-            ].map((member) => (
-              <div key={member.name} className="bg-white rounded-lg overflow-hidden shadow-sm">
-                <div className="h-48 flex items-center justify-center" style={{ backgroundColor: "#003E52" }}>
-                  <div className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold text-white" style={{ backgroundColor: "rgba(176,101,51,0.3)", border: "2px solid #B06533" }}>
-                    {member.name.split(" ").map((n) => n[0]).join("")}
-                  </div>
+                <div data-reveal="" style={{ background: '#fff', padding: '28px 26px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.15em', textTransform: 'uppercase', color: '#B06533', marginBottom: '14px' }}>Vision</div>
+                  <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Develop an elite team of project management specialists who provide our clients with expertise for the development and construction of projects at both new and existing facilities in the resource sector. Continuously strive to develop a culture of excellence between our contractors and ourselves that is evolutionary; having the potential to grow, adapt and excel in an ever-changing work landscape.</p>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold mb-1" style={{ color: "#003E52" }}>{member.name}</h3>
-                  <div className="text-sm font-medium mb-3" style={{ color: "#B06533" }}>{member.title}</div>
-                  <p className="text-sm text-gray-500 leading-relaxed">{member.bio}</p>
+                <div data-reveal="" style={{ background: '#fff', padding: '28px 26px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #98999B' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.15em', textTransform: 'uppercase', color: '#5b6266', marginBottom: '14px' }}>Goals</div>
+                  <ul style={{ fontSize: '14.5px', lineHeight: '1.8', color: '#555c60', margin: '0', paddingLeft: '18px' }}>
+                    <li>Create a legacy of excellence in the work Praetorian Construction Management does for our clients.</li>
+                    <li>Be recognized by our clients, industry and our team for developing a built-to-last group of professionals who retain and promote a balance between work and family.</li>
+                    <li>Build on our reputation as a leader in the management of resource projects in remote locations worldwide.</li>
+                    <li>Instill a safety culture of zero harm on every project.</li>
+                  </ul>
                 </div>
               </div>
-            ))}
-          </div>
-          <p className="text-center text-xs mt-8" style={{ color: "#98999B" }}>
-            Management headshots and updated biographies to be provided by Praetorian Construction Management.
-          </p>
+            </div>
+          </section>
+          <section id="pcml-management" style={{ background: '#003E52', padding: 'clamp(46px,6vw,84px) 0' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
+              <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>Management Team</div>
+              <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 38px', color: '#fff' }}>Management Team</h2>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,2.6vw,28px)' }}>
+                <div data-reveal="" style={{ background: 'rgba(255,255,255,.06)', padding: '28px 24px' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#fff', marginBottom: '4px' }}>Michael P. Culleton P.Eng.</div>
+                  <div style={{ fontSize: '13px', color: '#e3ab7c', marginBottom: '14px', fontFamily: 'var(--font-sora), sans-serif' }}>Chief Financial Officer</div>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>Michael has over 36 years of construction experience with a strong project controls and engineering background. The greatest portion of his career has been spent on mining projects. His in-depth knowledge of management and controls has contributed to a reputation of competence, integrity and loyalty.</p>
+                </div>
+                <div data-reveal="" style={{ background: 'rgba(255,255,255,.06)', padding: '28px 24px' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#fff', marginBottom: '4px' }}>K. Bradley Walter</div>
+                  <div style={{ fontSize: '13px', color: '#e3ab7c', marginBottom: '14px', fontFamily: 'var(--font-sora), sans-serif' }}>President</div>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>With over 40 years of construction experience, Brad has provided executive leadership to guide multiple industrial projects to successful completion. As an owner's representative, he has a reputation for getting contractors to produce high quality work on time and on budget.</p>
+                </div>
+                <div data-reveal="" style={{ background: 'rgba(255,255,255,.06)', padding: '28px 24px' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#fff', marginBottom: '4px' }}>Femi R. Farinu, P.Eng., CPA, CMA</div>
+                  <div style={{ fontSize: '13px', color: '#e3ab7c', marginBottom: '14px', fontFamily: 'var(--font-sora), sans-serif' }}>Vice President, Technical Services</div>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>Femi has over 23 years of work experience in construction, manufacturing and finance. With a background in Mining, Oil and Gas and Infrastructure, he applies his leadership and project management skills in support of project teams. His strength lies in Project Controls, Commercial Management and Accounting.</p>
+                </div>
+                <div data-reveal="" style={{ background: 'rgba(255,255,255,.06)', padding: '28px 24px' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#fff', marginBottom: '4px' }}>L. Annette Genge</div>
+                  <div style={{ fontSize: '13px', color: '#e3ab7c', marginBottom: '14px', fontFamily: 'var(--font-sora), sans-serif' }}>Human Resources Manager</div>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>Annette is a highly skilled Human Resources and Organization Management professional with more than 18 years of experience spanning industrial construction and mining projects in Canada and international markets. She leads Employee Relations, Performance Management, Recruitment and HR Operations at Praetorian.</p>
+                </div>
+                <div data-reveal="" style={{ background: 'rgba(255,255,255,.06)', padding: '28px 24px' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#fff', marginBottom: '4px' }}>Lisa Sander</div>
+                  <div style={{ fontSize: '13px', color: '#e3ab7c', marginBottom: '14px', fontFamily: 'var(--font-sora), sans-serif' }}>Finance Manager</div>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>Seasoned accounting specialist with 25 years of experience, including 19 years specialising in the oil and mining industries. Proven ability to manage all accounting functions, financial reporting, and compliance. Adept at streamlining processes, ensuring accuracy, and delivering actionable financial insights to support strategic decision making. Skilled in corporate finance, budgeting, tax reporting, and regulatory compliance, with a track record of driving efficiency and financial integrity.</p>
+                </div>
+                <div data-reveal="" style={{ background: 'rgba(255,255,255,.06)', padding: '28px 24px' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#fff', marginBottom: '4px' }}>Rob Ledgister</div>
+                  <div style={{ fontSize: '13px', color: '#e3ab7c', marginBottom: '14px', fontFamily: 'var(--font-sora), sans-serif' }}>VP, Project Development</div>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.65', color: '#c3d0d4', margin: '0', fontStyle: 'italic' }}>Biography details to follow.</p>
+                </div>
+              </div>
+              <p style={{ fontSize: '12px', color: '#7d8899', marginTop: '28px', fontStyle: 'italic' }}>Management team headshots and additional bios to be confirmed with Femi (OI-6).</p>
+            </div>
+          </section>
         </div>
-      </div>
-
-      {/* CTA Band */}
-      <div className="py-20" style={{ backgroundColor: "#003E52" }}>
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Work With Us</h2>
-          <p className="text-lg mb-8" style={{ color: "#98999B" }}>
-            Talk to our team about how Praetorian can support your next capital programme.
-          </p>
-          <div className="flex gap-4 justify-center">
-            <a href="/contact" style={{ backgroundColor: "#B06533" }} className="inline-block px-10 py-4 text-white font-semibold rounded hover:opacity-90">
-              Contact Us
-            </a>
-            <a href="/careers" className="inline-block px-10 py-4 text-white font-semibold rounded border border-white hover:bg-white hover:text-teal-900 transition-colors">
-              View Careers
-            </a>
-          </div>
-        </div>
-      </div>
-      <Footer />
     </main>
   );
 }

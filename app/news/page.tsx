@@ -1,153 +1,91 @@
-﻿import Navbar from "../components/Navbar";
-import Footer from "@/app/components/Footer";
+import type { Metadata } from "next";
+import Link from "next/link";
 
-export default function News() {
-  const articles = [
-    {
-      category: "Company News",
-      date: "August 2026",
-      title: "Praetorian Launches AI-Powered Project Management Platform",
-      summary: "Praetorian Construction Management has developed Praetorian IQ, an AI-powered platform delivering intelligent cost intelligence and document management across capital project portfolios.",
-    },
-    {
-      category: "Projects",
-      date: "July 2026",
-      title: "Praetorian Expands Project Controls Practice Across Western Canada",
-      summary: "Praetorian Construction Management continues to grow its project controls and scheduling capabilities, supporting capital programmes across mining and energy sectors in Alberta and British Columbia.",
-    },
-    {
-      category: "Industry",
-      date: "June 2026",
-      title: "Capital Project Delivery in Canadian Mining: Trends and Outlook",
-      summary: "A look at the current landscape for capital project delivery in the Canadian mining sector, including cost pressures, labour availability, and the growing role of technology in project controls.",
-    },
-    {
-      category: "Company News",
-      date: "May 2026",
-      title: "Praetorian Strengthens HSSE Programme Across All Active Projects",
-      summary: "Praetorian Construction Management has reinforced its health, safety, security, and environment programme with updated standards and enhanced training requirements across all project sites.",
-    },
-    {
-      category: "Projects",
-      date: "April 2026",
-      title: "Owner Representative Services: Supporting Complex Mine Development",
-      summary: "Praetorian reflects on the delivery of owner representative and project controls services on large-scale mine development programmes, sharing lessons learned and best practices.",
-    },
-    {
-      category: "Industry",
-      date: "March 2026",
-      title: "The Role of Technology in Modern Project Controls",
-      summary: "How AI-assisted analysis, structured cost data, and integrated scheduling tools are transforming the way capital project teams manage cost and schedule performance.",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "News and Insights | Praetorian Construction Management",
+  description: "Perspectives from the owner's side of the table. Cost intelligence, project controls and safety leadership.",
+};
 
-  const categories = ["All", "Company News", "Projects", "Industry"];
-
+export default function NewsPage() {
   return (
     <main>
-      <Navbar />
-
-      {/* Page Hero */}
-      <div style={{ backgroundColor: "#003E52", marginTop: "72px" }} className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#B06533" }}>Latest Updates</div>
-          <h1 className="text-5xl font-bold text-white mb-6">News &amp; Events</h1>
-          <p className="text-xl max-w-3xl leading-relaxed" style={{ color: "#98999B" }}>
-            Stay up to date with the latest news, project updates, and industry insights from Praetorian Construction Management.
-          </p>
-        </div>
-      </div>
-
-      {/* Category Filter */}
-      <div className="py-8 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex gap-3 flex-wrap">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className="px-5 py-2 rounded text-sm font-medium border transition-colors"
-                style={{
-                  borderColor: cat === "All" ? "#003E52" : "#E5E7EB",
-                  backgroundColor: cat === "All" ? "#003E52" : "white",
-                  color: cat === "All" ? "white" : "#98999B",
-                }}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Articles Grid */}
-      <div className="py-16" style={{ backgroundColor: "#F7F7F7" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-3 gap-8">
-            {articles.map((article) => (
-              <div key={article.title} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-40 flex items-end p-6" style={{ backgroundColor: "#003E52" }}>
-                  <span
-                    className="text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded"
-                    style={{ backgroundColor: "#B06533", color: "white" }}
-                  >
-                    {article.category}
-                  </span>
+      <div>
+          <section style={{ position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1444136393836-70a14068c669?w=1400&auto=format&fit=crop&q=80)' }}></div>
+            <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.72) 48%,rgba(0,15,22,.4) 100%)' }}></div>
+            <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: 'clamp(40px,5vw,72px) clamp(16px,4vw,44px)' }}>
+              <Link href="/" style={{ background: 'none', border: '0', padding: '0', color: '#e3ab7c', fontSize: '13px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
+                Home
+              </Link>
+              <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginTop: '22px' }}>News and Insights</div>
+              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '26ch' }}>Perspectives from the owner's side of the table</h1>
+              <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '62ch', color: '#c3d0d4', margin: '18px 0 0' }}>Praetorian's team writes about what they see on the ground, cost intelligence, project controls, safety leadership, and the application of AI to mining construction management.</p>
+            </div>
+          </section>
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(20px,2.6vw,30px)' }}>
+              <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+                <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                <div style={{ padding: '20px 22px 24px' }}>
+                  <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Cost Intelligence</span>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>How AI is reshaping project cost benchmarking in global mining</h4>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 14px' }}>Praetorian IQ draws on Praetorian's own delivered project actuals to give owners a benchmark that consultants and contractors can't replicate. Here's how it works.</p>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12.5px', color: '#7d8288' }}><span>Aug 2026 · 5 min read</span><span style={{ color: '#B06533', fontWeight: '600' }}>Read</span></div>
                 </div>
-                <div className="p-6">
-                  <div className="text-xs mb-3" style={{ color: "#98999B" }}>{article.date}</div>
-                  <h3 className="text-lg font-bold mb-3 leading-snug" style={{ color: "#003E52" }}>{article.title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed mb-4">{article.summary}</p>
-                  <a href="#" className="text-sm font-semibold hover:opacity-70 transition-opacity" style={{ color: "#B06533" }}>
-                    Read More
-                  </a>
+              </a>
+              <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+                <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1709489662983-3674d790b224?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                <div style={{ padding: '20px 22px 24px' }}>
+                  <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Project Controls</span>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>Five lessons from managing $1B+ projects in remote environments</h4>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 14px' }}>Remote logistics, contractor dependency, and communication latency create a category of risk that standard project controls frameworks weren't built for.</p>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12.5px', color: '#7d8288' }}><span>Aug 2026 · 7 min read</span><span style={{ color: '#B06533', fontWeight: '600' }}>Read</span></div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-xs mt-8" style={{ color: "#98999B" }}>
-            News content to be provided and updated by Praetorian Construction Management.
-          </p>
+              </a>
+              <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+                <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1586161148512-64a1b3dac527?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                <div style={{ padding: '20px 22px 24px' }}>
+                  <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Health and Safety</span>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>HSSE leadership: why owner's team culture sets the site culture</h4>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 14px' }}>The contractor's safety record is heavily influenced by what the owner's team models and enforces from Day 1. Praetorian builds this expectation into every engagement.</p>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12.5px', color: '#7d8288' }}><span>Jul 2026 · 4 min read</span><span style={{ color: '#B06533', fontWeight: '600' }}>Read</span></div>
+                </div>
+              </a>
+              <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+                <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                <div style={{ padding: '20px 22px 24px' }}>
+                  <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Praetorian IQ</span>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>What document intelligence means for the mining owner's team</h4>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 14px' }}>Asking a natural language question across a project's full document set and getting a cited answer in seconds is no longer a prototype. It's live at Praetorian.</p>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12.5px', color: '#7d8288' }}><span>Jul 2026 · 6 min read</span><span style={{ color: '#B06533', fontWeight: '600' }}>Read</span></div>
+                </div>
+              </a>
+              <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+                <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1523848309072-c199db53f137?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                <div style={{ padding: '20px 22px 24px' }}>
+                  <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Project Controls</span>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>The commissioning gap: why turnover packages fail and how to fix them</h4>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 14px' }}>Punch list closure delays usually trace back to how turnover requirements were defined, or weren't, at execution start.</p>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12.5px', color: '#7d8288' }}><span>Jun 2026 · 8 min read</span><span style={{ color: '#B06533', fontWeight: '600' }}>Read</span></div>
+                </div>
+              </a>
+              <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+                <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1444136393836-70a14068c669?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                <div style={{ padding: '20px 22px 24px' }}>
+                  <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Cost Intelligence</span>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>Stage gate estimates: what the industry gets wrong about contingency</h4>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 14px' }}>Contingency isn't a buffer for optimism bias, most PFS-stage contingencies are set too low based on comparable project actuals.</p>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12.5px', color: '#7d8288' }}><span>May 2026 · 5 min read</span><span style={{ color: '#B06533', fontWeight: '600' }}>Read</span></div>
+                </div>
+              </a>
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '46px', paddingTop: '34px', borderTop: '1px solid #e4e6e7' }}>
+              <p style={{ fontSize: '13.5px', color: '#7d8288', margin: '0 0 16px' }}>News and Insights will be CMS-driven at launch, Femi and Araceli manage posts directly through Sanity. Placeholder articles shown for layout review.</p>
+              <a href="mailto:info@praetoriancm.com" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#003E52', color: '#fff', textDecoration: 'none', minHeight: '44px', padding: '0 22px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '14px' }}>Subscribe to Insights</a>
+            </div>
+          </section>
         </div>
-      </div>
-
-      {/* Newsletter Signup */}
-      <div className="py-20 bg-white">
-        <div className="max-w-2xl mx-auto px-6 text-center">
-          <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#B06533" }}>Stay Informed</div>
-          <h2 className="text-3xl font-bold mb-4" style={{ color: "#003E52" }}>Subscribe to Our Newsletter</h2>
-          <p className="text-lg mb-8" style={{ color: "#98999B" }}>
-            Receive the latest news and project updates from Praetorian Construction Management directly to your inbox.
-          </p>
-          <div className="flex gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 px-4 py-3 rounded border text-sm focus:outline-none focus:ring-2"
-              style={{ borderColor: "#E5E7EB" }}
-            />
-            <button
-              className="px-6 py-3 text-white text-sm font-semibold rounded hover:opacity-90"
-              style={{ backgroundColor: "#B06533" }}
-            >
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Band */}
-      <div className="py-20" style={{ backgroundColor: "#003E52" }}>
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Have a Project Enquiry?</h2>
-          <p className="text-lg mb-8" style={{ color: "#98999B" }}>
-            Talk to our team about how Praetorian can support your next capital programme.
-          </p>
-          <a href="/contact" style={{ backgroundColor: "#B06533" }} className="inline-block px-10 py-4 text-white font-semibold rounded hover:opacity-90">
-            Contact Us
-          </a>
-        </div>
-      </div>
-      <Footer />
     </main>
   );
 }

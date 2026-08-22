@@ -1,0 +1,431 @@
+[
+  {
+    "name": "Praetorian Head Office",
+    "place": "Edmonton, Alberta",
+    "detail": "Owner's team headquarters",
+    "lat": 53.55,
+    "lon": -113.49,
+    "hq": true
+  },
+  {
+    "name": "Rackla Metals — Critical Mineral",
+    "place": "NWT, Canada",
+    "detail": "",
+    "lat": 64.0,
+    "lon": -132.0
+  },
+  {
+    "name": "Torngat Metals — Rare Earth",
+    "place": "Quebec, Canada",
+    "detail": "",
+    "lat": 58.5,
+    "lon": -64.0
+  },
+  {
+    "name": "IAMGold — Cote Gold",
+    "place": "Ontario, Canada",
+    "detail": "",
+    "lat": 48.1,
+    "lon": -82.0
+  },
+  {
+    "name": "Hecla — Keno Hill Silver",
+    "place": "Yukon, Canada",
+    "detail": "",
+    "lat": 63.9,
+    "lon": -135.3
+  },
+  {
+    "name": "LiFT Power — Lithium",
+    "place": "Quebec & NWT, Canada",
+    "detail": "",
+    "lat": 55.0,
+    "lon": -74.0
+  },
+  {
+    "name": "Burgundy — Ekati Mine",
+    "place": "NWT, Canada",
+    "detail": "",
+    "lat": 64.7,
+    "lon": -110.6
+  },
+  {
+    "name": "Newcrest — Red Chris",
+    "place": "BC, Canada",
+    "detail": "",
+    "lat": 57.7,
+    "lon": -129.8
+  },
+  {
+    "name": "Wesdome — Kiena",
+    "place": "Quebec, Canada",
+    "detail": "",
+    "lat": 48.2,
+    "lon": -78.9
+  },
+  {
+    "name": "Uniboard — Renaissance OSB",
+    "place": "Quebec, Canada",
+    "detail": "",
+    "lat": 45.8,
+    "lon": -72.5
+  },
+  {
+    "name": "Faro Mine Remediation",
+    "place": "NWT/Yukon, Canada",
+    "detail": "",
+    "lat": 62.2,
+    "lon": -133.4
+  },
+  {
+    "name": "Giant Mine Remediation",
+    "place": "Yellowknife, NWT, Canada",
+    "detail": "",
+    "lat": 62.5,
+    "lon": -114.3
+  },
+  {
+    "name": "First Mining — Springpole Gold",
+    "place": "Ontario, Canada",
+    "detail": "",
+    "lat": 51.5,
+    "lon": -92.0
+  },
+  {
+    "name": "B2Gold — Back River",
+    "place": "Nunavut, Canada",
+    "detail": "",
+    "lat": 65.8,
+    "lon": -106.0
+  },
+  {
+    "name": "Teck — Elk Valley",
+    "place": "BC, Canada",
+    "detail": "",
+    "lat": 49.9,
+    "lon": -114.9
+  },
+  {
+    "name": "Alamos — Island Gold",
+    "place": "Ontario, Canada",
+    "detail": "",
+    "lat": 47.7,
+    "lon": -84.1
+  },
+  {
+    "name": "Conuma Coal — Hermann",
+    "place": "BC, Canada",
+    "detail": "",
+    "lat": 55.4,
+    "lon": -121.9
+  },
+  {
+    "name": "Galaxy — James Bay Lithium",
+    "place": "Quebec, Canada",
+    "detail": "",
+    "lat": 53.8,
+    "lon": -76.0
+  },
+  {
+    "name": "INEOS-Calabrian — SO2 Plant",
+    "place": "South Porcupine, Ontario, Canada",
+    "detail": "",
+    "lat": 48.47,
+    "lon": -81.2
+  },
+  {
+    "name": "Rio Tinto — Diavik Diamond",
+    "place": "Lac De Gras, NWT, Canada",
+    "detail": "",
+    "lat": 64.5,
+    "lon": -110.3
+  },
+  {
+    "name": "Taseko — Prosperity",
+    "place": "Williams Lake, BC, Canada",
+    "detail": "",
+    "lat": 52.13,
+    "lon": -122.14
+  },
+  {
+    "name": "Giant Mine Reclamation",
+    "place": "Yellowknife, NWT, Canada",
+    "detail": "",
+    "lat": 62.45,
+    "lon": -114.4
+  },
+  {
+    "name": "Newmont — Hope Bay",
+    "place": "Nunavut, Canada",
+    "detail": "",
+    "lat": 68.15,
+    "lon": -106.6
+  },
+  {
+    "name": "Huckleberry Mines",
+    "place": "Houston, BC, Canada",
+    "detail": "",
+    "lat": 54.4,
+    "lon": -126.75
+  },
+  {
+    "name": "Western Canadian Coal — Wolverine",
+    "place": "BC, Canada",
+    "detail": "",
+    "lat": 55.0,
+    "lon": -121.0
+  },
+  {
+    "name": "Syncrude — SW Quadrant OPF",
+    "place": "Fort McMurray, Alberta, Canada",
+    "detail": "",
+    "lat": 57.0,
+    "lon": -111.5
+  },
+  {
+    "name": "Syncrude — Aurora Train 2",
+    "place": "Fort McMurray, Alberta, Canada",
+    "detail": "",
+    "lat": 57.3,
+    "lon": -111.6
+  },
+  {
+    "name": "CNRL — Utilities & Offsites",
+    "place": "Fort McMurray, Alberta, Canada",
+    "detail": "",
+    "lat": 57.05,
+    "lon": -111.65
+  },
+  {
+    "name": "Conoco Phillips — Surmont Ph1",
+    "place": "Fort McMurray, Alberta, Canada",
+    "detail": "",
+    "lat": 56.0,
+    "lon": -110.8
+  },
+  {
+    "name": "Opti-Nexen — Long Lake",
+    "place": "Fort McMurray, Alberta, Canada",
+    "detail": "",
+    "lat": 56.5,
+    "lon": -111.3
+  },
+  {
+    "name": "Shell — HMU Scottford",
+    "place": "Fort Saskatchewan, Alberta, Canada",
+    "detail": "",
+    "lat": 53.72,
+    "lon": -113.2
+  },
+  {
+    "name": "Petro-Canada Refinery",
+    "place": "Edmonton, Alberta, Canada",
+    "detail": "",
+    "lat": 53.55,
+    "lon": -113.49
+  },
+  {
+    "name": "Enbridge — Tank Farm",
+    "place": "Hardisty, Alberta, Canada",
+    "detail": "",
+    "lat": 52.65,
+    "lon": -111.3
+  },
+  {
+    "name": "Husky — Tank Farm",
+    "place": "Lloydminster, Saskatchewan, Canada",
+    "detail": "",
+    "lat": 53.28,
+    "lon": -110.0
+  },
+  {
+    "name": "Husky — Prince George Clean Fuels",
+    "place": "Prince George, BC, Canada",
+    "detail": "",
+    "lat": 53.92,
+    "lon": -122.75
+  },
+  {
+    "name": "Island Co-gen (250MW)",
+    "place": "Campbell River, BC, Canada",
+    "detail": "",
+    "lat": 50.02,
+    "lon": -125.24
+  },
+  {
+    "name": "ABB Alstom — Bayside Power",
+    "place": "Saint John, New Brunswick, Canada",
+    "detail": "",
+    "lat": 45.27,
+    "lon": -66.06
+  },
+  {
+    "name": "Nova Chemicals Co-gen (450MW)",
+    "place": "Joffre, Alberta, Canada",
+    "detail": "",
+    "lat": 52.35,
+    "lon": -113.4
+  },
+  {
+    "name": "Placer Dome — Mega Pit",
+    "place": "Timmins, Ontario, Canada",
+    "detail": "",
+    "lat": 48.48,
+    "lon": -81.33
+  },
+  {
+    "name": "Temp Power Project",
+    "place": "Cobourg, Ontario, Canada",
+    "detail": "",
+    "lat": 43.96,
+    "lon": -78.17
+  },
+  {
+    "name": "LaFarge — Texada Island",
+    "place": "Texada Island, BC, Canada",
+    "detail": "",
+    "lat": 49.66,
+    "lon": -124.5
+  },
+  {
+    "name": "Prince George Pulp & Paper",
+    "place": "Prince George, BC, Canada",
+    "detail": "",
+    "lat": 53.91,
+    "lon": -122.76
+  },
+  {
+    "name": "BC Ferry — Superstructures",
+    "place": "Delta, BC, Canada",
+    "detail": "",
+    "lat": 49.09,
+    "lon": -123.06
+  },
+  {
+    "name": "Howe Sound Pulp & Paper",
+    "place": "BC, Canada",
+    "detail": "",
+    "lat": 49.4,
+    "lon": -123.5
+  },
+  {
+    "name": "Dome Petroleum — Beaudrill",
+    "place": "Tuktoyaktuk, NWT, Canada",
+    "detail": "",
+    "lat": 69.44,
+    "lon": -133.03
+  },
+  {
+    "name": "Northern Construction — Mackenzie",
+    "place": "Norman Wells, NWT, Canada",
+    "detail": "",
+    "lat": 65.28,
+    "lon": -126.83
+  },
+  {
+    "name": "Kinross — Curlew Basin",
+    "place": "Washington State, USA",
+    "detail": "",
+    "lat": 48.7,
+    "lon": -118.7
+  },
+  {
+    "name": "Centerra — Thompson Creek",
+    "place": "Idaho, USA",
+    "detail": "",
+    "lat": 44.3,
+    "lon": -114.2
+  },
+  {
+    "name": "Comstock Mining",
+    "place": "Nevada, USA",
+    "detail": "",
+    "lat": 39.3,
+    "lon": -119.65
+  },
+  {
+    "name": "Newmont — Emigrant",
+    "place": "Nevada, USA",
+    "detail": "",
+    "lat": 40.75,
+    "lon": -115.75
+  },
+  {
+    "name": "Newmont — Phoenix Mill",
+    "place": "Nevada, USA",
+    "detail": "",
+    "lat": 40.6,
+    "lon": -117.2
+  },
+  {
+    "name": "Santa Fe — Twin Creeks",
+    "place": "Golconda, Nevada, USA",
+    "detail": "",
+    "lat": 41.2,
+    "lon": -117.15
+  },
+  {
+    "name": "Santa Fe — Lone Tree Mill",
+    "place": "Nevada, USA",
+    "detail": "",
+    "lat": 40.9,
+    "lon": -117.25
+  },
+  {
+    "name": "Santa Fe — Sage Mill",
+    "place": "Nevada, USA",
+    "detail": "",
+    "lat": 41.0,
+    "lon": -117.3
+  },
+  {
+    "name": "Santa Fe — Rosebud Mines",
+    "place": "Golconda, Nevada, USA",
+    "detail": "",
+    "lat": 41.15,
+    "lon": -117.5
+  },
+  {
+    "name": "Mining Koura — Las Cuevas Dams",
+    "place": "Mexico",
+    "detail": "",
+    "lat": 23.6,
+    "lon": -102.5
+  },
+  {
+    "name": "Goldcorp — Peñasquito",
+    "place": "Zacatecas, Mexico",
+    "detail": "",
+    "lat": 24.63,
+    "lon": -101.55
+  },
+  {
+    "name": "Anglo American — Quellaveco",
+    "place": "Peru",
+    "detail": "",
+    "lat": -17.1,
+    "lon": -70.6
+  },
+  {
+    "name": "Minera Yanacocha — Conga",
+    "place": "Cajamarca, Peru",
+    "detail": "",
+    "lat": -6.86,
+    "lon": -78.28
+  },
+  {
+    "name": "Bluestone — Cerro Blanco",
+    "place": "Guatemala",
+    "detail": "",
+    "lat": 14.35,
+    "lon": -89.7
+  },
+  {
+    "name": "Lydian — Amulsar Gold",
+    "place": "Djermuk, Armenia",
+    "detail": "Full-scope owner's team · flagship",
+    "lat": 39.72,
+    "lon": 45.78,
+    "flagship": true
+  }
+]

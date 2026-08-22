@@ -1,161 +1,314 @@
-﻿import Navbar from "./components/Navbar";
-import Footer from "@/app/components/Footer";
+import type { Metadata } from "next";
+import WorldMap, { type Pin } from "@/app/components/WorldMap";
+import CountryBoxes from "@/app/components/CountryBoxes";
+import projectPins from "@/data/project-pins.json";
+import Link from "next/link";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Praetorian Construction Management | Mining Construction Management",
+  description: "Owner's team construction management for the global mining sector, with AI-powered cost intelligence built in.",
+};
+
+export default function HomePage() {
   return (
     <main>
-      <Navbar />
-
-      {/* Hero */}
-      <div style={{ backgroundColor: "#003E52", marginTop: "72px" }} className="min-h-screen flex items-center justify-center">
-        <div className="text-center text-white px-6">
-          <h1 className="text-5xl font-bold mb-6">Building What Matters</h1>
-          <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#98999B" }}>
-            Praetorian Construction Management delivers world-class project management across mining, energy, and infrastructure sectors.
-          </p>
-          <div className="flex gap-4 justify-center">
-            <a href="/projects" style={{ backgroundColor: "#B06533" }} className="px-8 py-3 text-white font-semibold rounded hover:opacity-90">Our Projects</a>
-            <a href="/contact" className="px-8 py-3 border border-white text-white font-semibold rounded hover:bg-white hover:text-teal-900">Contact Us</a>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats Bar */}
-      <div style={{ backgroundColor: "#003E52" }} className="py-16">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 gap-8 text-center text-white">
-          <div>
-            <div style={{ color: "#B06533" }} className="text-5xl font-bold">20+</div>
-            <div className="mt-2 text-lg">Years of Experience</div>
-          </div>
-          <div>
-            <div style={{ color: "#B06533" }} className="text-5xl font-bold">60+</div>
-            <div className="mt-2 text-lg">Projects Delivered</div>
-          </div>
-          <div>
-            <div style={{ color: "#B06533" }} className="text-5xl font-bold">6</div>
-            <div className="mt-2 text-lg">Countries</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Services Section */}
-      <div className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4" style={{ color: "#003E52" }}>End-to-End Project Management Services</h2>
-            <p className="text-lg max-w-3xl mx-auto" style={{ color: "#98999B" }}>
-              From project controls and scheduling to HSSE and owner representation, we provide integrated expertise across the full project lifecycle.
-            </p>
-          </div>
-          <div className="grid grid-cols-3 gap-8">
-            {[
-              { title: "Project Controls", desc: "Cost management, schedule development, and earned value analysis across complex capital programmes." },
-              { title: "Owner's Representative", desc: "Independent oversight and advocacy for project owners from feasibility through commissioning." },
-              { title: "Construction Management", desc: "On-site leadership and coordination across civil, structural, mechanical, and electrical scopes." },
-              { title: "Scheduling & Planning", desc: "Primavera P6 and MS Project scheduling, baseline development, and recovery planning." },
-              { title: "HSSE Management", desc: "Health, safety, security, and environmental programme development and field implementation." },
-              { title: "Document Control", desc: "Structured document management systems and controlled workflows for capital projects." },
-            ].map((service) => (
-              <div key={service.title} className="p-8 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
-                <div className="w-10 h-1 mb-4 rounded" style={{ backgroundColor: "#B06533" }}></div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: "#003E52" }}>{service.title}</h3>
-                <p className="text-gray-500 leading-relaxed">{service.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <a href="/services" style={{ backgroundColor: "#003E52" }} className="inline-block px-8 py-3 text-white font-semibold rounded hover:opacity-90">
-              View All Services
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Projects Teaser */}
-      <div className="py-24" style={{ backgroundColor: "#F7F7F7" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4" style={{ color: "#003E52" }}>Featured Projects</h2>
-            <p className="text-lg max-w-3xl mx-auto" style={{ color: "#98999B" }}>
-              A track record built across mining, oil and gas, energy, and heavy civil sectors in Canada and internationally.
-            </p>
-          </div>
-          <div className="grid grid-cols-3 gap-8">
-            {[
-              { name: "Lydian Amulsar Gold Mine", location: "Armenia", sector: "Mining", value: "CA$3.4B" },
-              { name: "Alamos Island Gold", location: "Canada", sector: "Mining", value: "CA$205M" },
-              { name: "Bestech Calabrian", location: "Canada", sector: "Industrial", value: "CA$35M" },
-            ].map((project) => (
-              <div key={project.name} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-48 flex items-end p-6" style={{ backgroundColor: "#003E52" }}>
-                  <span className="text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded" style={{ backgroundColor: "#B06533", color: "white" }}>{project.sector}</span>
+      <div>
+          <section style={{ position: 'relative', height: 'clamp(520px,78vh,760px)', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1523660778745-247ed0bcce31?w=1400&auto=format&fit=crop&q=80)' }} ></div>
+            <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.86) 0%,rgba(0,25,36,.62) 46%,rgba(0,15,22,.2) 100%)' }}></div>
+            <div style={{ position: 'relative', height: '100%', maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)', display: 'flex', alignItems: 'center' }}>
+              <div style={{ maxWidth: '640px' }}>
+                <div data-reveal="" style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', border: '1px solid rgba(176,101,51,.55)', padding: '6px 14px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.16em', textTransform: 'uppercase', color: '#e3ab7c' }}>
+                  <span style={{ width: '6px', height: '6px', background: '#B06533', animation: 'pcmlBlink 2.4s ease-in-out infinite' }}></span>
+                  Global Mining · Built Right
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold mb-1" style={{ color: "#003E52" }}>{project.name}</h3>
-                  <p className="text-sm mb-3" style={{ color: "#98999B" }}>{project.location}</p>
-                  <p className="text-sm font-semibold" style={{ color: "#B06533" }}>{project.value}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <a href="/projects" className="inline-block px-8 py-3 font-semibold rounded border-2 hover:opacity-90 transition-colors" style={{ borderColor: "#003E52", color: "#003E52" }}>
-              View All Projects
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Praetorian IQ Panel */}
-      <div className="py-24" style={{ backgroundColor: "#003E52" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#B06533" }}>Technology</div>
-              <h2 className="text-4xl font-bold text-white mb-6">Praetorian IQ</h2>
-              <p className="text-lg mb-4 leading-relaxed" style={{ color: "#98999B" }}>
-                An AI-powered project management platform developed by Praetorian Construction Management to deliver intelligent cost intelligence and document management across capital portfolios.
-              </p>
-              <p className="text-lg mb-8 leading-relaxed" style={{ color: "#98999B" }}>
-                Praetorian IQ integrates structured cost data, scheduling inputs, and AI-assisted analysis to give project teams and ownership groups real-time visibility across complex programmes.
-              </p>
-              <div className="flex gap-4">
-                <div className="flex-1 p-4 rounded" style={{ backgroundColor: "rgba(255,255,255,0.07)" }}>
-                  <div className="text-2xl font-bold mb-1" style={{ color: "#B06533" }}>AI Insights</div>
-                  <div className="text-sm" style={{ color: "#98999B" }}>Cost and schedule intelligence</div>
-                </div>
-                <div className="flex-1 p-4 rounded" style={{ backgroundColor: "rgba(255,255,255,0.07)" }}>
-                  <div className="text-2xl font-bold mb-1" style={{ color: "#B06533" }}>Document Library</div>
-                  <div className="text-sm" style={{ color: "#98999B" }}>AI-powered search and retrieval</div>
+                <h1 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(38px,5.2vw,62px)', lineHeight: '1.04', margin: '20px 0 0', color: '#fff', textWrap: 'balance' }}>Mining Construction Management with a Technology Edge</h1>
+                <p data-reveal="" style={{ fontSize: 'clamp(15px,1.2vw,17.5px)', lineHeight: '1.62', maxWidth: '52ch', margin: '20px 0 0', color: '#dbe4e7', textWrap: 'pretty' }}>Praetorian integrates directly into your ownership team, from feasibility through commissioning. AI-powered cost intelligence, global experience, and an unwavering focus on your project outcomes.</p>
+                <div data-reveal="" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '30px' }}>
+                  <Link href="/contact" style={{ background: '#B06533', color: '#fff', textDecoration: 'none', minHeight: '48px', display: 'flex', alignItems: 'center', padding: '0 24px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '15px' }}>Speak with Our Team</Link>
+                  <Link href="/projects" style={{ minHeight: '48px', padding: '0 22px', fontSize: '15px', color: '#fff', border: '1px solid rgba(255,255,255,.55)', background: 'transparent', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', cursor: 'pointer' }}>
+                    View Our Projects
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className="rounded-lg p-8" style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#B06533" }}></div>
-                <span className="text-white font-semibold text-lg">Cost Intelligence</span>
+            <div style={{ position: 'absolute', left: '0', right: '0', bottom: '0', background: 'rgba(0,10,15,.55)', backdropFilter: 'blur(2px)' }}>
+              <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))' }}>
+                <div style={{ padding: '18px 20px', borderRight: '1px solid rgba(255,255,255,.16)' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>20<span style={{ color: '#e3ab7c' }}>+</span></div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Years delivering</div></div>
+                <div style={{ padding: '18px 20px', borderRight: '1px solid rgba(255,255,255,.16)' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>60<span style={{ color: '#e3ab7c' }}>+</span></div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Projects globally</div></div>
+                <div style={{ padding: '18px 20px', borderRight: '1px solid rgba(255,255,255,.16)' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>6</div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Countries of operation</div></div>
+                <div style={{ padding: '18px 20px' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>$3.6<span style={{ color: '#e3ab7c' }}>B+</span></div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Capital managed (CAD)</div></div>
               </div>
-              <div className="space-y-3">
-                {[
-                  { project: "Amulsar Gold Mine", value: "CA$3.4B" },
-                  { project: "Island Gold Mine", value: "CA$205M" },
-                  { project: "Calabrian Facility", value: "CA$35M" },
-                  { project: "Back River", value: "Pending Validation" },
-                ].map((item) => (
-                  <div key={item.project} className="flex items-center justify-between py-3 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
-                    <span className="text-sm" style={{ color: "#98999B" }}>{item.project}</span>
-                    <span className="text-sm font-semibold" style={{ color: "#B06533" }}>{item.value}</span>
+            </div>
+          </section>
+
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '0', borderTop: '1px solid #e4e6e7', borderBottom: '1px solid #e4e6e7' }}>
+              <div data-reveal="" style={{ padding: '30px 28px 32px', borderRight: '1px solid #e4e6e7' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>01</div>
+                <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Owner's Team Support</h3>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Study development, execution readiness, and H&amp;S oversight, embedded directly in your team.</p>
+                <Link href="/services" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </Link>
+              </div>
+              <div data-reveal="" style={{ padding: '30px 28px 32px', borderRight: '1px solid #e4e6e7' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>02</div>
+                <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Project Services</h3>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Procurement, cost control, scheduling, document management and risk, integrated from Day 1.</p>
+                <Link href="/services" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </Link>
+              </div>
+              <div data-reveal="" style={{ padding: '30px 28px 32px' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>03</div>
+                <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Operational Consulting</h3>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Leadership alignment, asset optimisation, and process safety for long-term operational performance.</p>
+                <Link href="/services" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          <section style={{ background: '#f7f7f7', padding: 'clamp(46px,6vw,84px) 0' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
+              <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>What we do</div>
+              <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', maxWidth: '24ch', lineHeight: '1.06', color: '#003E52' }}>End-to-End Project Management Services</h2>
+              <p data-reveal="" style={{ fontSize: '16px', lineHeight: '1.6', maxWidth: '66ch', color: '#555c60', margin: '18px 0 38px' }}>From the first feasibility study to final commissioning, Praetorian provides integrated services across every phase of your project lifecycle.</p>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,2.6vw,26px)' }}>
+                <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><path d="M3 21 21 3M14 3h7v7" /><path d="M3 15v6h6" /><circle cx="7" cy="7" r="3" /></svg>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>Engineering Support</h4>
+                  <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>Constructability reviews and value engineering that reduce cost before ground is broken.</p>
+                </div>
+                <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><rect x="4" y="3" width="16" height="18" /><path d="M8 8h8M8 12h8M8 16h5" /></svg>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>Early Planning &amp; Feasibility</h4>
+                  <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>Stage gate development, feasibility, and financing support from inception through FS.</p>
+                </div>
+                <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><path d="M3 17h4l3-3 4 4 3-3h4" /><path d="M3 7h6l3 3 3-3h6" /></svg>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>Procurement &amp; Logistics</h4>
+                  <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>Contract development, tendering strategy, and full vendor management through award.</p>
+                </div>
+                <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><path d="M3 3v18h18" /><path d="M7 16v-5M12 16V7M17 16v-8" /></svg>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>Project Controls</h4>
+                  <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>Cost, schedule, document management and reporting, integrated with your systems.</p>
+                </div>
+                <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><path d="M2 20h20" /><path d="M5 20V9l7-5 7 5v11" /><path d="M9 20v-6h6v6" /></svg>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>Construction Management</h4>
+                  <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>On-site supervision, contractor management, and quality oversight as your owner's representative.</p>
+                </div>
+                <div data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#003E52" strokeWidth="1.6"><path d="M12 3l8 3v6c0 5-3.4 8.2-8 9-4.6-.8-8-4-8-9V6l8-3Z" /><path d="m9 12 2 2 4-4" /></svg>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>Quality, Commissioning &amp; Turnover</h4>
+                  <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>QA/QC frameworks, commissioning planning, and turnover packages that protect your investment.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(420px,1fr))' }}>
+            <div style={{ position: 'relative', minHeight: '440px', overflow: 'hidden' }}>
+              <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 26s ease-in-out infinite alternate' }}>
+                <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1587919968590-fbc98cea6c9a?w=1200&auto=format&fit=crop&q=80)' }} ></div>
+              </div>
+              <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.35),rgba(0,15,22,0))' }}></div>
+            </div>
+            <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: 'clamp(40px,5vw,66px)' }}>
+              <div data-reveal="right" style={{ maxWidth: '44ch' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>On the ground</div>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '12px 0 16px', color: '#fff', lineHeight: '1.1' }}>Mining operations, run by people who've stood on the pit floor</h2>
+                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>Open pit, underground, heap leach, Praetorian's owner's teams have overseen fleet, crusher and haul-road programmes across every major mining geography.</p>
+              </div>
+            </div>
+
+            <div style={{ background: '#f7f7f7', display: 'flex', alignItems: 'center', padding: 'clamp(40px,5vw,66px)', order: '3' }}>
+              <div data-reveal="left" style={{ maxWidth: '44ch' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Engineering &amp; construction</div>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '12px 0 16px', color: '#003E52', lineHeight: '1.1' }}>Structural steel to process plant, delivered on schedule</h2>
+                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0' }}>Constructability review through commissioning, Praetorian's project controls keep complex builds on cost and on schedule.</p>
+              </div>
+            </div>
+            <div style={{ position: 'relative', minHeight: '440px', overflow: 'hidden', order: '4' }}>
+              <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 22s ease-in-out infinite alternate-reverse' }}>
+                <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&auto=format&fit=crop&q=80)' }} ></div>
+              </div>
+            </div>
+
+            <div style={{ position: 'relative', minHeight: '440px', overflow: 'hidden', order: '5' }}>
+              <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 24s ease-in-out infinite alternate' }}>
+                <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1571223641822-b82408a0e705?w=1200&auto=format&fit=crop&q=80)' }} ></div>
+              </div>
+              <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.35),rgba(0,15,22,0))' }}></div>
+            </div>
+            <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: 'clamp(40px,5vw,66px)', order: '6' }}>
+              <div data-reveal="right" style={{ maxWidth: '44ch' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>Health, safety &amp; environment</div>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '12px 0 16px', color: '#fff', lineHeight: '1.1' }}>Owner's team culture sets the site culture</h2>
+                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>HSSE oversight isn't a checkbox, it's embedded leadership, from toolbox talk to turnover.</p>
+              </div>
+            </div>
+          </section>
+
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '20px', marginBottom: '30px' }}>
+              <div data-reveal="">
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Global presence</div>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>Praetorian Footprint</h2>
+                <div style={{ width: '64px', height: '3px', background: '#B06533', marginTop: '18px' }}></div>
+              </div>
+              <p data-reveal="" style={{ fontSize: '14px', maxWidth: '40ch', margin: '0', color: '#65696c' }}>Praetorian has worked extensively across Canada, the United States, South America, Central America and Eurasia. The tour runs on its own, hover a pin or pick a project to take control.</p>
+            </div>
+            <div data-reveal="">
+              <WorldMap projects={projectPins as Pin[]} tourMs={4200} logo="/pcml-logo-nav.svg" />
+            </div>
+            <CountryBoxes />
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '22px', marginTop: '14px', fontSize: '12px', color: '#7d8288' }}><span style={{ fontStyle: 'italic' }}>Geometry: Natural Earth (public domain)</span><span>Hover a country to highlight its locations.</span></div>
+            
+          </section>
+
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px) clamp(46px,6vw,72px)' }}>
+            <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533', marginBottom: '12px' }}>All Locations</div>
+            <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(22px,2.6vw,30px)', margin: '0 0 8px', color: '#003E52' }}>Where we have worked</h3>
+            <p style={{ fontSize: '14px', color: '#65696c', margin: '0 0 26px', maxWidth: '60ch' }}>A sample of 60 projects our team and senior managers have delivered across 6 countries. Select a country to expand the full list.</p>
+            <div style={{ maxWidth: '820px' }}>
+              <details style={{ border: '1px solid #e4e6e7', background: '#fff', marginBottom: '10px' }}><summary style={{ cursor: 'pointer', padding: '16px 20px', listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}><span style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span style={{ width: '8px', height: '8px', background: '#B06533', borderRadius: '50%' }}></span>Canada</span><span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#7d8288' }}>45 projects</span></summary><div style={{ padding: '4px 20px 16px' }}><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Rackla Metals — Critical Mineral Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>NWT</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Torngat Metals — Rare Earth Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Quebec</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>IAMGold — Cote Gold Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Ontario</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Hecla Mining — Keno Hill Silver Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Yukon</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>LiFT Power — Lithium Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Quebec & NWT</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Burgundy Diamond — Ekati Mine Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>NWT</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Newcrest — Red Chris Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Wesdome — Kiena Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Quebec</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Uniboard — Renaissance OSB Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Quebec</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Faro Mine Remediation Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>NWT</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Giant Mine Remediation Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>NWT</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>First Mining — Springpole Gold Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Ontario</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>B2Gold — Back River Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Nunavut</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Teck Resources — Elk Valley Resources</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Alamos — Island Gold Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Ontario</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Conuma Coal — Hermann Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Galaxy Resources — James Bay Lithium Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Quebec</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>INEOS-Calabrian — SO2 Production Plant</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>South Porcupine, Ontario</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Rio Tinto — Diavik Diamond Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Lac De Gras, NWT</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Taseko Mines — Prosperity Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Williams Lake, BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Giant Mine Reclamation</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Yellowknife, NWT</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Newmont — Hope Bay Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Nunavut</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Huckleberry Mines</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Houston, BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Western Canadian Coal — Wolverine Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Syncrude — South West Quadrant Ore Processing Facility</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Fort McMurray, Alberta</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Syncrude — Aurora Train 2 Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Fort McMurray, Alberta</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>CNRL — Utilities and Offsites Modules Package A</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Fort McMurray, Alberta</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Conoco Phillips — Surmont Phase 1 SAGD</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Fort McMurray, Alberta</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Opti-Nexen — Long Lake Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Fort McMurray, Alberta</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Shell Canada — HMU Unit, AOSP Scottford Complex</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Fort Saskatchewan, Alberta</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Petro-Canada Refinery / Air Products Hydrogen Plant</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Edmonton, Alberta</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Enbridge Pipelines — Tank Farm Expansion</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Hardisty, Alberta</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Husky Energy — Tank Farm Installation</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Lloydminster, Saskatchewan</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Husky Energy — Prince George Clean Fuels Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Prince George, BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Island Co-gen Power Plant (250MW)</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Campbell River, BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>ABB Alstom — Bayside Power Project (250MW)</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Saint John, New Brunswick</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Nova Chemicals — Co-gen Power Plant (450MW)</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Joffre, Alberta</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Placer Dome — Mega Pit Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Timmins, Ontario</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Temp Power Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Cobourg, Ontario</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>LaFarge — Texada Island Expansion</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Texada Island, BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Prince George Pulp and Paper</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Prince George, BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>BC Ferry Corporation — Ferry Superstructures</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Delta, BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Howe Sound Pulp and Paper — TMP Building</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>BC</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Dome Petroleum — Beaudrill Oil Exploration</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Tuktoyaktuk, NWT</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Northern Construction — Mackenzie River Islands & Pipeline</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Norman Wells, NWT</span></div></div></details>
+              <details style={{ border: '1px solid #e4e6e7', background: '#fff', marginBottom: '10px' }}><summary style={{ cursor: 'pointer', padding: '16px 20px', listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}><span style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span style={{ width: '8px', height: '8px', background: '#B06533', borderRadius: '50%' }}></span>USA</span><span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#7d8288' }}>9 projects</span></summary><div style={{ padding: '4px 20px 16px' }}><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Kinross — Curlew Basin Restart</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Washington State</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Centerra — Thompson Creek Restart</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Idaho</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Comstock Mining — Mine Development</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Nevada</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Newmont — Emigrant Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Nevada</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Newmont — Phoenix Mill Expansion</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Nevada</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Santa Fe Pacific Gold — Twin Creeks Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Golconda, Nevada</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Santa Fe Pacific Gold — Lone Tree Sulfide Mill & Flotation</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Nevada</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Santa Fe Pacific Gold — Sage Mill Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Nevada</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Santa Fe Pacific Gold — Rosebud Mines</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Golconda, Nevada</span></div></div></details>
+              <details style={{ border: '1px solid #e4e6e7', background: '#fff', marginBottom: '10px' }}><summary style={{ cursor: 'pointer', padding: '16px 20px', listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}><span style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span style={{ width: '8px', height: '8px', background: '#B06533', borderRadius: '50%' }}></span>Mexico</span><span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#7d8288' }}>2 projects</span></summary><div style={{ padding: '4px 20px 16px' }}><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Mining Koura Global — Las Cuevas Dams Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Mexico</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Goldcorp — Peñasquito Gold Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Zacatecas</span></div></div></details>
+              <details style={{ border: '1px solid #e4e6e7', background: '#fff', marginBottom: '10px' }}><summary style={{ cursor: 'pointer', padding: '16px 20px', listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}><span style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span style={{ width: '8px', height: '8px', background: '#B06533', borderRadius: '50%' }}></span>Peru</span><span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#7d8288' }}>2 projects</span></summary><div style={{ padding: '4px 20px 16px' }}><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Anglo American — Quellaveco Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Peru</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Minera Yanacocha (Newmont) — Conga Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Peru</span></div></div></details>
+              <details style={{ border: '1px solid #e4e6e7', background: '#fff', marginBottom: '10px' }}><summary style={{ cursor: 'pointer', padding: '16px 20px', listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}><span style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span style={{ width: '8px', height: '8px', background: '#B06533', borderRadius: '50%' }}></span>Guatemala</span><span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#7d8288' }}>1 project</span></summary><div style={{ padding: '4px 20px 16px' }}><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Bluestone — Cerro Blanco Underground Gold Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Guatemala</span></div></div></details>
+              <details style={{ border: '1px solid #e4e6e7', background: '#fff', marginBottom: '10px' }}><summary style={{ cursor: 'pointer', padding: '16px 20px', listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}><span style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span style={{ width: '8px', height: '8px', background: '#B06533', borderRadius: '50%' }}></span>Armenia</span><span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#7d8288' }}>1 project</span></summary><div style={{ padding: '4px 20px 16px' }}><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Lydian International — Amulsar Gold Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Djermuk, Armenia</span></div></div></details>
+            </div>
+          </section>
+
+          <section style={{ background: '#003E52', color: '#e9eef0' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 'clamp(30px,4vw,56px)', alignItems: 'start' }}>
+              <div data-reveal="">
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', border: '1px solid rgba(176,101,51,.5)', padding: '6px 13px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.16em', textTransform: 'uppercase', color: '#e3ab7c' }}>
+                  <span style={{ width: '6px', height: '6px', background: '#B06533', animation: 'pcmlBlink 2s ease-in-out infinite' }}></span>Live Platform
+                </div>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(30px,3.6vw,44px)', margin: '20px 0 0', color: '#fff', lineHeight: '1.06' }}>Praetorian IQ<br />AI-Powered Cost Intelligence</h2>
+                <p style={{ fontSize: '16px', lineHeight: '1.62', maxWidth: '56ch', color: '#c3d0d4', margin: '18px 0 26px' }}>Praetorian's proprietary platform uses Microsoft Azure and Claude AI to deliver real-time cost benchmarking, document intelligence, and predictive analysis. No other construction management firm in the mining sector offers this.</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px' }}>
+                  <Link href="/praetorian-iq" style={{ background: '#B06533', color: '#fff', border: '0', minHeight: '46px', padding: '0 20px', fontSize: '15px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', cursor: 'pointer' }}>Explore Praetorian IQ</Link>
+                  <a href="#" style={{ minHeight: '46px', display: 'flex', alignItems: 'center', gap: '8px', padding: '0 20px', fontSize: '15px', color: '#e9eef0', border: '1px solid rgba(255,255,255,.4)', textDecoration: 'none', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Request a demo
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                  </a>
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(170px,1fr))', gap: '0', marginTop: '36px', border: '1px solid rgba(255,255,255,.2)' }}>
+                  <div style={{ padding: '20px', borderRight: '1px solid rgba(255,255,255,.2)' }}>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e3ab7c" strokeWidth="1.6"><path d="M3 3v18h18" /><path d="M7 16v-5M12 16V7M17 16v-8" /></svg>
+                    <h5 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#fff', margin: '12px 0 6px' }}>Cost Benchmarking</h5>
+                    <p style={{ fontSize: '13px', color: '#9aa9ae', margin: '0', lineHeight: '1.55' }}>Real-time estimate accuracy and variance analysis.</p>
                   </div>
-                ))}
+                  <div style={{ padding: '20px', borderRight: '1px solid rgba(255,255,255,.2)' }}>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e3ab7c" strokeWidth="1.6"><circle cx="11" cy="11" r="7" /><path d="m16.5 16.5 4.5 4.5" /></svg>
+                    <h5 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#fff', margin: '12px 0 6px' }}>Document Intelligence</h5>
+                    <p style={{ fontSize: '13px', color: '#9aa9ae', margin: '0', lineHeight: '1.55' }}>AI search across project records and contracts.</p>
+                  </div>
+                  <div style={{ padding: '20px' }}>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e3ab7c" strokeWidth="1.6"><path d="m3 17 6-6 4 4 8-8" /><path d="M15 7h6v6" /></svg>
+                    <h5 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#fff', margin: '12px 0 6px' }}>Predictive Analysis</h5>
+                    <p style={{ fontSize: '13px', color: '#9aa9ae', margin: '0', lineHeight: '1.55' }}>Identify cost outliers before they become issues.</p>
+                  </div>
+                </div>
               </div>
-              <div className="mt-6 text-xs" style={{ color: "rgba(152,153,155,0.6)" }}>
-                Platform capabilities summary only. Cost data shown for illustrative purposes.
+              <div data-reveal="right" style={{ border: '1px solid rgba(255,255,255,.22)', background: '#04222c' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 16px', borderBottom: '1px solid rgba(255,255,255,.16)' }}>
+                  <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '15px', color: '#fff' }}>AI Insights</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#e3ab7c' }}>
+                    <span style={{ width: '6px', height: '6px', background: '#e3ab7c', animation: 'pcmlBlink 1.6s ease-in-out infinite' }}></span>Claude · Live
+                  </span>
+                </div>
+                <div style={{ padding: '18px 16px 20px' }}>
+                  <div style={{ fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#7d8b90', marginBottom: '12px' }}>Try asking</div>
+                  <div style={{ display: 'grid', gap: '9px' }}>
+                    <span style={{ border: '1px solid rgba(176,101,51,.4)', padding: '9px 12px', fontSize: '13px', color: '#d7dfe1' }}>"Which estimate has the highest total value?"</span>
+                    <span style={{ border: '1px solid rgba(176,101,51,.4)', padding: '9px 12px', fontSize: '13px', color: '#d7dfe1' }}>"Compare accuracy across all stage gates"</span>
+                    <span style={{ border: '1px solid rgba(176,101,51,.4)', padding: '9px 12px', fontSize: '13px', color: '#d7dfe1' }}>"Amulsar actuals vs IFC estimate difference"</span>
+                    <span style={{ border: '1px solid rgba(176,101,51,.4)', padding: '9px 12px', fontSize: '13px', color: '#d7dfe1' }}>"Summarise Springpole PFS by cost category"</span>
+                  </div>
+                  <div style={{ marginTop: '20px', paddingTop: '15px', borderTop: '1px solid rgba(255,255,255,.14)', fontSize: '11.5px', color: '#6b7a80', lineHeight: '1.6' }}>
+                    Disclosure level: platform name and capabilities only. Data scope confirmed at Phase 4.
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
+
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)', textAlign: 'center' }}>
+            <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Knowledge Hub</div>
+            <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>Resources for Project Owners</h2>
+            <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px auto 34px' }}></div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 'clamp(16px,2vw,22px)', textAlign: 'left' }}>
+              <a data-reveal="" href="#" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><path d="M4 4h16v16H4z" /><path d="M8 9h8M8 13h5" /></svg>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Blog &amp; Insights</h4>
+                <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Industry commentary</p>
+              </a>
+              <a data-reveal="" href="#" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><path d="M12 5v15" /><path d="M12 5c-1.5-1.3-4-2-8-2v15c4 0 6.5.7 8 2 1.5-1.3 4-2 8-2V3c-4 0-6.5.7-8 2Z" /></svg>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Business Guides</h4>
+                <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Best-practice guides</p>
+              </a>
+              <a data-reveal="" href="#" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><path d="M3 3v18h18" /><path d="M7 16v-5M12 16V7M17 16v-8" /></svg>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Case Studies</h4>
+                <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Project case studies</p>
+              </a>
+              <a data-reveal="" href="#" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><path d="M14 3H6v18h12V7l-4-4Z" /><path d="M14 3v4h4" /><path d="M9 13h6M9 17h4" /></svg>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Whitepapers</h4>
+                <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Downloadable reports</p>
+              </a>
+              <a data-reveal="" href="#" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><rect x="2" y="5" width="14" height="14" /><path d="m16 10 6-3v10l-6-3z" /></svg>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Webinars &amp; Video</h4>
+                <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Expert-led sessions</p>
+              </a>
+            </div>
+          </section>
+
+          <section style={{ borderTop: '1px solid #e4e6e7', background: '#f7f7f7' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
+              <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Latest from Praetorian</div>
+              <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>News &amp; Insights</h2>
+              <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 34px' }}></div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(20px,2.6vw,30px)' }}>
+                <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+                  <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                  <div style={{ padding: '18px 20px 22px' }}>
+                    <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Cost Intelligence</span>
+                    <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>How AI is reshaping project cost benchmarking in global mining</h4>
+                    <div style={{ fontSize: '12.5px', color: '#7d8288' }}>Aug 2026 · 5 min read</div>
+                  </div>
+                </a>
+                <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+                  <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1709489662983-3674d790b224?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                  <div style={{ padding: '18px 20px 22px' }}>
+                    <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Project Controls</span>
+                    <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>Five lessons from managing $1B+ projects in remote environments</h4>
+                    <div style={{ fontSize: '12.5px', color: '#7d8288' }}>Aug 2026 · 7 min read</div>
+                  </div>
+                </a>
+                <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+                  <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1523848309072-c199db53f137?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                  <div style={{ padding: '18px 20px 22px' }}>
+                    <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Health, Safety, Security, and Environment</span>
+                    <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>HSSE leadership: why owner's team culture sets the site culture</h4>
+                    <div style={{ fontSize: '12.5px', color: '#7d8288' }}>Jul 2026 · 4 min read</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
-      </div>
-      <Footer />
     </main>
   );
 }

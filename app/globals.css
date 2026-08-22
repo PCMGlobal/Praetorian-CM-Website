@@ -1,27 +1,59 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: var(--font-work-sans), system-ui, sans-serif;
+  background: #ffffff;
+  color: #1c2226;
+  min-height: 100vh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a { color: #B06533; }
+a:hover { color: #8f5228; }
+
+/* Sora is applied via inline styles that name it directly */
+:root {
+  --pcml-teal: #003E52;
+  --pcml-copper: #B06533;
+  --pcml-grey: #98999B;
 }
+
+@keyframes pcmlDrift {
+  0%   { transform: scale(1.04) translate3d(0, 0, 0); }
+  100% { transform: scale(1.15) translate3d(-1.5%, -1.5%, 0); }
+}
+
+@keyframes pcmlBlink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: .25; }
+}
+
+@keyframes pcmlLogoPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.09); }
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  transition: opacity .75s cubic-bezier(.2, .7, .2, 1),
+              transform .75s cubic-bezier(.2, .7, .2, 1);
+}
+[data-reveal="left"]  { transform: translate3d(-34px, 0, 0); }
+[data-reveal="right"] { transform: translate3d(34px, 0, 0); }
+[data-reveal-in="1"]  { opacity: 1 !important; transform: translate3d(0, 0, 0) !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+
+/* hover states ported from the prototype style-hover attributes */
+.pcml-social:hover { background: #c9793f !important; }
+.pcml-cta:hover { background: #8f5228 !important; }
+.pcml-cta-dark:hover { background: #012a38 !important; }
+.pcml-flink:hover { color: #ffffff !important; }
+.pcml-card:hover { box-shadow: 0 8px 26px rgba(0, 20, 30, .12) !important; }
+
+/* Sora family helper */
+.sora { font-family: var(--font-sora), sans-serif; }

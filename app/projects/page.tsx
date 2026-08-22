@@ -1,135 +1,64 @@
-﻿import Navbar from "../components/Navbar";
-import Footer from "@/app/components/Footer";
+import type { Metadata } from "next";
+import Link from "next/link";
 
-export default function Projects() {
-  const projects = [
-    {
-      name: "Lydian Amulsar Gold Mine",
-      client: "Lydian International",
-      location: "Armenia",
-      sector: "Mining",
-      value: "CA$3.4B",
-      scope: "Owner's representative and project controls services across a large open-pit gold mine development in southern Armenia. Scope included cost management, schedule oversight, and contractor interface management.",
-    },
-    {
-      name: "Alamos Island Gold Mine",
-      client: "Alamos Gold",
-      location: "Ontario, Canada",
-      sector: "Mining",
-      value: "CA$205M",
-      scope: "Project controls and scheduling support for underground mine expansion. Delivered earned value reporting, schedule maintenance, and change management services throughout construction.",
-    },
-    {
-      name: "Bestech Calabrian",
-      client: "Bestech",
-      location: "British Columbia, Canada",
-      sector: "Industrial",
-      value: "CA$35M",
-      scope: "Construction management and project controls for an industrial facility project. Scope covered multi-discipline contractor coordination, progress monitoring, and cost reporting.",
-    },
-    {
-      name: "Conuma Coal Operations",
-      client: "Conuma Coal Resources",
-      location: "British Columbia, Canada",
-      sector: "Mining",
-      value: "Confidential",
-      scope: "Project management and scheduling services supporting coal mining operations and capital project delivery in northeast British Columbia.",
-    },
-  ];
+export const metadata: Metadata = {
+  title: "Projects | Praetorian Construction Management",
+  description: "A working selection of projects delivered across Canada, the USA, Mexico, Peru, Guatemala and Armenia.",
+};
 
-  const sectors = ["All", "Mining", "Industrial", "Energy", "Infrastructure"];
-
+export default function ProjectsPage() {
   return (
     <main>
-      <Navbar />
+      <div>
+          <section style={{ position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1523848309072-c199db53f137?w=1400&auto=format&fit=crop&q=80)' }}></div>
+            <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.72) 48%,rgba(0,15,22,.4) 100%)' }}></div>
+            <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: 'clamp(40px,5vw,72px) clamp(16px,4vw,44px)' }}>
+              <Link href="/" style={{ background: 'none', border: '0', padding: '0', color: '#e3ab7c', fontSize: '13px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
+                Home
+              </Link>
+              <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginTop: '22px' }}>Projects</div>
+              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '24ch' }}>40+ projects, eight countries, $3.6B under management</h1>
+              <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '62ch', color: '#c3d0d4', margin: '18px 0 0' }}>A working selection for review. The full confirmed list is pending sign-off before it goes public.</p>
+            </div>
+          </section>
 
-      {/* Page Hero */}
-      <div style={{ backgroundColor: "#003E52", marginTop: "72px" }} className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#B06533" }}>Our Work</div>
-          <h1 className="text-5xl font-bold text-white mb-6">Projects</h1>
-          <p className="text-xl max-w-3xl leading-relaxed" style={{ color: "#98999B" }}>
-            A track record built across mining, energy, oil and gas, and heavy civil sectors in Canada and internationally. Praetorian has supported project owners and teams on programmes ranging from feasibility through to full capital delivery.
-          </p>
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(40px,5vw,66px) clamp(16px,4vw,44px)' }}>
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', minWidth: '720px' }}>
+                <thead>
+                  <tr style={{ borderBottom: '1px solid #e4e6e7' }}><th style={{ textAlign: 'left', padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#5b6266' }}>Sample Project</th><th style={{ textAlign: 'left', padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#5b6266' }}>Location</th><th style={{ textAlign: 'left', padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#5b6266' }}>Client</th><th style={{ textAlign: 'left', padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#5b6266' }}>Scope</th><th style={{ textAlign: 'left', padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#5b6266' }}>Phase</th></tr>
+                </thead>
+                <tbody>
+                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Amulsar Gold Project</td><td style={{ padding: '10px' }}>Vayots Dzor, Armenia</td><td style={{ padding: '10px' }}>Lydian International</td><td style={{ padding: '10px' }}>Full-scope owner's team</td><td style={{ padding: '10px' }}><span style={{ background: '#fbe9db', color: '#8f4f27', padding: '3px 10px', fontSize: '11.5px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Flagship</span></td></tr>
+                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Conga</td><td style={{ padding: '10px' }}>Cajamarca, Peru</td><td style={{ padding: '10px' }}>Newmont</td><td style={{ padding: '10px' }}>25M m³ earthworks programme</td><td style={{ padding: '10px' }}><span style={{ background: '#eceeee', color: '#4a4e50', padding: '3px 10px', fontSize: '11.5px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Execution</span></td></tr>
+                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Peñasquito CLR</td><td style={{ padding: '10px' }}>Zacatecas, Mexico</td><td style={{ padding: '10px' }}>Goldcorp</td><td style={{ padding: '10px' }}>Expansion project controls</td><td style={{ padding: '10px' }}><span style={{ background: '#eceeee', color: '#4a4e50', padding: '3px 10px', fontSize: '11.5px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Execution</span></td></tr>
+                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Emigrant Mine</td><td style={{ padding: '10px' }}>Nevada, USA</td><td style={{ padding: '10px' }}>Newmont</td><td style={{ padding: '10px' }}>Heap leach facility</td><td style={{ padding: '10px' }}><span style={{ background: '#eceeee', color: '#4a4e50', padding: '3px 10px', fontSize: '11.5px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Commissioned</span></td></tr>
+                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Diavik Diamond Mine</td><td style={{ padding: '10px' }}>NWT, Canada</td><td style={{ padding: '10px' }}>Rio Tinto</td><td style={{ padding: '10px' }}>Remote arctic operations support</td><td style={{ padding: '10px' }}><span style={{ background: '#eceeee', color: '#4a4e50', padding: '3px 10px', fontSize: '11.5px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Operations</span></td></tr>
+                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>SO2Clean Facility</td><td style={{ padding: '10px' }}>Ontario, Canada</td><td style={{ padding: '10px' }}>Calabrian</td><td style={{ padding: '10px' }}>100 TPD chemical facility</td><td style={{ padding: '10px' }}><span style={{ background: '#eceeee', color: '#4a4e50', padding: '3px 10px', fontSize: '11.5px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Commissioned</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px) clamp(46px,6vw,80px)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 'clamp(18px,2.4vw,28px)' }}>
+              <figure style={{ margin: '0' }}>
+                <div style={{ position: 'relative', height: 'clamp(200px,20vw,260px)', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1523848309072-c199db53f137?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                <figcaption style={{ marginTop: '12px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.14em', textTransform: 'uppercase', color: '#003E52' }}>Amulsar · Armenia</figcaption>
+              </figure>
+              <figure style={{ margin: '0' }}>
+                <div style={{ position: 'relative', height: 'clamp(200px,20vw,260px)', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1582280871722-424e91cbee8b?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                <figcaption style={{ marginTop: '12px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.14em', textTransform: 'uppercase', color: '#003E52' }}>Conga · Peru</figcaption>
+              </figure>
+              <figure style={{ margin: '0' }}>
+                <div style={{ position: 'relative', height: 'clamp(200px,20vw,260px)', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1444136393836-70a14068c669?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                <figcaption style={{ marginTop: '12px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.14em', textTransform: 'uppercase', color: '#003E52' }}>Diavik · NWT</figcaption>
+              </figure>
+            </div>
+          </section>
         </div>
-      </div>
-
-      {/* Sector Filter */}
-      <div className="py-8 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex gap-3 flex-wrap">
-            {sectors.map((sector) => (
-              <button
-                key={sector}
-                className="px-5 py-2 rounded text-sm font-medium border transition-colors"
-                style={{
-                  borderColor: sector === "All" ? "#003E52" : "#E5E7EB",
-                  backgroundColor: sector === "All" ? "#003E52" : "white",
-                  color: sector === "All" ? "white" : "#98999B",
-                }}
-              >
-                {sector}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Projects Grid */}
-      <div className="py-16" style={{ backgroundColor: "#F7F7F7" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 gap-8">
-            {projects.map((project) => (
-              <div key={project.name} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-40 flex items-end p-6" style={{ backgroundColor: "#003E52" }}>
-                  <span
-                    className="text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded"
-                    style={{ backgroundColor: "#B06533", color: "white" }}
-                  >
-                    {project.sector}
-                  </span>
-                </div>
-                <div className="p-8">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold mb-1" style={{ color: "#003E52" }}>{project.name}</h3>
-                      <p className="text-sm" style={{ color: "#98999B" }}>{project.location}</p>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-lg font-bold" style={{ color: "#B06533" }}>{project.value}</div>
-                      <div className="text-xs mt-1" style={{ color: "#98999B" }}>Project Value</div>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-500 leading-relaxed mb-6">{project.scope}</p>
-                  <div className="flex items-center gap-2 text-xs" style={{ color: "#98999B" }}>
-                    <span className="font-medium">Client:</span>
-                    <span>{project.client}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Sample data note */}
-          <div className="mt-8 text-center text-sm" style={{ color: "#98999B" }}>
-            Sample project data shown. Full project list to be confirmed by Praetorian Construction Management.
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Band */}
-      <div className="py-20" style={{ backgroundColor: "#003E52" }}>
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Have a Project in Mind?</h2>
-          <p className="text-lg mb-8" style={{ color: "#98999B" }}>
-            Talk to our team about how Praetorian can support your next capital programme.
-          </p>
-          <a href="/contact" style={{ backgroundColor: "#B06533" }} className="inline-block px-10 py-4 text-white font-semibold rounded hover:opacity-90">
-            Get in Touch
-          </a>
-        </div>
-      </div>
-      <Footer />
     </main>
   );
 }
