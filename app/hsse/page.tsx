@@ -12,7 +12,7 @@ export default function HSSE() {
           <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#B06533" }}>Safety First</div>
           <h1 className="text-5xl font-bold text-white mb-6">Health, Safety, Security &amp; Environment</h1>
           <p className="text-xl max-w-3xl leading-relaxed" style={{ color: "#98999B" }}>
-            At Praetorian Construction Management, HSSE is not a programme we implement -- it is a value we live. The safety of our people, our clients, and the communities in which we work is our first priority on every project.
+            At Praetorian Construction Management, HSSE is not a programme we implement, it is a value we live. The safety of our people, our clients, and the communities in which we work is our first priority on every project.
           </p>
         </div>
       </div>
