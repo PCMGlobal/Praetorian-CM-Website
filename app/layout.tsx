@@ -4,6 +4,7 @@ import UtilityBar from "@/app/components/UtilityBar";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import Reveal from "@/app/components/Reveal";
+import Analytics from "@/app/components/Analytics";
 import "./globals.css";
 
 const sora = Sora({
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <Reveal />
+        <Analytics />
       </body>
     </html>
   );
