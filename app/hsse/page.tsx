@@ -1,4 +1,5 @@
-import Navbar from "../components/Navbar";
+﻿import Navbar from "../components/Navbar";
+import Footer from "@/app/components/Footer";
 
 export default function HSSE() {
   return (
@@ -136,53 +137,7 @@ export default function HSSE() {
           </a>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer style={{ backgroundColor: "#002C3A" }} className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-4 gap-12 mb-12">
-            <div className="col-span-1">
-              <div className="text-white font-bold text-lg mb-4">Praetorian Construction Management</div>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "#98999B" }}>
-                World-class project management across mining, energy, and infrastructure sectors.
-              </p>
-              <div className="flex gap-3">
-                {["in", "X", "yt", "ig"].map((s) => (
-                  <a key={s} href="#" className="w-8 h-8 rounded flex items-center justify-center text-xs font-bold" style={{ backgroundColor: "rgba(255,255,255,0.1)", color: "#98999B" }}>{s}</a>
-                ))}
-              </div>
-            </div>
-            <div>
-              <div className="text-white font-semibold mb-4">Services</div>
-              <ul className="space-y-2 text-sm" style={{ color: "#98999B" }}>
-                {["Project Controls", "Owner's Representative", "Construction Management", "HSSE", "Scheduling & Planning", "Document Control"].map((s) => (
-                  <li key={s}><a href="/services" className="hover:text-white transition-colors">{s}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <div className="text-white font-semibold mb-4">Company</div>
-              <ul className="space-y-2 text-sm" style={{ color: "#98999B" }}>
-                {["About Us", "Projects", "Careers", "News & Events", "HSSE", "Contact"].map((s) => (
-                  <li key={s}><a href="#" className="hover:text-white transition-colors">{s}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <div className="text-white font-semibold mb-4">Contact</div>
-              <ul className="space-y-3 text-sm" style={{ color: "#98999B" }}>
-                <li>201 - 10441 178 Street<br />Edmonton, Alberta T5S 1R5</li>
-                <li>780.989.0289</li>
-                <li>info@praetoriancm.com</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 flex items-center justify-between text-xs" style={{ borderTop: "1px solid rgba(255,255,255,0.08)", color: "#98999B" }}>
-            <span>2026 Praetorian Construction Management Ltd. All rights reserved.</span>
-            <span>Edmonton, Alberta, Canada</span>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
