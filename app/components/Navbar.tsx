@@ -124,7 +124,7 @@ export default function Navbar() {
           <img
             src="/pcml-logo-nav.svg"
             alt="Praetorian Construction Management"
-            style={{ height: "clamp(70px,7vw,96px)", width: "auto", display: "block" }}
+            style={{ height: "clamp(70px,7vw,96px)", width: "auto", display: "block", animation: "pcmlLogoPulse 3s ease-in-out infinite", transformOrigin: "left center" }}
           />
         </Link>
 

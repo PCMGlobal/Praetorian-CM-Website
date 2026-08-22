@@ -21,9 +21,11 @@ type Props = {
   projects: Pin[];
   tourMs?: number;
   logo?: string;
+  /** Numbered project rail beneath the map. Hidden by default. */
+  showRail?: boolean;
 };
 
-export default function WorldMap({ projects, tourMs = 4200, logo = "/pcml-logo-nav.svg" }: Props) {
+export default function WorldMap({ projects, tourMs = 4200, logo = "/pcml-logo-nav.svg", showRail = false }: Props) {
   const stageRef = useRef<HTMLDivElement | null>(null);
   const calloutRef = useRef<HTMLDivElement | null>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
@@ -382,75 +384,78 @@ export default function WorldMap({ projects, tourMs = 4200, logo = "/pcml-logo-n
         />
       </div>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(184px,1fr))",
-          border: "1px solid rgba(176,101,51,.28)",
-          borderTop: 0,
-          background: "#062633",
-        }}
-      >
-        {projects.map((p, i) => {
-          const on = i === active;
-          return (
-            <button
-              key={`${p.name}-${i}`}
-              type="button"
-              onClick={() => {
-                pausedRef.current = true;
-                select(i);
-              }}
-              style={{
-                appearance: "none",
-                textAlign: "left",
-                cursor: "pointer",
-                background: on ? "rgba(176,101,51,.22)" : "transparent",
-                border: 0,
-                borderRight: "1px solid rgba(176,101,51,.22)",
-                borderTop: `2px solid ${on ? "#B06533" : "transparent"}`,
-                padding: "12px 14px 13px",
-                fontFamily: 'var(--font-work-sans), system-ui, sans-serif',
-                color: "#cfd6da",
-                display: "block",
-                width: "100%",
-                transition: "background .2s",
-              }}
-            >
-              <span
+      {showRail && (
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(184px,1fr))",
+            border: "1px solid rgba(176,101,51,.28)",
+            borderTop: 0,
+            background: "#062633",
+          }}
+        >
+          {projects.map((p, i) => {
+            const on = i === active;
+            return (
+              <button
+                key={`${p.name}-${i}`}
+                type="button"
+                onClick={() => {
+                  pausedRef.current = true;
+                  select(i);
+                }}
                 style={{
+                  appearance: "none",
+                  textAlign: "left",
+                  cursor: "pointer",
+                  background: on ? "rgba(176,101,51,.22)" : "transparent",
+                  border: 0,
+                  borderRight: "1px solid rgba(176,101,51,.22)",
+                  borderTop: `2px solid ${on ? "#B06533" : "transparent"}`,
+                  padding: "12px 14px 13px",
+                  fontFamily: 'var(--font-work-sans), system-ui, sans-serif',
+                  color: "#cfd6da",
                   display: "block",
-                  fontFamily: "var(--font-sora), sans-serif",
-                  fontWeight: 600,
-                  fontSize: 11,
-                  letterSpacing: ".14em",
-                  textTransform: "uppercase",
-                  color: on ? "#d99a68" : "#7d8890",
+                  width: "100%",
+                  transition: "background .2s",
                 }}
               >
-                {String(i + 1).padStart(2, "0")}
-                {p.flagship ? " \u00b7 Flagship" : ""}
-              </span>
-              <span
-                style={{
-                  display: "block",
-                  fontFamily: "var(--font-sora), sans-serif",
-                  fontWeight: 600,
-                  fontSize: 17,
-                  lineHeight: 1.15,
-                  marginTop: 3,
-                  color: on ? "#fff" : "#c3ccd0",
-                }}
-              >
-                {p.name}
-              </span>
-              <span style={{ display: "block", fontSize: 11.5, color: "#8a9298", marginTop: 2 }}>
-                {p.place}
-              </span>
-            </button>
-          );
-        })}
-      </div>
+                <span
+                  style={{
+                    display: "block",
+                    fontFamily: "var(--font-sora), sans-serif",
+                    fontWeight: 600,
+                    fontSize: 11,
+                    letterSpacing: ".14em",
+                    textTransform: "uppercase",
+                    color: on ? "#d99a68" : "#7d8890",
+                  }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                  {p.flagship ? " \u00b7 Flagship" : ""}
+                </span>
+                <span
+                  style={{
+                    display: "block",
+                    fontFamily: "var(--font-sora), sans-serif",
+                    fontWeight: 600,
+                    fontSize: 17,
+                    lineHeight: 1.15,
+                    marginTop: 3,
+                    color: on ? "#fff" : "#c3ccd0",
+                  }}
+                >
+                  {p.name}
+                </span>
+                <span style={{ display: "block", fontSize: 11.5, color: "#8a9298", marginTop: 2 }}>
+                  {p.place}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
     </div>
   );
 }
