@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NewsletterSignup from "@/app/components/NewsletterSignup";
 
 const SOCIALS = [
   {
@@ -160,38 +161,7 @@ export default function Footer() {
             >
               Subscribe to Insights
             </div>
-            <div style={{ display: "flex", gap: 10, flexWrap: "wrap", maxWidth: 360 }}>
-              <input
-                type="email"
-                placeholder="Your email address"
-                aria-label="Email address"
-                style={{
-                  flex: "1 1 190px",
-                  minHeight: 44,
-                  background: "rgba(255,255,255,.06)",
-                  border: "1px solid rgba(255,255,255,.22)",
-                  color: "#fff",
-                  padding: "0 12px",
-                  font: "inherit",
-                }}
-              />
-              <button
-                type="button"
-                className="pcml-cta"
-                style={{
-                  background: "#B06533",
-                  color: "#fff",
-                  border: 0,
-                  minHeight: 44,
-                  padding: "0 18px",
-                  fontFamily: "var(--font-sora), sans-serif",
-                  fontWeight: 600,
-                  cursor: "pointer",
-                }}
-              >
-                Subscribe
-              </button>
-            </div>
+            <NewsletterSignup />
             <div style={{ display: "flex", gap: 12, marginTop: 26 }}>
               {SOCIALS.map((s) => ( <a key={s.label} href={s.href} aria-label={s.label} target={s.href === "#" ? undefined : "_blank"} rel={s.href === "#" ? undefined : "noopener noreferrer"} className="pcml-social" style={{ display: "grid", placeItems: "center", width: 46, height: 46, background: "#B06533", color: "#fff" }}><svg width={s.size} height={s.size} viewBox="0 0 24 24" fill="currentColor"><path d={s.path} /></svg></a> ))}
               <a href="#" aria-label="Instagram" className="pcml-social" style={{ display: "grid", placeItems: "center", width: 46, height: 46, background: "#B06533", color: "#fff" }}>

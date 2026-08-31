@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "@/app/components/ContactForm";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -28,47 +29,7 @@ export default function ContactPage() {
               <div>
                 <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Send an enquiry</div>
                 <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '12px 0 28px', color: '#003E52' }}>Tell us about your project</h2>
-                <div style={{ display: 'grid', gap: '16px' }}>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                    <div>
-                      <label style={{ display: 'block', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#003E52', marginBottom: '6px' }}>First name</label>
-                      <input type="text" placeholder="James" style={{ width: '100%', padding: '10px 12px', border: '1px solid #d4d6d8', fontSize: '14px', color: '#333', outline: 'none', boxSizing: 'border-box' }} />
-                    </div>
-                    <div>
-                      <label style={{ display: 'block', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#003E52', marginBottom: '6px' }}>Last name</label>
-                      <input type="text" placeholder="Hartley" style={{ width: '100%', padding: '10px 12px', border: '1px solid #d4d6d8', fontSize: '14px', color: '#333', outline: 'none', boxSizing: 'border-box' }} />
-                    </div>
-                  </div>
-                  <div>
-                    <label style={{ display: 'block', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#003E52', marginBottom: '6px' }}>Company</label>
-                    <input type="text" placeholder="Your organisation" style={{ width: '100%', padding: '10px 12px', border: '1px solid #d4d6d8', fontSize: '14px', color: '#333', outline: 'none', boxSizing: 'border-box' }} />
-                  </div>
-                  <div>
-                    <label style={{ display: 'block', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#003E52', marginBottom: '6px' }}>Email</label>
-                    <input type="email" placeholder="james@company.com" style={{ width: '100%', padding: '10px 12px', border: '1px solid #d4d6d8', fontSize: '14px', color: '#333', outline: 'none', boxSizing: 'border-box' }} />
-                  </div>
-                  <div>
-                    <label style={{ display: 'block', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#003E52', marginBottom: '6px' }}>Project stage</label>
-                    <select style={{ width: '100%', padding: '10px 12px', border: '1px solid #d4d6d8', fontSize: '14px', color: '#333', outline: 'none', background: '#fff', boxSizing: 'border-box' }}>
-                      <option value="">Select stage</option>
-                      <option>Scoping or Conceptual</option>
-                      <option>Pre-feasibility</option>
-                      <option>Feasibility</option>
-                      <option>Execution or Construction</option>
-                      <option>Commissioning</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label style={{ display: 'block', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#003E52', marginBottom: '6px' }}>Tell us about your project</label>
-                    <textarea rows={5} placeholder="Project type, location, key challenges..." style={{ width: '100%', padding: '10px 12px', border: '1px solid #d4d6d8', fontSize: '14px', color: '#333', outline: 'none', resize: 'vertical', boxSizing: 'border-box' }}></textarea>
-                  </div>
-                  <button type="button" style={{ background: '#B06533', color: '#fff', border: '0', padding: '0 28px', minHeight: '48px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '15px', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '10px', alignSelf: 'start' }}>
-                    Submit Enquiry
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                  </button>
-                  <p style={{ fontSize: '12px', color: '#8b9095', margin: '0', fontStyle: 'italic' }}>Form connects to info@praetoriancm.com at launch. Static layout for design review.</p>
-                </div>
+                <ContactForm />
               </div>
               <div>
                 <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Get in touch directly</div>
