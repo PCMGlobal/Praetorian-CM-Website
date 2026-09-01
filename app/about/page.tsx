@@ -69,6 +69,33 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
+          <section id="whypraetorian" style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
+            <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Why Praetorian</div>
+            <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>Why Praetorian?</h2>
+            <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 'clamp(20px,2.6vw,30px)' }}>
+              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #003E52', background: '#f7f7f7' }}>
+                <div style={{ fontSize: '36px', marginBottom: '16px' }}>⚙️</div>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Project Execution and Engineering Independence</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>We are at arm's length to the engineering efforts giving us the ability to make recommendations and take actions that are unbiased and transparent.</p>
+              </div>
+              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #B06533', background: '#f7f7f7' }}>
+                <div style={{ fontSize: '36px', marginBottom: '16px' }}>🌐</div>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Global Experience and Adaptability</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Our ability to adapt to new environments, cultures and market locations. We understand what it takes to operate in international markets.</p>
+              </div>
+              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #003E52', background: '#f7f7f7' }}>
+                <div style={{ fontSize: '36px', marginBottom: '16px' }}>👥</div>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Efficient and Economical Multi-Functional Teams</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Our teams are cross-trained, leading to non-duplication of roles without sacrificing quality. This is especially important for rotational shift works.</p>
+              </div>
+              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #B06533', background: '#f7f7f7' }}>
+                <div style={{ fontSize: '36px', marginBottom: '16px' }}>🧩</div>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Flexibility and Integrated Team Approach</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Our experience working as an integrated project management team alongside client personnel and/or other organisations gives us a unique advantage in the industry.</p>
+              </div>
+            </div>
+          </section>
           <section id="pcml-management" style={{ background: '#003E52', padding: 'clamp(46px,6vw,84px) 0' }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
               <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>Management Team</div>
