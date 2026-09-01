@@ -24,7 +24,7 @@ export default function NewsPage() {
             </div>
           </section>
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(20px,2.6vw,30px)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 'clamp(20px,2.6vw,30px)' }}>
               <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
                 <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
                 <div style={{ padding: '20px 22px 24px' }}>
@@ -79,8 +79,7 @@ export default function NewsPage() {
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12.5px', color: '#7d8288' }}><span>May 2026 · 5 min read</span><span style={{ color: '#B06533', fontWeight: '600' }}>Read</span></div>
                 </div>
               </a>
-            </div>
-                          <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+              <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
                 <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
                 <div style={{ padding: '20px 22px 24px' }}>
                   <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Project Management</span>
@@ -98,8 +97,9 @@ export default function NewsPage() {
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12.5px', color: '#7d8288' }}><span>Mar 2026 · 7 min read</span><span style={{ color: '#B06533', fontWeight: '600' }}>Read</span></div>
                 </div>
               </a>
-<div style={{ textAlign: 'center', marginTop: '46px', paddingTop: '34px', borderTop: '1px solid #e4e6e7' }}>
-                 <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#003E52', color: '#fff', textDecoration: 'none', minHeight: '44px', padding: '0 22px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '14px' }}>Subscribe to Insights</a>
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '46px', paddingTop: '34px', borderTop: '1px solid #e4e6e7' }}>
+              <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#003E52', color: '#fff', textDecoration: 'none', minHeight: '44px', padding: '0 22px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '14px' }}>Subscribe to Insights</a>
             </div>
           </section>
         </div>
