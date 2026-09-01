@@ -247,27 +247,27 @@ export default function HomePage() {
             <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>Resources for Project Owners</h2>
             <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px auto 34px' }}></div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 'clamp(16px,2vw,22px)', textAlign: 'left' }}>
-              <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', tecoration: 'none', color: 'inherit', display: 'block' }}>
+              <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><path d="M4 4h16v16H4z" /><path d="M8 9h8M8 13h5" /></svg>
                 <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Blog &amp; Insights</h4>
                 <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Industry commentary</p>
               </a>
-              <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', tecoration: 'none', color: 'inherit', display: 'block' }}>
+              <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><path d="M12 5v15" /><path d="M12 5c-1.5-1.3-4-2-8-2v15c4 0 6.5.7 8 2 1.5-1.3 4-2 8-2V3c-4 0-6.5.7-8 2Z" /></svg>
                 <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Business Guides</h4>
                 <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Best-practice guides</p>
               </a>
-              <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', tecoration: 'none', color: 'inherit', display: 'block' }}>
+              <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><path d="M3 3v18h18" /><path d="M7 16v-5M12 16V7M17 16v-8" /></svg>
                 <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Case Studies</h4>
                 <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Project case studies</p>
               </a>
-              <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', tecoration: 'none', color: 'inherit', display: 'block' }}>
+              <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><path d="M14 3H6v18h12V7l-4-4Z" /><path d="M14 3v4h4" /><path d="M9 13h6M9 17h4" /></svg>
                 <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Whitepapers</h4>
                 <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Downloadable reports</p>
               </a>
-              <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', tecoration: 'none', color: 'inherit', display: 'block' }}>
+              <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><rect x="2" y="5" width="14" height="14" /><path d="m16 10 6-3v10l-6-3z" /></svg>
                 <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Webinars &amp; Video</h4>
                 <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Expert-led sessions</p>
