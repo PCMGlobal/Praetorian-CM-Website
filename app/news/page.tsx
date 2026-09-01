@@ -80,9 +80,26 @@ export default function NewsPage() {
                 </div>
               </a>
             </div>
-            <div style={{ textAlign: 'center', marginTop: '46px', paddingTop: '34px', borderTop: '1px solid #e4e6e7' }}>
-              <p style={{ fontSize: '13.5px', color: '#7d8288', margin: '0 0 16px' }}>News and Insights will be CMS-driven at launch, Femi and Araceli manage posts directly through Sanity. Placeholder articles shown for layout review.</p>
-              <a href="mailto:info@praetoriancm.com" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#003E52', color: '#fff', textDecoration: 'none', minHeight: '44px', padding: '0 22px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '14px' }}>Subscribe to Insights</a>
+                          <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+                <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                <div style={{ padding: '20px 22px 24px' }}>
+                  <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Project Management</span>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>Why owner representation changes project outcomes from day one</h4>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 14px' }}>Projects that embed an owner team early consistently outperform those that bring oversight in after scope is set.</p>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12.5px', color: '#7d8288' }}><span>Apr 2026 · 6 min read</span><span style={{ color: '#B06533', fontWeight: '600' }}>Read</span></div>
+                </div>
+              </a>
+              <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
+                <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
+                <div style={{ padding: '20px 22px 24px' }}>
+                  <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Cost Intelligence</span>
+                  <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>Reading a mining feasibility study: what owners need to challenge</h4>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 14px' }}>Feasibility studies are produced by engineers for engineers. Here is what an owner team needs to interrogate before committing capital.</p>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12.5px', color: '#7d8288' }}><span>Mar 2026 · 7 min read</span><span style={{ color: '#B06533', fontWeight: '600' }}>Read</span></div>
+                </div>
+              </a>
+<div style={{ textAlign: 'center', marginTop: '46px', paddingTop: '34px', borderTop: '1px solid #e4e6e7' }}>
+                 <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#003E52', color: '#fff', textDecoration: 'none', minHeight: '44px', padding: '0 22px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '14px' }}>Subscribe to Insights</a>
             </div>
           </section>
         </div>
