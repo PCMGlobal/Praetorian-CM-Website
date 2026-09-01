@@ -7,13 +7,13 @@ const SOCIALS = [
   },
   {
     label: "X",
-    href: "#",
+    href: "https://x.com/PraetorianCMgmt",
     size: 13,
     path: "M17.5 3h3.2l-7 8 7.3 10h-5.6l-4.4-6.2L5.8 21H2.6l7.4-8.4L3 3h5.7l4.1 5.8L17.5 3Zm-1.1 16h1.7L7.6 4.8H5.8L16.4 19Z",
   },
   {
     label: "YouTube",
-    href: "#",
+    href: "https://youtube.com/@PraetorianCM",
     size: 14,
     path: "M22.5 7.3a3 3 0 0 0-2.1-2.1C18.6 4.7 12 4.7 12 4.7s-6.6 0-8.4.5A3 3 0 0 0 1.5 7.3C1 9.1 1 12 1 12s0 2.9.5 4.7a3 3 0 0 0 2.1 2.1c1.8.5 8.4.5 8.4.5s6.6 0 8.4-.5a3 3 0 0 0 2.1-2.1c.5-1.8.5-4.7.5-4.7s0-2.9-.5-4.7ZM9.8 15.4V8.6l6 3.4-6 3.4Z",
   },
@@ -57,7 +57,7 @@ export default function UtilityBar() {
 
         {SOCIALS.map((s) => ( <a key={s.label} href={s.href} aria-label={s.label} target={s.href === "#" ? undefined : "_blank"} rel={s.href === "#" ? undefined : "noopener noreferrer"} className="pcml-social" style={{ display: "grid", placeItems: "center", width: 26, height: 26, background: "#B06533", color: "#fff" }}><svg width={s.size} height={s.size} viewBox="0 0 24 24" fill="currentColor"><path d={s.path} /></svg></a> ))}
 
-        <a href="#" aria-label="Instagram" className="pcml-social" style={{ display: "grid", placeItems: "center", width: 26, height: 26, background: "#B06533", color: "#fff" }}>
+        <a href="https://instagram.com/praetoriancm" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="pcml-social" style={{ display: "grid", placeItems: "center", width: 26, height: 26, background: "#B06533", color: "#fff" }}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
             <rect x="3" y="3" width="18" height="18" />
             <circle cx="12" cy="12" r="4" />
