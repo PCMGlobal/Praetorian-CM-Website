@@ -60,6 +60,7 @@ export default function ContactPage() {
                     <div>
                       <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '14px', color: '#003E52', marginBottom: '4px' }}>Email</div>
                       <a href="mailto:info@praetoriancm.com" style={{ fontSize: '14px', color: '#B06533', textDecoration: 'none' }}>info@praetoriancm.com</a>
+                      <a href="mailto:bd@praetoriancm.com" style={{ fontSize: '14px', color: '#B06533', textDecoration: 'none', display: 'block', marginTop: '4px' }}>bd@praetoriancm.com</a>
                     </div>
                   </div>
                 </div>
