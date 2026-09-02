@@ -1,8 +1,8 @@
-﻿import { createClient } from '@sanity/client'
+import { createClient } from '@sanity/client'
 
 export const client = createClient({
-  projectId: 'ke8lg18i',
+  projectId: 'ke8lgl8i',
   dataset: 'production',
-  useCdn: true,
+  useCdn: false,
   apiVersion: '2024-01-01'
 })
