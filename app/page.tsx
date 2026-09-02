@@ -1,15 +1,47 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import MapSection from "@/app/components/MapSection";
 import { type Pin } from "@/app/components/WorldMap";
 import projectPins from "@/data/project-pins.json";
 import Link from "next/link";
+import { client } from "@/lib/sanity";
 
 export const metadata: Metadata = {
   title: "Praetorian Construction Management | Mining Construction Management",
   description: "Owner's team construction management for the global mining sector, with AI-powered cost intelligence built in.",
 };
 
-export default function HomePage() {
+
+type HomeArticle = {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  category: string;
+  publishedAt: string;
+  readTime: number;
+  coverImageUrl: string | null;
+};
+
+function formatHomeDate(dateStr: string): string {
+  if (!dateStr) return "";
+  const d = new Date(dateStr);
+  return d.toLocaleDateString("en-CA", { month: "short", year: "numeric" });
+}
+
+async function getLatestArticles() {
+  try {
+    return await client.fetch(
+      `*[_type == "article" && defined(slug.current)] | order(publishedAt desc) [0...3] {
+        _id, title, slug, category, publishedAt, readTime,
+        "coverImageUrl": heroImage.asset->url
+      }`
+    );
+  } catch {
+    return [];
+  }
+}
+
+export default async function HomePage() {
+  const latestArticles = await getLatestArticles();
   return (
     <main>
       <div>
@@ -37,8 +69,8 @@ export default function HomePage() {
               <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))' }}>
                 <div style={{ padding: '18px 20px', borderRight: '1px solid rgba(255,255,255,.16)' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>20<span style={{ color: '#e3ab7c' }}>+</span></div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Years delivering</div></div>
                 <div style={{ padding: '18px 20px', borderRight: '1px solid rgba(255,255,255,.16)' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>60<span style={{ color: '#e3ab7c' }}>+</span></div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Projects globally</div></div>
-                <div style={{ padding: '18px 20px', borderRight: '1px solid rgba(255,255,255,.16)' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>6</div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Countries of operation</div></div>
-                <div style={{ padding: '18px 20px' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>$3.6<span style={{ color: '#e3ab7c' }}>B+</span></div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Capital managed (CAD)</div></div>
+                <div style={{ padding: '18px 20px' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>6</div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Countries of operation</div></div>
+                
               </div>
             </div>
           </section>
@@ -278,30 +310,30 @@ export default function HomePage() {
               <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>News &amp; Insights</h2>
               <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 34px' }}></div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(20px,2.6vw,30px)' }}>
-                <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
-                  <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
-                  <div style={{ padding: '18px 20px 22px' }}>
-                    <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Cost Intelligence</span>
-                    <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>How AI is reshaping project cost benchmarking in global mining</h4>
-                    <div style={{ fontSize: '12.5px', color: '#7d8288' }}>Aug 2026 � 5 min read</div>
-                  </div>
-                </a>
-                <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
-                  <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1709489662983-3674d790b224?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
-                  <div style={{ padding: '18px 20px 22px' }}>
-                    <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Project Controls</span>
-                    <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>Five lessons from managing $1B+ projects in remote environments</h4>
-                    <div style={{ fontSize: '12.5px', color: '#7d8288' }}>Aug 2026 � 7 min read</div>
-                  </div>
-                </a>
-                <a data-reveal="" href="#" style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}>
-                  <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}><div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1523848309072-c199db53f137?w=800&auto=format&fit=crop&q=70)' }} ></div></div>
-                  <div style={{ padding: '18px 20px 22px' }}>
-                    <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>Health, Safety, Security, and Environment</span>
-                    <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>HSSE leadership: why owner's team culture sets the site culture</h4>
-                    <div style={{ fontSize: '12.5px', color: '#7d8288' }}>Jul 2026 � 4 min read</div>
-                  </div>
-                </a>
+                {latestArticles.map((article: HomeArticle) => (
+                  <Link
+                    key={article._id}
+                    href={'/news/' + article.slug.current}
+                    data-reveal=''
+                    style={{ textDecoration: 'none', color: 'inherit', display: 'block', background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)' }}
+                  >
+                    <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
+                      {article.coverImageUrl ? (
+                        <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(' + article.coverImageUrl + ')' }} />
+                      ) : (
+                        <div style={{ position: 'absolute', inset: '0', background: '#003E52' }} />
+                      )}
+                    </div>
+                    <div style={{ padding: '18px 20px 22px' }}>
+                      <span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: '#B06533' }}>{article.category}</span>
+                      <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '10px 0 8px', lineHeight: '1.25', color: '#003E52' }}>{article.title}</h4>
+                      <div style={{ fontSize: '12.5px', color: '#7d8288' }}>{formatHomeDate(article.publishedAt)}{article.readTime ? ' \u00B7 ' + article.readTime + ' min read' : ''}</div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <div style={{ textAlign: 'center', marginTop: '40px' }}>
+                <Link href='/news' style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#003E52', color: '#fff', textDecoration: 'none', minHeight: '44px', padding: '0 24px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '14px' }}>View All Articles</Link>
               </div>
             </div>
           </section>
