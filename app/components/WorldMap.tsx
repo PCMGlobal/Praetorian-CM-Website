@@ -21,11 +21,13 @@ type Props = {
   projects: Pin[];
   tourMs?: number;
   logo?: string;
+  onActiveChange?: (index: number) => void;
+  requestActive?: number | null;
   /** Numbered project rail beneath the map. Hidden by default. */
   showRail?: boolean;
 };
 
-export default function WorldMap({ projects, tourMs = 4200, logo = "/pcml-logo-nav.svg", showRail = false }: Props) {
+export default function WorldMap({ projects, tourMs = 4200, logo = "/pcml-logo-nav.svg", showRail = false, onActiveChange, requestActive }: Props) {
   const stageRef = useRef<HTMLDivElement | null>(null);
   const calloutRef = useRef<HTMLDivElement | null>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
@@ -188,6 +190,7 @@ export default function WorldMap({ projects, tourMs = 4200, logo = "/pcml-logo-n
       const on = () => {
         pausedRef.current = true;
         select(i);
+        onActiveChange?.(i);
       };
       g.on("mouseenter", on).on("focus", on);
 
@@ -314,10 +317,21 @@ export default function WorldMap({ projects, tourMs = 4200, logo = "/pcml-logo-n
     if (!ready || tourMs < 400) return;
     const t = setInterval(() => {
       if (pausedRef.current) return;
-      setActive((a) => (a + 1) % projects.length);
+      setActive((a) => {
+        const next = (a + 1) % projects.length;
+        onActiveChange?.(next);
+        return next;
+      });
     }, tourMs);
     return () => clearInterval(t);
   }, [ready, tourMs, projects.length]);
+
+  /* ---------- external active override (box hover) ---------- */
+  useEffect(() => {
+    if (requestActive == null) return;
+    pausedRef.current = true;
+    select(requestActive);
+  }, [requestActive, select]);
 
   return (
     <div

@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 type Box = {
   country: string;
   label: string;
@@ -18,9 +16,13 @@ const BOXES: Box[] = [
   { country: "Armenia", label: "Armenia", sub: "1 project \u00b7 flagship", badge: "Flagship" },
 ];
 
-export default function CountryBoxes() {
-  const [hover, setHover] = useState<string | null>(null);
-
+export default function CountryBoxes({
+  activeCountry = null,
+  onHover,
+}: {
+  activeCountry?: string | null;
+  onHover?: (country: string | null) => void;
+}) {
   return (
     <div
       style={{
@@ -32,13 +34,13 @@ export default function CountryBoxes() {
       }}
     >
       {BOXES.map((b) => {
-        const on = hover === b.country;
+        const on = activeCountry === b.country;
         return (
           <div
             key={b.country}
             data-country={b.country}
-            onMouseEnter={() => setHover(b.country)}
-            onMouseLeave={() => setHover(null)}
+            onMouseEnter={() => onHover?.(b.country)}
+            onMouseLeave={() => onHover?.(null)}
             style={{
               flex: 1,
               minWidth: 130,
