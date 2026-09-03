@@ -25,42 +25,42 @@ export default function ServicesPage() {
           </section>
 
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(44px,6vw,78px) clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '0', borderBottom: '1px solid #e4e6e7' }}>
-            <div style={{ padding: '0 clamp(20px,2.4vw,32px) 34px 0', borderRight: '1px solid #e4e6e7' }}>
+            <div id="owners-team-support" style={{ padding: '0 clamp(20px,2.4vw,32px) 34px 0', borderRight: '1px solid #e4e6e7', scrollMarginTop: '100px' }}>
               <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>01</div>
               <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '26px', margin: '12px 0 10px', color: '#003E52' }}>Owner's Team Support</h3>
               <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 18px' }}>Embedded directly in your team, from study through handover.</p>
               <div style={{ display: 'grid', gap: '0', borderTop: '1px solid #e4e6e7' }}>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Study Development &amp; Planning <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Project Execution Readiness <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Project Execution Support <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Project Due Diligence <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Health, Safety, Security, and Environment Oversight <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Shutdown &amp; Turnaround <span style={{ color: '#B06533' }}>+</span></a>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Study Development &amp; Planning</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Project Execution Readiness</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Project Execution Support</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Project Due Diligence</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Health, Safety, Security, and Environment Oversight</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Shutdown &amp; Turnaround</div>
               </div>
             </div>
-            <div style={{ padding: '0 clamp(20px,2.4vw,32px) 34px', borderRight: '1px solid #e4e6e7' }}>
+            <div id="project-services" style={{ padding: '0 clamp(20px,2.4vw,32px) 34px', borderRight: '1px solid #e4e6e7', scrollMarginTop: '100px' }}>
               <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>02</div>
               <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '26px', margin: '12px 0 10px', color: '#003E52' }}>Project Services</h3>
               <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 18px' }}>Technical and commercial controls across the full project lifecycle.</p>
               <div style={{ display: 'grid', gap: '0', borderTop: '1px solid #e4e6e7' }}>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Procurement &amp; Contracts <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Cost Control &amp; Estimating <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Planning &amp; Scheduling <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Document Management <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Risk Management <span style={{ color: '#B06533' }}>+</span></a>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Procurement &amp; Contracts</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Cost Control &amp; Estimating</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Planning &amp; Scheduling</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Document Management</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Risk Management</div>
               </div>
             </div>
-            <div style={{ padding: '0 0 34px clamp(20px,2.4vw,32px)' }}>
+            <div id="operational-consulting" style={{ padding: '0 0 34px clamp(20px,2.4vw,32px)', scrollMarginTop: '100px' }}>
               <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>03</div>
               <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '26px', margin: '12px 0 10px', color: '#003E52' }}>Operational Consulting</h3>
               <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 18px' }}>Long-term operational performance after the project is handed over.</p>
               <div style={{ display: 'grid', gap: '0', borderTop: '1px solid #e4e6e7' }}>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Leadership Alignment <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Change Management <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Asset Integrity <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Asset Optimisation <span style={{ color: '#B06533' }}>+</span></a>
-                <a href="#" style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Process Safety Management <span style={{ color: '#B06533' }}>+</span></a>
-                <Link href="/praetorian-iq" style={{ padding: '11px 0', border: '0', borderBottom: '1px solid #e4e6e7', background: 'none', font: 'inherit', fontSize: '14px', color: '#B06533', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', gap: '10px', width: '100%', textAlign: 'left', fontFamily: 'var(--font-work-sans), sans-serif' }}>Praetorian IQ Platform <span>+</span></Link>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Leadership Alignment</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Change Management</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Asset Integrity</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Asset Optimisation</div>
+                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Process Safety Management</div>
+                
               </div>
             </div>
           </section>

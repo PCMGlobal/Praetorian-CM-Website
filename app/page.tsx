@@ -81,7 +81,7 @@ export default async function HomePage() {
                 <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>01</div>
                 <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Owner's Team Support</h3>
                 <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Study development, execution readiness, and H&amp;S oversight, embedded directly in your team.</p>
-                <Link href="/services" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                <Link href="/services#owners-team-support" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                 </Link>
               </div>
@@ -89,7 +89,7 @@ export default async function HomePage() {
                 <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>02</div>
                 <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Project Services</h3>
                 <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Procurement, cost control, scheduling, document management and risk, integrated from Day 1.</p>
-                <Link href="/services" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                <Link href="/services#project-services" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                 </Link>
               </div>
@@ -97,7 +97,7 @@ export default async function HomePage() {
                 <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>03</div>
                 <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Operational Consulting</h3>
                 <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Leadership alignment, asset optimisation, and process safety for long-term operational performance.</p>
-                <Link href="/services" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                <Link href="/services#operational-consulting" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                 </Link>
               </div>
