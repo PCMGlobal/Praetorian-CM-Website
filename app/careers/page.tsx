@@ -10,7 +10,6 @@ export default function CareersPage() {
   return (
     <main>
       <div>
-
           <section style={{ position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1680463990599-9d318aaecf71?w=1400&auto=format&fit=crop&q=80)' }}></div>
             <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.72) 48%,rgba(0,15,22,.4) 100%)' }}></div>
@@ -20,7 +19,7 @@ export default function CareersPage() {
                 Home
               </Link>
               <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginTop: '22px' }}>Careers</div>
-              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '24ch' }}>Build the world's most complex projects. From the owner's side.</h1>
+              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '24ch' }}>Build the world&apos;s most complex projects. From the owner&apos;s side.</h1>
               <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '62ch', color: '#c3d0d4', margin: '18px 0 0' }}>Praetorian offers career opportunities in project management with a primary focus on capital project development in the mining industry. Successful candidates demonstrate an interest and personal drive towards growth in their leadership and technical abilities.</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '28px' }}>
                 <a href="#pcml-opportunities" style={{ background: '#B06533', color: '#fff', textDecoration: 'none', minHeight: '48px', display: 'flex', alignItems: 'center', padding: '0 24px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '15px' }}>View Opportunities</a>
@@ -53,8 +52,8 @@ export default function CareersPage() {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e3ab7c" strokeWidth="1.6"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><path d="m9 11 3 3L22 4" /></svg>
                   </div>
                   <div>
-                    <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '17px', color: '#003E52', margin: '0 0 6px' }}>Owner's team accountability</h4>
-                    <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#555c60', margin: '0' }}>Embedded directly in the client's ownership team, making decisions that directly affect project outcomes.</p>
+                    <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '17px', color: '#003E52', margin: '0 0 6px' }}>Owner&apos;s team accountability</h4>
+                    <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#555c60', margin: '0' }}>Embedded directly in the client&apos;s ownership team, making decisions that directly affect project outcomes.</p>
                   </div>
                 </div>
                 <div data-reveal="" style={{ padding: '28px 26px', borderBottom: '1px solid #e4e6e7', display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
@@ -85,13 +84,16 @@ export default function CareersPage() {
                 <div>
                   <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginBottom: '20px' }}>Our People, Our Value</div>
                   <svg width="36" height="28" viewBox="0 0 40 30" fill="#B06533" style={{ marginBottom: '20px' }}><path d="M0 30V19C0 8 6 2 18 0l3 4C15 5.5 12 8 11 12h6V30H0zm22 0V19C22 8 28 2 40 0l3 4C37 5.5 34 8 33 12h6V30H22z" /></svg>
-                  <p style={{ fontSize: '16px', lineHeight: '1.75', color: '#e9eef0', fontStyle: 'italic', margin: '0 0 28px' }}>I have been working with Praetorian for 7 years as Human Resource Manager and my favourite part about the company is the diverse work experience and locations, the international work and how much I am involved as a whole with the day to day operations. Working at PCML, the day to day direct contact with all members of the Team provides that &#8220;home&#8221; and &#8220;human&#8221; element to an industry that is sometimes lost with a larger organisation. Praetorian&#8217;s employee turnover rate is lower and they take care of their Team!</p>
+                  <p style={{ fontSize: '16px', lineHeight: '1.75', color: '#e9eef0', fontStyle: 'italic', margin: '0 0 28px' }}>I have been working with Praetorian for 7 years as Human Resource Manager and my favourite part about the company is the diverse work experience and locations, the international work and how much I am involved as a whole with the day to day operations. Working at PCML, the day to day direct contact with all members of the Team provides that &#8220;home&#8221; and &#8220;human&#8221; element to an industry that is sometimes lost with a larger organisation. Praetorian&#8217;s employee turnover rate is lower and they take care of their Team! Calling for all talents, the opportunities are endless and the next exciting opportunity is just around the corner!</p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                     <div style={{ width: '48px', height: '48px', background: '#B06533', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '18px', color: '#fff' }}>AG</div>
                     <div>
                       <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#fff' }}>Annette Genge</div>
                       <div style={{ fontSize: '13px', color: '#9aa9ae', marginTop: '3px' }}>Human Resource Manager</div>
                     </div>
+                  </div>
+                  <div style={{ marginTop: '28px' }}>
+                    <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#B06533', color: '#fff', padding: '0 24px', minHeight: '46px', fontSize: '15px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', textDecoration: 'none' }}>Apply Now</a>
                   </div>
                 </div>
                 <div style={{ display: 'grid', gap: '16px' }}>
@@ -157,7 +159,7 @@ export default function CareersPage() {
               <div>
                 <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Employment Opportunities</div>
                 <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(28px,3.2vw,40px)', margin: '12px 0 16px', color: '#003E52' }}>Live Positions</h2>
-                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0 0 16px' }}>Thank you for considering employment with Praetorian. Specific openings are posted as engagements are confirmed. If you don't see a role that matches your background, send us a profile; we maintain a register of qualified candidates for upcoming projects.</p>
+                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0 0 16px' }}>Thank you for considering employment with Praetorian. Specific openings are posted as engagements are confirmed. If you don&apos;t see a role that matches your background, send us a profile; we maintain a register of qualified candidates for upcoming projects.</p>
                 <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0 0 28px' }}>Send your resume directly to: <a href="mailto:careers@praetoriancm.com" style={{ color: '#B06533', fontWeight: '600' }}>careers@praetoriancm.com</a></p>
                 <a href="mailto:careers@praetoriancm.com" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#B06533', color: '#fff', textDecoration: 'none', minHeight: '46px', padding: '0 22px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '14px' }}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
@@ -216,8 +218,7 @@ export default function CareersPage() {
               </div>
             </div>
           </section>
-
-        </div>
+      </div>
     </main>
   );
 }
