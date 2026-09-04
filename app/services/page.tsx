@@ -1,10 +1,99 @@
-import type { Metadata } from "next";
+'use client';
 import Link from "next/link";
+import { useState } from "react";
 
-export const metadata: Metadata = {
-  title: "Services | Praetorian Construction Management",
-  description: "Three service families, one integrated owner's team. Engineering support, project services and operational consulting.",
+const SERVICES = {
+  owners: [
+    {
+      title: "Study Development & Planning",
+      body: "Praetorian embeds study managers and technical leads into the owner's team from concept through prefeasibility and feasibility, ensuring study scope, cost basis, and schedule assumptions are set by people who will be accountable for execution. We align study deliverables to your stage gate requirements, not a consultant's standard template."
+    },
+    {
+      title: "Project Execution Readiness",
+      body: "Before a project reaches sanction, the execution framework must already be in place. Praetorian assesses contracting strategy, procurement readiness, organisation design, and controls infrastructure so that first dollar of capital is spent against a plan that will hold."
+    },
+    {
+      title: "Project Execution Support",
+      body: "Once capital is sanctioned, Praetorian provides the full owner's team: project manager, controls lead, procurement lead, HSE representative, and document controller -- scaled to the project's stage and complexity. We manage the contractors so the owner maintains authority over scope, cost, and schedule."
+    },
+    {
+      title: "Project Due Diligence",
+      body: "Independent review of a project's technical, commercial, and execution basis -- whether for investment decision, acquisition, or internal governance. Praetorian delivers findings the owner can act on, not a report written to satisfy a process."
+    },
+    {
+      title: "Health, Safety, Security, and Environment Oversight",
+      body: "Owner-side HSSE representation embedded in the project team, not parachuted in for audits. Praetorian monitors contractor HSSE performance against the project's safety case, supports incident investigation, and ensures the owner's duty of care is actively discharged throughout the project lifecycle."
+    },
+    {
+      title: "Shutdown & Turnaround",
+      body: "Scope development, contractor management, and controls support for planned shutdowns and turnarounds. Praetorian helps owners set realistic scope freezes, manage cost growth, and close out safely -- protecting production targets and asset integrity."
+    },
+  ],
+  project: [
+    {
+      title: "Procurement & Contracts",
+      body: "Contracting strategy, tender package development, bid evaluation, and contract administration. Praetorian structures procurement to match project risk profile and market conditions, and stays engaged through contract close-out to protect the owner's commercial position."
+    },
+    {
+      title: "Cost Control & Estimating",
+      body: "Independent cost estimating, budget development, and ongoing cost control throughout execution. Praetorian maintains the owner's cost position with rigour -- tracking commitments, accruals, trends, and forecasts so there are no surprises at close-out."
+    },
+    {
+      title: "Planning & Scheduling",
+      body: "Integrated project schedules that reflect real contractor logic, procurement lead times, and resource constraints. Praetorian builds and maintains schedules the project team actually uses to make decisions, and identifies critical path risks before they become delays."
+    },
+    {
+      title: "Document Management",
+      body: "Structured document control systems and protocols that ensure the right revision reaches the right party at the right time. Praetorian establishes document management frameworks that support construction, commissioning, and handover -- and that the asset owner can operate against for the life of the facility."
+    },
+    {
+      title: "Risk Management",
+      body: "Systematic identification, quantification, and active management of project risk. Praetorian facilitates risk workshops, maintains the risk register, and integrates risk outcomes into cost and schedule contingency so the owner holds a defensible position at every stage gate."
+    },
+  ],
+  operational: [
+    {
+      title: "Leadership Alignment",
+      body: "Praetorian works with asset leadership teams to align on operational priorities, performance targets, and organisational accountabilities. Structured facilitation that converts strategic intent into a shared operating model the team can execute against."
+    },
+    {
+      title: "Change Management",
+      body: "Structured support for organisations navigating operational transitions -- new systems, restructured teams, revised operating procedures, or post-project integration. Praetorian helps leadership manage the human side of change so performance targets are met during the transition, not after it."
+    },
+    {
+      title: "Asset Integrity",
+      body: "Assessment and improvement of the systems, processes, and competencies that keep physical assets performing safely within design limits. Praetorian helps operators identify integrity gaps before they become incidents and build the management systems to close them."
+    },
+    {
+      title: "Asset Optimisation",
+      body: "Performance analysis and improvement programmes targeting throughput, availability, and unit cost. Praetorian works from operating data to identify the highest-value opportunities and supports implementation through to sustained results."
+    },
+    {
+      title: "Process Safety Management",
+      body: "Review and strengthening of process safety management systems across the hierarchy of controls -- from hazard identification and barrier management through to emergency response and learning from incidents. Praetorian brings an owner's perspective to process safety: accountability sits with the operator, and the management system must reflect that."
+    },
+  ],
 };
+
+function AccordionItem({ title, body }: { title: string; body: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ borderBottom: '1px solid #e4e6e7' }}>
+      <button
+        onClick={() => setOpen(!open)}
+        style={{ width: '100%', background: 'none', border: '0', padding: '13px 0', fontSize: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '10px', color: '#1c2226', cursor: 'pointer', textAlign: 'left', fontFamily: 'var(--font-work-sans), sans-serif' }}
+      >
+        {title}
+        <span style={{ color: '#B06533', fontSize: '20px', lineHeight: '1', flexShrink: 0, transform: open ? 'rotate(45deg)' : 'none', transition: 'transform 0.2s' }}>+</span>
+      </button>
+      {open && (
+        <div style={{ fontSize: '14px', lineHeight: '1.7', color: '#5b6266', paddingBottom: '14px' }}>
+          {body}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function ServicesPage() {
   return (
@@ -19,77 +108,39 @@ export default function ServicesPage() {
                 Home
               </Link>
               <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginTop: '22px' }}>Services</div>
-              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '22ch' }}>Three service families, one integrated owner's team</h1>
-              <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '62ch', color: '#c3d0d4', margin: '18px 0 0' }}>Praetorian scales from a single embedded specialist to a full owner's project management office. Every engagement is staffed against your stage gates, not ours.</p>
+              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '22ch' }}>Three service families, one integrated owner&apos;s team</h1>
+              <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '62ch', color: '#c3d0d4', margin: '18px 0 0' }}>Praetorian scales from a single embedded specialist to a full owner&apos;s project management office. Every engagement is staffed against your stage gates, not ours.</p>
             </div>
           </section>
-
-          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(44px,6vw,78px) clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '0', borderBottom: '1px solid #e4e6e7' }}>
-            <div id="owners-team-support" style={{ padding: '0 clamp(20px,2.4vw,32px) 34px 0', borderRight: '1px solid #e4e6e7', scrollMarginTop: '100px' }}>
-              <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>01</div>
-              <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '26px', margin: '12px 0 10px', color: '#003E52' }}>Owner's Team Support</h3>
-              <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 18px' }}>Embedded directly in your team, from study through handover.</p>
-              <div style={{ display: 'grid', gap: '0', borderTop: '1px solid #e4e6e7' }}>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Study Development &amp; Planning</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Project Execution Readiness</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Project Execution Support</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Project Due Diligence</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Health, Safety, Security, and Environment Oversight</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Shutdown &amp; Turnaround</div>
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(40px,5vw,64px) clamp(16px,4vw,44px)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '0' }}>
+              <div id="owners-team-support" style={{ padding: '0 clamp(20px,2.4vw,32px) 34px 0', borderRight: '1px solid #e4e6e7', scrollMarginTop: '100px' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>01</div>
+                <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '26px', margin: '12px 0 10px', color: '#003E52' }}>Owner&apos;s Team Support</h3>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 18px' }}>Embedded directly in your team, from study through handover.</p>
+                <div style={{ borderTop: '1px solid #e4e6e7' }}>
+                  {SERVICES.owners.map(item => <AccordionItem key={item.title} title={item.title} body={item.body} />)}
+                </div>
               </div>
-            </div>
-            <div id="project-services" style={{ padding: '0 clamp(20px,2.4vw,32px) 34px', borderRight: '1px solid #e4e6e7', scrollMarginTop: '100px' }}>
-              <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>02</div>
-              <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '26px', margin: '12px 0 10px', color: '#003E52' }}>Project Services</h3>
-              <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 18px' }}>Technical and commercial controls across the full project lifecycle.</p>
-              <div style={{ display: 'grid', gap: '0', borderTop: '1px solid #e4e6e7' }}>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Procurement &amp; Contracts</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Cost Control &amp; Estimating</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Planning &amp; Scheduling</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Document Management</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Risk Management</div>
+              <div id="project-services" style={{ padding: '0 clamp(20px,2.4vw,32px) 34px', borderRight: '1px solid #e4e6e7', scrollMarginTop: '100px' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>02</div>
+                <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '26px', margin: '12px 0 10px', color: '#003E52' }}>Project Services</h3>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 18px' }}>Technical and commercial controls across the full project lifecycle.</p>
+                <div style={{ borderTop: '1px solid #e4e6e7' }}>
+                  {SERVICES.project.map(item => <AccordionItem key={item.title} title={item.title} body={item.body} />)}
+                </div>
               </div>
-            </div>
-            <div id="operational-consulting" style={{ padding: '0 0 34px clamp(20px,2.4vw,32px)', scrollMarginTop: '100px' }}>
-              <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>03</div>
-              <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '26px', margin: '12px 0 10px', color: '#003E52' }}>Operational Consulting</h3>
-              <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 18px' }}>Long-term operational performance after the project is handed over.</p>
-              <div style={{ display: 'grid', gap: '0', borderTop: '1px solid #e4e6e7' }}>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Leadership Alignment</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Change Management</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Asset Integrity</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Asset Optimisation</div>
-                <div style={{ padding: '11px 0', borderBottom: '1px solid #e4e6e7', fontSize: '14px', display: 'flex', justifyContent: 'space-between', gap: '10px', color: '#1c2226' }}>Process Safety Management</div>
-                
+              <div id="operational-consulting" style={{ padding: '0 0 34px clamp(20px,2.4vw,32px)', scrollMarginTop: '100px' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>03</div>
+                <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '26px', margin: '12px 0 10px', color: '#003E52' }}>Operational Consulting</h3>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 18px' }}>Long-term operational performance after the project is handed over.</p>
+                <div style={{ borderTop: '1px solid #e4e6e7' }}>
+                  {SERVICES.operational.map(item => <AccordionItem key={item.title} title={item.title} body={item.body} />)}
+                </div>
               </div>
             </div>
           </section>
-
-          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(44px,6vw,78px) clamp(16px,4vw,44px)' }}>
-            <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Coverage by phase</div>
-            <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(28px,3.2vw,40px)', margin: '12px 0 26px', color: '#003E52' }}>Where we plug into your stage gates</h2>
-            <div style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', minWidth: '640px' }}>
-                <thead>
-                  <tr style={{ borderBottom: '1px solid #e4e6e7' }}><th style={{ textAlign: 'left', padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#5b6266' }}>Phase</th><th style={{ textAlign: 'left', padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#5b6266' }}>Scope</th><th style={{ textAlign: 'left', padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#5b6266' }}>Typical team</th><th style={{ textAlign: 'left', padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#5b6266' }}>Deliverable</th></tr>
-                </thead>
-                <tbody>
-                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Concept / PEA</td><td style={{ padding: '10px' }}>Study management, options analysis</td><td style={{ padding: '10px' }}>1–2 specialists</td><td style={{ padding: '10px' }}>Study framework, cost basis</td></tr>
-                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Pre-feasibility</td><td style={{ padding: '10px' }}>Estimate review, constructability</td><td style={{ padding: '10px' }}>2–4</td><td style={{ padding: '10px' }}>PFS cost &amp; schedule basis</td></tr>
-                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Feasibility</td><td style={{ padding: '10px' }}>Execution readiness, contracting strategy</td><td style={{ padding: '10px' }}>4–8</td><td style={{ padding: '10px' }}>Execution plan, tender packages</td></tr>
-                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Execution</td><td style={{ padding: '10px' }}>Full owner's team, controls, HSE oversight</td><td style={{ padding: '10px' }}>8–30+</td><td style={{ padding: '10px' }}>Monthly cost/schedule reporting</td></tr>
-                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Commissioning</td><td style={{ padding: '10px' }}>QA/QC, turnover, ramp-up support</td><td style={{ padding: '10px' }}>4–10</td><td style={{ padding: '10px' }}>Turnover packages, punch closure</td></tr>
-                  <tr><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Operations</td><td style={{ padding: '10px' }}>Asset optimisation, process safety</td><td style={{ padding: '10px' }}>1–4</td><td style={{ padding: '10px' }}>Performance improvement plan</td></tr>
-          
-                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>IAMGold - Cote Gold</td><td style={{ padding: '10px' }}>Ontario, Canada</td><td style={{ padding: '10px' }}>IAMGold</td><td style={{ padding: '10px' }}>Owner's team, execution oversight</td><td style={{ padding: '10px' }}><span style={{ background: '#eceeee', color: '#4a4e50', padding: '3px 10px', fontSize: '11.5px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Execution</span></td></tr>
-                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Anglo American - Quellaveco</td><td style={{ padding: '10px' }}>Moquegua, Peru</td><td style={{ padding: '10px' }}>Anglo American</td><td style={{ padding: '10px' }}>Copper mine owner's team</td><td style={{ padding: '10px' }}><span style={{ background: '#eceeee', color: '#4a4e50', padding: '3px 10px', fontSize: '11.5px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Commissioned</span></td></tr>
-                  <tr style={{ borderBottom: '1px solid #eee' }}><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Teck - Elk Valley</td><td style={{ padding: '10px' }}>BC, Canada</td><td style={{ padding: '10px' }}>Teck Resources</td><td style={{ padding: '10px' }}>Steelmaking coal operations support</td><td style={{ padding: '10px' }}><span style={{ background: '#eceeee', color: '#4a4e50', padding: '3px 10px', fontSize: '11.5px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Operations</span></td></tr>
-                  <tr><td style={{ padding: '10px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}>Newmont - Phoenix Mill</td><td style={{ padding: '10px' }}>Nevada, USA</td><td style={{ padding: '10px' }}>Newmont</td><td style={{ padding: '10px' }}>Mill expansion, project controls</td><td style={{ padding: '10px' }}><span style={{ background: '#eceeee', color: '#4a4e50', padding: '3px 10px', fontSize: '11.5px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Execution</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-        </div>
+      </div>
     </main>
   );
 }
