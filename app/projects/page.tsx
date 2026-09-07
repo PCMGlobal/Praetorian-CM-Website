@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MapSection from "@/app/components/MapSection";
+import { type Pin } from "@/app/components/WorldMap";
+import projectPins from "@/data/project-pins.json";
 
 export const metadata: Metadata = {
   title: "Projects | Praetorian Construction Management",
@@ -13,7 +16,7 @@ export default function ProjectsPage() {
           <section style={{ position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1523848309072-c199db53f137?w=1400&auto=format&fit=crop&q=80)' }}></div>
             <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.72) 48%,rgba(0,15,22,.4) 100%)' }}></div>
-            <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: 'clamp(40px,5vw,72px) clamp(16px,4vw,44px)' }}>
+            <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: 'clamp(40px,5vw,72px) clamp(16px,4vw,44px) clamp(16px,2vw,28px)' }}>
               <Link href="/" style={{ background: 'none', border: '0', padding: '0', color: '#e3ab7c', fontSize: '13px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
                 Home
@@ -23,6 +26,7 @@ export default function ProjectsPage() {
               <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '62ch', color: '#c3d0d4', margin: '18px 0 0' }}></p>
             </div>
           </section>
+          <MapSection projects={projectPins as Pin[]} />
 
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(40px,5vw,66px) clamp(16px,4vw,44px)' }}>
             <div style={{ overflowX: 'auto' }}>

@@ -365,12 +365,12 @@ export default function WorldMap({ projects, tourMs = 4200, logo = "/pcml-logo-n
             fontFamily: 'var(--font-work-sans), system-ui, sans-serif',
           }}
         >
-          <img src={logo} alt="Praetorian Construction Management" style={{ height: 26, width: "auto", display: "block" }} />
+          <img src={logo} alt="Praetorian Construction Management" style={{ height: 56, width: "auto", display: "block" }} />
           <span
             style={{
               fontFamily: "var(--font-sora), sans-serif",
               fontWeight: 600,
-              fontSize: 11,
+              fontSize: 17,
               letterSpacing: ".18em",
               textTransform: "uppercase",
               color: "#d99a68",
