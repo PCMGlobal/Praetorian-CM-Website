@@ -106,6 +106,55 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
+      <section id="pcml-differentiators" style={{ padding: "clamp(46px,6vw,84px) 0", scrollMarginTop: "100px" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
+          <div data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533" }}>Our Advantage</div>
+          <h2 data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(30px,3.6vw,44px)", margin: "12px 0 0", color: "#003E52" }}>What Sets Us Apart</h2>
+          <div style={{ width: "64px", height: "3px", background: "#B06533", margin: "18px 0 38px" }}></div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "clamp(20px,2.6vw,28px)" }}>
+            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #003E52", background: "#f7f7f7" }}>
+              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🤝</div>
+              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Integrated Team Approach</h4>
+              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>We work directly within the owner's execution team, ensuring the best ideas from client personnel and consultants are put forward to drive project success.</p>
+            </div>
+            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #B06533", background: "#f7f7f7" }}>
+              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🔍</div>
+              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Engineering Independence</h4>
+              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>Operating at arm's length from the engineering effort gives us the ability to make recommendations and take actions that are unbiased and transparent on behalf of the owner.</p>
+            </div>
+            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #98999B", background: "#f7f7f7" }}>
+              <div style={{ fontSize: "36px", marginBottom: "16px" }}>👷</div>
+              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Balanced Professional Team</h4>
+              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>Our well-rounded team of tradespeople, technologists and engineers implements a balanced and practical approach to every project execution.</p>
+            </div>
+            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #003E52", background: "#f7f7f7" }}>
+              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🌍</div>
+              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Global Adaptability</h4>
+              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>We adapt to new environments, cultures and market locations across six countries, bringing deep international experience to every engagement.</p>
+            </div>
+            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #B06533", background: "#f7f7f7" }}>
+              <div style={{ fontSize: "36px", marginBottom: "16px" }}>⚙️</div>
+              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Cross-Trained Multi-Functional Teams</h4>
+              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>Our cross-trained teams eliminate duplication of roles without sacrificing quality -- especially critical for rotational shift work on remote sites.</p>
+            </div>
+            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #98999B", background: "#f7f7f7" }}>
+              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🏗️</div>
+              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Direct-Hire Contractor Experience</h4>
+              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>A large proportion of our team came through direct-hire contractor backgrounds, giving us experience-based solutions to specific contractor challenges.</p>
+            </div>
+            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #003E52", background: "#f7f7f7" }}>
+              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🎯</div>
+              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Completion-Focused From Day One</h4>
+              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>We set every project up with robust project controls and a completion focus from the start, with the end-goal of successful delivery and start-up.</p>
+            </div>
+            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #B06533", background: "#f7f7f7" }}>
+              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🌱</div>
+              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Community Development Focus</h4>
+              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>We leave every community better than we found it -- through local training, business growth, and social capital building that creates a lasting positive legacy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
           <section id="pcml-management" style={{ background: '#003E52', padding: 'clamp(46px,6vw,84px) 0' }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
               <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>Management Team</div>

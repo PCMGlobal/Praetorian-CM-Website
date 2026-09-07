@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -13,7 +13,8 @@ const ABOUT: Item[] = [
   { label: "Who We Are", href: "/about" },
   { label: "Mission, Vision and Goals", href: "/about#pcml-mission" },
   { label: "Why Praetorian?", href: "/about#whypraetorian" },
-  { label: "Management Team", href: "/about#pcml-management" },
+  { label: "What Sets Us Apart", href: "/about#pcml-differentiators" },
+    { label: "Management Team", href: "/about#pcml-management" },
 ];
 
 const SERVICES: Item[] = [
