@@ -19,15 +19,15 @@ export default function AboutPage() {
                 Home
               </Link>
               <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginTop: '22px' }}>About Us</div>
-              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '26ch' }}>Mining construction and project management specialists.</h1>
-              <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '70ch', color: '#c3d0d4', margin: '18px 0 0' }}>Praetorian Construction Management has experience in a diverse field of industrial construction including: mining, petrochemical, power, refineries, dams, roadways, water treatment plants, natural gas pipelines and compressor stations, forestry and marine.</p>
+              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '26ch' }}>Mining Construction Management &amp; Project Specialists.</h1>
+              <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '70ch', color: '#c3d0d4', margin: '18px 0 0' }}>Praetorian Construction Management has experience in a diverse field of industrial construction including: mining, petrochemical, power, refineries, dams, roadways, water treatment plants, natural gas pipelines and compressor stations, forestry and marine. Over the past two decades, mining has been the primary focus of our work, and it is where our deepest expertise and reputation have been built.</p>
             </div>
           </section>
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Who we are</div>
             <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 16px', color: '#003E52' }}>Who We Are</h2>
-            <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 18px' }}>We are mining construction and project management specialists. While our project experience spans most major industrial sectors, we have developed a reputation as an expert in the mining sector.</p>
-            <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 44px' }}>Given our team's unique project management skills, Praetorian offers a complete portfolio of services from reviewing a project's feasibility through to mine operations. We have both the experience and tools for establishing project control systems, contract management, purchasing services and construction management.</p>
+            <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 18px' }}>We are mining Construction Management and Project Experts. While our project experience spans most major industrial sectors, we have developed a reputation as an expert in the mining sector.</p>
+            <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 44px' }}>Given our team's unique skills, Praetorian offers a complete portfolio of services from reviewing a project's feasibility through to mine operations. We have both the experience and tools for establishing project control systems, contract management, purchasing services and construction management.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(20px,2.6vw,28px)' }}>
               <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #003E52', background: '#f7f7f7' }}>
                 <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', color: '#003E52', margin: '0 0 12px' }}>Leadership and Teamwork</h4>
@@ -73,26 +73,36 @@ export default function AboutPage() {
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Why Praetorian</div>
             <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>Why Praetorian?</h2>
             <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 'clamp(20px,2.6vw,30px)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,2.6vw,30px)' }}>
+              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #003E52', background: '#f7f7f7' }}>
+                <div style={{ fontSize: '36px', marginBottom: '16px' }}>👷</div>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Balanced Team of Professionals</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Our mixed team of trades, technologists and engineers results in a balanced, practical approach to contractor management, bringing the right discipline to every challenge on site.</p>
+              </div>
+              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #B06533', background: '#f7f7f7' }}>
+                <div style={{ fontSize: '36px', marginBottom: '16px' }}>🔍</div>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Project Execution &amp; Engineering Independence</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>We operate at arm&apos;s length from the engineering effort, giving us the ability to make recommendations and take actions that are unbiased and transparent on behalf of the owner.</p>
+              </div>
+              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #98999B', background: '#f7f7f7' }}>
+                <div style={{ fontSize: '36px', marginBottom: '16px' }}>🌍</div>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Global Experience &amp; Adaptability</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Our ability to adapt to new environments, cultures and market locations sets us apart. We understand what it takes to operate effectively in international markets across six countries.</p>
+              </div>
               <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #003E52', background: '#f7f7f7' }}>
                 <div style={{ fontSize: '36px', marginBottom: '16px' }}>⚙️</div>
-                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Project Execution and Engineering Independence</h4>
-                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>We are at arm's length to the engineering efforts giving us the ability to make recommendations and take actions that are unbiased and transparent.</p>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Efficient &amp; Economical Multi-Functional Teams</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Our teams are cross-trained, enabling non-duplication of roles without sacrificing quality. This is especially important for rotational shift work, where versatility directly impacts project economics.</p>
               </div>
               <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #B06533', background: '#f7f7f7' }}>
-                <div style={{ fontSize: '36px', marginBottom: '16px' }}>🌐</div>
-                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Global Experience and Adaptability</h4>
-                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Our ability to adapt to new environments, cultures and market locations. We understand what it takes to operate in international markets.</p>
+                <div style={{ fontSize: '36px', marginBottom: '16px' }}>🤝</div>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Flexibility &amp; Integrated Team Approach</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Our experience working as an integrated project management team alongside client personnel and other organisations gives us a unique advantage. We adapt our structure to fit seamlessly within the owner's team.</p>
               </div>
-              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #003E52', background: '#f7f7f7' }}>
-                <div style={{ fontSize: '36px', marginBottom: '16px' }}>👥</div>
-                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Efficient and Economical Multi-Functional Teams</h4>
-                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Our teams are cross-trained, leading to non-duplication of roles without sacrificing quality. This is especially important for rotational shift works.</p>
-              </div>
-              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #B06533', background: '#f7f7f7' }}>
-                <div style={{ fontSize: '36px', marginBottom: '16px' }}>🧩</div>
-                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Flexibility and Integrated Team Approach</h4>
-                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Our experience working as an integrated project management team alongside client personnel and/or other organisations gives us a unique advantage in the industry.</p>
+              <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #98999B', background: '#f7f7f7' }}>
+                <div style={{ fontSize: '36px', marginBottom: '16px' }}>🏗️</div>
+                <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 12px' }}>Extensive Direct-Hire Contracting Experience</h4>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>A large proportion of our team came through the direct-hire contractor background. We understand how contractors operate, their challenges and the practical solutions that keep projects moving.</p>
               </div>
             </div>
           </section>
