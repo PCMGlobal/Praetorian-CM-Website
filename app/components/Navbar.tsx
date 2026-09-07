@@ -18,12 +18,12 @@ const ABOUT: Item[] = [
 ];
 
 const SERVICES: Item[] = [
-  { label: "Engineering Support and Constructability", href: "/services" },
-  { label: "Early Planning and Financing Support", href: "/services" },
-  { label: "Procurement and Logistics", href: "/services" },
-  { label: "Project Controls", href: "/services" },
-  { label: "Construction Management", href: "/services" },
-  { label: "Quality, Commissioning and Turnover", href: "/services" },
+  { label: "Engineering Support and Constructability", href: "/services#engineering-support" },
+  { label: "Early Planning and Financing Support", href: "/services#early-planning" },
+  { label: "Procurement and Logistics", href: "/services#procurement-logistics" },
+  { label: "Project Controls", href: "/services#project-controls" },
+  { label: "Construction Management", href: "/services#construction-management" },
+  { label: "Quality, Commissioning and Turnover", href: "/services#quality-commissioning" },
 ];
 
 const HSSE: Item[] = [
