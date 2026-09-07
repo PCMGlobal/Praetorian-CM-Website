@@ -43,7 +43,7 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
-          <section id="pcml-mission" style={{ background: '#f7f7f7', padding: 'clamp(46px,6vw,84px) 0' }}>
+      <section id="pcml-mission" style={{ background: "#f7f7f7", padding: "clamp(46px,6vw,84px) 0", scrollMarginTop: "120px" }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
               <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Mission, Vision and Goals</div>
               <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>Mission, Vision and Goals</h2>
@@ -69,7 +69,7 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
-          <section id="whypraetorian" style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
+      <section id="whypraetorian" style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(46px,6vw,84px) clamp(16px,4vw,44px)", scrollMarginTop: "120px" }}>
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Why Praetorian</div>
             <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>Why Praetorian?</h2>
             <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
@@ -155,7 +155,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-          <section id="pcml-management" style={{ background: '#003E52', padding: 'clamp(46px,6vw,84px) 0' }}>
+      <section id="pcml-management" style={{ background: "#003E52", padding: "clamp(46px,6vw,84px) 0", scrollMarginTop: "120px" }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
               <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>Management Team</div>
               <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 38px', color: '#fff' }}>Management Team</h2>
