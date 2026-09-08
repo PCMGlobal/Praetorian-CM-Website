@@ -77,13 +77,13 @@ export default function CountryBoxes({
                 fontFamily: "var(--font-sora), sans-serif",
                 fontWeight: 700,
                 fontSize: 18,
-                color: "#003E52",
+                color: "#ffffff",
                 lineHeight: 1.2,
               }}
             >
               {b.label}
             </div>
-            <div style={{ fontSize: 14, color: "#555c60", marginTop: 5, lineHeight: 1.3 }}>
+            <div style={{ fontSize: 14, color: "#9aa9ae", marginTop: 5, lineHeight: 1.3 }}>
               {b.sub}
             </div>
           </div>

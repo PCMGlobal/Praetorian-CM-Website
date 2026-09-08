@@ -34,7 +34,6 @@ export default function ProjectsPage() {
             <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(34px,4.6vw,58px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.04", maxWidth: "24ch" }}>40+ projects across six countries, two decades of mining construction expertise</h1>
           </div>
         </section>
-        <MapSection projects={projectPins as Pin[]} />
         <section style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(40px,5vw,66px) clamp(16px,4vw,44px)" }}>
           <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Featured Projects</div>
           <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(28px,3.2vw,40px)", margin: "0 0 38px", color: "#003E52" }}>Sample Past Projects</h2>
@@ -57,6 +56,25 @@ export default function ProjectsPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Global Footprint Map -- teal section */}
+        <section style={{ background: '#003E52', padding: 'clamp(46px,6vw,84px) 0' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
+            <div data-reveal='' style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginBottom: '12px' }}>Global Presence</div>
+            <h2 data-reveal='' style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(28px,3.2vw,40px)', margin: '0 0 8px', color: '#fff' }}>Praetorian Footprint</h2>
+            <p data-reveal='' style={{ fontSize: '15px', lineHeight: '1.7', color: '#c3d0d4', margin: '0 0 32px', maxWidth: '66ch' }}>Praetorian has delivered projects across Canada, the United States, South America, Central America and Eurasia. Hover a pin or select a country to explore our global deployment.</p>
+          </div>
+          <MapSection projects={projectPins as Pin[]} />
+        </section>
+
+        {/* Copper CTA strip */}
+        <section style={{ background: '#B06533', color: '#fff' }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto', padding: 'clamp(48px,6vw,88px) clamp(16px,4vw,44px)', textAlign: 'center' }}>
+            <h2 data-reveal='' style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(28px,3.4vw,42px)', margin: '0', color: '#fff' }}>Ready to discuss your project?</h2>
+            <p data-reveal='' style={{ fontSize: '16px', lineHeight: '1.65', margin: '18px auto 30px', maxWidth: '58ch', color: 'rgba(255,255,255,.92)' }}>Praetorian embeds directly into your ownership team, from early feasibility through final commissioning. Let us talk about what that looks like for your project.</p>
+            <a href='/contact' style={{ display: 'inline-flex', minHeight: '50px', padding: '0 26px', fontSize: '16px', background: '#003E52', color: '#fff', textDecoration: 'none', alignItems: 'center', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>Speak with Our Team</a>
           </div>
         </section>
       </div>
