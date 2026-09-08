@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import Link from "next/link";
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ const SERVICES = {
     { title: "Project Execution Readiness", body: "Before a project reaches sanction, the execution framework must already be in place. Praetorian assesses contracting strategy, procurement readiness, organisation design, and controls infrastructure so that first dollar of capital is spent against a plan that will hold." },
     { title: "Project Execution Support", body: "Once capital is sanctioned, Praetorian provides the full owner's team: project manager, controls lead, procurement lead, HSE representative, and document controller -- scaled to the project's stage and complexity. We manage the contractors so the owner maintains authority over scope, cost, and schedule." },
     { title: "Project Due Diligence", body: "Independent review of a project's technical, commercial, and execution basis -- whether for investment decision, acquisition, or internal governance. Praetorian delivers findings the owner can act on, not a report written to satisfy a process." },
-    { title: "Health, Safety, Security, and Environment Oversight", body: "Owner-side HSSE representation embedded in the project team, not parachuted in for audits. Praetorian monitors contractor HSSE performance against the project's safety case, supports incident investigation, and ensures the owner's duty of care is actively discharged throughout the project lifecycle." },
+    { title: "Health, Safety, Social, and Environment Oversight", body: "Owner-side HSSE representation embedded in the project team, not parachuted in for audits. Praetorian monitors contractor HSSE performance against the project's safety case, supports incident investigation, and ensures the owner's duty of care is actively discharged throughout the project lifecycle." },
     { title: "Shutdown & Turnaround", body: "Scope development, contractor management, and controls support for planned shutdowns and turnarounds. Praetorian helps owners set realistic scope freezes, manage cost growth, and close out safely -- protecting production targets and asset integrity." },
   ],
   project: [

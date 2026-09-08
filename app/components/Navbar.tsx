@@ -13,7 +13,6 @@ const ABOUT: Item[] = [
   { label: "Who We Are", href: "/about" },
   { label: "Mission, Vision and Goals", href: "/about#pcml-mission" },
   { label: "Why Praetorian?", href: "/about#whypraetorian" },
-  { label: "What Sets Us Apart", href: "/about#pcml-differentiators" },
     { label: "Management Team", href: "/about#pcml-management" },
 ];
 
@@ -202,13 +201,6 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              style={{ ...navLabel, color: colour("/contact"), textDecoration: "none", padding: "10px 0" }}
-            >
-              Contact Us
-            </Link>
-
-            <Link
-              href="/contact"
               className="pcml-cta"
               style={{
                 marginLeft: 8,
@@ -269,7 +261,6 @@ export default function Navbar() {
             { label: "Projects", href: "/projects" },
             { label: "Careers", href: "/careers" },
             { label: "News and Insights", href: "/news" },
-            { label: "Contact Us", href: "/contact" },
           ].map((l) => ( <Link key={l.href} href={l.href} style={{ borderBottom: "1px solid #e4e6e7", padding: "14px 0", fontFamily: "var(--font-sora), sans-serif", fontWeight: 700, fontSize: 19, color: "#003E52", textDecoration: "none" }}>{l.label}</Link> ))}
 
           <Link

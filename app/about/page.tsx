@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -13,20 +13,20 @@ export default function AboutPage() {
           <section style={{ position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1582280871722-424e91cbee8b?w=1400&auto=format&fit=crop&q=80)' }}></div>
             <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.72) 48%,rgba(0,15,22,.4) 100%)' }}></div>
-            <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: 'clamp(40px,5vw,72px) clamp(16px,4vw,44px)' }}>
+            <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: 'clamp(24px,3vw,44px) clamp(16px,4vw,44px)' }}>
               <Link href="/" style={{ background: 'none', border: '0', padding: '0', color: '#e3ab7c', fontSize: '13px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
                 Home
               </Link>
               <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginTop: '22px' }}>About Us</div>
-              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '26ch' }}>Mining Construction Management &amp; Project Specialists.</h1>
+              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '26ch' }}>Mining Construction Management &amp; Project Management Experts.</h1>
               <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '70ch', color: '#c3d0d4', margin: '18px 0 0' }}>Praetorian Construction Management has experience in a diverse field of industrial construction including: mining, petrochemical, power, refineries, dams, roadways, water treatment plants, natural gas pipelines and compressor stations, forestry and marine. Over the past two decades, mining has been the primary focus of our work, and it is where our deepest expertise and reputation have been built.</p>
             </div>
           </section>
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Who we are</div>
             <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 16px', color: '#003E52' }}>Who We Are</h2>
-            <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 18px' }}>We are mining Construction Management and Project Experts. While our project experience spans most major industrial sectors, we have developed a reputation as an expert in the mining sector.</p>
+            <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 18px' }}>We are Mining Construction Management and Project Management Experts. While our project experience spans most major industrial sectors, we have developed a reputation as an expert in the mining sector.</p>
             <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 44px' }}>Given our team's unique skills, Praetorian offers a complete portfolio of services from reviewing a project's feasibility through to mine operations. We have both the experience and tools for establishing project control systems, contract management, purchasing services and construction management.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(20px,2.6vw,28px)' }}>
               <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #003E52', background: '#f7f7f7' }}>
@@ -106,55 +106,6 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
-      <section id="pcml-differentiators" style={{ padding: "clamp(46px,6vw,84px) 0", scrollMarginTop: "100px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
-          <div data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533" }}>Our Advantage</div>
-          <h2 data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(30px,3.6vw,44px)", margin: "12px 0 0", color: "#003E52" }}>What Sets Us Apart</h2>
-          <div style={{ width: "64px", height: "3px", background: "#B06533", margin: "18px 0 38px" }}></div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "clamp(20px,2.6vw,28px)" }}>
-            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #003E52", background: "#f7f7f7" }}>
-              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🤝</div>
-              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Integrated Team Approach</h4>
-              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>We work directly within the owner's execution team, ensuring the best ideas from client personnel and consultants are put forward to drive project success.</p>
-            </div>
-            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #B06533", background: "#f7f7f7" }}>
-              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🔍</div>
-              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Engineering Independence</h4>
-              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>Operating at arm's length from the engineering effort gives us the ability to make recommendations and take actions that are unbiased and transparent on behalf of the owner.</p>
-            </div>
-            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #98999B", background: "#f7f7f7" }}>
-              <div style={{ fontSize: "36px", marginBottom: "16px" }}>👷</div>
-              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Balanced Professional Team</h4>
-              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>Our well-rounded team of tradespeople, technologists and engineers implements a balanced and practical approach to every project execution.</p>
-            </div>
-            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #003E52", background: "#f7f7f7" }}>
-              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🌍</div>
-              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Global Adaptability</h4>
-              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>We adapt to new environments, cultures and market locations across six countries, bringing deep international experience to every engagement.</p>
-            </div>
-            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #B06533", background: "#f7f7f7" }}>
-              <div style={{ fontSize: "36px", marginBottom: "16px" }}>⚙️</div>
-              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Cross-Trained Multi-Functional Teams</h4>
-              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>Our cross-trained teams eliminate duplication of roles without sacrificing quality -- especially critical for rotational shift work on remote sites.</p>
-            </div>
-            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #98999B", background: "#f7f7f7" }}>
-              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🏗️</div>
-              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Direct-Hire Contractor Experience</h4>
-              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>A large proportion of our team came through direct-hire contractor backgrounds, giving us experience-based solutions to specific contractor challenges.</p>
-            </div>
-            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #003E52", background: "#f7f7f7" }}>
-              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🎯</div>
-              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Completion-Focused From Day One</h4>
-              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>We set every project up with robust project controls and a completion focus from the start, with the end-goal of successful delivery and start-up.</p>
-            </div>
-            <div data-reveal="" style={{ padding: "28px 26px", borderTop: "3px solid #B06533", background: "#f7f7f7" }}>
-              <div style={{ fontSize: "36px", marginBottom: "16px" }}>🌱</div>
-              <h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", color: "#003E52", margin: "0 0 12px" }}>Community Development Focus</h4>
-              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>We leave every community better than we found it -- through local training, business growth, and social capital building that creates a lasting positive legacy.</p>
-            </div>
-          </div>
-        </div>
-      </section>
       <section id="pcml-management" style={{ background: "#003E52", padding: "clamp(46px,6vw,84px) 0", scrollMarginTop: "120px" }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
               <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>Management Team</div>
