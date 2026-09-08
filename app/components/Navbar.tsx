@@ -167,12 +167,14 @@ export default function Navbar() {
               {menu === "hs" && <Dropdown items={HSSE} width={240} />}
             </div>
 
+{/* Praetorian IQ hidden -- restore by uncommenting
             <Link
               href="/praetorian-iq"
               style={{ ...navLabel, color: colour("/praetorian-iq"), textDecoration: "none", padding: "10px 0" }}
             >
               Praetorian IQ
             </Link>
+            */}
 
             <Link
               href="/projects"
@@ -260,7 +262,7 @@ export default function Navbar() {
             { label: "About Us", href: "/about" },
             { label: "Services", href: "/services" },
             { label: "HSSE", href: "/hsse" },
-            { label: "Praetorian IQ", href: "/praetorian-iq" },
+            // { label: "Praetorian IQ", href: "/praetorian-iq" }, // hidden -- restore to re-enable
             { label: "Projects", href: "/projects" },
             // { label: "Careers", href: "/careers" }, // hidden -- restore to re-enable
             { label: "News and Insights", href: "/news" },

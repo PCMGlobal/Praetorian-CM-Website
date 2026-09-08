@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import MapSection from "@/app/components/MapSection";
 import { type Pin } from "@/app/components/WorldMap";
@@ -44,9 +44,7 @@ export default function ProjectsPage() {
               <div key={p.slug} style={{ background: "#fff", boxShadow: "0 2px 14px rgba(0,20,30,.06)", overflow: "hidden" }}>
                 <div style={{ position: "relative", height: "240px", overflow: "hidden" }}>
                   <div style={{ position: "absolute", inset: "0", backgroundSize: "cover", backgroundPosition: "center", backgroundImage: `url(${p.photo})` }}></div>
-                  <div style={{ position: "absolute", top: "14px", left: "14px" }}>
-                    <span style={{ background: p.phaseColor, color: p.phaseText, padding: "3px 10px", fontSize: "11.5px", fontFamily: "var(--font-sora), sans-serif", fontWeight: "600" }}>{p.phase}</span>
-                  </div>
+
                 </div>
                 <div style={{ padding: "24px" }}>
                   <div style={{ fontSize: "12px", color: "#8b9095", marginBottom: "8px" }}>{p.location} &middot; {p.year}</div>

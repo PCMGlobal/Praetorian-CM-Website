@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 type Box = {
   country: string;
@@ -13,7 +13,7 @@ const BOXES: Box[] = [
   { country: "Mexico", label: "Mexico", sub: "2 projects" },
   { country: "Peru", label: "Peru", sub: "2 projects" },
   { country: "Guatemala", label: "Guatemala", sub: "1 project" },
-  { country: "Armenia", label: "Armenia", sub: "1 project \u00b7 flagship", badge: "Flagship" },
+  { country: "Armenia", label: "Armenia", sub: "1 project" },
 ];
 
 export default function CountryBoxes({

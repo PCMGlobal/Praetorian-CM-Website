@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next'
+﻿import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://praetoriancm.com'
@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about',
     '/services',
-    '/praetorian-iq',
+    // '/praetorian-iq', // hidden -- restore when page goes public
     '/projects',
     '/hsse',
     '/careers',

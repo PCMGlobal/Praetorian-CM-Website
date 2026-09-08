@@ -44,7 +44,7 @@ const COL_RESOURCES = [
 
 const COL_COMPANY = [
   { label: "About Praetorian", href: "/about" },
-  { label: "Praetorian IQ", href: "/praetorian-iq" },
+  // { label: "Praetorian IQ", href: "/praetorian-iq" }, // hidden -- restore when article is ready
   { label: "Projects", href: "/projects" },
   // { label: "Careers", href: "/careers" }, // hidden -- restore to re-enable
   { label: "HSSE", href: "/hsse" },

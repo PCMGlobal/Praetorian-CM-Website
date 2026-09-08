@@ -216,6 +216,7 @@ export default async function HomePage() {
             </div>
           </section>
 
+{/* Praetorian IQ section hidden -- restore by removing comment wrapper
           <section style={{ background: '#003E52', color: '#e9eef0' }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 'clamp(30px,4vw,56px)', alignItems: 'start' }}>
               <div data-reveal="">
@@ -270,6 +271,7 @@ export default async function HomePage() {
               </div>
             </div>
           </section>
+*/}
 
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)', textAlign: 'center' }}>
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Knowledge Hub</div>
