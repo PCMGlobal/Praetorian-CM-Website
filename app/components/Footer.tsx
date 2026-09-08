@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import NewsletterSignup from "@/app/components/NewsletterSignup";
 
 const SOCIALS = [
@@ -46,7 +46,7 @@ const COL_COMPANY = [
   { label: "About Praetorian", href: "/about" },
   { label: "Praetorian IQ", href: "/praetorian-iq" },
   { label: "Projects", href: "/projects" },
-  { label: "Careers", href: "/careers" },
+  // { label: "Careers", href: "/careers" }, // hidden -- restore to re-enable
   { label: "HSSE", href: "/hsse" },
   { label: "Contact", href: "/contact" },
 ];

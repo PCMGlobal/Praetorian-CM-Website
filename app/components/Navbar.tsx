@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -13,6 +13,7 @@ const ABOUT: Item[] = [
   { label: "Who We Are", href: "/about" },
   { label: "Mission, Vision and Goals", href: "/about#pcml-mission" },
   { label: "Why Praetorian?", href: "/about#whypraetorian" },
+  { label: "Our People", href: "/about#pcml-careers" },
     { label: "Management Team", href: "/about#pcml-management" },
 ];
 
@@ -135,10 +136,10 @@ export default function Navbar() {
               onMouseLeave={() => setMenu(null)}
               style={{ position: "relative", padding: "10px 0" }}
             >
-              <span style={{ ...navLabel, color: colour("/about"), cursor: "default" }}>
+              <Link href="/about" style={{ ...navLabel, color: colour("/about"), textDecoration: "none" }}>
                 About Us
                 <Caret />
-              </span>
+              </Link>
               {menu === "about" && <Dropdown items={ABOUT} width={260} />}
             </div>
 
@@ -180,6 +181,7 @@ export default function Navbar() {
               Projects
             </Link>
 
+            {/* Careers hidden -- restore by removing the false && wrapper
             <div
               onMouseEnter={() => setMenu("careers")}
               onMouseLeave={() => setMenu(null)}
@@ -191,6 +193,7 @@ export default function Navbar() {
               </Link>
               {menu === "careers" && <Dropdown items={CAREERS} width={240} align="right" />}
             </div>
+            */}
 
             <Link
               href="/news"
@@ -259,7 +262,7 @@ export default function Navbar() {
             { label: "HSSE", href: "/hsse" },
             { label: "Praetorian IQ", href: "/praetorian-iq" },
             { label: "Projects", href: "/projects" },
-            { label: "Careers", href: "/careers" },
+            // { label: "Careers", href: "/careers" }, // hidden -- restore to re-enable
             { label: "News and Insights", href: "/news" },
           ].map((l) => ( <Link key={l.href} href={l.href} style={{ borderBottom: "1px solid #e4e6e7", padding: "14px 0", fontFamily: "var(--font-sora), sans-serif", fontWeight: 700, fontSize: 19, color: "#003E52", textDecoration: "none" }}>{l.label}</Link> ))}
 

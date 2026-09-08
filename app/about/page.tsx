@@ -106,6 +106,54 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
+      <section id="pcml-careers" style={{ padding: "clamp(28px,3.5vw,48px) 0", scrollMarginTop: "120px" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
+          <div data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Why Choose Us</div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(340px,1fr))", gap: "clamp(36px,5vw,72px)", alignItems: "start" }}>
+            <div>
+              <h2 data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(28px,3.2vw,40px)", margin: "0 0 20px", color: "#003E52", lineHeight: "1.08" }}>Our people are our delivery capability</h2>
+              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 18px" }}>Our core training and development programs support the principle of mentoring through developmental delegation. This ensures a system of successor preparation and cross support of responsibilities for each position on a project team.</p>
+              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 18px" }}>Team leaders are challenged to position their teams to optimise skills and abilities while setting individual growth goals for each project member. Our teams consist of Engineers, Technologists, and Tradespersons, providing a balanced approach to managing projects and the contractors who deliver them.</p>
+              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 32px" }}>Recognising the value of the balance between profession and family, Praetorian has a high focus on quality of life promoted through optimised project shift schedules, team development retreats, sporting activities, and milestone celebrations where family participation is encouraged.</p>
+              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 18px" }}>Praetorian is always looking for the right talent to join our team.</p>
+              <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#555c60", margin: "0 0 8px" }}>Send your resume directly to: <a href="mailto:careers@praetoriancm.com" style={{ color: "#B06533", fontWeight: "600" }}>careers@praetoriancm.com</a></p>
+              <div style={{ marginTop: "20px", padding: "20px 22px", background: "#f7f7f7", borderLeft: "3px solid #003E52" }}>
+                <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "11px", color: "#003E52", marginBottom: "12px", letterSpacing: ".1em", textTransform: "uppercase" }}>Stay Connected</div>
+                <a href="https://www.linkedin.com/company/praetorian-construction-management/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "10px", color: "#003E52", textDecoration: "none", fontFamily: "var(--font-sora), sans-serif", fontWeight: "600", fontSize: "14px" }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#003E52"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  Follow us on LinkedIn for future opportunities
+                </a>
+              </div>
+            </div>
+            <div style={{ display: "grid", gap: "0", border: "1px solid #e4e6e7" }}>
+              <div data-reveal="" style={{ padding: "28px 26px", borderBottom: "1px solid #e4e6e7", display: "flex", gap: "20px", alignItems: "flex-start" }}>
+                <div style={{ flexShrink: "0", width: "42px", height: "42px", background: "#003E52", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e3ab7c" strokeWidth="1.6"><path d="M12 2L2 7l10 5 10-5-10-5ZM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                </div>
+                <div><h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "17px", color: "#003E52", margin: "0 0 6px" }}>Global project exposure</h4><p style={{ fontSize: "13.5px", lineHeight: "1.6", color: "#555c60", margin: "0" }}>Operations in Canada, the USA, South America, Central America, and Eurasia. Our people work on projects that few firms in the world have access to.</p></div>
+              </div>
+              <div data-reveal="" style={{ padding: "28px 26px", borderBottom: "1px solid #e4e6e7", display: "flex", gap: "20px", alignItems: "flex-start" }}>
+                <div style={{ flexShrink: "0", width: "42px", height: "42px", background: "#003E52", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e3ab7c" strokeWidth="1.6"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><path d="m9 11 3 3L22 4" /></svg>
+                </div>
+                <div><h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "17px", color: "#003E52", margin: "0 0 6px" }}>Owner&apos;s team accountability</h4><p style={{ fontSize: "13.5px", lineHeight: "1.6", color: "#555c60", margin: "0" }}>Embedded directly in the client&apos;s ownership team, making decisions that directly affect project outcomes.</p></div>
+              </div>
+              <div data-reveal="" style={{ padding: "28px 26px", borderBottom: "1px solid #e4e6e7", display: "flex", gap: "20px", alignItems: "flex-start" }}>
+                <div style={{ flexShrink: "0", width: "42px", height: "42px", background: "#003E52", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e3ab7c" strokeWidth="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                </div>
+                <div><h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "17px", color: "#003E52", margin: "0 0 6px" }}>People-first culture</h4><p style={{ fontSize: "13.5px", lineHeight: "1.6", color: "#555c60", margin: "0" }}>Training programs in leadership, management systems, and technical subjects. Internal recognition, family-inclusive milestones, and a lower-than-average employee turnover rate.</p></div>
+              </div>
+              <div data-reveal="" style={{ padding: "28px 26px", display: "flex", gap: "20px", alignItems: "flex-start" }}>
+                <div style={{ flexShrink: "0", width: "42px", height: "42px", background: "#003E52", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e3ab7c" strokeWidth="1.6"><path d="M12 20h9" /><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>
+                </div>
+                <div><h4 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "17px", color: "#003E52", margin: "0 0 6px" }}>Technology-forward culture</h4><p style={{ fontSize: "13.5px", lineHeight: "1.6", color: "#555c60", margin: "0" }}>Praetorian is investing in AI-powered project intelligence through Praetorian IQ, reshaping how mining construction is managed globally.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="pcml-management" style={{ background: "#003E52", padding: "clamp(46px,6vw,84px) 0", scrollMarginTop: "120px" }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
               <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>Management Team</div>
@@ -113,7 +161,7 @@ export default function AboutPage() {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,2.6vw,28px)' }}>
                 <div data-reveal="" style={{ background: 'rgba(255,255,255,.06)', padding: '28px 24px' }}>
                   <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#fff', marginBottom: '4px' }}>Michael P. Culleton P.Eng.</div>
-                  <div style={{ fontSize: '13px', color: '#e3ab7c', marginBottom: '14px', fontFamily: 'var(--font-sora), sans-serif' }}>Chief Financial Officer</div>
+                  <div style={{ fontSize: '13px', color: '#e3ab7c', marginBottom: '14px', fontFamily: 'var(--font-sora), sans-serif' }}>CEO</div>
                   <p style={{ fontSize: '13.5px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>Michael has almost four decades of construction experience with a strong project controls and engineering background. The greatest portion of his career has been spent on mining projects. His in-depth knowledge of management and controls has contributed to a reputation of competence, integrity and loyalty.</p>
                 </div>
                 <div data-reveal="" style={{ background: 'rgba(255,255,255,.06)', padding: '28px 24px' }}>
