@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import MapSection from "@/app/components/MapSection";
 import { type Pin } from "@/app/components/WorldMap";
 import projectPins from "@/data/project-pins.json";
 import Link from "next/link";
+import HeroSlideshow from "@/app/components/HeroSlideshow";
 import { client } from "@/lib/sanity";
 
 export const metadata: Metadata = {
@@ -45,35 +46,7 @@ export default async function HomePage() {
   return (
     <main>
       <div>
-          <section style={{ position: 'relative', height: 'clamp(520px,78vh,760px)', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1523660778745-247ed0bcce31?w=1400&auto=format&fit=crop&q=80)' }} ></div>
-            <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.86) 0%,rgba(0,25,36,.62) 46%,rgba(0,15,22,.2) 100%)' }}></div>
-            <div style={{ position: 'relative', height: '100%', maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)', display: 'flex', alignItems: 'center' }}>
-              <div style={{ maxWidth: '640px' }}>
-                <div data-reveal="" style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', border: '1px solid rgba(176,101,51,.55)', padding: '6px 14px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.16em', textTransform: 'uppercase', color: '#e3ab7c' }}>
-                  <span style={{ width: '6px', height: '6px', background: '#B06533', animation: 'pcmlBlink 2.4s ease-in-out infinite' }}></span>
-                  Global Mining � Built Right
-                </div>
-                <h1 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(38px,5.2vw,62px)', lineHeight: '1.04', margin: '20px 0 0', color: '#fff', textWrap: 'balance' }}>Mining Construction Management with a Technology Edge</h1>
-                <p data-reveal="" style={{ fontSize: 'clamp(15px,1.2vw,17.5px)', lineHeight: '1.62', maxWidth: '52ch', margin: '20px 0 0', color: '#dbe4e7', textWrap: 'pretty' }}>Praetorian integrates directly into your ownership team, from feasibility through commissioning. AI-powered cost intelligence, global experience, and an unwavering focus on your project outcomes.</p>
-                <div data-reveal="" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '30px' }}>
-                  <Link href="/contact" style={{ background: '#B06533', color: '#fff', textDecoration: 'none', minHeight: '48px', display: 'flex', alignItems: 'center', padding: '0 24px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '15px' }}>Speak with Our Team</Link>
-                  <Link href="/projects" style={{ minHeight: '48px', padding: '0 22px', fontSize: '15px', color: '#fff', border: '1px solid rgba(255,255,255,.55)', background: 'transparent', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', cursor: 'pointer' }}>
-                    View Our Projects
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div style={{ position: 'absolute', left: '0', right: '0', bottom: '0', background: 'rgba(0,10,15,.55)', backdropFilter: 'blur(2px)' }}>
-              <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))' }}>
-                <div style={{ padding: '18px 20px', borderRight: '1px solid rgba(255,255,255,.16)' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>20<span style={{ color: '#e3ab7c' }}>+</span></div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Years delivering</div></div>
-                <div style={{ padding: '18px 20px', borderRight: '1px solid rgba(255,255,255,.16)' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>60<span style={{ color: '#e3ab7c' }}>+</span></div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Projects globally</div></div>
-                <div style={{ padding: '18px 20px' }}><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>6</div><div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#a9b6bb', marginTop: '2px' }}>Countries of operation</div></div>
-                
-              </div>
-            </div>
-          </section>
+          <HeroSlideshow />
 
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '0', borderTop: '1px solid #e4e6e7', borderBottom: '1px solid #e4e6e7' }}>
@@ -93,8 +66,16 @@ export default async function HomePage() {
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                 </Link>
               </div>
-              <div data-reveal="" style={{ padding: '30px 28px 32px' }}>
+              <div data-reveal="" style={{ padding: '30px 28px 32px', borderRight: '1px solid #e4e6e7' }}>
                 <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>03</div>
+                <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Construction Execution</h3>
+                <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>On-the-ground construction management across civil, structural, mechanical, electrical and commissioning.</p>
+                <Link href="/services#construction-execution" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </Link>
+              </div>
+              <div data-reveal="" style={{ padding: '30px 28px 32px' }}>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>04</div>
                 <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Operational Consulting</h3>
                 <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Leadership alignment, asset optimisation, and process safety for long-term operational performance.</p>
                 <Link href="/services#operational-consulting" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore

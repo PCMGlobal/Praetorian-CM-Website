@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { previewClient } from "@/lib/sanity";
+import { client } from "@/lib/sanity";
 import { AccordionItem } from "./AccordionItem";
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ function getPortableText(body: Array<{children: Array<{text: string}>}>): string
 
 async function getServicePage(): Promise<ServicePageData | null> {
   try {
-    return await previewClient.fetch(
+    return await client.fetch(
       `*[_type == "servicePage"][0]{
         serviceColumns[]{ _key, number, title, subtitle, items[]{ _key, title, body } },
         deliveryCards[]{ _key, title, borderColour, body }
@@ -56,28 +56,32 @@ export default async function ServicesPage() {
             <p style={{ fontSize: "16.5px", lineHeight: "1.62", maxWidth: "62ch", color: "#c3d0d4", margin: "18px 0 0" }}>Praetorian scales from a single embedded specialist to a full owner&apos;s project management office. Every engagement is staffed against your stage gates, not ours.</p>
           </div>
         </section>
-        <section style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(40px,5vw,64px) clamp(16px,4vw,44px)" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "0", borderBottom: "1px solid #e4e6e7" }}>
-            {columns.map((col, i) => (
-              <div
-                key={col._key}
-                id={colIds[i]}
-                style={{
-                  padding: i === 0 ? "0 clamp(14px,1.8vw,22px) 34px 0" : i === columns.length - 1 ? "0 0 34px clamp(14px,1.8vw,22px)" : "0 clamp(14px,1.8vw,22px) 34px",
-                  borderRight: i < columns.length - 1 ? "1px solid #e4e6e7" : "none",
-                  scrollMarginTop: "100px"
-                }}
-              >
-                <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "13px", letterSpacing: ".2em", color: "#B06533" }}>{col.number}</div>
-                <h3 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "20px", margin: "12px 0 10px", color: "#003E52" }}>{col.title}</h3>
-                <p style={{ fontSize: "13px", lineHeight: "1.6", color: "#5b6266", margin: "0 0 18px" }}>{col.subtitle}</p>
-                <div style={{ borderTop: "1px solid #e4e6e7" }}>
-                  {(col.items ?? []).map(item => <AccordionItem key={item._key} title={item.title} body={item.body} />)}
+        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
+          {columns.map((col, i) => (
+            <section
+              key={col._key}
+              id={colIds[i]}
+              style={{
+                background: i % 2 === 0 ? "#ffffff" : "#f7f7f7",
+                padding: "clamp(46px,6vw,84px) 0",
+                scrollMarginTop: "100px"
+              }}
+            >
+              <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "clamp(36px,5vw,72px)", alignItems: "start" }}>
+                  <div>
+                    <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "13px", letterSpacing: ".2em", color: "#B06533", marginBottom: "12px" }}>{col.number}</div>
+                    <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(26px,3vw,38px)", margin: "0 0 16px", color: "#003E52", lineHeight: "1.1" }}>{col.title}</h2>
+                    <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>{col.subtitle}</p>
+                  </div>
+                  <div style={{ borderTop: "1px solid #e4e6e7" }}>
+                    {(col.items ?? []).map(item => <AccordionItem key={item._key} title={item.title} body={item.body} />)}
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </section>
+            </section>
+          ))}
+        </div>
         <section style={{ background: "#f7f7f7", padding: "clamp(46px,6vw,84px) 0" }}>
           <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
             <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Our Approach</div>
