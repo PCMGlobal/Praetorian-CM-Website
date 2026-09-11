@@ -50,15 +50,21 @@ export default function AboutPage() {
               <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 'clamp(20px,2.6vw,30px)' }}>
                 <div data-reveal="" style={{ background: '#fff', padding: '28px 26px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #003E52' }}>
-                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.15em', textTransform: 'uppercase', color: '#003E52', marginBottom: '14px' }}>Mission</div>
-                  <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Provide exceptional reliable project management services to select clients in the resource sector through team excellence, leadership, effective communications and a focus on continuous improvement.</p>
+                  <div style={{ fontSize: '36px', marginBottom: '10px' }}>🎯</div><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.15em', textTransform: 'uppercase', color: '#003E52', marginBottom: '14px' }}>Mission</div>
+                  <ul style={{ fontSize: '14.5px', lineHeight: '1.8', color: '#555c60', margin: '0', paddingLeft: '18px' }}>
+                    <li>Provide exceptional reliable project management services to select clients in the resource sector.</li>
+                    <li>Build team excellence through leadership, effective communications and a focus on continuous improvement.</li>
+                  </ul>
                 </div>
                 <div data-reveal="" style={{ background: '#fff', padding: '28px 26px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
-                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.15em', textTransform: 'uppercase', color: '#B06533', marginBottom: '14px' }}>Vision</div>
-                  <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#555c60', margin: '0' }}>Develop an elite team of project management specialists who provide our clients with expertise for the development and construction of projects at both new and existing facilities in the resource sector. Continuously strive to develop a culture of excellence between our contractors and ourselves that is evolutionary; having the potential to grow, adapt and excel in an ever-changing work landscape.</p>
+                  <div style={{ fontSize: '36px', marginBottom: '10px' }}>💡</div><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.15em', textTransform: 'uppercase', color: '#B06533', marginBottom: '14px' }}>Vision</div>
+                  <ul style={{ fontSize: '14.5px', lineHeight: '1.8', color: '#555c60', margin: '0', paddingLeft: '18px' }}>
+                    <li>Develop an elite team of project management specialists who provide our clients with expertise for the development and construction of projects at both new and existing facilities in the resource sector.</li>
+                    <li>Continuously strive to develop a culture of excellence between our contractors and ourselves that is evolutionary, having the potential to grow, adapt and excel in an ever-changing work landscape.</li>
+                  </ul>
                 </div>
                 <div data-reveal="" style={{ background: '#fff', padding: '28px 26px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #98999B' }}>
-                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.15em', textTransform: 'uppercase', color: '#5b6266', marginBottom: '14px' }}>Goals</div>
+                  <div style={{ fontSize: '36px', marginBottom: '10px' }}>🏆</div><div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.15em', textTransform: 'uppercase', color: '#5b6266', marginBottom: '14px' }}>Goals</div>
                   <ul style={{ fontSize: '14.5px', lineHeight: '1.8', color: '#555c60', margin: '0', paddingLeft: '18px' }}>
                     <li>Create a legacy of excellence in the work Praetorian Construction Management does for our clients.</li>
                     <li>Be recognized by our clients, industry and our team for developing a built-to-last group of professionals who retain and promote a balance between work and family.</li>
