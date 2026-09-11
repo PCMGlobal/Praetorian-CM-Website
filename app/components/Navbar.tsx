@@ -22,6 +22,7 @@ const SERVICES: Item[] = [
   { label: "Project Services", href: "/services#project-services" },
   { label: "Construction Execution", href: "/services#construction-execution" },
   { label: "Post-Construction", href: "/services#operational-consulting" },
+  { label: "Our Approach", href: "/services#our-approach" },
 ];
 
 const HSSE: Item[] = [
