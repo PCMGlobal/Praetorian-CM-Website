@@ -93,7 +93,7 @@ export async function POST(request: Request) {
 
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
-      from: `PCML Website <${FROM}>`,
+      from: `Praetorian Website <${FROM}>`,
       to: [TO],
       replyTo: email,
       subject: `Website enquiry from ${name}${company ? ` at ${company}` : ""}`,
