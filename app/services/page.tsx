@@ -56,12 +56,6 @@ export default async function ServicesPage() {
             <p style={{ fontSize: "16.5px", lineHeight: "1.62", maxWidth: "62ch", color: "#c3d0d4", margin: "18px 0 0" }}>Praetorian scales from a single embedded specialist to a full owner&apos;s project management office. Every engagement is staffed against your stage gates, not ours.</p>
           </div>
         </section>
-        <section style={{ background: "#ffffff", padding: "clamp(46px,6vw,84px) 0 0" }}>
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
-            <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Our Services</div>
-            <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(30px,3.6vw,44px)", margin: "0 0 12px", color: "#003E52" }}>What We Do</h2>
-          </div>
-        </section>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           {columns.map((col, i) => (
             <section
@@ -70,10 +64,16 @@ export default async function ServicesPage() {
               style={{
                 background: i % 2 === 0 ? "#ffffff" : "#f7f7f7",
                 padding: "clamp(24px,3vw,40px) 0",
-                scrollMarginTop: "100px"
+                scrollMarginTop: "120px"
               }}
             >
               <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
+                {i === 0 && (
+                  <div style={{ marginBottom: "clamp(24px,3vw,40px)" }}>
+                    <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Our Services</div>
+                    <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(30px,3.6vw,44px)", margin: "0", color: "#003E52" }}>What We Do</h2>
+                  </div>
+                )}
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "clamp(36px,5vw,72px)", alignItems: "start" }}>
                   <div>
                     <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>{col.number}</div>
@@ -88,7 +88,7 @@ export default async function ServicesPage() {
             </section>
           ))}
         </div>
-        <section id="our-approach" style={{ background: "#003E52", padding: "clamp(46px,6vw,84px) 0", scrollMarginTop: "100px" }}>
+        <section id="our-approach" style={{ background: "#003E52", padding: "clamp(46px,6vw,84px) 0", scrollMarginTop: "120px" }}>
           <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
             <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Our Approach</div>
             <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(30px,3.6vw,44px)", margin: "0 0 12px", color: "#ffffff" }}>How We Deliver</h2>
