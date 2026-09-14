@@ -173,7 +173,8 @@ export default async function HomePage() {
             </div>
           </section>
 
-          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)' }}>
+          <section style={{ padding: 'clamp(28px,3.5vw,52px) 0' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '20px', marginBottom: '30px' }}>
               <div data-reveal="">
                 <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Global presence</div>
@@ -182,12 +183,14 @@ export default async function HomePage() {
               </div>
               <p data-reveal="" style={{ fontSize: '14px', maxWidth: '80ch', margin: '0', color: '#65696c' }}>Praetorian has worked extensively across Canada, the United States, South America, Central America and Eurasia. The tour runs on its own, hover a pin or pick a project to take control.</p>
             </div>
+            </div>
               <MapSection projects={projectPins as Pin[]} />
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '22px', marginTop: '14px', fontSize: '12px', color: '#7d8288' }}><span style={{ fontStyle: 'italic' }}>Geometry: Natural Earth (public domain)</span><span>Hover a country to highlight its locations.</span></div>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}><div style={{ display: 'flex', flexWrap: 'wrap', gap: '22px', marginTop: '14px', fontSize: '12px', color: '#7d8288' }}><span style={{ fontStyle: 'italic' }}>Geometry: Natural Earth (public domain)</span><span>Hover a country to highlight its locations.</span></div></div>
             
           </section>
 
-          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px) clamp(46px,6vw,72px)', background: '#f7f7f7' }}>
+          <section style={{ background: '#f7f7f7', padding: '0 0 clamp(46px,6vw,72px)' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533', marginBottom: '12px' }}>All Locations</div>
             <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(22px,2.6vw,30px)', margin: '0 0 8px', color: '#003E52' }}>Where we have worked</h3>
             <p style={{ fontSize: '14px', color: '#65696c', margin: '0 0 26px', textAlign: 'justify' }}>A sample of 60 projects our team and senior managers have delivered across 6 countries. Select a country to expand the full list.</p>
@@ -198,6 +201,7 @@ export default async function HomePage() {
               <details style={{ border: '1px solid #e4e6e7', background: '#fff', marginBottom: '10px' }}><summary style={{ cursor: 'pointer', padding: '16px 20px', listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}><span style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span style={{ width: '8px', height: '8px', background: '#B06533', borderRadius: '50%' }}></span>Peru</span><span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#7d8288' }}>2 projects</span></summary><div style={{ padding: '4px 20px 16px' }}><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Anglo American � Quellaveco Project</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Peru</span></div><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Minera Yanacocha (Newmont) � Conga Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Peru</span></div></div></details>
               <details style={{ border: '1px solid #e4e6e7', background: '#fff', marginBottom: '10px' }}><summary style={{ cursor: 'pointer', padding: '16px 20px', listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}><span style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span style={{ width: '8px', height: '8px', background: '#B06533', borderRadius: '50%' }}></span>Guatemala</span><span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#7d8288' }}>1 project</span></summary><div style={{ padding: '4px 20px 16px' }}><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Bluestone � Cerro Blanco Underground Gold Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Guatemala</span></div></div></details>
               <details style={{ border: '1px solid #e4e6e7', background: '#fff', marginBottom: '10px' }}><summary style={{ cursor: 'pointer', padding: '16px 20px', listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#003E52' }}><span style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span style={{ width: '8px', height: '8px', background: '#B06533', borderRadius: '50%' }}></span>Armenia</span><span style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#7d8288' }}>1 project</span></summary><div style={{ padding: '4px 20px 16px' }}><div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', padding: '9px 0', borderBottom: '1px solid #eef0f1' }}><span style={{ fontSize: '13.5px', color: '#1c2226', lineHeight: '1.4' }}>Lydian International � Amulsar Gold Mine</span><span style={{ fontSize: '12.5px', color: '#7d8288', whiteSpace: 'nowrap', flexShrink: '0' }}>Djermuk, Armenia</span></div></div></details>
+            </div>
             </div>
           </section>
 
@@ -258,10 +262,10 @@ export default async function HomePage() {
           </section>
 */}
 
-          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)', textAlign: 'center', background: '#ffffff' }}>
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)', background: '#ffffff' }}>
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>Knowledge Hub</div>
             <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>Resources for Project Owners</h2>
-            <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px auto 34px' }}></div>
+            <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 34px' }}></div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 'clamp(16px,2vw,22px)', textAlign: 'left' }}>
               <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><path d="M4 4h16v16H4z" /><path d="M8 9h8M8 13h5" /></svg>
