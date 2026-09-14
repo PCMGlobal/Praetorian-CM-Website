@@ -166,7 +166,7 @@ export default async function HomePage() {
             </div>
             <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: 'clamp(40px,5vw,66px)', order: '6' }}>
               <div data-reveal="right" style={{ maxWidth: '44ch' }}>
-                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>Health, safety &amp; environment</div>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>Health, Safety, Social, and Environment</div>
                 <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '12px 0 16px', color: '#fff', lineHeight: '1.1' }}>Owner's team culture sets the site culture</h2>
                 <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>HSSE oversight isn't a checkbox, it's embedded leadership, from toolbox talk to turnover.</p>
               </div>

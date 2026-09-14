@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import CTABanner from "@/app/components/CTABanner";
 
 export const metadata: Metadata = {
   title: "Calabrian Corporation – SO2Clean Production Facility | Praetorian Construction Management",
