@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CTABanner from "@/app/components/CTABanner";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -88,6 +89,7 @@ export default function PrivacyPage() {
 
         </div>
       </section>
+          <CTABanner />
     </main>
   );
 }

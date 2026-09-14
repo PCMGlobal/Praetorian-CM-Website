@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import CTABanner from "@/app/components/CTABanner";
 import Link from "next/link";
 import { client } from "@/lib/sanity";
 import { AccordionItem } from "./AccordionItem";
@@ -106,6 +107,7 @@ export default async function ServicesPage() {
           </div>
         </section>
       </div>
+          <CTABanner />
     </main>
   );
 }

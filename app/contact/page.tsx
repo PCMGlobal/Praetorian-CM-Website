@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CTABanner from "@/app/components/CTABanner";
 import ContactForm from "@/app/components/ContactForm";
 import Link from "next/link";
 
@@ -68,6 +69,7 @@ export default function ContactPage() {
             </div>
           </section>
         </div>
+          <CTABanner />
     </main>
   );
 }

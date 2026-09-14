@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CTABanner from "@/app/components/CTABanner";
 import MapSection from "@/app/components/MapSection";
 import { type Pin } from "@/app/components/WorldMap";
 import projectPins from "@/data/project-pins.json";
@@ -323,6 +324,7 @@ export default async function HomePage() {
             </div>
           </section>
         </div>
+          <CTABanner />
     </main>
   );
 }

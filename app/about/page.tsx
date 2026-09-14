@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import CTABanner from "@/app/components/CTABanner";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -200,6 +201,7 @@ export default function AboutPage() {
             </div>
           </section>
         </div>
+          <CTABanner />
     </main>
   );
 }

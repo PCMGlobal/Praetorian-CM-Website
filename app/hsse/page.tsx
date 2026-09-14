@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import CTABanner from "@/app/components/CTABanner";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -105,6 +106,7 @@ export default function HSSEPage() {
             <p style={{ fontSize: '12px', color: '#8b9095', marginTop: '14px', fontStyle: 'italic' }}>Safety metrics are available to qualified clients on request. Content to be confirmed with Femi before publication.</p>
           </section>
         </div>
+          <CTABanner />
     </main>
   );
 }

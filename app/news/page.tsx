@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CTABanner from "@/app/components/CTABanner";
 import Link from "next/link";
 import { client } from "@/lib/sanity";
 import ArticleGrid from "@/app/news/ArticleGrid";
@@ -71,6 +72,7 @@ export default async function NewsPage() {
           </div>
         </section>
       </div>
+          <CTABanner />
     </main>
   );
 }
