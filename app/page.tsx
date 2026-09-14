@@ -1,10 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import MapSection from "@/app/components/MapSection";
 import { type Pin } from "@/app/components/WorldMap";
 import projectPins from "@/data/project-pins.json";
 import Link from "next/link";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
 import { client } from "@/lib/sanity";
+import GlobeWatermark from "@/app/components/GlobeWatermark";
 
 export const metadata: Metadata = {
   title: "Praetorian Construction Management | Mining Construction Management",
@@ -48,44 +49,48 @@ export default async function HomePage() {
       <div>
           <HeroSlideshow />
 
-          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '0', borderTop: '1px solid #e4e6e7', borderBottom: '1px solid #e4e6e7' }}>
-              <div data-reveal="" style={{ padding: '30px 28px 32px', borderRight: '1px solid #e4e6e7' }}>
-                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>01</div>
-                <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Owner's Team Support</h3>
-                <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Study development, execution readiness, and H&amp;S oversight, embedded directly in your team.</p>
-                <Link href="/services#owners-team-support" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                </Link>
-              </div>
-              <div data-reveal="" style={{ padding: '30px 28px 32px', borderRight: '1px solid #e4e6e7' }}>
-                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>02</div>
-                <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Project Services</h3>
-                <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Procurement, cost control, scheduling, document management and risk, integrated from Day 1.</p>
-                <Link href="/services#project-services" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                </Link>
-              </div>
-              <div data-reveal="" style={{ padding: '30px 28px 32px', borderRight: '1px solid #e4e6e7' }}>
-                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>03</div>
-                <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Construction Execution</h3>
-                <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>On-the-ground construction management across civil, structural, mechanical, electrical and commissioning.</p>
-                <Link href="/services#construction-execution" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                </Link>
-              </div>
-              <div data-reveal="" style={{ padding: '30px 28px 32px' }}>
-                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>04</div>
-                <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Operational Consulting</h3>
-                <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Leadership alignment, asset optimisation, and process safety for long-term operational performance.</p>
-                <Link href="/services#operational-consulting" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                </Link>
+          <section style={{ position: 'relative' }}>
+            <GlobeWatermark side="right" opacity={0.05} size={360} />
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '0', borderTop: '1px solid #e4e6e7', borderBottom: '1px solid #e4e6e7' }}>
+                <div data-reveal="" style={{ padding: '30px 28px 32px', borderRight: '1px solid #e4e6e7' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>01</div>
+                  <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Owner's Team Support</h3>
+                  <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Study development, execution readiness, and H&amp;S oversight, embedded directly in your team.</p>
+                  <Link href="/services#owners-team-support" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                  </Link>
+                </div>
+                <div data-reveal="" style={{ padding: '30px 28px 32px', borderRight: '1px solid #e4e6e7' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>02</div>
+                  <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Project Services</h3>
+                  <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Procurement, cost control, scheduling, document management and risk, integrated from Day 1.</p>
+                  <Link href="/services#project-services" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                  </Link>
+                </div>
+                <div data-reveal="" style={{ padding: '30px 28px 32px', borderRight: '1px solid #e4e6e7' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>03</div>
+                  <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Construction Execution</h3>
+                  <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>On-the-ground construction management across civil, structural, mechanical, electrical and commissioning.</p>
+                  <Link href="/services#construction-execution" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                  </Link>
+                </div>
+                <div data-reveal="" style={{ padding: '30px 28px 32px' }}>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>04</div>
+                  <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>Operational Consulting</h3>
+                  <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>Leadership alignment, asset optimisation, and process safety for long-term operational performance.</p>
+                  <Link href="/services#operational-consulting" style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                  </Link>
+                </div>
               </div>
             </div>
           </section>
 
-          <section style={{ background: '#f7f7f7', padding: 'clamp(46px,6vw,84px) 0' }}>
+          <section style={{ background: '#f7f7f7', padding: 'clamp(46px,6vw,84px) 0', position: 'relative', overflow: 'hidden' }}>
+            <GlobeWatermark side="left" opacity={0.05} size={360} />
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
               <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>What we do</div>
               <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', maxWidth: '24ch', lineHeight: '1.06', color: '#003E52' }}>End-to-End Project Management Services</h2>
@@ -125,7 +130,6 @@ export default async function HomePage() {
               </div>
             </div>
           </section>
-
           <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(420px,1fr))' }}>
             <div style={{ position: 'relative', minHeight: '440px', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 26s ease-in-out infinite alternate' }}>
