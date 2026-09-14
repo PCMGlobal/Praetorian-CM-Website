@@ -65,7 +65,7 @@ export default function ProjectsPage() {
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
             <div data-reveal='' style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginBottom: '12px' }}>Global Presence</div>
             <h2 data-reveal='' style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(28px,3.2vw,40px)', margin: '0 0 8px', color: '#fff' }}>Praetorian Footprint</h2>
-            <p data-reveal='' style={{ fontSize: '15px', lineHeight: '1.7', color: '#c3d0d4', margin: '0 0 32px', maxWidth: '66ch' }}>Praetorian has delivered projects across Canada, the United States, South America, Central America and Eurasia. Hover a pin or select a country to explore our global deployment.</p>
+            <p data-reveal='' style={{ fontSize: '15px', lineHeight: '1.7', color: '#c3d0d4', margin: '0 0 32px' }}>Praetorian has delivered projects across Canada, the United States, South America, Central America and Eurasia. Hover a pin or select a country to explore our global deployment.</p>
           </div>
           <MapSection projects={projectPins as Pin[]} />
         </section>

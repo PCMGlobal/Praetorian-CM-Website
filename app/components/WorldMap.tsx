@@ -286,7 +286,9 @@ export default function WorldMap({ projects, tourMs = 4200, logo = "/pcml-logo-n
         `<span style="display:block;font-family:var(--font-sora),sans-serif;font-weight:600;font-size:16px;color:#fff;line-height:1.2;margin-top:2px">${pin.p.name}</span>` +
         `<span style="display:block;font-size:11.5px;color:#b7c0c5;margin-top:3px">${pin.p.detail || ""}</span>`;
       const sw = stage.clientWidth;
-      callout.style.left = Math.max(100, Math.min(sw - 100, pin.x)) + "px";
+      const cw = callout.offsetWidth || 220;
+      const clampedX = Math.max(cw / 2 + 8, Math.min(sw - cw / 2 - 8, pin.x));
+      callout.style.left = clampedX + "px";
       callout.style.top = pin.y - pin.r - 10 + "px";
       callout.style.opacity = "1";
     }
@@ -389,11 +391,15 @@ export default function WorldMap({ projects, tourMs = 4200, logo = "/pcml-logo-n
             padding: "8px 11px 9px",
             background: "#04141c",
             border: "1px solid #B06533",
-            minWidth: 170,
+            minWidth: 180,
+            maxWidth: 220,
+            width: "max-content",
             opacity: 0,
             transition: "opacity .22s ease",
             fontFamily: 'var(--font-work-sans), system-ui, sans-serif',
             zIndex: 3,
+            whiteSpace: "normal",
+            wordBreak: "break-word",
           }}
         />
       </div>

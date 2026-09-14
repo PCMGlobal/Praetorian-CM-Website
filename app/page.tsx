@@ -180,7 +180,7 @@ export default async function HomePage() {
                 <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>Praetorian Footprint</h2>
                 <div style={{ width: '64px', height: '3px', background: '#B06533', marginTop: '18px' }}></div>
               </div>
-              <p data-reveal="" style={{ fontSize: '14px', maxWidth: '40ch', margin: '0', color: '#65696c' }}>Praetorian has worked extensively across Canada, the United States, South America, Central America and Eurasia. The tour runs on its own, hover a pin or pick a project to take control.</p>
+              <p data-reveal="" style={{ fontSize: '14px', maxWidth: '80ch', margin: '0', color: '#65696c' }}>Praetorian has worked extensively across Canada, the United States, South America, Central America and Eurasia. The tour runs on its own, hover a pin or pick a project to take control.</p>
             </div>
               <MapSection projects={projectPins as Pin[]} />
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '22px', marginTop: '14px', fontSize: '12px', color: '#7d8288' }}><span style={{ fontStyle: 'italic' }}>Geometry: Natural Earth (public domain)</span><span>Hover a country to highlight its locations.</span></div>
