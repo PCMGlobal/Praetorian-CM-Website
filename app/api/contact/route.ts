@@ -94,7 +94,7 @@ export async function POST(request: Request) {
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
       from: `Praetorian Website <${FROM}>`,
-      to: [TO],
+      to: ["info@praetoriancm.com", "bd@praetoriancm.com"],
       replyTo: email,
       subject: `Website enquiry from ${name}${company ? ` at ${company}` : ""}`,
       html,
