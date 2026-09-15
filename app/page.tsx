@@ -135,7 +135,7 @@ export default async function HomePage() {
           <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(420px,1fr))' }}>
             <div style={{ position: 'relative', minHeight: '440px', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 26s ease-in-out infinite alternate' }}>
-                <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1587919968590-fbc98cea6c9a?w=1200&auto=format&fit=crop&q=80)' }} ></div>
+                <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(/images/photos/pcml-service-ownersTeam.jpg)' }} ></div>
               </div>
               <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.35),rgba(0,15,22,0))' }}></div>
             </div>
@@ -156,13 +156,13 @@ export default async function HomePage() {
             </div>
             <div style={{ position: 'relative', minHeight: '440px', overflow: 'hidden', order: '4' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 22s ease-in-out infinite alternate-reverse' }}>
-                <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&auto=format&fit=crop&q=80)' }} ></div>
+                <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(/images/photos/pcml-service-hsse.jpg)' }} ></div>
               </div>
             </div>
 
             <div style={{ position: 'relative', minHeight: '440px', overflow: 'hidden', order: '5' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 24s ease-in-out infinite alternate' }}>
-                <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1571223641822-b82408a0e705?w=1200&auto=format&fit=crop&q=80)' }} ></div>
+                <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(/images/photos/pcml-service-commitment.jpg)' }} ></div>
               </div>
               <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.35),rgba(0,15,22,0))' }}></div>
             </div>

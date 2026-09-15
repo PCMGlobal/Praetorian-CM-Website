@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const IMAGES = [
-  "https://images.unsplash.com/photo-1523660778745-247ed0bcce31?w=1400&auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1581092921461-7031e4bfb83b?w=1400&auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1400&auto=format&fit=crop&q=80",
+  "/images/photos/pcml-hero-01.jpg",
+  "/images/photos/pcml-hero-02.jpg",
+  "/images/photos/pcml-hero-03.jpg",
+  "/images/photos/pcml-hero-04.jpg",
 ];
 
 export default function HeroSlideshow() {

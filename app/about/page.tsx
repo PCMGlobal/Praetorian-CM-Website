@@ -12,7 +12,7 @@ export default function AboutPage() {
     <main>
       <div>
           <section style={{ position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(https://images.unsplash.com/photo-1582280871722-424e91cbee8b?w=1400&auto=format&fit=crop&q=80)' }}></div>
+            <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(/images/photos/pcml-hero-01.jpg)' }}></div>
             <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.72) 48%,rgba(0,15,22,.4) 100%)' }}></div>
             <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: 'clamp(24px,3vw,44px) clamp(16px,4vw,44px)' }}>
               <Link href="/" style={{ background: 'none', border: '0', padding: '0', color: '#e3ab7c', fontSize: '13px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>
