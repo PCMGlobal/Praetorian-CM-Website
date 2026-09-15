@@ -37,6 +37,7 @@ const COL_SERVICES = [
 
 const COL_RESOURCES = [
   { label: "News and Insights", href: "/news" },
+  { label: "Praetorian IQ", href: "/praetorian-iq" },
   { label: "Privacy Policy", href: "/privacy" },
 ];
 
