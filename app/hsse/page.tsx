@@ -3,8 +3,8 @@ import CTABanner from "@/app/components/CTABanner";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "HSSE | Praetorian Construction Management",
-  description: "Zero harm is the only acceptable outcome. Praetorian embeds HSSE leadership directly into the owner's team.",
+  title: "HSSE Leadership | Praetorian Construction Management",
+  description: "Zero harm is the only acceptable outcome. Praetorian embeds HSSE leadership directly into the owner's team from mobilisation through handover.",
 };
 
 export default function HSSEPage() {

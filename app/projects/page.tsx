@@ -6,8 +6,8 @@ import { type Pin } from "@/app/components/WorldMap";
 import projectPins from "@/data/project-pins.json";
 
 export const metadata: Metadata = {
-  title: "Projects | Praetorian Construction Management",
-  description: "A working selection of projects delivered across Canada, the USA, Mexico, Peru, Guatemala and Armenia.",
+  title: "Mining Projects | Praetorian Construction Management",
+  description: "Mining construction projects across Canada, USA, Mexico, Peru, Guatemala and Armenia. Open pit, underground, heap leach and industrial construction.",
 };
 
 const PROJECTS = [

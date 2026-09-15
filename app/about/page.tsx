@@ -3,8 +3,8 @@ import CTABanner from "@/app/components/CTABanner";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us | Praetorian Construction Management",
-  description: "Mining construction and project management specialists with experience across industrial sectors worldwide.",
+  title: "Praetorian Construction Management | Mining Specialists",
+  description: "Praetorian Construction Management brings 20+ years of owner's team expertise across mining, energy, and industrial construction worldwide.",
 };
 
 export default function AboutPage() {

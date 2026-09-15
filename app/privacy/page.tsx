@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Praetorian Construction Management",
-  description: "Privacy policy for praetoriancm.com -- how we collect, use and protect your information.",
+  description: "Privacy policy for praetoriancm.com. How we collect, use and protect your information.",
 };
 
 export default function PrivacyPage() {

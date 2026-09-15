@@ -6,7 +6,7 @@ import ArticleGrid from "@/app/news/ArticleGrid";
 
 export const metadata: Metadata = {
   title: "News and Insights | Praetorian Construction Management",
-  description: "Perspectives from the owner's side of the table. Cost intelligence, project controls and safety leadership.",
+  description: "Cost intelligence, project controls, safety leadership, and AI in mining construction. Perspectives from the owner's side of the table. Updated regularly.",
 };
 
 export const revalidate = 60;

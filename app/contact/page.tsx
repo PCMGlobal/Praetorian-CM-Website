@@ -4,8 +4,8 @@ import ContactForm from "@/app/components/ContactForm";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact | Praetorian Construction Management",
-  description: "Let's talk about your project. Praetorian Construction Management, Edmonton, Alberta.",
+  title: "Contact Praetorian Construction Management",
+  description: "Speak with Praetorian's team about your mining construction project. Owner's team specialists based in Edmonton, Alberta, operating globally.",
 };
 
 export default function ContactPage() {
