@@ -5,6 +5,7 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import Reveal from "@/app/components/Reveal";
 import Analytics from "@/app/components/Analytics";
+import Script from "next/script";
 import "./globals.css";
 const sora = Sora({
   subsets: ["latin"],
@@ -61,6 +62,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <Reveal />
         <Analytics />
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Praetorian Construction Management",
+            "url": "https://praetoriancm.com",
+            "logo": "https://praetoriancm.com/pcml-logo-colour.svg",
+            "description": "Owner's team construction management for the global mining sector, with AI-powered cost intelligence built in.",
+            "telephone": "+17809890289",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "201-10441 178 Street",
+              "addressLocality": "Edmonton",
+              "addressRegion": "AB",
+              "postalCode": "T5S 1R5",
+              "addressCountry": "CA"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/praetorian-construction-management",
+              "https://www.youtube.com/@PraetorianCM",
+              "https://x.com/PraetorianCMgmt",
+              "https://www.instagram.com/praetoriancm"
+            ]
+          })}}
+        />
       </body>
     </html>
   );
