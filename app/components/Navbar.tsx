@@ -115,16 +115,16 @@ export default function Navbar() {
           display: "flex",
           alignItems: "center",
           gap: "clamp(14px,2vw,30px)",
-          padding: "10px clamp(16px,4vw,44px)",
+          padding: "4px clamp(16px,4vw,44px)",
           maxWidth: 1400,
           margin: "0 auto",
         }}
       >
-        <Link href="/" style={{ display: "block", flex: "none", padding: "6px 0" }}>
+        <Link href="/" style={{ display: "block", flex: "none", padding: "2px 0" }}>
           <img
             src="/pcml-logo-nav.svg"
             alt="Praetorian Construction Management"
-            style={{ height: "clamp(70px,7vw,96px)", width: "auto", display: "block", animation: "pcmlLogoPulse 3s ease-in-out infinite", transformOrigin: "left center" }}
+            style={{ height: "clamp(80px,8vw,118px)", width: "auto", display: "block", animation: "pcmlLogoPulse 3s ease-in-out infinite", transformOrigin: "left center" }}
           />
         </Link>
 
