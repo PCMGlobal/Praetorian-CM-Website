@@ -272,7 +272,7 @@ export default async function HomePage() {
                 <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Business Guides</h4>
                 <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Best-practice guides</p>
               </a>
-              <a data-reveal="" href="/news" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+              <a data-reveal="" href="/projects" style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><path d="M3 3v18h18" /><path d="M7 16v-5M12 16V7M17 16v-8" /></svg>
                 <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>Case Studies</h4>
                 <p style={{ fontSize: '13px', margin: '0', color: '#687074' }}>Project case studies</p>
