@@ -71,6 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "name": "Praetorian Construction Management",
             "url": "https://praetoriancm.com",
             "logo": "https://praetoriancm.com/pcml-logo-colour.svg",
+              "image": "https://praetoriancm.com/pcml-logo-colour.svg",
             "description": "Owner's team construction management for the global mining sector, with AI-powered cost intelligence built in.",
             "telephone": "+17809890289",
             "address": {
