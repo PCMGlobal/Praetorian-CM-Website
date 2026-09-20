@@ -32,6 +32,8 @@ const DEFAULT_PROJECTS: ProjectCard[] = [
   { slug: "emigrant", title: "Newmont Mining Corp – Emigrant Mine", location: "Carlin, Nevada, USA", client: "Newmont Mining Corp", year: "2011 – 2012", photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Emigrant-Aerial.jpg", excerpt: "Newmont’s Emigrant Mine is a greenfield mine development near Carlin, Nevada. The project involves the construction of access roads, a leach pad, water management facilities, a carbon in column processing plant, and related infrastructure." },
   { slug: "diavik", title: "Diavik Diamond Mines Inc. – Diavik Underground Project", location: "Lac De Gras, NWT, Canada", client: "Diavik Diamond Mines Ltd.", year: "2006 – 2013", photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Diavik.jpg", excerpt: "Diavik’s Underground Project covers work associated with the transition from an open pit to underground operation. Praetorian’s cold weather (arctic) construction expertise and detailed logistics support were critical to the success of this project." },
   { slug: "so2clean", title: "Calabrian Corporation – SO2Clean Production Facility", location: "Porcupine, Ontario, Canada", client: "Calabrian Corporation", year: "2015 – 2017", photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Calabrian-Plant-1.jpg", excerpt: "Calabrian’s SO2Clean Production Facility is a 100 TPD Liquid Sulphur Dioxide Production Plant in Northern Ontario, Canada. Praetorian was responsible for overall Project Management and Construction Management." },
+  { slug: "cote", title: "IAMGOLD/WOOD \u2013 Cote Gold Project", location: "Sudbury District, Ontario, Canada", client: "IAMGOLD", year: "2021 \u2013 2024", photoUrl: "/images/photos/pcml-project-cote.jpg", excerpt: "Cote Gold Project is a greenfield 495,000 gold ounces per annum mine in Ontario. Praetorian provided Project Management Support, Construction Advisory, Turnover and Commissioning Support across the full processing plant and facilities." },
+  { slug: "kiena", title: "Wesdome Gold Mines \u2013 Kiena Paste Plant Project", location: "Val d'Or, Quebec, Canada", client: "Wesdome Gold Mines", year: "2021 \u2013 2022", photoUrl: "/images/photos/pcml-project-kiena.jpg", excerpt: "Praetorian provided on-site Construction Management and Contract Administration for the design, procurement and construction of a Tailings and Backfill System for the Kiena Mine in Val d'Or, Quebec." },
 ];
 
 async function getProjects(): Promise<ProjectCard[]> {
@@ -47,7 +49,10 @@ async function getProjects(): Promise<ProjectCard[]> {
         excerpt
       }`
     );
-    return fetched && fetched.length > 0 ? fetched : DEFAULT_PROJECTS;
+    if (!fetched || fetched.length === 0) return DEFAULT_PROJECTS;
+    const sanityslugs = new Set(fetched.map((p: ProjectCard) => p.slug));
+    const extras = DEFAULT_PROJECTS.filter(p => !sanityslugs.has(p.slug));
+    return [...fetched, ...extras];
   } catch {
     return DEFAULT_PROJECTS;
   }
@@ -75,7 +80,7 @@ export default async function ProjectsPage() {
           <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Featured Projects</div>
           <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(28px,3.2vw,40px)", margin: "0 0 38px", color: "#003E52" }}>Sample Past Projects</h2>
           <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#555c60", margin: "0 0 38px", maxWidth: "72ch" }}>Praetorian's experience cuts across various industries, regions and project scopes. Below are some of our past projects. For a comprehensive past projects list, please contact our <Link href="/contact" style={{ color: "#B06533" }}>Business Development team</Link>.</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: "clamp(20px,2.6vw,28px)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "clamp(20px,2.6vw,28px)" }}>
             {projects.map(p => (
               <div key={p.slug} style={{ background: "#fff", boxShadow: "0 2px 14px rgba(0,20,30,.06)", overflow: "hidden" }}>
                 <div style={{ position: "relative", height: "240px", overflow: "hidden" }}>
