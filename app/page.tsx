@@ -195,6 +195,9 @@ export default async function HomePage() {
               </div>
             </div>
           </section>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '8px clamp(16px,4vw,44px) 0' }}>
+            <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533' }}>Boots on the Ground</div>
+          </div>
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: '24px', marginTop: '40px', marginBottom: '40px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '260px', alignItems: 'stretch', overflow: 'hidden', borderRadius: '2px' }}>
               <div style={{ position: 'relative', overflow: 'hidden', minHeight: '260px' }}>
