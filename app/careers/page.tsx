@@ -193,7 +193,7 @@ export default async function CareersPage() {
                 Home
               </Link>
               <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginTop: '22px' }}>{data.hero.eyebrow}</div>
-              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '24ch' }}>{data.hero.headline}</h1>
+              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(25px,3.45vw,43px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '24ch' }}>{data.hero.headline}</h1>
               <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '62ch', color: '#c3d0d4', margin: '18px 0 0' }}>{data.hero.body}</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '28px' }}>
                 <a href="#pcml-opportunities" style={{ background: '#B06533', color: '#fff', textDecoration: 'none', minHeight: '48px', display: 'flex', alignItems: 'center', padding: '0 24px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '15px' }}>{data.hero.primaryCtaLabel}</a>

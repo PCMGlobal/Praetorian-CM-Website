@@ -1,33 +1,63 @@
-// Fix 2: Reduce hero h1 font size on all other page-level heroes
-// These use inline style fontSize on <h1> — pattern: fontSize: 'var(--font... or clamp
+// Fix 2: Reduce hero h1 font size to 75% across all page-level heroes
+// Windows-compatible recursive file finder
 const fs = require('fs');
 const path = require('path');
-const glob = require('child_process').execSync(
-  "find app -name 'page.tsx' -not -path '*/node_modules/*'", {encoding:'utf8'}
-).trim().split('\n');
 
-const OLD = /fontFamily: 'var\(--font-sora\)[^']*', fontWeight: '700', fontSize: 'clamp\((\d+)px,([\d.]+)vw,(\d+)px\)', margin: '[^']*', color: '#0+3E52'[^}]*\}>[^<]*<\/h1>/g;
+function findFiles(dir, filename, results = []) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory() && entry.name !== 'node_modules' && entry.name !== '.next') {
+      findFiles(full, filename, results);
+    } else if (entry.isFile() && entry.name === filename) {
+      results.push(full);
+    }
+  }
+  return results;
+}
 
-let total = 0;
-glob.forEach(file => {
+const pages = findFiles('app', 'page.tsx');
+
+// 75% of each original value (rounded to nearest px / 2 decimal places on vw)
+const patterns = [
+  // Main hero pages — about, hsse, contact, careers, services, news, praetorian-iq
+  { old: 'fontSize: "clamp(34px,4.6vw,58px)"', new: 'fontSize: "clamp(25px,3.45vw,43px)"' },
+  { old: "fontSize: 'clamp(34px,4.6vw,58px)'", new: "fontSize: 'clamp(25px,3.45vw,43px)'" },
+  // Projects listing page
+  { old: 'fontSize: "clamp(32px,4vw,52px)"',   new: 'fontSize: "clamp(24px,3vw,39px)"' },
+  { old: "fontSize: 'clamp(32px,4vw,52px)'",   new: "fontSize: 'clamp(24px,3vw,39px)'" },
+  // News article slug
+  { old: 'fontSize: "clamp(28px,3.8vw,52px)"', new: 'fontSize: "clamp(21px,2.85vw,39px)"' },
+  { old: "fontSize: 'clamp(28px,3.8vw,52px)'", new: "fontSize: 'clamp(21px,2.85vw,39px)'" },
+];
+
+// Exclude project detail pages (clamp(28px,3.6vw,48px)) — already small, leave alone
+const EXCLUDE = ['amulsar', 'conga', 'diavik', 'emigrant', 'penasquito', 'so2clean', '[slug]'];
+
+let totalFiles = 0;
+let totalReplacements = 0;
+
+pages.forEach(file => {
+  const normalised = file.replace(/\\/g, '/');
+  if (EXCLUDE.some(ex => normalised.includes(ex))) {
+    console.log(`  Skipped: ${path.relative('.', file)}`);
+    return;
+  }
   let content = fs.readFileSync(file, 'utf8');
-  // Target h1 hero headings with the specific large font pattern
-  const patterns = [
-    // about, hsse, contact, careers — all use same inline style on h1
-    { old: "fontWeight: '700', fontSize: 'clamp(36px,4.2vw,54px)'", new: "fontWeight: '700', fontSize: 'clamp(27px,3.15vw,40px)'" },
-    { old: "fontWeight: '700', fontSize: 'clamp(34px,4vw,52px)'",   new: "fontWeight: '700', fontSize: 'clamp(25px,3vw,39px)'" },
-    { old: "fontWeight: '700', fontSize: 'clamp(32px,3.8vw,50px)'", new: "fontWeight: '700', fontSize: 'clamp(24px,2.85vw,37px)'" },
-    { old: "fontWeight: '800', fontSize: 'clamp(36px,4.2vw,54px)'", new: "fontWeight: '800', fontSize: 'clamp(27px,3.15vw,40px)'" },
-    { old: "fontWeight: '800', fontSize: 'clamp(34px,4vw,52px)'",   new: "fontWeight: '800', fontSize: 'clamp(25px,3vw,39px)'" },
-  ];
   let changed = false;
   patterns.forEach(p => {
     if (content.includes(p.old)) {
+      const count = content.split(p.old).length - 1;
       content = content.replaceAll(p.old, p.new);
-      changed = true; total++;
-      console.log(`${file}: ${p.old.substring(0,40)}...`);
+      console.log(`  ${path.relative('.', file)}: replaced ${count}x  ${p.old.slice(10,30)}...`);
+      totalReplacements += count;
+      changed = true;
     }
   });
-  if (changed) fs.writeFileSync(file, content, 'utf8');
+  if (changed) {
+    fs.writeFileSync(file, content, 'utf8');
+    totalFiles++;
+  }
 });
-console.log(`Total replacements across page files: ${total}`);
+
+console.log(`\nDone. ${totalFiles} file(s) updated, ${totalReplacements} replacement(s) made.`);

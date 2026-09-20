@@ -95,7 +95,7 @@ export default async function ContactPage() {
                 {data.hero.backLinkLabel}
               </Link>
               <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginTop: '22px' }}>{data.hero.eyebrow}</div>
-              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(34px,4.6vw,58px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '22ch' }}>{data.hero.headline}</h1>
+              <h1 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(25px,3.45vw,43px)', margin: '14px 0 0', color: '#fff', lineHeight: '1.04', maxWidth: '22ch' }}>{data.hero.headline}</h1>
               <p style={{ fontSize: '16.5px', lineHeight: '1.62', maxWidth: '58ch', color: '#c3d0d4', margin: '18px 0 0' }}>{data.hero.subhead}</p>
             </div>
           </section>

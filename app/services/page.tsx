@@ -53,7 +53,7 @@ export default async function ServicesPage() {
               Home
             </Link>
             <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#e3ab7c", marginTop: "22px" }}>Services</div>
-            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(34px,4.6vw,58px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.04", maxWidth: "22ch" }}>Four service families, one integrated owner&apos;s team</h1>
+            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(25px,3.45vw,43px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.04", maxWidth: "22ch" }}>Four service families, one integrated owner&apos;s team</h1>
             <p style={{ fontSize: "16.5px", lineHeight: "1.62", maxWidth: "62ch", color: "#c3d0d4", margin: "18px 0 0" }}>Praetorian scales from a single embedded specialist to a full owner&apos;s project management office. Every engagement is staffed against your stage gates, not ours.</p>
           </div>
         </section>

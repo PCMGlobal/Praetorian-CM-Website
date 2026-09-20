@@ -68,7 +68,7 @@ export default async function ProjectsPage() {
               Home
             </Link>
             <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#e3ab7c", marginTop: "22px" }}>Projects</div>
-            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(34px,4.6vw,58px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.04", maxWidth: "24ch" }}>40+ projects across six countries, two decades of mining construction expertise</h1>
+            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(25px,3.45vw,43px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.04", maxWidth: "24ch" }}>40+ projects across six countries, two decades of mining construction expertise</h1>
           </div>
         </section>
         <section style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(40px,5vw,66px) clamp(16px,4vw,44px)" }}>

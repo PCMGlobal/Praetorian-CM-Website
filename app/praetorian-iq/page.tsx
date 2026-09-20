@@ -115,7 +115,7 @@ export default async function PraetorianIQPage() {
                 <span style={{ width: "6px", height: "6px", background: "#B06533" }}></span>{data.hero.eyebrowBadge}
               </div>
             </div>
-            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(34px,4.6vw,58px)", margin: "16px 0 0", color: "#fff", lineHeight: "1.04" }}>{data.hero.heading}</h1>
+            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(25px,3.45vw,43px)", margin: "16px 0 0", color: "#fff", lineHeight: "1.04" }}>{data.hero.heading}</h1>
             <p style={{ fontSize: "17px", lineHeight: "1.62", maxWidth: "62ch", color: "#c3d0d4", margin: "16px 0 0" }}>{data.hero.subhead}</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))", gap: "0", marginTop: "38px", border: "1px solid rgba(255,255,255,.2)" }}>
               {data.hero.stats.map((stat, i) => (

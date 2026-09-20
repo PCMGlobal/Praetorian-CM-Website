@@ -174,7 +174,7 @@ export default async function PrivacyPage() {
             Home
           </Link>
           <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#e3ab7c", marginBottom: "12px" }}>Legal</div>
-          <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(32px,4vw,52px)", margin: "0", color: "#fff", lineHeight: "1.06" }}>{data.title}</h1>
+          <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(24px,3vw,39px)", margin: "0", color: "#fff", lineHeight: "1.06" }}>{data.title}</h1>
           {data.lastUpdated ? (
             <p style={{ fontSize: "15px", color: "#c3d0d4", margin: "14px 0 0" }}>Last updated: {data.lastUpdated}</p>
           ) : null}
