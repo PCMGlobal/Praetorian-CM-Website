@@ -45,7 +45,7 @@ export default function Footer() {
   return (
     <footer style={{ background: "#012530", color: "#a9b6bb" }}>
       <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(8px,1vw,12px) clamp(16px,4vw,44px) 0" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: "clamp(32px,4vw,64px)", paddingBottom: "clamp(12px,1.5vw,20px)", alignItems: "start" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr", gap: "clamp(32px,4vw,64px)", paddingBottom: "clamp(12px,1.5vw,20px)", alignItems: "start" }}>
           
           {/* Brand column */}
           <div>
@@ -89,6 +89,18 @@ export default function Footer() {
                 <Link key={l.href} href={l.href} style={linkStyle} className="pcml-flink">{l.label}</Link>
               ))}
             </div>
+
+          {/* Head Office column */}
+          <div style={{ paddingTop: "0" }}>
+            <div style={headingStyle}>Head Office</div>
+            <p style={{ fontSize: "13px", lineHeight: "1.7", color: "#6b7f84", margin: "0 0 8px" }}>
+              201, 10441-178 Street<br />
+              Edmonton, Alberta T5S 1R5<br />
+              Canada
+            </p>
+            <a href="tel:7809890289" style={{ ...linkStyle, display: "block", marginTop: "8px" }}>(780) 989-0289</a>
+            <a href="mailto:info@praetoriancm.com" style={{ ...linkStyle, display: "block" }}>info@praetoriancm.com</a>
+          </div>
           </div>
 
           {/* Resources column */}
@@ -98,16 +110,6 @@ export default function Footer() {
               {COL_RESOURCES.map(l => (
                 <Link key={l.href} href={l.href} style={linkStyle} className="pcml-flink">{l.label}</Link>
               ))}
-            </div>
-            <div style={{ marginTop: "32px" }}>
-              <div style={{ ...headingStyle, marginBottom: "10px" }}>Head Office</div>
-              <p style={{ fontSize: "13px", lineHeight: "1.7", color: "#6b7f84", margin: "0" }}>
-                201, 10441-178 Street<br />
-                Edmonton, Alberta T5S 1R5<br />
-                Canada
-              </p>
-              <a href="tel:7809890289" style={{ ...linkStyle, display: "block", marginTop: "8px" }}>(780) 989-0289</a>
-              <a href="mailto:info@praetoriancm.com" style={{ ...linkStyle, display: "block" }}>info@praetoriancm.com</a>
             </div>
           </div>
 
