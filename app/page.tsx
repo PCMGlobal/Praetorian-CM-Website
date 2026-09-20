@@ -161,6 +161,7 @@ export default async function HomePage() {
     "/images/photos/pcml-service-ownersTeam.jpg",
     "/images/photos/pcml-service-hsse.jpg",
     "/images/photos/pcml-service-commitment.jpg",
+    "/images/photos/pcml-service-projectControls.jpg",
   ];
   const resourceMeta = [
     { href: "/news", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B06533" strokeWidth="1.6"><path d="M4 4h16v16H4z" /><path d="M8 9h8M8 13h5" /></svg> },
