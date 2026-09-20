@@ -252,8 +252,8 @@ export default async function HomePage() {
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', border: '1px solid rgba(176,101,51,.5)', padding: '6px 13px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.16em', textTransform: 'uppercase', color: '#e3ab7c' }}>
                   <span style={{ width: "6px", height: "6px", background: "#B06533" }}></span>Proprietary Platform
                 </div>
-                <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(22px,2.4vw,30px)", margin: "12px 0 0", color: "#fff", lineHeight: "1.06" }}>Praetorian IQ<br />Proprietary Cost Intelligence</h2>
-                <p style={{ fontSize: "14px", lineHeight: "1.62", maxWidth: "56ch", color: "#c3d0d4", margin: "12px 0 18px" }}>Praetorian IQ is our proprietary cost intelligence platform, built on Microsoft Azure and Claude AI. Embedded in every engagement, it gives our teams and their clients real-time benchmarking, document intelligence and predictive analysis drawn from Praetorian's own delivered project record.</p>
+
+                <p style={{ fontSize: "14px", lineHeight: "1.62", maxWidth: "56ch", color: "#c3d0d4", margin: "16px 0 18px" }}>Praetorian IQ is our proprietary cost intelligence platform, built on Microsoft Azure and Claude AI. Embedded in every engagement, it gives our teams and their clients real-time benchmarking, document intelligence and predictive analysis drawn from Praetorian's own delivered project record.</p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px' }}>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "14px" }}>
                   <Link href="/praetorian-iq" style={{ background: "#B06533", color: "#fff", border: "0", minHeight: "46px", padding: "0 20px", fontSize: "15px", fontFamily: "var(--font-sora), sans-serif", fontWeight: "600", cursor: "pointer", display: "inline-flex", alignItems: "center" }}>Learn About Praetorian IQ</Link>
