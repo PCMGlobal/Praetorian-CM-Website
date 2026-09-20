@@ -195,8 +195,8 @@ export default async function HomePage() {
             </div>
           </section>
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: '24px', marginTop: '40px', marginBottom: '40px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '260px', overflow: 'hidden', borderRadius: '2px' }}>
-              <div style={{ position: 'relative', overflow: 'hidden', minHeight: '100%' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '260px', alignItems: 'stretch', overflow: 'hidden', borderRadius: '2px' }}>
+              <div style={{ position: 'relative', overflow: 'hidden', minHeight: '260px' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundImage: `url(${groundPanelImages[0]})`, animation: 'pcmlDrift 26s ease-in-out infinite alternate' }}></div>
               </div>
               <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: '28px 24px' }}>
@@ -207,8 +207,8 @@ export default async function HomePage() {
                 </div>
               </div>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '260px', overflow: 'hidden', borderRadius: '2px' }}>
-              <div style={{ position: 'relative', overflow: 'hidden', minHeight: '100%' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '260px', alignItems: 'stretch', overflow: 'hidden', borderRadius: '2px' }}>
+              <div style={{ position: 'relative', overflow: 'hidden', minHeight: '260px' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundImage: `url(${groundPanelImages[1]})`, animation: 'pcmlDrift 22s ease-in-out infinite alternate-reverse' }}></div>
               </div>
               <div style={{ background: '#f7f7f7', display: 'flex', alignItems: 'center', padding: '28px 24px' }}>
@@ -219,8 +219,8 @@ export default async function HomePage() {
                 </div>
               </div>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '260px', overflow: 'hidden', borderRadius: '2px' }}>
-              <div style={{ position: 'relative', overflow: 'hidden', minHeight: '100%' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '260px', alignItems: 'stretch', overflow: 'hidden', borderRadius: '2px' }}>
+              <div style={{ position: 'relative', overflow: 'hidden', minHeight: '260px' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundImage: `url(${groundPanelImages[2]})`, animation: 'pcmlDrift 24s ease-in-out infinite alternate' }}></div>
               </div>
               <div style={{ background: '#f7f7f7', display: 'flex', alignItems: 'center', padding: '28px 24px' }}>
@@ -231,8 +231,8 @@ export default async function HomePage() {
                 </div>
               </div>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '260px', overflow: 'hidden', borderRadius: '2px' }}>
-              <div style={{ position: 'relative', overflow: 'hidden', minHeight: '100%' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '260px', alignItems: 'stretch', overflow: 'hidden', borderRadius: '2px' }}>
+              <div style={{ position: 'relative', overflow: 'hidden', minHeight: '260px' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundImage: `url(${groundPanelImages[3]})`, animation: 'pcmlDrift 20s ease-in-out infinite alternate' }}></div>
               </div>
               <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: '28px 24px' }}>
