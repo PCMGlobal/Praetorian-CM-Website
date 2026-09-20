@@ -247,20 +247,20 @@ export default async function HomePage() {
           </section>
 
           <section style={{ background: '#003E52', color: '#e9eef0' }}>
-            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 'clamp(30px,4vw,56px)', alignItems: 'start' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(20px,2.5vw,36px) clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 'clamp(30px,4vw,56px)', alignItems: 'start' }}>
               <div data-reveal="">
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', border: '1px solid rgba(176,101,51,.5)', padding: '6px 13px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.16em', textTransform: 'uppercase', color: '#e3ab7c' }}>
                   <span style={{ width: "6px", height: "6px", background: "#B06533" }}></span>Proprietary Platform
                 </div>
-                <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(30px,3.6vw,44px)", margin: "20px 0 0", color: "#fff", lineHeight: "1.06" }}>Praetorian IQ<br />Proprietary Cost Intelligence</h2>
-                <p style={{ fontSize: "16px", lineHeight: "1.62", maxWidth: "56ch", color: "#c3d0d4", margin: "18px 0 26px" }}>Praetorian IQ is our proprietary cost intelligence platform, built on Microsoft Azure and Claude AI. Embedded in every engagement, it gives our teams and their clients real-time benchmarking, document intelligence and predictive analysis drawn from Praetorian's own delivered project record.</p>
+                <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(22px,2.4vw,30px)", margin: "12px 0 0", color: "#fff", lineHeight: "1.06" }}>Praetorian IQ<br />Proprietary Cost Intelligence</h2>
+                <p style={{ fontSize: "14px", lineHeight: "1.62", maxWidth: "56ch", color: "#c3d0d4", margin: "12px 0 18px" }}>Praetorian IQ is our proprietary cost intelligence platform, built on Microsoft Azure and Claude AI. Embedded in every engagement, it gives our teams and their clients real-time benchmarking, document intelligence and predictive analysis drawn from Praetorian's own delivered project record.</p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px' }}>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "14px" }}>
                   <Link href="/praetorian-iq" style={{ background: "#B06533", color: "#fff", border: "0", minHeight: "46px", padding: "0 20px", fontSize: "15px", fontFamily: "var(--font-sora), sans-serif", fontWeight: "600", cursor: "pointer", display: "inline-flex", alignItems: "center" }}>Learn About Praetorian IQ</Link>
                 </div>
 
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(170px,1fr))', gap: '0', marginTop: '36px', border: '1px solid rgba(255,255,255,.2)' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(170px,1fr))', gap: '0', marginTop: '20px', border: '1px solid rgba(255,255,255,.2)' }}>
                   <div style={{ padding: '20px', borderRight: '1px solid rgba(255,255,255,.2)' }}>
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e3ab7c" strokeWidth="1.6"><path d="M3 3v18h18" /><path d="M7 16v-5M12 16V7M17 16v-8" /></svg>
                     <h5 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#fff', margin: '12px 0 6px' }}>Cost Benchmarking</h5>
@@ -278,9 +278,9 @@ export default async function HomePage() {
                   </div>
                 </div>
               </div>
-              <div data-reveal="right" style={{ border: "1px solid rgba(255,255,255,.22)", background: "#04222c", padding: "32px 28px" }}>
-                <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#e3ab7c", marginBottom: "20px" }}>Included in every engagement</div>
-                <div style={{ display: "grid", gap: "20px" }}>
+              <div data-reveal="right" style={{ border: "1px solid rgba(255,255,255,.22)", alignSelf: "start", background: "#04222c", padding: "24px 22px" }}>
+                <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#e3ab7c", marginBottom: "14px" }}>Included in every engagement</div>
+                <div style={{ display: "grid", gap: "14px" }}>
                   <div style={{ borderLeft: "3px solid #B06533", paddingLeft: "16px" }}>
                     <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "15px", color: "#fff", marginBottom: "6px" }}>Your estimates, benchmarked in real time</div>
                     <div style={{ fontSize: "13px", color: "#9aa9ae", lineHeight: "1.6" }}>As your project develops, Praetorian IQ compares your cost position against comparable delivered projects at the same stage gate.</div>
@@ -294,7 +294,7 @@ export default async function HomePage() {
                     <div style={{ fontSize: "13px", color: "#9aa9ae", lineHeight: "1.6" }}>Cost outliers and schedule drift identified against the benchmark before they show up in a monthly report.</div>
                   </div>
                 </div>
-                <div style={{ marginTop: "28px", paddingTop: "20px", borderTop: "1px solid rgba(255,255,255,.14)", fontSize: "13px", color: "#6b7a80", lineHeight: "1.6" }}>
+                <div style={{ marginTop: "16px", paddingTop: "14px", borderTop: "1px solid rgba(255,255,255,.14)", fontSize: "13px", color: "#6b7a80", lineHeight: "1.6" }}>
                   Access to Praetorian IQ is embedded in our client engagements. It is not a standalone subscription product.
                 </div>
               </div>
