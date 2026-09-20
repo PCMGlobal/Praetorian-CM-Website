@@ -38,7 +38,20 @@ export default function MapSection({ projects }: { projects: Pin[] }) {
 
   return (
     <>
-      <div data-reveal="">
+      <div data-reveal="" style={{ position: 'relative' }}>
+        <div style={{
+          position: 'absolute',
+          top: 20,
+          left: 20,
+          zIndex: 10,
+          padding: '14px 20px',
+          background: 'rgba(4,20,28,.78)',
+          border: '1px solid rgba(176,101,51,.4)',
+          pointerEvents: 'none',
+        }}>
+          <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginBottom: '6px' }}>Global Presence</div>
+          <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '22px', color: '#ffffff', lineHeight: '1.1' }}>Praetorian Footprint</div>
+        </div>
         <WorldMap
           projects={projects}
           tourMs={4200}

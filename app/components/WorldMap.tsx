@@ -353,36 +353,6 @@ export default function WorldMap({ projects, tourMs = 4200, logo = "/pcml-logo-n
         }}
       >
         <div
-          style={{
-            position: "absolute",
-            left: 16,
-            top: 16,
-            zIndex: 2,
-            display: "flex",
-            alignItems: "center",
-            gap: 12,
-            padding: "9px 14px",
-            border: "1px solid rgba(176,101,51,.4)",
-            background: "rgba(4,20,28,.78)",
-            fontFamily: 'var(--font-work-sans), system-ui, sans-serif',
-          }}
-        >
-          <img src={logo} alt="Praetorian Construction Management" style={{ height: 56, width: "auto", display: "block" }} />
-          <span
-            style={{
-              fontFamily: "var(--font-sora), sans-serif",
-              fontWeight: 600,
-              fontSize: 17,
-              letterSpacing: ".18em",
-              textTransform: "uppercase",
-              color: "#d99a68",
-            }}
-          >
-            Global deployment map
-          </span>
-        </div>
-
-        <div
           ref={calloutRef}
           style={{
             position: "absolute",
