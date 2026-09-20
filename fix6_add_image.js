@@ -1,0 +1,11 @@
+const fs = require('fs');
+const lines = fs.readFileSync('app/page.tsx', 'utf8').split('\r\n').join('\n').split('\n');
+const idx = lines.findIndex(l => l.includes('pcml-service-commitment.jpg'));
+console.log('Found at line:', idx + 1, '|', lines[idx]);
+lines.splice(idx + 1, 0, '    "/images/photos/pcml-service-projectControls.jpg",');
+fs.writeFileSync('app/page.tsx', lines.join('\n'), 'utf8');
+console.log('Verify:');
+console.log(lines[idx]);
+console.log(lines[idx + 1]);
+console.log(lines[idx + 2]);
+console.log('Done.');

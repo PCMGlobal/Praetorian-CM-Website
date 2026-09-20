@@ -175,8 +175,25 @@ export default async function HomePage() {
       <div>
           <HeroSlideshow content={home.hero} />
 
+          <section style={{ position: 'relative' }}>
+            <GlobeWatermark side="right" opacity={0.05} size={360} />
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '0', borderTop: '1px solid #e4e6e7', borderBottom: '1px solid #e4e6e7' }}>
+                {(home.serviceTeasers ?? []).map((teaser, i) => (
+                  <div key={teaser._key ?? i} data-reveal="" style={{ padding: '30px 28px 32px', borderRight: i < home.serviceTeasers.length - 1 ? '1px solid #e4e6e7' : undefined }}>
+                    <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: '13px', letterSpacing: '.2em', color: '#B06533' }}>{teaser.number}</div>
+                    <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '24px', margin: '12px 0 8px', color: '#003E52' }}>{teaser.title}</h3>
+                    <p style={{ fontSize: '14.5px', lineHeight: '1.6', color: '#555c60', margin: '0 0 16px' }}>{teaser.description}</p>
+                    <Link href={`/services#${serviceAnchors[i]}`} style={{ background: 'none', border: '0', padding: '0', fontSize: '14px', color: '#B06533', cursor: 'pointer', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>Explore
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
-          <section style={{ background: '#f7f7f7', padding: 'clamp(24px,3.5vw,44px) 0', position: 'relative', overflow: 'hidden' }}>
+          <section style={{ background: '#f7f7f7', padding: 'clamp(46px,6vw,84px) 0', position: 'relative', overflow: 'hidden' }}>
             <GlobeWatermark side="left" opacity={0.05} size={360} />
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
               <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{home.whatWeDo.eyebrow}</div>
@@ -184,7 +201,7 @@ export default async function HomePage() {
               <p data-reveal="" style={{ fontSize: '16px', lineHeight: '1.6', maxWidth: '66ch', color: '#555c60', margin: '18px 0 38px' }}>{home.whatWeDo.subhead}</p>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,2.6vw,26px)' }}>
-                {home.whatWeDo.cards.map((card, i) => (
+                {(home.whatWeDo?.cards ?? []).map((card, i) => (
                   <div key={card._key ?? i} data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
                     {whatWeDoIcons[i]}
                     <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>{card.title}</h4>
@@ -194,63 +211,75 @@ export default async function HomePage() {
               </div>
             </div>
           </section>
-          <section style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)' }}>
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden' }}>
+          <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(420px,1fr))' }}>
+            <div style={{ position: 'relative', minHeight: '440px', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 26s ease-in-out infinite alternate' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[0]})` }} ></div>
               </div>
               <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.35),rgba(0,15,22,0))' }}></div>
             </div>
-            <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: 'clamp(28px,3.5vw,48px)' }}>
+            <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: 'clamp(40px,5vw,66px)' }}>
               <div data-reveal="right" style={{ maxWidth: '44ch' }}>
-                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>{home.onTheGround[0]?.eyebrow}</div>
-                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,27px)', margin: '10px 0 12px', color: '#fff', lineHeight: '1.1' }}>{home.onTheGround[0]?.heading}</h2>
-                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>{home.onTheGround[0]?.body}</p>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>{home.onTheGround?.[0]?.eyebrow}</div>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '12px 0 16px', color: '#fff', lineHeight: '1.1' }}>{home.onTheGround?.[0]?.heading}</h2>
+                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>{home.onTheGround?.[0]?.body}</p>
               </div>
             </div>
 
-            <div style={{ background: '#f7f7f7', display: 'flex', alignItems: 'center', padding: 'clamp(28px,3.5vw,48px)', order: '3' }}>
+            <div style={{ background: '#f7f7f7', display: 'flex', alignItems: 'center', padding: 'clamp(40px,5vw,66px)', order: '3' }}>
               <div data-reveal="left" style={{ maxWidth: '44ch' }}>
-                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{home.onTheGround[1]?.eyebrow}</div>
-                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,27px)', margin: '10px 0 12px', color: '#003E52', lineHeight: '1.1' }}>{home.onTheGround[1]?.heading}</h2>
-                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0' }}>{home.onTheGround[1]?.body}</p>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{home.onTheGround?.[1]?.eyebrow}</div>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '12px 0 16px', color: '#003E52', lineHeight: '1.1' }}>{home.onTheGround?.[1]?.heading}</h2>
+                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0' }}>{home.onTheGround?.[1]?.body}</p>
               </div>
             </div>
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden', order: '4' }}>
+            <div style={{ position: 'relative', minHeight: '440px', overflow: 'hidden', order: '4' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 22s ease-in-out infinite alternate-reverse' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[1]})` }} ></div>
               </div>
             </div>
 
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden', order: '5' }}>
+            <div style={{ position: 'relative', minHeight: '440px', overflow: 'hidden', order: '5' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 24s ease-in-out infinite alternate' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[2]})` }} ></div>
               </div>
               <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.35),rgba(0,15,22,0))' }}></div>
             </div>
-            <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: 'clamp(28px,3.5vw,48px)', order: '6' }}>
+            <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: 'clamp(40px,5vw,66px)', order: '6' }}>
               <div data-reveal="right" style={{ maxWidth: '44ch' }}>
-                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>{home.onTheGround[2]?.eyebrow}</div>
-                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,27px)', margin: '10px 0 12px', color: '#fff', lineHeight: '1.1' }}>{home.onTheGround[2]?.heading}</h2>
-                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>{home.onTheGround[2]?.body}</p>
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>{home.onTheGround?.[2]?.eyebrow}</div>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '12px 0 16px', color: '#fff', lineHeight: '1.1' }}>{home.onTheGround?.[2]?.heading}</h2>
+                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>{home.onTheGround?.[2]?.body}</p>
               </div>
-            </div>
-
-            <div style={{ background: '#f7f7f7', display: 'flex', alignItems: 'center', padding: 'clamp(28px,3.5vw,48px)', order: '7' }}>
-              <div data-reveal="left" style={{ maxWidth: '44ch' }}>
-                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>PROJECT CONTROLS</div>
-                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,27px)', margin: '10px 0 12px', color: '#003E52', lineHeight: '1.1' }}>Cost and schedule visibility from day one</h2>
-                <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0' }}>Earned value tracking, progress measurement, and change management integrated from study through commissioning — so nothing surprises you at close-out.</p>
-              </div>
-            </div>
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden', order: '8' }}>
-              <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 20s ease-in-out infinite alternate' }}>
-                <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[3]})` }}></div>
-              </div>
-              <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.35),rgba(0,15,22,0))' }}></div>
             </div>
           </section>
 
+          <section style={{ padding: 'clamp(28px,3.5vw,52px) 0' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '20px', marginBottom: '30px' }}>
+              <div data-reveal="">
+                <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{home.footprint.eyebrow}</div>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>{home.footprint.heading}</h2>
+                <div style={{ width: '64px', height: '3px', background: '#B06533', marginTop: '18px' }}></div>
+              </div>
+              <p data-reveal="" style={{ fontSize: '14px', maxWidth: '80ch', margin: '0', color: '#65696c' }}>{home.footprint.body}</p>
+            </div>
+            </div>
+              <MapSection projects={projectPins as Pin[]} />
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}><div style={{ display: 'flex', flexWrap: 'wrap', gap: '22px', marginTop: '14px', fontSize: '12px', color: '#7d8288' }}><span style={{ fontStyle: 'italic' }}>Geometry: Natural Earth (public domain)</span><span>Hover a country to highlight its locations.</span></div></div>
+
+          </section>
+
+          <section style={{ background: '#f7f7f7', padding: '0 0 clamp(46px,6vw,72px)' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
+            <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533', marginBottom: '12px' }}>{home.allLocations.eyebrow}</div>
+            <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(22px,2.6vw,30px)', margin: '0 0 8px', color: '#003E52' }}>{home.allLocations.heading}</h3>
+            <p style={{ fontSize: '14px', color: '#65696c', margin: '0 0 26px', textAlign: 'justify' }}>{home.allLocations.body}</p>
+            <CountryCards />
+            </div>
+          </section>
+
+{/* Praetorian IQ section hidden -- restore by removing comment wrapper
           <section style={{ background: '#003E52', color: '#e9eef0' }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 'clamp(30px,4vw,56px)', alignItems: 'start' }}>
               <div data-reveal="">
@@ -305,13 +334,14 @@ export default async function HomePage() {
               </div>
             </div>
           </section>
+*/}
 
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)', background: '#ffffff' }}>
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{home.resources.eyebrow}</div>
             <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>{home.resources.heading}</h2>
             <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 34px' }}></div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 'clamp(16px,2vw,22px)', textAlign: 'left' }}>
-              {home.resources.cards.map((card, i) => (
+              {(home.resources?.cards ?? []).map((card, i) => (
                 <a key={card._key ?? i} data-reveal="" href={resourceMeta[i]?.href ?? "/news"} style={{ background: '#fff', boxShadow: '0 2px 14px rgba(0,20,30,.06)', padding: '22px 20px', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                   {resourceMeta[i]?.icon}
                   <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '19px', margin: '16px 0 5px', color: '#003E52' }}>{card.title}</h4>
