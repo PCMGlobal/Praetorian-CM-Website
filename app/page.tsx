@@ -194,56 +194,56 @@ export default async function HomePage() {
               </div>
             </div>
           </section>
-          <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(420px,1fr))' }}>
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden' }}>
+          <section style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)' }}>
+            <div style={{ position: 'relative', minHeight: '280px', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 26s ease-in-out infinite alternate' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[0]})` }} ></div>
               </div>
               <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.35),rgba(0,15,22,0))' }}></div>
             </div>
-            <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: 'clamp(28px,3.5vw,48px)' }}>
+            <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: 'clamp(20px,2.5vw,36px)' }}>
               <div data-reveal="right" style={{ maxWidth: '44ch' }}>
                 <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>{home.onTheGround?.[0]?.eyebrow}</div>
-                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,27px)', margin: '10px 0 12px', color: '#fff', lineHeight: '1.1' }}>{home.onTheGround?.[0]?.heading}</h2>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(17px,1.8vw,22px)', margin: '10px 0 12px', color: '#fff', lineHeight: '1.1' }}>{home.onTheGround?.[0]?.heading}</h2>
                 <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>{home.onTheGround?.[0]?.body}</p>
               </div>
             </div>
 
-            <div style={{ background: '#f7f7f7', display: 'flex', alignItems: 'center', padding: 'clamp(28px,3.5vw,48px)', order: '3' }}>
+            <div style={{ background: '#f7f7f7', display: 'flex', alignItems: 'center', padding: 'clamp(20px,2.5vw,36px)' }}>
               <div data-reveal="left" style={{ maxWidth: '44ch' }}>
                 <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{home.onTheGround?.[1]?.eyebrow}</div>
-                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,27px)', margin: '10px 0 12px', color: '#003E52', lineHeight: '1.1' }}>{home.onTheGround?.[1]?.heading}</h2>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(17px,1.8vw,22px)', margin: '10px 0 12px', color: '#003E52', lineHeight: '1.1' }}>{home.onTheGround?.[1]?.heading}</h2>
                 <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0' }}>{home.onTheGround?.[1]?.body}</p>
               </div>
             </div>
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden', order: '4' }}>
+            <div style={{ position: 'relative', minHeight: '280px', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 22s ease-in-out infinite alternate-reverse' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[1]})` }} ></div>
               </div>
             </div>
 
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden', order: '5' }}>
+            <div style={{ position: 'relative', minHeight: '280px', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 24s ease-in-out infinite alternate' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[2]})` }} ></div>
               </div>
               <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.35),rgba(0,15,22,0))' }}></div>
             </div>
-            <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: 'clamp(28px,3.5vw,48px)', order: '6' }}>
+            <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: 'clamp(20px,2.5vw,36px)' }}>
               <div data-reveal="right" style={{ maxWidth: '44ch' }}>
                 <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>{home.onTheGround?.[2]?.eyebrow}</div>
-                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,27px)', margin: '10px 0 12px', color: '#fff', lineHeight: '1.1' }}>{home.onTheGround?.[2]?.heading}</h2>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(17px,1.8vw,22px)', margin: '10px 0 12px', color: '#fff', lineHeight: '1.1' }}>{home.onTheGround?.[2]?.heading}</h2>
                 <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>{home.onTheGround?.[2]?.body}</p>
               </div>
             </div>
 
-            <div style={{ background: '#f7f7f7', display: 'flex', alignItems: 'center', padding: 'clamp(28px,3.5vw,48px)', order: '7' }}>
+            <div style={{ background: '#f7f7f7', display: 'flex', alignItems: 'center', padding: 'clamp(20px,2.5vw,36px)' }}>
               <div data-reveal="left" style={{ maxWidth: '44ch' }}>
                 <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>PROJECT CONTROLS</div>
-                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,27px)', margin: '10px 0 12px', color: '#003E52', lineHeight: '1.1' }}>Cost and schedule visibility from day one</h2>
+                <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(17px,1.8vw,22px)', margin: '10px 0 12px', color: '#003E52', lineHeight: '1.1' }}>Cost and schedule visibility from day one</h2>
                 <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0' }}>Earned value tracking, progress measurement, and change management integrated from study through commissioning — so nothing surprises you at close-out.</p>
               </div>
             </div>
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden', order: '8' }}>
+            <div style={{ position: 'relative', minHeight: '280px', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 20s ease-in-out infinite alternate' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[3]})` }}></div>
               </div>
