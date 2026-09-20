@@ -52,9 +52,6 @@ export default function Footer() {
             <Link href="/" style={{ display: "inline-block", marginBottom: "12px" }}>
               <img src="/pcml-logo-footer.svg" alt="Praetorian Construction Management" style={{ width: "100%", maxWidth: "160px", height: "auto", display: "block" }} />
             </Link>
-            <p style={{ fontSize: "13px", lineHeight: "1.7", color: "#6b7f84", margin: "0 0 16px" }}>
-              Owner&apos;s team construction management for the global mining sector.
-            </p>
             <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
               <a href="https://www.linkedin.com/company/praetorian-construction-management/" target="_blank" rel="noopener noreferrer" className="pcml-flink" style={{ color: "#B06533", textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", width: "36px", height: "36px", borderRadius: "50%", background: "#003E52", flexShrink: 0 }} aria-label="LinkedIn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
