@@ -88,7 +88,7 @@ export default async function HSSEPage() {
           <section style={{ position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: 'url(/images/photos/pcml-service-hsse.jpg)' }}></div>
             <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.72) 48%,rgba(0,15,22,.4) 100%)' }}></div>
-            <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: 'clamp(40px,5vw,72px) clamp(16px,4vw,44px)' }}>
+            <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: 'clamp(24px,3vw,40px) clamp(16px,4vw,44px)' }}>
               <Link href="/" style={{ background: 'none', border: '0', padding: '0', color: '#e3ab7c', fontSize: '13px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
                 Home
@@ -99,10 +99,10 @@ export default async function HSSEPage() {
             </div>
           </section>
 
-          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(20px,2.5vw,32px) clamp(16px,4vw,44px)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,2.6vw,32px)' }}>
               {data.pillars.map((card, i) => (
-                <div key={card._key ?? i} data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                <div key={card._key ?? i} data-reveal="" style={{ background: '#fff', padding: '16px 18px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
                   {pillarIcons[i]}
                   <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>{card.title}</h4>
                   <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>{card.description}</p>
@@ -118,23 +118,23 @@ export default async function HSSEPage() {
                 </div>
                 <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.4),rgba(0,15,22,0))' }}></div>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', padding: 'clamp(40px,5vw,66px)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', padding: 'clamp(22px,2.8vw,36px)' }}>
                 <div data-reveal="right" style={{ maxWidth: '44ch' }}>
                   <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>{data.commitment.eyebrow}</div>
-                  <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '12px 0 16px', color: '#fff', lineHeight: '1.1' }}>{data.commitment.heading}</h2>
+                  <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '8px 0 10px', color: '#fff', lineHeight: '1.1' }}>{data.commitment.heading}</h2>
                   <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0 0 24px' }}>{data.commitment.body}</p>
                   <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#B06533', color: '#fff', textDecoration: 'none', minHeight: '46px', padding: '0 22px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '14px' }}>{data.commitment.ctaLabel}</Link>
                 </div>
               </div>
             </div>
           </section>
-          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
+          <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(20px,2.5vw,32px) clamp(16px,4vw,44px)' }}>
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533' }}>{data.statsSection.eyebrow}</div>
-            <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,28px)', margin: '12px 0 0', color: '#003E52' }}>{data.statsSection.heading}</h2>
+            <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,28px)', margin: '8px 0 0', color: '#003E52' }}>{data.statsSection.heading}</h2>
             <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: '0', border: '1px solid #e4e6e7' }}>
               {data.statsSection.stats.map((stat, i) => (
-                <div key={stat._key ?? i} data-reveal="" style={{ padding: '28px 24px', borderRight: i < data.statsSection.stats.length - 1 ? '1px solid #e4e6e7' : undefined }}>
+                <div key={stat._key ?? i} data-reveal="" style={{ padding: '16px 20px', borderRight: i < data.statsSection.stats.length - 1 ? '1px solid #e4e6e7' : undefined }}>
                   <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(32px,3.2vw,44px)', color: '#003E52' }}>{stat.value}<span style={{ color: '#B06533' }}>{stat.suffix}</span></div>
                   <div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#7d8288', marginTop: '6px' }}>{stat.label}</div>
                   <p style={{ fontSize: '13.5px', color: '#5b6266', margin: '10px 0 0', lineHeight: '1.5' }}>{stat.description}</p>
