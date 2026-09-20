@@ -291,7 +291,6 @@ export default async function HomePage() {
               </div>
             </div>
           </section>
-*/}
 
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)', background: '#ffffff' }}>
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{home.resources.eyebrow}</div>
