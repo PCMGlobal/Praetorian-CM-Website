@@ -194,8 +194,8 @@ export default async function HomePage() {
               </div>
             </div>
           </section>
-          <section style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)' }}>
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden' }}>
+          <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridAutoRows: '420px' }}>
+            <div style={{ position: 'relative', minHeight: '0', height: '100%', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 26s ease-in-out infinite alternate' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[0]})` }} ></div>
               </div>
@@ -216,13 +216,13 @@ export default async function HomePage() {
                 <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0' }}>{home.onTheGround?.[1]?.body}</p>
               </div>
             </div>
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden', order: '4' }}>
+            <div style={{ position: 'relative', minHeight: '0', height: '100%', overflow: 'hidden', order: '4' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 22s ease-in-out infinite alternate-reverse' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[1]})` }} ></div>
               </div>
             </div>
 
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden', order: '5' }}>
+            <div style={{ position: 'relative', minHeight: '0', height: '100%', overflow: 'hidden', order: '5' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 24s ease-in-out infinite alternate' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[2]})` }} ></div>
               </div>
@@ -243,7 +243,7 @@ export default async function HomePage() {
                 <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0' }}>Earned value tracking, progress measurement, and change management integrated from study through commissioning — so nothing surprises you at close-out.</p>
               </div>
             </div>
-            <div style={{ position: 'relative', minHeight: '340px', overflow: 'hidden', order: '8' }}>
+            <div style={{ position: 'relative', minHeight: '0', height: '100%', overflow: 'hidden', order: '8' }}>
               <div style={{ position: 'absolute', inset: '0', animation: 'pcmlDrift 20s ease-in-out infinite alternate' }}>
                 <div style={{ position: 'absolute', inset: '0', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(${groundPanelImages[3]})` }}></div>
               </div>
