@@ -248,19 +248,19 @@ export default async function HomePage() {
 
           <section style={{ background: '#003E52', color: '#e9eef0' }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(20px,2.5vw,36px) clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 'clamp(30px,4vw,56px)', alignItems: 'start' }}>
-              <div data-reveal="">
+              <div data-reveal="" style={{ display: "flex", flexDirection: "column", height: "100%" }}>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', border: '1px solid rgba(176,101,51,.5)', padding: '6px 13px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.16em', textTransform: 'uppercase', color: '#e3ab7c' }}>
                   <span style={{ width: "6px", height: "6px", background: "#B06533" }}></span>Proprietary Platform
                 </div>
 
-                <p style={{ fontSize: "14px", lineHeight: "1.62", maxWidth: "56ch", color: "#c3d0d4", margin: "16px 0 18px" }}>Praetorian IQ is our proprietary cost intelligence platform, built on Microsoft Azure and Claude AI. Embedded in every engagement, it gives our teams and their clients real-time benchmarking, document intelligence and predictive analysis drawn from Praetorian's own delivered project record.</p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px' }}>
+                <p style={{ fontSize: "14px", lineHeight: "1.62", maxWidth: "72ch", color: "#c3d0d4", margin: "16px 0 18px" }}>Praetorian IQ is our proprietary cost intelligence platform, built on Microsoft Azure and Claude AI. Embedded in every engagement, it gives our teams and their clients real-time benchmarking, document intelligence and predictive analysis drawn from Praetorian's own delivered project record.</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginBottom: '0' }}>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "14px" }}>
                   <Link href="/praetorian-iq" style={{ background: "#B06533", color: "#fff", border: "0", minHeight: "46px", padding: "0 20px", fontSize: "15px", fontFamily: "var(--font-sora), sans-serif", fontWeight: "600", cursor: "pointer", display: "inline-flex", alignItems: "center" }}>Learn About Praetorian IQ</Link>
                 </div>
 
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(170px,1fr))', gap: '0', marginTop: '20px', border: '1px solid rgba(255,255,255,.2)' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(170px,1fr))', gap: '0', marginTop: '12px', border: '1px solid rgba(255,255,255,.2)' }}>
                   <div style={{ padding: '20px', borderRight: '1px solid rgba(255,255,255,.2)' }}>
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e3ab7c" strokeWidth="1.6"><path d="M3 3v18h18" /><path d="M7 16v-5M12 16V7M17 16v-8" /></svg>
                     <h5 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '16px', color: '#fff', margin: '12px 0 6px' }}>Cost Benchmarking</h5>
