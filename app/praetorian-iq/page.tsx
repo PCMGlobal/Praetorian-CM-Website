@@ -150,7 +150,7 @@ export default async function PraetorianIQPage() {
 
         <section style={{ background: "#f7f7f7", padding: "clamp(44px,6vw,78px) 0" }}>
           <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
-            <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>{data.dataSection.eyebrow}</div>
+            <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>{data.dataSection.eyebrow}</div>
             <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(28px,3.2vw,40px)", margin: "0 0 20px", color: "#003E52" }}>{data.dataSection.heading}</h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "clamp(24px,3vw,44px)", alignItems: "start" }}>
               <div>

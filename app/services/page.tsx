@@ -71,13 +71,13 @@ export default async function ServicesPage() {
               <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
                 {i === 0 && (
                   <div style={{ marginBottom: "clamp(24px,3vw,40px)" }}>
-                    <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Our Services</div>
-                    <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(30px,3.6vw,44px)", margin: "0", color: "#003E52" }}>What We Do</h2>
+                    <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Our Services</div>
+                    <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(20px,2.2vw,28px)", margin: "0", color: "#003E52" }}>What We Do</h2>
                   </div>
                 )}
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "clamp(36px,5vw,72px)", alignItems: "start" }}>
                   <div>
-                    <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>{col.number}</div>
+                    <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>{col.number}</div>
                     <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "20px", margin: "0 0 12px", color: "#003E52", lineHeight: "1.2" }}>{col.title}</h2>
                     <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>{col.subtitle}</p>
                   </div>
@@ -91,7 +91,7 @@ export default async function ServicesPage() {
         </div>
         <section id="our-approach" style={{ background: "#003E52", padding: "clamp(46px,6vw,84px) 0", scrollMarginTop: "120px" }}>
           <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
-            <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Our Approach</div>
+            <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Our Approach</div>
             <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(30px,3.6vw,44px)", margin: "0 0 12px", color: "#ffffff" }}>How We Deliver</h2>
             <p style={{ fontSize: "16px", lineHeight: "1.7", color: "#c3d0d4", margin: "0 0 44px", textAlign: "justify" }}>Praetorian delivers value through early engagement, disciplined execution, and the deployment of proven tools and technologies. From the first stage gate through final turnover, our teams are equipped with the systems, processes, and intelligence platforms that keep projects on budget, on schedule, and in control.</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(480px,1fr))", gap: "clamp(20px,2.6vw,28px)" }}>

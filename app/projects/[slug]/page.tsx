@@ -233,7 +233,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         <section style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(44px,6vw,72px) clamp(16px,4vw,44px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "clamp(28px,4vw,56px)" }}>
             <div>
-              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Overview</div>
+              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Overview</div>
               {data.overviewParagraphs.map((paragraph, i) => (
                 <p key={i} style={{ fontSize: i === 0 ? "15.5px" : "14.5px", lineHeight: "1.8", color: i === 0 ? "#3a3f42" : "#555c60", margin: i === data.overviewParagraphs.length - 1 ? "0" : "0 0 22px" }}>{paragraph}</p>
               ))}
@@ -241,7 +241,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div>
               {data.secondaryListItems && data.secondaryListItems.length > 0 ? (
                 <>
-                  <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>{data.secondaryListLabel}</div>
+                  <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>{data.secondaryListLabel}</div>
                   <ul style={{ fontSize: "14.5px", lineHeight: "1.9", color: "#555c60", margin: "0 0 28px", paddingLeft: "18px" }}>
                     {data.secondaryListItems.map((item, i) => (
                       <li key={i}>{item}</li>
@@ -251,7 +251,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               ) : null}
               {data.scope ? (
                 <>
-                  <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Praetorian&rsquo;s Scope</div>
+                  <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Praetorian&rsquo;s Scope</div>
                   <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0" }}>{data.scope}</p>
                 </>
               ) : null}

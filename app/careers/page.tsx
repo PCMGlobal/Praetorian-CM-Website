@@ -205,7 +205,7 @@ export default async function CareersPage() {
           <section id="pcml-careers-why" style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(340px,1fr))', gap: 'clamp(36px,5vw,72px)', alignItems: 'start' }}>
               <div>
-                <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533', marginBottom: '12px' }}>{data.whyChooseUs.eyebrow}</div>
+                <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533', marginBottom: '12px' }}>{data.whyChooseUs.eyebrow}</div>
                 <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(28px,3.2vw,40px)', margin: '0 0 20px', color: '#003E52', lineHeight: '1.08' }}>{data.whyChooseUs.heading}</h2>
                 {data.whyChooseUs.paragraphs.map((paragraph, i) => (
                   <p key={i} style={{ fontSize: '15.5px', lineHeight: '1.7', color: '#555c60', margin: i === data.whyChooseUs.paragraphs.length - 1 ? '0' : '0 0 18px' }}>{paragraph}</p>
@@ -265,7 +265,7 @@ export default async function CareersPage() {
 
           <section style={{ background: '#f7f7f7', padding: 'clamp(46px,6vw,84px) 0' }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
-              <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{data.disciplinesSection.eyebrow}</div>
+              <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533' }}>{data.disciplinesSection.eyebrow}</div>
               <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(28px,3.2vw,40px)', margin: '12px 0 0', color: '#003E52' }}>{data.disciplinesSection.heading}</h2>
               <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,2.6vw,26px)' }}>
@@ -273,7 +273,7 @@ export default async function CareersPage() {
                   <div key={discipline._key ?? i} data-reveal="" style={{ background: '#fff', padding: '24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderLeft: '3px solid #B06533' }}>
                     <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#003E52', margin: '0 0 8px' }}>{discipline.title}</h4>
                     <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 12px' }}>{discipline.description}</p>
-                    <div style={{ fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#B06533', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>{discipline.tags}</div>
+                    <div style={{ fontSize: '18px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#B06533', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600' }}>{discipline.tags}</div>
                   </div>
                 ))}
               </div>
@@ -283,7 +283,7 @@ export default async function CareersPage() {
           <section id="pcml-opportunities" style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(340px,1fr))', gap: 'clamp(36px,5vw,64px)', alignItems: 'start' }}>
               <div>
-                <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{data.opportunities.eyebrow}</div>
+                <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533' }}>{data.opportunities.eyebrow}</div>
                 <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(28px,3.2vw,40px)', margin: '12px 0 16px', color: '#003E52' }}>{data.opportunities.heading}</h2>
                 <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0 0 16px' }}>{data.opportunities.paragraph1}</p>
                 <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#555c60', margin: '0 0 28px' }}>{data.opportunities.paragraph2Prefix} <a href="mailto:careers@praetoriancm.com" style={{ color: '#B06533', fontWeight: '600' }}>careers@praetoriancm.com</a></p>

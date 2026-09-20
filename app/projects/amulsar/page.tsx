@@ -31,12 +31,12 @@ export default function ProjectPage() {
         <section style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(44px,6vw,72px) clamp(16px,4vw,44px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "clamp(28px,4vw,56px)" }}>
             <div>
-              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Overview</div>
+              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Overview</div>
               <p style={{ fontSize: "15.5px", lineHeight: "1.8", color: "#3a3f42", margin: "0 0 22px" }}>Amulsar Gold Project is a greenfield 225,000 gold ounces per annum mine in the Republic of Armenia. Praetorian provided supports ranging from feasibility review, assistance in preparation for financing, environmental and social impact assessment review, project management, construction management and precommissioning.</p>
               <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0" }}>Praetorian's unique skillsets were critical to the success of this project, including remote region construction expertise, experience with constructability reviews to capture cost savings, engineering interface for seamless integration with construction, construction driven-approach, early identification of contractor strengths and ability to breach gaps identified to ensure project success, staffing with Praetorian personnel with multidiscipline skillsets.</p>
             </div>
             <div>
-              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Facilities</div>
+              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Facilities</div>
               <ul style={{ fontSize: "14.5px", lineHeight: "1.9", color: "#555c60", margin: "0 0 28px", paddingLeft: "18px" }}>
                 <li>Crusher Facility and Adsorption, Desorption and Recovery (ADR) Facility</li>
                 <li>Heap Leach Facility (Ponds, Dams, Channels)</li>
@@ -46,7 +46,7 @@ export default function ProjectPage() {
                 <li>Mine Shop and Related Facilities</li>
                 <li>Site Services and Utilities (Water, Gas, Power) and Haul Roads</li>
               </ul>
-              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Praetorian's Scope</div>
+              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Praetorian's Scope</div>
               <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0" }}>Feasibility Review and Input for Project Development, Support for Financing, Support for ESIA, Development, Value Engineering, Procurement, Contracts Development and Administration, Cost Control, Scheduling, Constructability, Survey Data Management, Survey, Overall Project Management, Construction Management, Pre-commissioning and Operations Preparations Support.</p>
             </div>
           </div>

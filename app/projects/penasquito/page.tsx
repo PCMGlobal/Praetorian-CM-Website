@@ -31,12 +31,12 @@ export default function ProjectPage() {
         <section style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(44px,6vw,72px) clamp(16px,4vw,44px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "clamp(28px,4vw,56px)" }}>
             <div>
-              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Overview</div>
+              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Overview</div>
               <p style={{ fontSize: "15.5px", lineHeight: "1.8", color: "#3a3f42", margin: "0 0 22px" }}>Goldcorp's Peñasquito Mine CLR (Centerline Raise) project is a brownfield expansion of the tailings facility and tailings systems. The project involves the construction of lined tailings dams, reclaim ponds, access roads, tailings pumping systems, tailings discharge and water reclaim systems for the purpose of increasing the overall capacity of the tailings storage facility.</p>
               <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0" }}>Praetorian provided Project Management services by integrating with the Goldcorp personnel as part of the owners' team, including training of Goldcorp staff for future tailings facility raises and heavy equipment operator training of local residents.</p>
             </div>
             <div>
-              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Key Quantities</div>
+              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Key Quantities</div>
               <ul style={{ fontSize: "14.5px", lineHeight: "1.9", color: "#555c60", margin: "0 0 28px", paddingLeft: "18px" }}>
                 <li>20M m3 Bulk Excavation</li>
                 <li>13M m3 Bulk Mine Waste Rock Fill</li>
@@ -45,7 +45,7 @@ export default function ProjectPage() {
                 <li>8.3 km of cable and 28 large diameter pumps</li>
                 <li>220 person camp expansion</li>
               </ul>
-              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Praetorian's Scope</div>
+              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Praetorian's Scope</div>
               <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0" }}>Project Management, Construction Management, Cost Control, Scheduling, Constructability, and CM Team Training.</p>
             </div>
           </div>

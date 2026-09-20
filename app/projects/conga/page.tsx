@@ -31,12 +31,12 @@ export default function ProjectPage() {
         <section style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(44px,6vw,72px) clamp(16px,4vw,44px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "clamp(28px,4vw,56px)" }}>
             <div>
-              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Overview</div>
+              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Overview</div>
               <p style={{ fontSize: "15.5px", lineHeight: "1.8", color: "#3a3f42", margin: "0 0 22px" }}>The Conga project is an open pit copper/gold mine. The project covers a vast area of approx. 6,000 ha and involves a substantial amount of earthworks infrastructure in a remote area of the Peruvian Andes. The average elevation is approximately 3,800 m and there is significant water management required during the wet season where annual rainfalls can exceed 1.2m.</p>
               <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0" }}>Praetorian provided survey data and Cadd Modelling management, collating data from multiple survey groups, overall site map information management, as-builts, quantity and quality control for contractor payment, and aggregate quantity management.</p>
             </div>
             <div>
-              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Key Quantities</div>
+              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Key Quantities</div>
               <ul style={{ fontSize: "14.5px", lineHeight: "1.9", color: "#555c60", margin: "0 0 28px", paddingLeft: "18px" }}>
                 <li>20 water storage dams, tailings dams, and sediment ponds</li>
                 <li>25 km of water diversion channels</li>
@@ -44,7 +44,7 @@ export default function ProjectPage() {
                 <li>25M m3 of contractor excavated earthworks</li>
                 <li>10M m3 of Mine Operations supplied rock fill for earthworks structures</li>
               </ul>
-              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Praetorian's Scope</div>
+              <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Praetorian's Scope</div>
               <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0" }}>Earthworks Project and Construction Management, Value Engineering and Constructability, Survey Data Control and Cadd Modeling Management.</p>
             </div>
           </div>

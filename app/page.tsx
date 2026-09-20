@@ -180,8 +180,8 @@ export default async function HomePage() {
           <section style={{ background: '#f7f7f7', padding: 'clamp(24px,3.5vw,44px) 0', position: 'relative', overflow: 'hidden' }}>
             <GlobeWatermark side="left" opacity={0.05} size={360} />
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
-              <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{home.whatWeDo.eyebrow}</div>
-              <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', maxWidth: '24ch', lineHeight: '1.06', color: '#003E52' }}>{home.whatWeDo.heading}</h2>
+              <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533' }}>{home.whatWeDo.eyebrow}</div>
+              <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,28px)', margin: '12px 0 0', maxWidth: '24ch', lineHeight: '1.06', color: '#003E52' }}>{home.whatWeDo.heading}</h2>
               <p data-reveal="" style={{ fontSize: '16px', lineHeight: '1.6', maxWidth: '66ch', color: '#555c60', margin: '18px 0 38px' }}>{home.whatWeDo.subhead}</p>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,2.6vw,26px)' }}>
@@ -302,8 +302,8 @@ export default async function HomePage() {
           </section>
 
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)', background: '#ffffff' }}>
-            <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{home.resources.eyebrow}</div>
-            <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>{home.resources.heading}</h2>
+            <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533' }}>{home.resources.eyebrow}</div>
+            <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,28px)', margin: '12px 0 0', color: '#003E52' }}>{home.resources.heading}</h2>
             <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 34px' }}></div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 'clamp(16px,2vw,22px)', textAlign: 'left' }}>
               {(home.resources?.cards ?? []).map((card, i) => (
@@ -318,8 +318,8 @@ export default async function HomePage() {
 
           <section style={{ borderTop: '1px solid #e4e6e7', background: '#f7f7f7' }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(28px,3.5vw,52px) clamp(16px,4vw,44px)' }}>
-              <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{home.newsSection.eyebrow}</div>
-              <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>{home.newsSection.heading}</h2>
+              <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533' }}>{home.newsSection.eyebrow}</div>
+              <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,28px)', margin: '12px 0 0', color: '#003E52' }}>{home.newsSection.heading}</h2>
               <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 34px' }}></div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(20px,2.6vw,30px)' }}>
                 {latestArticles.map((article: HomeArticle) => (

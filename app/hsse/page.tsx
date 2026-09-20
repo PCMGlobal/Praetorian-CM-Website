@@ -129,8 +129,8 @@ export default async function HSSEPage() {
             </div>
           </section>
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
-            <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#B06533' }}>{data.statsSection.eyebrow}</div>
-            <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(30px,3.6vw,44px)', margin: '12px 0 0', color: '#003E52' }}>{data.statsSection.heading}</h2>
+            <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533' }}>{data.statsSection.eyebrow}</div>
+            <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(20px,2.2vw,28px)', margin: '12px 0 0', color: '#003E52' }}>{data.statsSection.heading}</h2>
             <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: '0', border: '1px solid #e4e6e7' }}>
               {data.statsSection.stats.map((stat, i) => (
