@@ -61,7 +61,7 @@ export default function HeroSlideshow({ content }: { content: HeroContent }) {
             <span style={{ width: '6px', height: '6px', background: '#B06533', animation: 'pcmlBlink 2.4s ease-in-out infinite' }}></span>
             {content.eyebrow}
           </div>
-          <h1 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(38px,5.2vw,62px)', lineHeight: '1.04', margin: '20px 0 0', color: '#fff', textWrap: 'balance' }}>{content.headline}</h1>
+          <h1 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(28px,3.9vw,46px)', lineHeight: '1.04', margin: '20px 0 0', color: '#fff', textWrap: 'balance' }}>{content.headline}</h1>
           <p data-reveal="" style={{ fontSize: 'clamp(15px,1.2vw,17.5px)', lineHeight: '1.62', maxWidth: '52ch', margin: '20px 0 0', color: '#dbe4e7', textWrap: 'pretty' }}>{content.subhead}</p>
           <div data-reveal="" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '30px' }}>
             <Link href="/contact" style={{ background: '#B06533', color: '#fff', textDecoration: 'none', minHeight: '48px', display: 'flex', alignItems: 'center', padding: '0 24px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '15px' }}>{content.primaryCtaLabel}</Link>

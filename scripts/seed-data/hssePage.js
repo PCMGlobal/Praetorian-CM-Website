@@ -1,0 +1,92 @@
+module.exports = {
+  _id: 'hssePage-singleton',
+  _type: 'hssePage',
+  hero: {
+    eyebrow: 'Health, Safety, Social, and Environment',
+    headline: "Zero harm isn't a target. It's the only acceptable outcome.",
+    subhead: "Praetorian embeds HSSE leadership directly into the owner's team. Safety culture starts at the top, and that means us.",
+  },
+  pillars: [
+    {
+      _key: 'k1',
+      _type: 'pillarCard',
+      title: 'H&S Policy Statement',
+      description: "Our policy is unambiguous: no task is so urgent that it cannot be performed safely. Every Praetorian engagement begins with a documented safety framework aligned to the owner's standards and the jurisdiction's regulatory requirements.",
+    },
+    {
+      _key: 'k2',
+      _type: 'pillarCard',
+      title: 'Project HSSE Approach',
+      description: 'From pre-mobilisation planning through final demobilisation, Praetorian integrates HSSE into every stage gate. Our field leaders run toolbox talks, hazard assessments, and incident investigations as core delivery.',
+    },
+    {
+      _key: 'k3',
+      _type: 'pillarCard',
+      title: "Owner's Team Culture",
+      description: 'Site culture follows the owner\'s team lead. Praetorian personnel are expected to stop unsafe work, engage contractors directly, and escalate immediately, from first induction to handover.',
+    },
+    {
+      _key: 'k4',
+      _type: 'pillarCard',
+      title: 'Regulatory Compliance',
+      description: 'Praetorian operates across multiple jurisdictions, Canada, USA, South America, and Eurasia. Our teams understand the local regulatory frameworks and ensure execution meets or exceeds applicable mining safety codes.',
+    },
+    {
+      _key: 'k5',
+      _type: 'pillarCard',
+      title: 'Incident Management',
+      description: 'When incidents occur, Praetorian leads root cause analysis, corrective action tracking, and lessons-learned dissemination. Transparency with the owner is non-negotiable.',
+    },
+    {
+      _key: 'k6',
+      _type: 'pillarCard',
+      title: 'Environment & Community',
+      description: 'Environmental stewardship and community engagement are embedded in our HSSE framework. Praetorian teams maintain the social licence to operate throughout the project lifecycle.',
+    },
+  ],
+  commitment: {
+    eyebrow: 'Our commitment',
+    heading: "HSSE oversight isn't a checkbox. It's embedded leadership.",
+    body: "From toolbox talk to turnover, Praetorian's owner's team culture sets the standard that contractors are held to. We don't audit from the sidelines, we lead from the front.",
+    ctaLabel: 'Speak with Our Team',
+  },
+  statsSection: {
+    eyebrow: 'By the numbers',
+    heading: 'Safety record across global operations',
+    stats: [
+      {
+        _key: 'k7',
+        _type: 'hsseStat',
+        value: '6',
+        suffix: '+',
+        label: 'Countries of operation',
+        description: 'Consistent HSSE standards applied across every jurisdiction Praetorian has operated in.',
+      },
+      {
+        _key: 'k8',
+        _type: 'hsseStat',
+        value: '20',
+        suffix: '+',
+        label: 'Years of safe delivery',
+        description: 'A track record built project by project, site by site, across four continents.',
+      },
+      {
+        _key: 'k9',
+        _type: 'hsseStat',
+        value: '100',
+        suffix: '%',
+        label: "Owner's team integration",
+        description: 'Every Praetorian engagement includes embedded HSSE leadership, no exceptions.',
+      },
+      {
+        _key: 'k10',
+        _type: 'hsseStat',
+        value: 'Zero',
+        suffix: '',
+        label: 'Acceptable harm threshold',
+        description: 'No task is so urgent it cannot be performed safely. No outcome justifies a lost-time injury.',
+      },
+    ],
+    footnote: 'Safety metrics are available to qualified clients on request. Content to be confirmed with Femi before publication.',
+  },
+};

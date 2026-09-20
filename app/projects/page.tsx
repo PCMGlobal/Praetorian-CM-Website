@@ -1,25 +1,61 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
 import MapSection from "@/app/components/MapSection";
 import { type Pin } from "@/app/components/WorldMap";
 import projectPins from "@/data/project-pins.json";
+import { client } from "@/lib/sanity";
 
 export const metadata: Metadata = {
   title: "Mining Projects | Praetorian Construction Management",
   description: "Mining construction projects across Canada, USA, Mexico, Peru, Guatemala and Armenia. Open pit, underground, heap leach and industrial construction.",
 };
 
-const PROJECTS = [
-  { slug: "amulsar", title: "Lydian International – Amulsar Gold Project", location: "Vayots Dzor, Armenia", client: "Lydian International", year: "2015 – 2018", phase: "Flagship", phaseColor: "#fbe9db", phaseText: "#8f4f27", photo: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Amulsar.jpg", excerpt: "Amulsar Gold Project is a greenfield 225,000 gold ounces per annum mine in the Republic of Armenia. Praetorian provided supports ranging from feasibility review, assistance in preparation for financing, environmental and social impact assessment review, project management, construction management and precommissioning." },
-  { slug: "conga", title: "Newmont Mining Corp – Conga Mine", location: "Cajamarca, Peru", client: "Newmont (Yanacocha)", year: "2010 – 2014", phase: "Execution", phaseColor: "#eceeee", phaseText: "#4a4e50", photo: "https://www.praetoriancm.com/wp-content/uploads/2018/08/BannerConga.jpg", excerpt: "The Conga project is an open pit copper/gold mine covering approx. 6,000 ha in a remote area of the Peruvian Andes. The project involves a substantial amount of earthworks infrastructure with significant water management requirements." },
-  { slug: "penasquito", title: "Goldcorp Inc. – Peñasquito Mine CLR Project", location: "Zacatecas, Mexico", client: "Goldcorp Inc.", year: "2016 – 2019", phase: "Execution", phaseColor: "#eceeee", phaseText: "#4a4e50", photo: "https://www.praetoriancm.com/wp-content/uploads/2018/09/Penasquito.jpg", excerpt: "Goldcorp’s Peñasquito Mine CLR (Centerline Raise) project is a brownfield expansion of the tailings facility and tailings systems involving the construction of lined tailings dams, reclaim ponds, access roads and tailings pumping systems." },
-  { slug: "emigrant", title: "Newmont Mining Corp – Emigrant Mine", location: "Carlin, Nevada, USA", client: "Newmont Mining Corp", year: "2011 – 2012", phase: "Commissioned", phaseColor: "#eceeee", phaseText: "#4a4e50", photo: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Emigrant-Aerial.jpg", excerpt: "Newmont’s Emigrant Mine is a greenfield mine development near Carlin, Nevada. The project involves the construction of access roads, a leach pad, water management facilities, a carbon in column processing plant, and related infrastructure." },
-  { slug: "diavik", title: "Diavik Diamond Mines Inc. – Diavik Underground Project", location: "Lac De Gras, NWT, Canada", client: "Diavik Diamond Mines Ltd.", year: "2006 – 2013", phase: "Operations", phaseColor: "#eceeee", phaseText: "#4a4e50", photo: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Diavik.jpg", excerpt: "Diavik’s Underground Project covers work associated with the transition from an open pit to underground operation. Praetorian’s cold weather (arctic) construction expertise and detailed logistics support were critical to the success of this project." },
-  { slug: "so2clean", title: "Calabrian Corporation – SO2Clean Production Facility", location: "Porcupine, Ontario, Canada", client: "Calabrian Corporation", year: "2015 – 2017", phase: "Commissioned", phaseColor: "#eceeee", phaseText: "#4a4e50", photo: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Calabrian-Plant-1.jpg", excerpt: "Calabrian’s SO2Clean Production Facility is a 100 TPD Liquid Sulphur Dioxide Production Plant in Northern Ontario, Canada. Praetorian was responsible for overall Project Management and Construction Management." },
+export const revalidate = 60;
+
+type ProjectCard = {
+  slug: string;
+  title: string;
+  location: string;
+  client: string;
+  year?: string;
+  photoUrl: string;
+  excerpt?: string;
+};
+
+// Matches what's live today -- shown whenever no "Project" documents have
+// been created/published in Sanity Studio yet, so the site never regresses.
+const DEFAULT_PROJECTS: ProjectCard[] = [
+  { slug: "amulsar", title: "Lydian International – Amulsar Gold Project", location: "Vayots Dzor, Armenia", client: "Lydian International", year: "2015 – 2018", photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Amulsar.jpg", excerpt: "Amulsar Gold Project is a greenfield 225,000 gold ounces per annum mine in the Republic of Armenia. Praetorian provided supports ranging from feasibility review, assistance in preparation for financing, environmental and social impact assessment review, project management, construction management and precommissioning." },
+  { slug: "conga", title: "Newmont Mining Corp – Conga Mine", location: "Cajamarca, Peru", client: "Newmont (Yanacocha)", year: "2010 – 2014", photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/BannerConga.jpg", excerpt: "The Conga project is an open pit copper/gold mine covering approx. 6,000 ha in a remote area of the Peruvian Andes. The project involves a substantial amount of earthworks infrastructure with significant water management requirements." },
+  { slug: "penasquito", title: "Goldcorp Inc. – Peñasquito Mine CLR Project", location: "Zacatecas, Mexico", client: "Goldcorp Inc.", year: "2016 – 2019", photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/09/Penasquito.jpg", excerpt: "Goldcorp’s Peñasquito Mine CLR (Centerline Raise) project is a brownfield expansion of the tailings facility and tailings systems involving the construction of lined tailings dams, reclaim ponds, access roads and tailings pumping systems." },
+  { slug: "emigrant", title: "Newmont Mining Corp – Emigrant Mine", location: "Carlin, Nevada, USA", client: "Newmont Mining Corp", year: "2011 – 2012", photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Emigrant-Aerial.jpg", excerpt: "Newmont’s Emigrant Mine is a greenfield mine development near Carlin, Nevada. The project involves the construction of access roads, a leach pad, water management facilities, a carbon in column processing plant, and related infrastructure." },
+  { slug: "diavik", title: "Diavik Diamond Mines Inc. – Diavik Underground Project", location: "Lac De Gras, NWT, Canada", client: "Diavik Diamond Mines Ltd.", year: "2006 – 2013", photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Diavik.jpg", excerpt: "Diavik’s Underground Project covers work associated with the transition from an open pit to underground operation. Praetorian’s cold weather (arctic) construction expertise and detailed logistics support were critical to the success of this project." },
+  { slug: "so2clean", title: "Calabrian Corporation – SO2Clean Production Facility", location: "Porcupine, Ontario, Canada", client: "Calabrian Corporation", year: "2015 – 2017", photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Calabrian-Plant-1.jpg", excerpt: "Calabrian’s SO2Clean Production Facility is a 100 TPD Liquid Sulphur Dioxide Production Plant in Northern Ontario, Canada. Praetorian was responsible for overall Project Management and Construction Management." },
 ];
 
-export default function ProjectsPage() {
+async function getProjects(): Promise<ProjectCard[]> {
+  try {
+    const fetched = await client.fetch(
+      `*[_type == "project" && featured == true] | order(order asc) {
+        "slug": slug.current,
+        title,
+        location,
+        client,
+        year,
+        photoUrl,
+        excerpt
+      }`
+    );
+    return fetched && fetched.length > 0 ? fetched : DEFAULT_PROJECTS;
+  } catch {
+    return DEFAULT_PROJECTS;
+  }
+}
+
+export default async function ProjectsPage() {
+  const projects = await getProjects();
+
   return (
     <main>
       <div>
@@ -40,10 +76,10 @@ export default function ProjectsPage() {
           <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(28px,3.2vw,40px)", margin: "0 0 38px", color: "#003E52" }}>Sample Past Projects</h2>
           <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#555c60", margin: "0 0 38px", maxWidth: "72ch" }}>Praetorian's experience cuts across various industries, regions and project scopes. Below are some of our past projects. For a comprehensive past projects list, please contact our <Link href="/contact" style={{ color: "#B06533" }}>Business Development team</Link>.</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: "clamp(20px,2.6vw,28px)" }}>
-            {PROJECTS.map(p => (
+            {projects.map(p => (
               <div key={p.slug} style={{ background: "#fff", boxShadow: "0 2px 14px rgba(0,20,30,.06)", overflow: "hidden" }}>
                 <div style={{ position: "relative", height: "240px", overflow: "hidden" }}>
-                  <div style={{ position: "absolute", inset: "0", backgroundSize: "cover", backgroundPosition: "center", backgroundImage: `url(${p.photo})` }}></div>
+                  <div style={{ position: "absolute", inset: "0", backgroundSize: "cover", backgroundPosition: "center", backgroundImage: `url(${p.photoUrl})` }}></div>
 
                 </div>
                 <div style={{ padding: "24px" }}>

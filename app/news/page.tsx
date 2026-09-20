@@ -22,6 +22,20 @@ type Article = {
   coverImageUrl: string | null;
 };
 
+type NewsPageData = {
+  eyebrow?: string;
+  heading?: string;
+  intro?: string;
+};
+
+// Matches what's live today -- shown whenever the "News Page" document hasn't
+// been created/published in Sanity Studio yet, so the site never regresses.
+const DEFAULT_NEWS: NewsPageData = {
+  eyebrow: "News and Insights",
+  heading: "Perspectives from the owner's side of the table",
+  intro: "Praetorian's team writes about cost intelligence, project controls, safety leadership, and the application of AI to mining construction management.",
+};
+
 async function getInitialArticles(): Promise<Article[]> {
   try {
     return await client.fetch(
@@ -43,8 +57,19 @@ async function getTotalCount(): Promise<number> {
   }
 }
 
+async function getNewsPage(): Promise<NewsPageData | null> {
+  try {
+    return await client.fetch(
+      `*[_type == "newsPage"][0]{ eyebrow, heading, intro }`
+    );
+  } catch {
+    return null;
+  }
+}
+
 export default async function NewsPage() {
-  const [articles, total] = await Promise.all([getInitialArticles(), getTotalCount()]);
+  const [articles, total, newsData] = await Promise.all([getInitialArticles(), getTotalCount(), getNewsPage()]);
+  const news = newsData ?? DEFAULT_NEWS;
   return (
     <main>
       <div>
@@ -56,9 +81,9 @@ export default async function NewsPage() {
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
               Home
             </Link>
-            <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#e3ab7c", marginTop: "22px" }}>News and Insights</div>
-            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(34px,4.6vw,58px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.04", maxWidth: "26ch" }}>Perspectives from the owner's side of the table</h1>
-            <p style={{ fontSize: "16.5px", lineHeight: "1.62", maxWidth: "62ch", color: "#c3d0d4", margin: "18px 0 0" }}>Praetorian's team writes about cost intelligence, project controls, safety leadership, and the application of AI to mining construction management.</p>
+            <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#e3ab7c", marginTop: "22px" }}>{news.eyebrow}</div>
+            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(34px,4.6vw,58px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.04", maxWidth: "26ch" }}>{news.heading}</h1>
+            <p style={{ fontSize: "16.5px", lineHeight: "1.62", maxWidth: "62ch", color: "#c3d0d4", margin: "18px 0 0" }}>{news.intro}</p>
           </div>
         </section>
         <section style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(46px,6vw,84px) clamp(16px,4vw,44px)" }}>
