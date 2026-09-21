@@ -3,7 +3,7 @@ import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "IAMGOLD/WOOD – Cote Gold Project | Praetorian Construction Management",
+  title: "IAMGOLD – Cote Gold Project | Praetorian Construction Management",
   description: "Cote Gold Project is a greenfield 495,000 gold ounces per annum mine in Ontario, Canada. Praetorian provided Project Management, Construction Advisory, Turnover and Commissioning Support.",
 };
 
@@ -22,9 +22,9 @@ export default function ProjectPage() {
             <div style={{ display: "flex", alignItems: "center", gap: "12px", marginTop: "22px", flexWrap: "wrap" }}>
               <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#e3ab7c" }}>Projects</div>
             </div>
-            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(28px,3.6vw,48px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.1" }}>IAMGOLD/WOOD – Cote Gold Project</h1>
+            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(28px,3.6vw,48px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.1" }}>IAMGOLD – Cote Gold Project</h1>
             <div style={{ display: "flex", gap: "28px", flexWrap: "wrap", marginTop: "18px", fontSize: "14px", color: "#c3d0d4" }}>
-              <span>IAMGOLD</span><span>Sudbury District, Ontario, Canada</span><span>2021 – 2024</span>
+              <span>IAMGOLD</span><span>Sudbury District, Ontario, Canada</span><span>2021 – 2026 (Ongoing)</span>
             </div>
           </div>
         </section>
