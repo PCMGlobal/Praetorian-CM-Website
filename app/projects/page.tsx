@@ -50,7 +50,7 @@ async function getProjects(): Promise<ProjectCard[]> {
       }`
     );
     // Always use DEFAULT_PROJECTS order as master — Sanity data supplements where available
-    const sanityMap = new Map((fetched || []).map((p: ProjectCard) => [p.slug, p]));
+    const sanityMap = new Map<string, ProjectCard>((fetched || []).map((p: ProjectCard) => [p.slug, p]));
     return DEFAULT_PROJECTS.map(p => sanityMap.get(p.slug) ?? p);
   } catch {
     return DEFAULT_PROJECTS;
