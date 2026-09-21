@@ -135,13 +135,13 @@ export default async function HSSEPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: '0', border: '1px solid #e4e6e7' }}>
               {data.statsSection.stats.map((stat, i) => (
                 <div key={stat._key ?? i} data-reveal="" style={{ padding: '16px 20px', borderRight: i < data.statsSection.stats.length - 1 ? '1px solid #e4e6e7' : undefined }}>
-                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(32px,3.2vw,44px)', color: '#003E52' }}>{stat.value}<span style={{ color: '#B06533' }}>{stat.suffix}</span></div>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(18px,1.8vw,22px)', color: '#003E52' }}>{stat.value}<span style={{ color: '#B06533' }}>{stat.suffix}</span></div>
                   <div style={{ fontSize: '12px', letterSpacing: '.05em', textTransform: 'uppercase', color: '#7d8288', marginTop: '6px' }}>{stat.label}</div>
                   <p style={{ fontSize: '13.5px', color: '#5b6266', margin: '10px 0 0', lineHeight: '1.5' }}>{stat.description}</p>
                 </div>
               ))}
             </div>
-            <p style={{ fontSize: '12px', color: '#8b9095', marginTop: '14px', fontStyle: 'italic' }}>{data.statsSection.footnote}</p>
+
           </section>
         </div>
           <CTABanner />
