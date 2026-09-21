@@ -37,7 +37,7 @@ export default function HeroSlideshow({ content }: { content: HeroContent }) {
   }, []);
 
   return (
-    <section style={{ position: 'relative', height: 'clamp(380px,62vh,580px)', overflow: 'hidden' }}>
+    <section style={{ position: 'relative', height: 'clamp(520px,72vh,680px)', overflow: 'hidden' }}>
       {/* Current image */}
       <div style={{
         position: 'absolute', inset: '0',
