@@ -137,7 +137,6 @@ export default function Navbar() {
             >
               <Link href="/about" style={{ ...navLabel, color: colour("/about"), textDecoration: "none" }}>
                 About Us
-                <Caret />
               </Link>
               {menu === "about" && <Dropdown items={ABOUT} width={260} />}
             </div>
@@ -149,7 +148,6 @@ export default function Navbar() {
             >
               <Link href="/services" style={{ ...navLabel, color: colour("/services"), textDecoration: "none" }}>
                 Services
-                <Caret />
               </Link>
               {menu === "svc" && <Dropdown items={SERVICES} width={300} />}
             </div>
@@ -161,7 +159,6 @@ export default function Navbar() {
             >
               <Link href="/hsse" style={{ ...navLabel, color: colour("/hsse"), textDecoration: "none" }}>
                 HSSE
-                <Caret />
               </Link>
               {menu === "hs" && <Dropdown items={HSSE} width={240} />}
             </div>
@@ -190,7 +187,6 @@ export default function Navbar() {
             >
               <Link href="/careers" style={{ ...navLabel, color: colour("/careers"), textDecoration: "none" }}>
                 Careers
-                <Caret />
               </Link>
               {menu === "careers" && <Dropdown items={CAREERS} width={240} align="right" />}
             </div>
