@@ -140,7 +140,7 @@ const DEFAULT_ABOUT: AboutPageData = {
       { name: "Femi R. Farinu, P.Eng., CPA", role: "Vice President, Technical Services", bio: "Femi has almost three decades of work experience in construction, manufacturing and finance. With a background in Mining, Oil and Gas and Infrastructure, he applies his leadership and project management skills in support of project teams. His strength lies in Project Controls, Commercial Management and Accounting." },
       { name: "L. Annette Genge", role: "Human Resources Manager", bio: "Annette is a highly skilled Human Resources and Organization Management professional with more than two decades of experience spanning industrial construction and mining projects in Canada and international markets. She leads Employee Relations, Performance Management, Recruitment and HR Operations at Praetorian." },
       { name: "Lisa Sander", role: "Finance Manager", bio: "Seasoned accounting specialist with almost three decades of experience, including 19 years specialising in the oil and mining industries. Proven ability to manage all accounting functions, financial reporting, and compliance. Adept at streamlining processes, ensuring accuracy, and delivering actionable financial insights to support strategic decision making. Skilled in corporate finance, budgeting, tax reporting, and regulatory compliance, with a track record of driving efficiency and financial integrity." },
-      { name: "Rob Ledgister", role: "VP, Project Development", bio: "Biography details to follow." },
+      { name: "Rob Ledgister", role: "VP, Project Development", bio: "Rob brings almost three decades of multidisciplinary project management experience, with a strong foundation in project controls, scheduling and QA/QC. The greatest portion of his career has been spent on mining and industrial projects across Canada, where his methodical approach to project setup and execution has earned him a reputation for reliability and technical rigour." },
     ],
   },
 };
@@ -274,7 +274,7 @@ export default async function AboutPage() {
           <div data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>{about.careers.eyebrow}</div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(340px,1fr))", gap: "clamp(36px,5vw,72px)", alignItems: "start" }}>
             <div>
-              <h2 data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(28px,3.2vw,40px)", margin: "0 0 20px", color: "#003E52", lineHeight: "1.08" }}>{about.careers.heading}</h2>
+              <p data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "600", fontSize: "15.5px", margin: "0 0 20px", color: "#3a3f42", lineHeight: "1.5" }}>{about.careers.heading}</p>
               <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 18px" }}>{about.careers.paragraph1}</p>
               <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 18px" }}>{about.careers.paragraph2}</p>
               <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 32px" }}>{about.careers.paragraph3}</p>
