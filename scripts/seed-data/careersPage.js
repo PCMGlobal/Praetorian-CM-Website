@@ -10,7 +10,7 @@ module.exports = {
   },
   whyChooseUs: {
     eyebrow: 'Why Choose Us',
-    heading: 'Our people are our delivery capability',
+    heading: 'Our people are our delivery capability.',
     paragraphs: [
       'Our core training and development programs support the principle of mentoring through developmental delegation. This ensures a system of successor preparation and cross support of responsibilities for each position on a project team.',
       'Team leaders are challenged to position their teams to optimise skills and abilities while setting individual growth goals for each project member. Our teams consist of Engineers, Technologists, and Tradespersons, providing a balanced approach to managing projects and the contractors who deliver them.',

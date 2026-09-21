@@ -1,6 +1,12 @@
-// One-time (re-runnable) script that creates and publishes the "homePage"
-// singleton document in Sanity with the current live homepage copy, so you
-// don't have to type ~40 fields into Studio by hand.
+// One-time (re-runnable) script that creates the "homePage" singleton
+// document in Sanity with the ORIGINAL seed copy, so you don't have to type
+// ~40 fields into Studio by hand.
+//
+// SAFE TO RE-RUN: uses createIfNotExists, so if the homePage-singleton
+// document already exists (including if Femi has since edited it in
+// Studio), this script does nothing to it. It only ever creates the
+// document the very first time it's missing. It will never overwrite or
+// clobber live Studio edits.
 //
 // Usage (PowerShell, from the pcml-website folder):
 //   $env:SANITY_WRITE_TOKEN = "paste-your-token-here"
@@ -39,9 +45,9 @@ const homePageDoc = {
   _type: 'homePage',
   hero: {
     eyebrow: 'Global Mining · Built Right',
-    headline: 'Mining Construction Management with a Technology Edge',
+    headline: 'Construction Management with a Technology Edge',
     subhead:
-      "Praetorian integrates directly into your ownership team, from feasibility through commissioning. AI-powered cost intelligence, global experience, and an unwavering focus on your project outcomes.",
+      "Praetorian integrates directly into the client's ownership team, from scoping through commissioning. AI-powered cost intelligence, global experience, and an unwavering focus on successful project outcomes.",
     primaryCtaLabel: 'Speak with Our Team',
     secondaryCtaLabel: 'View Our Projects',
     stats: [
@@ -85,43 +91,43 @@ const homePageDoc = {
     eyebrow: 'What we do',
     heading: 'End-to-End Project Management Services',
     subhead:
-      'From the first feasibility study to final commissioning, Praetorian provides integrated services across every phase of your project lifecycle.',
+      'From scoping studies to commissioning, Praetorian provides integrated services across every phase of the mining project lifecycle.',
     cards: [
       {
         _key: key(),
         _type: 'whatWeDoCard',
         title: 'Engineering Support',
-        description: 'Constructability reviews and value engineering that reduce cost before ground is broken.',
+        description: 'Design input with a construction focus. Constructability reviews and value engineering.',
       },
       {
         _key: key(),
         _type: 'whatWeDoCard',
         title: 'Early Planning & Feasibility',
-        description: 'Stage gate development, feasibility, and financing support from inception through FS.',
+        description: 'Stage gate development, PEA, PFS, FS, and financing application. Early works planning and execution.',
       },
       {
         _key: key(),
         _type: 'whatWeDoCard',
         title: 'Procurement & Logistics',
-        description: 'Contract development, tendering strategy, and full vendor management through award.',
+        description: 'Purchasing and contract development, tendering strategy, and full vendor management through award and site execution management.',
       },
       {
         _key: key(),
         _type: 'whatWeDoCard',
         title: 'Project Controls',
-        description: 'Cost, schedule, document management and reporting, integrated with your systems.',
+        description: 'Technology deployment for cost, schedule, document management and reporting, integrated with corporate systems.',
       },
       {
         _key: key(),
         _type: 'whatWeDoCard',
         title: 'Construction Management',
-        description: "On-site supervision, contractor management, and quality oversight as your owner's representative.",
+        description: "On-site construction supervision, contractor management, HSSE and quality oversight as Owner's representative.",
       },
       {
         _key: key(),
         _type: 'whatWeDoCard',
         title: 'Quality, Commissioning & Turnover',
-        description: 'QA/QC frameworks, commissioning planning, and turnover packages that protect your investment.',
+        description: 'QA/QC frameworks and execution, commissioning planning, and turnover packages that protect your investment.',
       },
     ],
   },
@@ -148,6 +154,14 @@ const homePageDoc = {
       eyebrow: 'Health, Safety, Social, and Environment',
       heading: "Owner's team culture sets the site culture",
       body: "HSSE oversight isn't a checkbox, it's embedded leadership, from toolbox talk to turnover.",
+    },
+    {
+      _key: key(),
+      _type: 'groundPanel',
+      eyebrow: 'Project Controls',
+      heading: 'Cost and schedule visibility from day one',
+      body:
+        'Earned value tracking, progress measurement, and change management integrated from study through commissioning, so nothing surprises you at close-out.',
     },
   ],
   footprint: {
@@ -180,10 +194,14 @@ const homePageDoc = {
 };
 
 client
-  .createOrReplace(homePageDoc)
+  .createIfNotExists(homePageDoc)
   .then((res) => {
-    console.log('Success. Home Page document created and published:', res._id);
-    console.log('Open it in Studio to review, or hand it straight to Femi.');
+    if (res._createdAt === res._updatedAt) {
+      console.log('Success. Home Page document created and published:', res._id);
+      console.log('Open it in Studio to review, or hand it straight to Femi.');
+    } else {
+      console.log('Home Page document already exists (created ' + res._createdAt + ') -- left untouched so no Studio edits were overwritten.');
+    }
   })
   .catch((err) => {
     console.error('Failed to create the Home Page document.');

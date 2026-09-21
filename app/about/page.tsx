@@ -125,10 +125,10 @@ const DEFAULT_ABOUT: AboutPageData = {
     stayConnectedLabel: "Stay Connected",
     linkedinLabel: "Follow us on LinkedIn for future opportunities",
     reasons: [
-      { title: "Global project exposure", description: "Operations in Canada, the USA, South America, Central America, and Eurasia. Our people work on projects that few firms in the world have access to." },
-      { title: "Owner's team accountability", description: "Embedded directly in the client's ownership team, making decisions that directly affect project outcomes." },
-      { title: "People-first culture", description: "Training programs in leadership, management systems, and technical subjects. Internal recognition, family-inclusive milestones, and a lower-than-average employee turnover rate." },
-      { title: "Technology-forward culture", description: "Praetorian is investing in AI-powered project intelligence through Praetorian IQ, reshaping how mining construction is managed globally." },
+      { title: "Global project exposure", description: "Operations in Canada, the USA, South America, Central America, and Eurasia. Our people work on projects in remote and challenging locations." },
+      { title: "Owner's team accountability", description: "Embedded within the client's ownership team, supporting the Owners in making decisions that positively impact project outcomes." },
+      { title: "People-first culture", description: "Leadership and technical training programs. Family-oriented schedules and lower-than-average employee turnover." },
+      { title: "Technology-forward culture", description: "Praetorian is investing in AI-powered project intelligence through Praetorian IQ, reshaping how mining construction is managed." },
     ],
   },
   management: {

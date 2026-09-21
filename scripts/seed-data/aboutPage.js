@@ -140,28 +140,28 @@ module.exports = {
         _type: 'careerReason',
         title: 'Global project exposure',
         description:
-          'Operations in Canada, the USA, South America, Central America, and Eurasia. Our people work on projects that few firms in the world have access to.',
+          'Operations in Canada, the USA, South America, Central America, and Eurasia. Our people work on projects in remote and challenging locations.',
       },
       {
         _key: 'k14',
         _type: 'careerReason',
         title: "Owner's team accountability",
         description:
-          "Embedded directly in the client's ownership team, making decisions that directly affect project outcomes.",
+          "Embedded within the client's ownership team, supporting the Owners in making decisions that positively impact project outcomes.",
       },
       {
         _key: 'k15',
         _type: 'careerReason',
         title: 'People-first culture',
         description:
-          'Training programs in leadership, management systems, and technical subjects. Internal recognition, family-inclusive milestones, and a lower-than-average employee turnover rate.',
+          'Leadership and technical training programs. Family-oriented schedules and lower-than-average employee turnover.',
       },
       {
         _key: 'k16',
         _type: 'careerReason',
         title: 'Technology-forward culture',
         description:
-          'Praetorian is investing in AI-powered project intelligence through Praetorian IQ, reshaping how mining construction is managed globally.',
+          'Praetorian is investing in AI-powered project intelligence through Praetorian IQ, reshaping how mining construction is managed.',
       },
     ],
   },

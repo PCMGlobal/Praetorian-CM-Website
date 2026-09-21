@@ -46,8 +46,8 @@ type HomePageData = {
 const DEFAULT_HOME: HomePageData = {
   hero: {
     eyebrow: "Global Mining · Built Right",
-    headline: "Mining Construction Management with a Technology Edge",
-    subhead: "Praetorian integrates directly into your ownership team, from feasibility through commissioning. AI-powered cost intelligence, global experience, and an unwavering focus on your project outcomes.",
+    headline: "Construction Management with a Technology Edge",
+    subhead: "Praetorian integrates directly into the client's ownership team, from scoping through commissioning. AI-powered cost intelligence, global experience, and an unwavering focus on successful project outcomes.",
     primaryCtaLabel: "Speak with Our Team",
     secondaryCtaLabel: "View Our Projects",
     stats: [
@@ -65,20 +65,21 @@ const DEFAULT_HOME: HomePageData = {
   whatWeDo: {
     eyebrow: "What we do",
     heading: "End-to-End Project Management Services",
-    subhead: "From the first feasibility study to final commissioning, Praetorian provides integrated services across every phase of your project lifecycle.",
+    subhead: "From scoping studies to commissioning, Praetorian provides integrated services across every phase of the mining project lifecycle.",
     cards: [
-      { title: "Engineering Support", description: "Constructability reviews and value engineering that reduce cost before ground is broken." },
-      { title: "Early Planning & Feasibility", description: "Stage gate development, feasibility, and financing support from inception through FS." },
-      { title: "Procurement & Logistics", description: "Contract development, tendering strategy, and full vendor management through award." },
-      { title: "Project Controls", description: "Cost, schedule, document management and reporting, integrated with your systems." },
-      { title: "Construction Management", description: "On-site supervision, contractor management, and quality oversight as your owner's representative." },
-      { title: "Quality, Commissioning & Turnover", description: "QA/QC frameworks, commissioning planning, and turnover packages that protect your investment." },
+      { title: "Engineering Support", description: "Design input with a construction focus. Constructability reviews and value engineering." },
+      { title: "Early Planning & Feasibility", description: "Stage gate development, PEA, PFS, FS, and financing application. Early works planning and execution." },
+      { title: "Procurement & Logistics", description: "Purchasing and contract development, tendering strategy, and full vendor management through award and site execution management." },
+      { title: "Project Controls", description: "Technology deployment for cost, schedule, document management and reporting, integrated with corporate systems." },
+      { title: "Construction Management", description: "On-site construction supervision, contractor management, HSSE and quality oversight as Owner's representative." },
+      { title: "Quality, Commissioning & Turnover", description: "QA/QC frameworks and execution, commissioning planning, and turnover packages that protect your investment." },
     ],
   },
   onTheGround: [
     { eyebrow: "On the ground", heading: "Mining operations, run by people who've stood on the pit floor", body: "Open pit, underground, heap leach, Praetorian's owner's teams have overseen fleet, crusher and haul-road programmes across every major mining geography." },
     { eyebrow: "Engineering & Construction", heading: "Structural steel to process plant, delivered on schedule", body: "Constructability review through commissioning, Praetorian's project controls keep complex builds on cost and on schedule." },
     { eyebrow: "Health, Safety, Social, and Environment", heading: "Owner's team culture sets the site culture", body: "HSSE oversight isn't a checkbox, it's embedded leadership, from toolbox talk to turnover." },
+    { eyebrow: "Project Controls", heading: "Cost and schedule visibility from day one", body: "Earned value tracking, progress measurement, and change management integrated from study through commissioning, so nothing surprises you at close-out." },
   ],
   footprint: {
     eyebrow: "Global presence",
@@ -241,9 +242,9 @@ export default async function HomePage() {
               </div>
               <div style={{ background: '#003E52', display: 'flex', alignItems: 'center', padding: '28px 24px' }}>
                 <div>
-                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginBottom: '8px' }}>PROJECT CONTROLS</div>
-                  <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(15px,1.4vw,18px)', margin: '0 0 10px', color: '#fff', lineHeight: '1.2' }}>Cost and schedule visibility from day one</h3>
-                  <p style={{ fontSize: '13px', lineHeight: '1.6', color: '#c3d0d4', margin: '0' }}>Earned value tracking, progress measurement, and change management integrated from study through commissioning — so nothing surprises you at close-out.</p>
+                  <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '11px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c', marginBottom: '8px' }}>{home.onTheGround?.[3]?.eyebrow}</div>
+                  <h3 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(15px,1.4vw,18px)', margin: '0 0 10px', color: '#fff', lineHeight: '1.2' }}>{home.onTheGround?.[3]?.heading}</h3>
+                  <p style={{ fontSize: '13px', lineHeight: '1.6', color: '#c3d0d4', margin: '0' }}>{home.onTheGround?.[3]?.body}</p>
                 </div>
               </div>
             </div>

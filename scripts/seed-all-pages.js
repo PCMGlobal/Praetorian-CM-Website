@@ -14,8 +14,11 @@
 // Never commit the token or put it in .env.local -- it's only used for this
 // one run, straight from the terminal's environment variable.
 //
-// Safe to run more than once: each document uses createOrReplace with a
-// fixed _id, so re-running just republishes the same content.
+// SAFE TO RE-RUN: uses createIfNotExists with a fixed _id, so if a page
+// document already exists (including if Femi has since edited it in
+// Studio), this script leaves it completely untouched. It only ever
+// creates a page the very first time it's missing. It will never
+// overwrite or clobber live Studio edits.
 
 const { createClient } = require('@sanity/client');
 
@@ -50,8 +53,12 @@ async function run() {
 
   for (const page of pages) {
     try {
-      const res = await client.createOrReplace(page.doc);
-      console.log(`Success. ${page.label} document created and published: ${res._id}`);
+      const res = await client.createIfNotExists(page.doc);
+      if (res._createdAt === res._updatedAt) {
+        console.log(`Success. ${page.label} document created and published: ${res._id}`);
+      } else {
+        console.log(`${page.label} already exists (created ${res._createdAt}) -- left untouched so no Studio edits were overwritten.`);
+      }
       successCount += 1;
     } catch (err) {
       console.error(`Failed to create the ${page.label} document.`);
@@ -61,9 +68,9 @@ async function run() {
   }
 
   console.log('');
-  console.log(`Done. ${successCount} of ${pages.length} pages published.`);
+  console.log(`Done. ${successCount} of ${pages.length} pages processed.`);
   if (failCount > 0) {
-    console.log(`${failCount} page(s) failed -- see errors above. You can re-run this script safely; successful pages will just be republished with the same content.`);
+    console.log(`${failCount} page(s) failed -- see errors above. You can re-run this script safely; pages that already exist are always left untouched.`);
     process.exit(1);
   } else {
     console.log('Open Sanity Studio to review each page, or hand it straight to Femi.');

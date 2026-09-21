@@ -17,6 +17,8 @@ type ProjectData = {
   secondaryListLabel?: string;
   secondaryListItems?: string[];
   scope?: string;
+  costOfServices?: string;
+  totalCapitalCost?: string;
 };
 
 // Matches what's live today for each of the six existing projects -- shown
@@ -163,6 +165,55 @@ const DEFAULT_PROJECTS: Record<string, ProjectData> = {
     ],
     scope: "Project Management, Construction Management, Cost Control, Scheduling, Constructability.",
   },
+  cote: {
+    title: "IAMGOLD/WOOD – Cote Gold Project",
+    slug: "cote",
+    client: "IAMGOLD",
+    location: "Sudbury District, Ontario, Canada",
+    year: "2021 – 2024",
+    photoUrl: "/images/photos/pcml-project-cote.jpg",
+    excerpt: "Cote Gold Project is a greenfield 495,000 gold ounces per annum mine located in Chester and Yeo Townships, Sudbury District, Ontario. Praetorian provided Project Management Support, Construction Advisory, Turnover and Commissioning Support across the full processing plant and facilities.",
+    overviewParagraphs: [
+      "Cote Gold Project is a greenfield 495,000 gold ounces per annum mine located in Chester and Yeo Townships, Sudbury District, Ontario. Praetorian provided Project Management Support, Construction Advisory, Turnover and Commissioning Support across the full processing plant and facilities.",
+      "Praetorian's involvement was essential in managing supply, design and execution challenges during and after the Covid pandemic. Construction experts from Praetorian were assigned directly to contractors to augment planning and completion of contractor work packages, utilising multidiscipline skillsets to overcome worldwide supply chain issues and vendor delays.",
+    ],
+    secondaryListLabel: "Facilities",
+    secondaryListItems: [
+      "Primary and Secondary Crusher and HPGR",
+      "Screening, Coarse and Fine Ore Storage",
+      "Ball Mill and Pre-Leach Thickener",
+      "Leach Tank Farm and Tailings Thickener",
+      "Conveyor Systems and CIP Tanks",
+      "Site Wide Power Distribution and Main Line 115 kV",
+      "Substation",
+    ],
+    scope: "Project Manager Role (Process Plant and Facilities), Construction Specialists and Advisors, Field Engineers, Planning and Execution Supervision, Commercial and Contract Management, Punch List and Turnover Supervision, Commissioning Support.",
+    costOfServices: ">US$8M",
+    totalCapitalCost: ">US$1.9B",
+  },
+  kiena: {
+    title: "Wesdome Gold Mines – Kiena Paste Plant Project",
+    slug: "kiena",
+    client: "Wesdome Gold Mines",
+    location: "Val d'Or, Quebec, Canada",
+    year: "2021 – 2022",
+    photoUrl: "/images/photos/pcml-project-kiena.jpg",
+    excerpt: "Praetorian provided on-site Construction Management and Contract Administration for the design, procurement and construction of a Tailings and Backfill System for the Kiena Mine in Val d'Or, Quebec.",
+    overviewParagraphs: [
+      "Praetorian was contracted by Wesdome Kiena Mine management to fully represent Wesdome's interests in the design, procurement and construction of a Tailings and Backfill System for the Kiena Mine, located in Val d'Or, Quebec.",
+      "Responsibilities included on-site construction management and contract administration across all HSE, project controls, engineering, procurement, construction and commissioning deliverables. Following project completion, Praetorian continued to provide support for further improvements to the Paste Plant and additional capital projects on site.",
+    ],
+    secondaryListLabel: "Facilities",
+    secondaryListItems: [
+      "Thickener Building: Tailings Thickener, Rake Drive and Pumping Systems",
+      "Paste Plant Building: 800m³ Tailings Buffer Tank, Vacuum Disc Filter, Cement Silo, Paste Mixer and Overhead Crane",
+      "E-House: 1MVA Transformer, 1000kW Generator, 600V MCC and PLC",
+      "Transfer Pipelines connecting all plant facilities and Tailings Storage",
+    ],
+    scope: "On-site Construction Management and Contract Administration, daily coordination of HSE, project controls, engineering, procurement, construction and commissioning deliverables.",
+    costOfServices: "~CAD$2M",
+    totalCapitalCost: "CAD$60M",
+  },
 };
 
 async function getProject(slug: string): Promise<ProjectData | null> {
@@ -179,7 +230,9 @@ async function getProject(slug: string): Promise<ProjectData | null> {
         overviewParagraphs,
         secondaryListLabel,
         secondaryListItems,
-        scope
+        scope,
+        costOfServices,
+        totalCapitalCost
       }`,
       { slug }
     );
@@ -252,8 +305,24 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               {data.scope ? (
                 <>
                   <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Praetorian&rsquo;s Scope</div>
-                  <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0" }}>{data.scope}</p>
+                  <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: data.costOfServices || data.totalCapitalCost ? "0 0 16px" : "0" }}>{data.scope}</p>
                 </>
+              ) : null}
+              {data.costOfServices || data.totalCapitalCost ? (
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginTop: "8px" }}>
+                  {data.costOfServices ? (
+                    <div style={{ borderLeft: "3px solid #B06533", paddingLeft: "12px" }}>
+                      <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: ".1em", color: "#9aa9ae", marginBottom: "4px" }}>Cost of Services</div>
+                      <div style={{ fontSize: "15px", fontWeight: "700", color: "#003E52" }}>{data.costOfServices}</div>
+                    </div>
+                  ) : null}
+                  {data.totalCapitalCost ? (
+                    <div style={{ borderLeft: "3px solid #B06533", paddingLeft: "12px" }}>
+                      <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: ".1em", color: "#9aa9ae", marginBottom: "4px" }}>Total Capital Cost</div>
+                      <div style={{ fontSize: "15px", fontWeight: "700", color: "#003E52" }}>{data.totalCapitalCost}</div>
+                    </div>
+                  ) : null}
+                </div>
               ) : null}
             </div>
           </div>

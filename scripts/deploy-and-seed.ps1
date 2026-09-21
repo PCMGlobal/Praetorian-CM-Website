@@ -13,20 +13,30 @@
     1. Deploys the Sanity Studio schema (pcml-studio)
     2. Commits and pushes any pending website code changes (pcml-website),
        which triggers Vercel to redeploy automatically
-    3. Seeds the About/Careers/Contact/HSSE/Praetorian IQ/Privacy/News pages
-    4. Seeds the six project case studies (Amulsar, Conga, Diavik, Emigrant,
-       Penasquito, SO2Clean)
+    3. Seeds the Home page
+    4. Seeds the About/Careers/Contact/HSSE/Praetorian IQ/Privacy/News pages
+    5. Seeds the project case studies (Amulsar, Conga, Diavik, Emigrant,
+       Penasquito, SO2Clean, Cote, Kiena)
+    6. Applies two targeted live-content patches (patch-live-fixes.js):
+       adds the Home page's "Project Controls" panel and restores the
+       About page's blank careers heading -- both skipped automatically if
+       already present, so this is always safe to re-run
+
+  Every seed and patch step is safe to re-run: pages/projects that already
+  exist in Sanity (including anything Femi has edited in Studio) are left
+  completely untouched. Nothing in this script ever overwrites live Studio
+  content.
 
   If any step fails, the script stops immediately so you can see exactly
   what happened before anything downstream runs.
 
 .PARAMETER DeleteOldProjectFolders
-  Optional. After a fully successful run, also deletes the six old static
-  project folders (amulsar, conga, diavik, emigrant, penasquito, so2clean)
-  under app\projects\, since their content now lives in Sanity and is served
-  by app\projects\[slug]\page.tsx instead. This is a permanent delete with
-  no undo, so it is off by default -- pass this switch once you've checked
-  the live site and are ready to clean up.
+  Optional. After a fully successful run, also deletes the eight old static
+  project folders (amulsar, conga, diavik, emigrant, penasquito, so2clean,
+  cote, kiena) under app\projects\, since their content now lives in Sanity
+  and is served by app\projects\[slug]\page.tsx instead. This is a permanent
+  delete with no undo, so it is off by default -- pass this switch once
+  you've checked the live site and are ready to clean up.
 
 .USAGE
   Open PowerShell in the pcml-website folder and run:
@@ -111,7 +121,17 @@ try {
     Pop-Location
 }
 
-# ---- Step 3: seed the seven remaining pages into Sanity ----
+# ---- Step 3: seed the Home page into Sanity (safe no-op if it already exists) ----
+Write-Step "Seeding the Home page into Sanity"
+Push-Location $websiteRoot
+try {
+    node scripts/seed-home-page.js
+    if ($LASTEXITCODE -ne 0) { Fail "seed-home-page.js failed (exit code $LASTEXITCODE)." }
+} finally {
+    Pop-Location
+}
+
+# ---- Step 4: seed the seven remaining pages into Sanity ----
 Write-Step "Seeding About, Careers, Contact, HSSE, Praetorian IQ, Privacy and News into Sanity"
 Push-Location $websiteRoot
 try {
@@ -121,8 +141,8 @@ try {
     Pop-Location
 }
 
-# ---- Step 4: seed the six project case studies into Sanity ----
-Write-Step "Seeding the six project case studies into Sanity"
+# ---- Step 5: seed the project case studies into Sanity ----
+Write-Step "Seeding the project case studies into Sanity"
 Push-Location $websiteRoot
 try {
     node scripts/seed-projects.js
@@ -131,11 +151,21 @@ try {
     Pop-Location
 }
 
+# ---- Step 6: apply targeted live-content patches (always safe to re-run) ----
+Write-Step "Applying live-content patches (Home 'Project Controls' panel, About careers heading)"
+Push-Location $websiteRoot
+try {
+    node scripts/patch-live-fixes.js
+    if ($LASTEXITCODE -ne 0) { Fail "patch-live-fixes.js failed (exit code $LASTEXITCODE)." }
+} finally {
+    Pop-Location
+}
+
 Write-Host ""
 Write-Host "All done. Schema deployed, code pushed (Vercel will redeploy automatically), and every page and project is live in Sanity." -ForegroundColor Green
 
-# ---- Optional step 5: clean up the old static project folders ----
-$oldFolders = @("amulsar", "conga", "diavik", "emigrant", "penasquito", "so2clean")
+# ---- Optional step 7: clean up the old static project folders ----
+$oldFolders = @("amulsar", "conga", "diavik", "emigrant", "penasquito", "so2clean", "cote", "kiena")
 $projectsRoot = Join-Path $websiteRoot "app\projects"
 
 if ($DeleteOldProjectFolders) {

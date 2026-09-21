@@ -14,8 +14,12 @@
 // Never commit the token or put it in .env.local -- it's only used for this
 // one run, straight from the terminal's environment variable.
 //
-// Safe to run more than once: each document uses createOrReplace with a
-// fixed _id, so re-running just republishes the same content.
+// SAFE TO RE-RUN: uses createIfNotExists with a fixed _id, so if a project
+// document already exists (including if Femi has since edited it in
+// Studio), this script leaves it completely untouched. It only ever
+// creates a project the very first time it's missing -- which is exactly
+// how new projects (e.g. Cote, Kiena) added to seed-data/projects.js later
+// get created without touching any of the earlier ones.
 
 const { createClient } = require('@sanity/client');
 
@@ -42,8 +46,12 @@ async function run() {
 
   for (const projectDoc of projects) {
     try {
-      const res = await client.createOrReplace(projectDoc);
-      console.log(`Success. Project document created and published: ${res._id} (${projectDoc.title})`);
+      const res = await client.createIfNotExists(projectDoc);
+      if (res._createdAt === res._updatedAt) {
+        console.log(`Success. Project document created and published: ${res._id} (${projectDoc.title})`);
+      } else {
+        console.log(`Project ${res._id} already exists (created ${res._createdAt}) -- left untouched so no Studio edits were overwritten.`);
+      }
       successCount += 1;
     } catch (err) {
       console.error(`Failed to create the project document for "${projectDoc.title}".`);
@@ -53,16 +61,16 @@ async function run() {
   }
 
   console.log('');
-  console.log(`Done. ${successCount} of ${projects.length} projects published.`);
+  console.log(`Done. ${successCount} of ${projects.length} projects processed.`);
   if (failCount > 0) {
-    console.log(`${failCount} project(s) failed -- see errors above. You can re-run this script safely; successful projects will just be republished with the same content.`);
+    console.log(`${failCount} project(s) failed -- see errors above. You can re-run this script safely; projects that already exist are always left untouched.`);
     process.exit(1);
   } else {
     console.log('Open Sanity Studio to review each project under "Project", or hand it straight to Femi.');
     console.log('');
-    console.log('Reminder: once you have confirmed /projects and the six project pages look correct live,');
-    console.log('you can delete these six now-unused folders from pcml-website/app/projects/:');
-    console.log('  amulsar, conga, diavik, emigrant, penasquito, so2clean');
+    console.log('Reminder: once you have confirmed /projects and all project pages look correct live,');
+    console.log('you can delete these now-unused folders from pcml-website/app/projects/:');
+    console.log('  amulsar, conga, diavik, emigrant, penasquito, so2clean, cote, kiena');
     console.log('(Their content now lives in Sanity and is served by app/projects/[slug]/page.tsx instead.)');
   }
 }
