@@ -269,18 +269,18 @@ export default async function AboutPage() {
               </div>
             </div>
           </section>
-      <section id="pcml-careers" style={{ padding: "clamp(28px,3.5vw,48px) 0", scrollMarginTop: "120px" }}>
+      <section id="pcml-careers" style={{ padding: "clamp(16px,2vw,28px) 0", scrollMarginTop: "120px" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
-          <div data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>{about.careers.eyebrow}</div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(340px,1fr))", gap: "clamp(36px,5vw,72px)", alignItems: "start" }}>
+          <div data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "8px" }}>{about.careers.eyebrow}</div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(340px,1fr))", gap: "clamp(24px,3vw,44px)", alignItems: "start" }}>
             <div>
               <p data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "600", fontSize: "15.5px", margin: "0 0 20px", color: "#3a3f42", lineHeight: "1.5" }}>{about.careers.heading}</p>
-              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 18px" }}>{about.careers.paragraph1}</p>
-              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 18px" }}>{about.careers.paragraph2}</p>
-              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 32px" }}>{about.careers.paragraph3}</p>
-              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 18px" }}>{about.careers.paragraph4}</p>
-              <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#555c60", margin: "0 0 8px" }}>{about.careers.resumeIntro} <a href="mailto:careers@praetoriancm.com" style={{ color: "#B06533", fontWeight: "600" }}>careers@praetoriancm.com</a></p>
-              <div style={{ marginTop: "20px", padding: "20px 22px", background: "#f7f7f7", borderLeft: "3px solid #003E52" }}>
+              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 6px" }}>{about.careers.paragraph1}</p>
+              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 6px" }}>{about.careers.paragraph2}</p>
+              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 6px" }}>{about.careers.paragraph3}</p>
+              <p style={{ fontSize: "15.5px", lineHeight: "1.7", color: "#555c60", margin: "0 0 6px" }}>{about.careers.paragraph4}</p>
+              <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#555c60", margin: "0 0 6px" }}>{about.careers.resumeIntro} <a href="mailto:careers@praetoriancm.com" style={{ color: "#B06533", fontWeight: "600" }}>careers@praetoriancm.com</a></p>
+              <div style={{ marginTop: "8px", padding: "20px 22px", background: "#f7f7f7", borderLeft: "3px solid #003E52" }}>
                 <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "11px", color: "#003E52", marginBottom: "12px", letterSpacing: ".1em", textTransform: "uppercase" }}>{about.careers.stayConnectedLabel}</div>
                 <a href="https://www.linkedin.com/company/praetorian-construction-management/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "10px", color: "#003E52", textDecoration: "none", fontFamily: "var(--font-sora), sans-serif", fontWeight: "600", fontSize: "14px" }}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="#003E52"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
