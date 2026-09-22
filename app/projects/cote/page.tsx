@@ -48,16 +48,6 @@ export default function ProjectPage() {
               </ul>
               <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Praetorian's Scope</div>
               <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0 0 16px" }}>Project Manager Role (Process Plant and Facilities), Construction Specialists and Advisors, Field Engineers, Planning and Execution Supervision, Commercial and Contract Management, Punch List and Turnover Supervision, Commissioning Support.</p>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginTop: "8px" }}>
-                <div style={{ borderLeft: "3px solid #B06533", paddingLeft: "12px" }}>
-                  <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: ".1em", color: "#9aa9ae", marginBottom: "4px" }}>Cost of Services</div>
-                  <div style={{ fontSize: "15px", fontWeight: "700", color: "#003E52" }}>&gt;US$8M</div>
-                </div>
-                <div style={{ borderLeft: "3px solid #B06533", paddingLeft: "12px" }}>
-                  <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: ".1em", color: "#9aa9ae", marginBottom: "4px" }}>Total Capital Cost</div>
-                  <div style={{ fontSize: "15px", fontWeight: "700", color: "#003E52" }}>&gt;US$1.9B</div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
