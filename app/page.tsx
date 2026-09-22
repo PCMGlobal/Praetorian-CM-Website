@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import CTABanner from "@/app/components/CTABanner";
 import MapSection from "@/app/components/MapSection";
 import { type Pin } from "@/app/components/WorldMap";
@@ -77,7 +77,7 @@ const DEFAULT_HOME: HomePageData = {
   },
   onTheGround: [
     { eyebrow: "On the ground", heading: "Mining operations, run by people who've stood on the pit floor", body: "Open pit, underground, heap leach, Praetorian's owner's teams have overseen fleet, crusher and haul-road programmes across every major mining geography." },
-    { eyebrow: "Engineering & Construction", heading: "Structural steel to process plant, delivered on schedule", body: "Constructability review through commissioning, Praetorian's project controls keep complex builds on cost and on schedule." },
+    { eyebrow: "From Earthworks to Commissioning", heading: "Full-scope construction management, delivered on time and on budget", body: "Constructability review through commissioning, Praetorian's project controls keep complex builds on cost and on schedule." },
     { eyebrow: "Health, Safety, Social, and Environment", heading: "Owner's team culture sets the site culture", body: "HSSE oversight isn't a checkbox, it's embedded leadership, from toolbox talk to turnover." },
     { eyebrow: "Project Controls", heading: "Cost and schedule visibility from day one", body: "Earned value tracking, progress measurement, and change management integrated from study through commissioning, so nothing surprises you at close-out." },
   ],
