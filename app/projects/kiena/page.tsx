@@ -1,9 +1,9 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Wesdome Gold Mines â€“ Kiena Paste Plant Project | Praetorian Construction Management",
+  title: "Wesdome Gold Mines – Kiena Paste Plant Project | Praetorian Construction Management",
   description: "Design, procurement and construction of a Tailings and Backfill System for the Kiena Mine. Praetorian provided on-site Construction Management and Contract Administration.",
 };
 
@@ -22,9 +22,9 @@ export default function ProjectPage() {
             <div style={{ display: "flex", alignItems: "center", gap: "12px", marginTop: "22px", flexWrap: "wrap" }}>
               <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#e3ab7c" }}>Projects</div>
             </div>
-            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(28px,3.6vw,48px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.1" }}>Wesdome Gold Mines â€“ Kiena Paste Plant Project</h1>
+            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(28px,3.6vw,48px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.1" }}>Wesdome Gold Mines – Kiena Paste Plant Project</h1>
             <div style={{ display: "flex", gap: "28px", flexWrap: "wrap", marginTop: "18px", fontSize: "14px", color: "#c3d0d4" }}>
-              <span>Wesdome Gold Mines</span><span>Val d&apos;Or, Quebec, Canada</span><span>2021 â€“ 2022</span>
+              <span>Wesdome Gold Mines</span><span>Val d&apos;Or, Quebec, Canada</span><span>2021 – 2022</span>
             </div>
           </div>
         </section>
@@ -38,13 +38,25 @@ export default function ProjectPage() {
             <div>
               <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Facilities</div>
               <ul style={{ fontSize: "14.5px", lineHeight: "1.9", color: "#555c60", margin: "0 0 28px", paddingLeft: "18px" }}>
-                <li>Thickener Building â€” Tailings Thickener, Rake Drive and Pumping Systems</li>
-                <li>Paste Plant Building â€” 800mÂ³ Tailings Buffer Tank, Vacuum Disc Filter, Cement Silo, Paste Mixer and Overhead Crane</li>
-                <li>E-House â€” 1MVA Transformer, 1000kW Generator, 600V MCC and PLC</li>
+                <li>Thickener Building — Tailings Thickener, Rake Drive and Pumping Systems</li>
+                <li>Paste Plant Building — 800m³ Tailings Buffer Tank, Vacuum Disc Filter, Cement Silo, Paste Mixer and Overhead Crane</li>
+                <li>E-House — 1MVA Transformer, 1000kW Generator, 600V MCC and PLC</li>
                 <li>Transfer Pipelines connecting all plant facilities and Tailings Storage</li>
               </ul>
               <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Praetorian's Scope</div>
               <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0 0 16px" }}>On-site Construction Management and Contract Administration, daily coordination of HSE, project controls, engineering, procurement, construction and commissioning deliverables.</p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginTop: "8px" }}>
+                <div style={{ borderLeft: "3px solid #B06533", paddingLeft: "12px" }}>
+                  <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: ".1em", color: "#9aa9ae", marginBottom: "4px" }}>Cost of Services</div>
+                  <div style={{ fontSize: "15px", fontWeight: "700", color: "#003E52" }}>~CAD$2M</div>
+                </div>
+                <div style={{ borderLeft: "3px solid #B06533", paddingLeft: "12px" }}>
+                  <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: ".1em", color: "#9aa9ae", marginBottom: "4px" }}>Total Capital Cost</div>
+                  <div style={{ fontSize: "15px", fontWeight: "700", color: "#003E52" }}>CAD$60M</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section style={{ background: "#003E52", padding: "clamp(36px,4vw,52px) 0" }}>
           <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "20px" }}>
