@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import CTABanner from "@/app/components/CTABanner";
 import Link from "next/link";
 import { client } from "@/lib/sanity";
@@ -184,6 +184,7 @@ export default async function AboutPage() {
           </section>
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533' }}>{about.whoWeAre.eyebrow}</div>
+            <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
             <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 18px' }}>{about.whoWeAre.paragraph1}</p>
             <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 44px' }}>{about.whoWeAre.paragraph2}</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(20px,2.6vw,28px)' }}>
@@ -271,7 +272,8 @@ export default async function AboutPage() {
           </section>
       <section id="pcml-careers" style={{ padding: "clamp(16px,2vw,28px) 0", scrollMarginTop: "120px" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
-          <div data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "8px" }}>{about.careers.eyebrow}</div>
+          <div data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533" }}>{about.careers.eyebrow}</div>
+          <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(340px,1fr))", gap: "clamp(24px,3vw,44px)", alignItems: "stretch" }}>
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
               <p data-reveal="" style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "600", fontSize: "15.5px", margin: "0 0 20px", color: "#3a3f42", lineHeight: "1.5" }}>{about.careers.heading}</p>
@@ -320,7 +322,7 @@ export default async function AboutPage() {
       <section id="pcml-management" style={{ background: "#003E52", padding: "clamp(46px,6vw,84px) 0", scrollMarginTop: "120px" }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)' }}>
               <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#e3ab7c' }}>{about.management.eyebrow}</div>
-
+              <div style={{ width: '64px', height: '3px', background: '#e3ab7c', margin: '18px 0 38px' }}></div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,2.6vw,28px)' }}>
                 <div data-reveal="" style={{ background: 'rgba(255,255,255,.06)', padding: '28px 24px' }}>
                   <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#fff', marginBottom: '4px' }}>{about.management.members[0]?.name}</div>

@@ -76,7 +76,8 @@ export default async function ProjectsPage() {
           </div>
         </section>
         <section style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(40px,5vw,66px) clamp(16px,4vw,44px)" }}>
-          <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Featured Projects</div>
+          <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533" }}>Featured Projects</div>
+          <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 18px' }}></div>
           <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(28px,3.2vw,40px)", margin: "0 0 38px", color: "#003E52" }}>Sample Past Projects</h2>
           <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#555c60", margin: "0 0 38px", maxWidth: "72ch" }}>Praetorian's experience cuts across various industries, regions and project scopes. Below are some of our past projects. For a comprehensive past projects list, please contact our <Link href="/contact" style={{ color: "#B06533" }}>Business Development team</Link>.</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "clamp(20px,2.6vw,28px)" }}>

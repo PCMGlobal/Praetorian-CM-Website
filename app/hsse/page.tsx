@@ -119,9 +119,9 @@ export default async function HSSEPage() {
                 <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(0deg,rgba(0,15,22,.4),rgba(0,15,22,0))' }}></div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', padding: 'clamp(22px,2.8vw,36px)' }}>
-                <div data-reveal="right" style={{ maxWidth: '44ch' }}>
+                <div data-reveal="right" style={{ maxWidth: '80ch' }}>
                   <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '12px', letterSpacing: '.2em', textTransform: 'uppercase', color: '#e3ab7c' }}>{data.commitment.eyebrow}</div>
-                  <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '8px 0 10px', color: '#fff', lineHeight: '1.1' }}>{data.commitment.heading}</h2>
+                  <h2 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '8px 0 10px', color: '#fff', lineHeight: '1.1' }}>HSSE oversight isn&apos;t a checkbox.<br />It&apos;s embedded leadership.</h2>
                   <p style={{ fontSize: '15px', lineHeight: '1.65', color: '#c3d0d4', margin: '0 0 24px' }}>{data.commitment.body}</p>
                   <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#B06533', color: '#fff', textDecoration: 'none', minHeight: '46px', padding: '0 22px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '14px' }}>{data.commitment.ctaLabel}</Link>
                 </div>

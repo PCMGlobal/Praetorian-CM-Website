@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import CTABanner from "@/app/components/CTABanner";
 import Link from "next/link";
 import { client } from "@/lib/sanity";
@@ -72,6 +72,7 @@ export default async function ServicesPage() {
                 {i === 0 && (
                   <div style={{ marginBottom: "clamp(12px,1.5vw,18px)" }}>
                     <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Our Services</div>
+                    <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 18px' }}></div>
                     <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(20px,2.2vw,28px)", margin: "0", color: "#003E52" }}>What We Do</h2>
                   </div>
                 )}
@@ -92,6 +93,7 @@ export default async function ServicesPage() {
         <section id="our-approach" style={{ background: "#003E52", padding: "clamp(24px,3vw,36px) 0", scrollMarginTop: "120px" }}>
           <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)" }}>
             <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>Our Approach</div>
+            <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 18px' }}></div>
             <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "clamp(30px,3.6vw,44px)", margin: "0 0 12px", color: "#ffffff" }}>How We Deliver</h2>
             <p style={{ fontSize: "16px", lineHeight: "1.7", color: "#c3d0d4", margin: "0 0 20px", textAlign: "justify" }}>Praetorian delivers value through early engagement, disciplined execution, and the deployment of proven tools and technologies. From the first stage gate through final turnover, our teams are equipped with the systems, processes, and intelligence platforms that keep projects on budget, on schedule, and in control.</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(480px,1fr))", gap: "clamp(20px,2.6vw,28px)" }}>
