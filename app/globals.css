@@ -84,3 +84,8 @@ a:hover { color: #8f5228; }
 @media (max-width: 640px) {
   .pcml-ub-text { display: none; }
 }
+
+/* Mobile: remove text justification on phones */
+@media (max-width: 640px) {
+  [style*='text-align: justify'] { text-align: left !important; }
+}
