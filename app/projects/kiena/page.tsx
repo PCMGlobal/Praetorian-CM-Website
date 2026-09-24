@@ -33,7 +33,7 @@ export default function ProjectPage() {
             <div>
               <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Overview</div>
               <p style={{ fontSize: "15.5px", lineHeight: "1.8", color: "#3a3f42", margin: "0 0 22px" }}>Praetorian was contracted by Wesdome Kiena Mine management to fully represent Wesdome's interests in the design, procurement and construction of a Tailings and Backfill System for the Kiena Mine, located in Val d'Or, Quebec.</p>
-              <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0" }}>Responsibilities included on-site construction management and contract administration across all HSE, project controls, engineering, procurement, construction and commissioning deliverables. Following project completion, Praetorian continued to provide support for further improvements to the Paste Plant and additional capital projects on site.</p>
+              <p style={{ fontSize: "15.5px", lineHeight: "1.8", color: "#3a3f42", margin: "0" }}>Responsibilities included on-site construction management and contract administration across all HSE, project controls, engineering, procurement, construction and commissioning deliverables. Following project completion, Praetorian continued to provide support for further improvements to the Paste Plant and additional capital projects on site.</p>
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Facilities</div>

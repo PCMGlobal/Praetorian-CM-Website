@@ -33,7 +33,7 @@ export default function ProjectPage() {
             <div>
               <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Overview</div>
               <p style={{ fontSize: "15.5px", lineHeight: "1.8", color: "#3a3f42", margin: "0 0 22px" }}>Goldcorp's Peñasquito Mine CLR (Centerline Raise) project is a brownfield expansion of the tailings facility and tailings systems. The project involves the construction of lined tailings dams, reclaim ponds, access roads, tailings pumping systems, tailings discharge and water reclaim systems for the purpose of increasing the overall capacity of the tailings storage facility.</p>
-              <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0" }}>Praetorian provided Project Management services by integrating with the Goldcorp personnel as part of the owners' team, including training of Goldcorp staff for future tailings facility raises and heavy equipment operator training of local residents.</p>
+              <p style={{ fontSize: "15.5px", lineHeight: "1.8", color: "#3a3f42", margin: "0" }}>Praetorian provided Project Management services by integrating with the Goldcorp personnel as part of the owners' team, including training of Goldcorp staff for future tailings facility raises and heavy equipment operator training of local residents.</p>
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Key Quantities</div>

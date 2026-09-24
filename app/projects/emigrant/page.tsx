@@ -33,7 +33,7 @@ export default function ProjectPage() {
             <div>
               <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Overview</div>
               <p style={{ fontSize: "15.5px", lineHeight: "1.8", color: "#3a3f42", margin: "0 0 22px" }}>Newmont's Emigrant Mine is a greenfield mine development near Carlin, Nevada. The project involves the construction of access roads, a leach pad, water management facilities, a carbon in column processing plant, and related infrastructure.</p>
-              <p style={{ fontSize: "14.5px", lineHeight: "1.8", color: "#555c60", margin: "0" }}>Praetorian provided overall Project Management services by integrating with Newmont personnel as part of the owners' team. Responsibilities included feasibility support, management of engineering firms, constructability planning, equipment installation sequencing and feedback to designers to reduce construction costs.</p>
+              <p style={{ fontSize: "15.5px", lineHeight: "1.8", color: "#3a3f42", margin: "0" }}>Praetorian provided overall Project Management services by integrating with Newmont personnel as part of the owners' team. Responsibilities included feasibility support, management of engineering firms, constructability planning, equipment installation sequencing and feedback to designers to reduce construction costs.</p>
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "14px" }}>Key Quantities</div>
