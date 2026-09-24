@@ -38,8 +38,8 @@ export default function MapSection({ projects }: { projects: Pin[] }) {
 
   return (
     <>
-      <div data-reveal="" style={{ position: 'relative' }}>
-        <div style={{
+      <div data-reveal="" className="pcml-map-wrap" style={{ position: 'relative' }}>
+        <div className="pcml-map-label" style={{
           position: 'absolute',
           top: 20,
           left: 20,

@@ -37,7 +37,7 @@ export default function HeroSlideshow({ content }: { content: HeroContent }) {
   }, []);
 
   return (
-    <section style={{ position: 'relative', height: 'clamp(380px,62vh,580px)', overflow: 'hidden' }}>
+    <section className="pcml-hero" style={{ position: 'relative', height: 'clamp(380px,62vh,580px)', overflow: 'hidden' }}>
       {/* Current image */}
       <div style={{
         position: 'absolute', inset: '0',
@@ -55,7 +55,7 @@ export default function HeroSlideshow({ content }: { content: HeroContent }) {
         zIndex: -1,
       }} />
       <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.86) 0%,rgba(0,25,36,.62) 46%,rgba(0,15,22,.2) 100%)' }}></div>
-      <div style={{ position: 'relative', height: '100%', maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px) clamp(92px,12vh,118px)', display: 'flex', alignItems: 'center' }}>
+      <div className="pcml-hero-content" style={{ position: 'relative', height: '100%', maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px) clamp(92px,12vh,118px)', display: 'flex', alignItems: 'center' }}>
         <div style={{ maxWidth: '640px' }}>
           <div data-reveal="" style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', border: '1px solid rgba(176,101,51,.55)', padding: '6px 14px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.16em', textTransform: 'uppercase', color: '#e3ab7c' }}>
             <span style={{ width: '6px', height: '6px', background: '#B06533', animation: 'pcmlBlink 2.4s ease-in-out infinite' }}></span>
@@ -73,8 +73,8 @@ export default function HeroSlideshow({ content }: { content: HeroContent }) {
         </div>
       </div>
       {/* Credentials bar */}
-      <div style={{ position: 'absolute', left: '0', right: '0', bottom: '0', background: 'rgba(0,10,15,.55)', backdropFilter: 'blur(2px)' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))' }}>
+      <div className="pcml-hero-stats" style={{ position: 'absolute', left: '0', right: '0', bottom: '0', background: 'rgba(0,10,15,.55)', backdropFilter: 'blur(2px)' }}>
+        <div className="pcml-hero-stats-grid" style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))' }}>
           {content.stats.map((stat, i) => (
             <div key={stat._key ?? i} style={{ padding: '18px 20px', borderRight: i < content.stats.length - 1 ? '1px solid rgba(255,255,255,.16)' : undefined }}>
               <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '800', fontSize: 'clamp(26px,2.6vw,34px)', color: '#fff' }}>{stat.value}{stat.suffix ? <span style={{ color: '#e3ab7c' }}>{stat.suffix}</span> : null}</div>
@@ -84,7 +84,7 @@ export default function HeroSlideshow({ content }: { content: HeroContent }) {
         </div>
       </div>
       {/* Dot indicators */}
-      <div style={{ position: 'absolute', bottom: '108px', right: 'clamp(16px,4vw,44px)', zIndex: 10, display: 'flex', gap: '8px' }}>
+      <div className="pcml-hero-dots" style={{ position: 'absolute', bottom: '108px', right: 'clamp(16px,4vw,44px)', zIndex: 10, display: 'flex', gap: '8px' }}>
         {IMAGES.map((_, i) => (
           <button key={i} onClick={() => { setCurrent(i); setNext((i + 1) % IMAGES.length); }} style={{ width: i === current ? '24px' : '8px', height: '8px', borderRadius: '4px', background: i === current ? '#B06533' : 'rgba(255,255,255,.45)', border: 'none', cursor: 'pointer', transition: 'all 0.3s ease', padding: 0 }} />
         ))}
