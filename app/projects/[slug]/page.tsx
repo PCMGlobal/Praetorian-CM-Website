@@ -31,7 +31,7 @@ const DEFAULT_PROJECTS: Record<string, ProjectData> = {
     client: "Lydian International",
     location: "Vayots Dzor, Armenia",
     year: "2015 – 2018",
-    photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Amulsar.jpg",
+    photoUrl: "/images/photos/pcml-project-amulsar.jpg",
     excerpt: "Amulsar Gold Project is a greenfield 225,000 gold ounces per annum mine in the Republic of Armenia. Praetorian provided supports ranging from feasibility review, assistance in preparation for financing, environmental and social impact assessment review, project management, construction management and precommissioning.",
     overviewParagraphs: [
       "Amulsar Gold Project is a greenfield 225,000 gold ounces per annum mine in the Republic of Armenia. Praetorian provided supports ranging from feasibility review, assistance in preparation for financing, environmental and social impact assessment review, project management, construction management and precommissioning.",
@@ -55,7 +55,7 @@ const DEFAULT_PROJECTS: Record<string, ProjectData> = {
     client: "Newmont (Yanacocha – MYSRL)",
     location: "Cajamarca, Peru",
     year: "2010 – 2014",
-    photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/BannerConga.jpg",
+    photoUrl: "/images/photos/pcml-project-conga.jpg",
     excerpt: "The Conga project is an open pit copper/gold mine covering approx. 6,000 ha in a remote area of the Peruvian Andes. The project involves a substantial amount of earthworks infrastructure with significant water management requirements.",
     overviewParagraphs: [
       "The Conga project is an open pit copper/gold mine. The project covers a vast area of approx. 6,000 ha and involves a substantial amount of earthworks infrastructure in a remote area of the Peruvian Andes. The average elevation is approximately 3,800 m and there is significant water management required during the wet season where annual rainfalls can exceed 1.2m.",
@@ -77,7 +77,7 @@ const DEFAULT_PROJECTS: Record<string, ProjectData> = {
     client: "Goldcorp Inc.",
     location: "Zacatecas, Mexico",
     year: "2016 – 2019",
-    photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/09/Penasquito.jpg",
+    photoUrl: "/images/photos/pcml-project-penasquito.jpg",
     excerpt: "Goldcorp’s Peñasquito Mine CLR (Centerline Raise) project is a brownfield expansion of the tailings facility and tailings systems involving the construction of lined tailings dams, reclaim ponds, access roads and tailings pumping systems.",
     overviewParagraphs: [
       "Goldcorp's Peñasquito Mine CLR (Centerline Raise) project is a brownfield expansion of the tailings facility and tailings systems. The project involves the construction of lined tailings dams, reclaim ponds, access roads, tailings pumping systems, tailings discharge and water reclaim systems for the purpose of increasing the overall capacity of the tailings storage facility.",
@@ -100,7 +100,7 @@ const DEFAULT_PROJECTS: Record<string, ProjectData> = {
     client: "Newmont Mining Corp",
     location: "Carlin, Nevada, USA",
     year: "2011 – 2012",
-    photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Emigrant-Aerial.jpg",
+    photoUrl: "/images/photos/pcml-project-emigrant.jpg",
     excerpt: "Newmont’s Emigrant Mine is a greenfield mine development near Carlin, Nevada. The project involves the construction of access roads, a leach pad, water management facilities, a carbon in column processing plant, and related infrastructure.",
     overviewParagraphs: [
       "Newmont's Emigrant Mine is a greenfield mine development near Carlin, Nevada. The project involves the construction of access roads, a leach pad, water management facilities, a carbon in column processing plant, and related infrastructure.",
@@ -122,7 +122,7 @@ const DEFAULT_PROJECTS: Record<string, ProjectData> = {
     client: "Diavik Diamond Mines Ltd.",
     location: "Lac De Gras, NWT, Canada",
     year: "2006 – 2013",
-    photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Diavik.jpg",
+    photoUrl: "/images/photos/pcml-project-diavik.jpg",
     excerpt: "Diavik’s Underground Project covers work associated with the transition from an open pit to underground operation. Praetorian’s cold weather (arctic) construction expertise and detailed logistics support were critical to the success of this project.",
     overviewParagraphs: [
       "Diavik's Underground Project is the overall project title for work associated with the transition from an open pit to underground operation. There are numerous sub-projects within this major expansion. Several of Praetorian's key differentiators were critical to the success of this project, including cold weather (arctic) construction expertise and detailed materials and construction equipment logistic support due to ice road constraints.",
@@ -148,7 +148,7 @@ const DEFAULT_PROJECTS: Record<string, ProjectData> = {
     client: "Calabrian Corporation",
     location: "Porcupine, Ontario, Canada",
     year: "2015 – 2017",
-    photoUrl: "https://www.praetoriancm.com/wp-content/uploads/2018/08/Calabrian-Plant-1.jpg",
+    photoUrl: "/images/photos/pcml-project-so2clean.jpg",
     excerpt: "Calabrian’s SO2Clean Production Facility is a 100 TPD Liquid Sulphur Dioxide Production Plant in Northern Ontario, Canada. Praetorian was responsible for overall Project Management and Construction Management.",
     overviewParagraphs: [
       "Calabrian's SO2Clean Production Facility Project is a 100 TPD Liquid Sulphur Dioxide Production Plant in Northern Ontario, Canada. Praetorian was responsible for overall Project Management and Construction Management. Praetorian's overall project management expertise including experience in remote locations construction and engineering/procurement/construction interface management was critical to the success of this project.",
