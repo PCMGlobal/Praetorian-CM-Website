@@ -56,7 +56,7 @@ export default function HeroSlideshow({ content }: { content: HeroContent }) {
       }} />
       <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(100deg,rgba(0,15,22,.86) 0%,rgba(0,25,36,.62) 46%,rgba(0,15,22,.2) 100%)' }}></div>
       <div className="pcml-hero-content" style={{ position: 'relative', height: '100%', maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(16px,4vw,44px) clamp(92px,12vh,118px)', display: 'flex', alignItems: 'center' }}>
-        <div style={{ maxWidth: '640px' }}>
+        <div style={{ maxWidth: '640px', width: '100%' }}>
           <div data-reveal="" style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', border: '1px solid rgba(176,101,51,.55)', padding: '6px 14px', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '12px', letterSpacing: '.16em', textTransform: 'uppercase', color: '#e3ab7c' }}>
             <span style={{ width: '6px', height: '6px', background: '#B06533', animation: 'pcmlBlink 2.4s ease-in-out infinite' }}></span>
             {content.eyebrow}
