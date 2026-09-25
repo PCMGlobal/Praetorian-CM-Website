@@ -55,7 +55,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-CA" className={`${sora.variable} ${workSans.variable}`}>
-      <meta name="google-site-verification" content="QI8JR4Es8p-RiRRruBxrefT4pXXntSI4ZV8nnyyU3yU" />`n      <style>{`*, *::before, *::after { box-sizing: border-box; } html, body { max-width: 100%; overflow-x: hidden; }`}</style>
+      <meta name="google-site-verification" content="QI8JR4Es8p-RiRRruBxrefT4pXXntSI4ZV8nnyyU3yU" />
+      <style>{`*, *::before, *::after { box-sizing: border-box; } html, body { max-width: 100%; overflow-x: hidden; }`}</style>
       <body>
         <UtilityBar />
         <Navbar />
