@@ -352,10 +352,10 @@ export default async function AboutPage() {
                 <div data-reveal="" style={{ background: 'rgba(255,255,255,.06)', padding: '28px 24px' }}>
                   <div style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', color: '#fff', marginBottom: '4px' }}>{about.management.members[5]?.name}</div>
                   <div style={{ fontSize: '13px', color: '#e3ab7c', marginBottom: '14px', fontFamily: 'var(--font-sora), sans-serif' }}>{about.management.members[5]?.role}</div>
-                  <p style={{ fontSize: '13.5px', lineHeight: '1.65', color: '#c3d0d4', margin: '0', fontStyle: 'italic' }}>{about.management.members[5]?.bio}</p>
+                  <p style={{ fontSize: '13.5px', lineHeight: '1.65', color: '#c3d0d4', margin: '0' }}>{about.management.members[5]?.bio}</p>
                 </div>
               </div>
-              <p style={{ fontSize: '12px', color: '#7d8899', marginTop: '28px', fontStyle: 'italic' }}></p>
+              <p style={{ fontSize: '12px', color: '#7d8899', marginTop: '28px' }}></p>
             </div>
           </section>
         </div>
