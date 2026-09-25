@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Sora, Work_Sans } from "next/font/google";
 import UtilityBar from "@/app/components/UtilityBar";
 import Navbar from "@/app/components/Navbar";
@@ -68,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": ["Organization", "LocalBusiness"],
             "name": "Praetorian Construction Management",
             "url": "https://praetoriancm.com",
             "logo": "https://praetoriancm.com/pcml-logo-colour.svg",
@@ -83,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "postalCode": "T5S 1R5",
               "addressCountry": "CA"
             },
-            "sameAs": [
+            "geo": { "@type": "GeoCoordinates", "latitude": 53.5461, "longitude": -113.6216 }, "sameAs": [
               "https://www.linkedin.com/company/praetorian-construction-management",
               "https://www.youtube.com/@PraetorianCM",
               "https://x.com/PraetorianCMgmt",
@@ -95,3 +95,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
