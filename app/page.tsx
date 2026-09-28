@@ -10,7 +10,7 @@ import GlobeWatermark from "@/app/components/GlobeWatermark";
 import CountryCards from "@/app/components/CountryCards";
 
 export const metadata: Metadata = {
-  title: "Praetorian Construction Management | Mining Construction",
+  title: "Praetorian Construction Management | Owner's Team Mining & EPCM Advisory",
   description: "Owner's team construction management for the global mining industry. AI-powered cost intelligence, 20+ years of experience, operating across 6 countries.",
 };
 
