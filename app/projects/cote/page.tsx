@@ -3,8 +3,8 @@ import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "IAMGOLD – Cote Gold Project | Praetorian Construction Management",
-  description: "Cote Gold Project is a greenfield 495,000 gold ounces per annum mine in Ontario, Canada. Praetorian provided Project Management, Construction Advisory, Turnover and Commissioning Support.",
+  title: "Cote Gold Project, Ontario",
+  description: "Greenfield 495,000 oz/year gold mine in Ontario. Praetorian provided project management support, construction advisory, turnover and commissioning support.",
 };
 
 export default function ProjectPage() {

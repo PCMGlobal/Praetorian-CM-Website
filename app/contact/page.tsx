@@ -5,7 +5,7 @@ import Link from "next/link";
 import { client } from "@/lib/sanity";
 
 export const metadata: Metadata = {
-  title: "Contact Praetorian Construction Management",
+  title: "Contact Us",
   description: "Speak with Praetorian's team about your mining construction project. Owner's team specialists based in Edmonton, Alberta, operating globally.",
 };
 

@@ -7,7 +7,7 @@ import projectPins from "@/data/project-pins.json";
 import { client } from "@/lib/sanity";
 
 export const metadata: Metadata = {
-  title: "Mining Projects | Praetorian Construction Management",
+  title: "Mining Projects",
   description: "Mining construction projects across Canada, USA, Mexico, Peru, Guatemala and Armenia. Open pit, underground, heap leach and industrial construction.",
 };
 

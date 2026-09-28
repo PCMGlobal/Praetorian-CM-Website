@@ -102,7 +102,7 @@ export default function Footer() {
           <div>
             <div style={headingStyle}>Head Office</div>
             <p style={{ fontSize: "13px", lineHeight: "1.7", color: "#6b7f84", margin: "0 0 8px" }}>
-              201, 10441-178 Street<br />
+              201-10441 178 Street NW<br />
               Edmonton, Alberta T5S 1R5<br />
               Canada
             </p>

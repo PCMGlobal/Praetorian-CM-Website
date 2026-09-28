@@ -3,8 +3,8 @@ import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Newmont Mining Corp – Conga Mine | Praetorian Construction Management",
-  description: "The Conga project is an open pit copper/gold mine. The project covers a vast area of approx. 6,000 ha and involves a substantial amount of earthworks infrastruc",
+  title: "Conga Mine, Peru",
+  description: "Open pit copper/gold mine in the Peruvian Andes. Praetorian managed survey data, CADD modelling, as-builts and quantity control on 6,000 ha of earthworks.",
 };
 
 export default function ProjectPage() {

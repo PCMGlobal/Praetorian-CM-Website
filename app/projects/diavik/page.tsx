@@ -3,8 +3,8 @@ import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Diavik Diamond Mines Inc. – Diavik Underground Project | Praetorian Construction Management",
-  description: "Diavik's Underground Project is the overall project title for work associated with the transition from an open pit to underground operation. There are numerous ",
+  title: "Diavik Underground Project, NWT",
+  description: "Open pit to underground transition at Diavik, NWT. Praetorian provided survey data control, CADD modelling and site mapping in arctic conditions.",
 };
 
 export default function ProjectPage() {

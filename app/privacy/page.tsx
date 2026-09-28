@@ -5,7 +5,7 @@ import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import { client } from "@/lib/sanity";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Praetorian Construction Management",
+  title: "Privacy Policy",
   description: "Privacy policy for praetoriancm.com. How we collect, use and protect your information.",
 };
 

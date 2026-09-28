@@ -5,7 +5,7 @@ import { client } from "@/lib/sanity";
 import ArticleGrid from "@/app/news/ArticleGrid";
 
 export const metadata: Metadata = {
-  title: "News and Insights | Praetorian Construction Management",
+  title: "News and Insights",
   description: "Cost intelligence, project controls, safety leadership, and AI in mining construction. Perspectives from the owner's side of the table. Updated regularly.",
 };
 

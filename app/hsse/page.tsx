@@ -4,7 +4,7 @@ import Link from "next/link";
 import { client } from "@/lib/sanity";
 
 export const metadata: Metadata = {
-  title: "HSSE Leadership | Praetorian Construction Management",
+  title: "HSSE Leadership",
   description: "Zero harm is the only acceptable outcome. Praetorian embeds HSSE leadership directly into the owner's team from mobilisation through handover.",
 };
 

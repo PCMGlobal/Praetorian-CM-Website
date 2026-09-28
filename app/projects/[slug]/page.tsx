@@ -246,11 +246,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const data = (await getProject(slug)) ?? DEFAULT_PROJECTS[slug];
   if (!data) {
-    return { title: "Project | Praetorian Construction Management" };
+    return { title: "Project", robots: { index: false } };
   }
   return {
-    title: `${data.title} | Praetorian Construction Management`,
-    description: data.excerpt?.slice(0, 155),
+    title: data.title,
+    description: data.excerpt && data.excerpt.length > 155
+      ? `${data.excerpt.slice(0, 152).replace(/\s+\S*$/, "")}...`
+      : data.excerpt,
   };
 }
 

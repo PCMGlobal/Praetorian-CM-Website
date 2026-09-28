@@ -3,8 +3,8 @@ import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Lydian International – Amulsar Gold Project | Praetorian Construction Management",
-  description: "Amulsar Gold Project is a greenfield 225,000 gold ounces per annum mine in the Republic of Armenia. Praetorian provided supports ranging from feasibility review",
+  title: "Amulsar Gold Project, Armenia",
+  description: "Greenfield 225,000 oz/year gold mine in Armenia. Praetorian delivered feasibility review, project management, construction management and precommissioning.",
 };
 
 export default function ProjectPage() {

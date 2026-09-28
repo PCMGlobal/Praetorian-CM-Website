@@ -3,8 +3,8 @@ import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Newmont Mining Corp – Emigrant Mine | Praetorian Construction Management",
-  description: "Newmont's Emigrant Mine is a greenfield mine development near Carlin, Nevada. The project involves the construction of access roads, a leach pad, water manageme",
+  title: "Emigrant Mine, Nevada",
+  description: "Greenfield gold mine near Carlin, Nevada. Praetorian led owner's team project management, feasibility support, constructability planning and cost control.",
 };
 
 export default function ProjectPage() {

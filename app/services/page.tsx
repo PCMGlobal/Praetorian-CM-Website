@@ -5,7 +5,7 @@ import { client } from "@/lib/sanity";
 import { AccordionItem } from "./AccordionItem";
 
 export const metadata: Metadata = {
-  title: "Owner's Team Services | Praetorian Construction Management",
+  title: "Owner's Team Services",
   description: "Embedded owner's team support, project controls, HSSE leadership, and cost intelligence. Four integrated service families for the global mining sector.",
 };
 

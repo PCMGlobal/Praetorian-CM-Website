@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 import { client } from "@/lib/sanity";
+import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -54,14 +55,28 @@ export async function generateMetadata(
   { params }: { params: { slug: string } }
 ): Promise<Metadata> {
   const article = await getArticle(params.slug);
-  if (!article) return { title: "Article Not Found" };
+  if (!article) return { title: "Article Not Found", robots: { index: false } };
   return {
-    title: `${article.title} | Praetorian Construction Management`,
+    title: article.title,
     description: article.excerpt,
+    alternates: { canonical: `/news/${params.slug}` },
     openGraph: {
+      type: "article",
+      url: `/news/${params.slug}`,
+      siteName: SITE_NAME,
+      locale: "en_CA",
       title: article.title,
       description: article.excerpt,
-      images: article.coverImageUrl ? [{ url: article.coverImageUrl }] : [],
+      publishedTime: article.publishedAt || undefined,
+      images: article.coverImageUrl
+        ? [{ url: article.coverImageUrl }]
+        : [{ url: "/og-image.jpg", width: 1200, height: 630, alt: SITE_NAME }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      images: [article.coverImageUrl || "/og-image.jpg"],
     },
   };
 }
@@ -117,8 +132,25 @@ export default async function ArticlePage({ params }: { params: { slug: string }
   const article = await getArticle(params.slug);
   if (!article) notFound();
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.excerpt,
+    ...(article.coverImageUrl ? { image: [article.coverImageUrl] } : {}),
+    ...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
+    mainEntityOfPage: `${SITE_URL}/news/${params.slug}`,
+    inLanguage: "en-CA",
+    author: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: SITE_NAME, url: `${SITE_URL}/` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <section style={{ position: "relative", overflow: "hidden", minHeight: "420px" }}>
         <div style={{ position: "absolute", inset: "0", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", ...(article.coverImageUrl ? { backgroundImage: `url(${article.coverImageUrl})` } : { background: "#003E52" }) }} />
         <div style={{ position: "absolute", inset: "0", background: "linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.82) 48%,rgba(0,15,22,.6) 100%)" }} />

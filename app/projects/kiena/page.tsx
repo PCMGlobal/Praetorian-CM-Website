@@ -3,8 +3,8 @@ import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Wesdome Gold Mines – Kiena Paste Plant Project | Praetorian Construction Management",
-  description: "Design, procurement and construction of a Tailings and Backfill System for the Kiena Mine. Praetorian provided on-site Construction Management and Contract Administration.",
+  title: "Kiena Paste Plant, Quebec",
+  description: "Tailings and paste backfill system at Kiena Mine, Quebec. Praetorian represented Wesdome with on-site construction management and contract administration.",
 };
 
 export default function ProjectPage() {
