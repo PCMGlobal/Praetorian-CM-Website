@@ -44,6 +44,20 @@ const LEGACY_REDIRECTS = [
   ["/brochure_mining/index.html", "/"],
 ];
 
+// Articles merged into a stronger article on the same topic (28 Sep 2026), so the two
+// versions no longer compete with each other in search. The merged-away article is
+// unpublished in Sanity and its address now leads to the combined article.
+const MERGED_ARTICLE_REDIRECTS = [
+  [
+    "/news/what-owner-s-team-construction-management-means-in-practice",
+    "/news/what-an-owner-s-team-construction-manager-actually-does",
+  ],
+  [
+    "/news/praetorian-iq-ai-powered-cost-intelligence-for-mining-construction",
+    "/news/praetorian-iq-how-we-built-a-proprietary-cost-intelligence-platform-for-mining-construction",
+  ],
+];
+
 const nextConfig = {
   async redirects() {
     return [
@@ -55,7 +69,7 @@ const nextConfig = {
         destination: "https://www.praetoriancm.com/:path*",
         permanent: true,
       },
-      ...LEGACY_REDIRECTS.map(([source, destination]) => ({
+      ...[...LEGACY_REDIRECTS, ...MERGED_ARTICLE_REDIRECTS].map(([source, destination]) => ({
         source,
         destination,
         permanent: true,
