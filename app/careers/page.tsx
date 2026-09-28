@@ -3,7 +3,7 @@ import Link from "next/link";
 import { client } from "@/lib/sanity";
 
 export const metadata: Metadata = {
-  title: "Careers | Praetorian Construction Management",
+  title: "Careers",
   description: "Build the world's most complex projects from the owner's side. Career opportunities in mining project management.",
 };
 

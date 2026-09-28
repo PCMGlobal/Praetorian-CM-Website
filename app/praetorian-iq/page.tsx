@@ -3,7 +3,7 @@ import Link from "next/link";
 import { client } from "@/lib/sanity";
 
 export const metadata: Metadata = {
-  title: "Praetorian IQ | Proprietary Cost Intelligence Platform",
+  title: { absolute: "Praetorian IQ | Proprietary Cost Intelligence Platform" },
   description: "Praetorian IQ is our proprietary cost intelligence platform built on Microsoft Azure and Claude AI, embedded in every client engagement.",
 };
 

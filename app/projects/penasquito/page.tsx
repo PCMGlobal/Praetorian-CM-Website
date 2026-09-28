@@ -3,8 +3,8 @@ import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Goldcorp Inc. – Peñasquito Mine CLR Project | Praetorian Construction Management",
-  description: "Goldcorp's Peñasquito Mine CLR (Centerline Raise) project is a brownfield expansion of the tailings facility and tailings systems. The project involves the cons",
+  title: "Peñasquito Mine CLR Project, Mexico",
+  description: "Brownfield tailings expansion at Peñasquito, Mexico. Praetorian provided owner's team project management, construction management and cost control.",
 };
 
 export default function ProjectPage() {

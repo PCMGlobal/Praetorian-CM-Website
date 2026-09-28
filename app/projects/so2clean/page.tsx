@@ -3,8 +3,8 @@ import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Calabrian Corporation – SO2Clean Production Facility | Praetorian Construction Management",
-  description: "Calabrian's SO2Clean Production Facility Project is a 100 TPD Liquid Sulphur Dioxide Production Plant in Northern Ontario, Canada. Praetorian was responsible fo",
+  title: "SO2Clean Production Facility, Ontario",
+  description: "100 TPD liquid sulphur dioxide plant in Northern Ontario. Praetorian led project management, construction management and contract administration.",
 };
 
 export default function ProjectPage() {

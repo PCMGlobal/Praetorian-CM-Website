@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Sora, Work_Sans } from "next/font/google";
 import UtilityBar from "@/app/components/UtilityBar";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import Reveal from "@/app/components/Reveal";
 import Analytics from "@/app/components/Analytics";
-import Script from "next/script";
+import { SITE_URL, SITE_NAME, organizationJsonLd } from "@/lib/seo";
 import "./globals.css";
 const sora = Sora({
   subsets: ["latin"],
@@ -19,26 +19,32 @@ const workSans = Work_Sans({
   variable: "--font-work-sans",
   display: "swap",
 });
+const DEFAULT_DESCRIPTION =
+  "Owner's team construction management for the global mining sector, with AI-powered cost intelligence built in.";
 export const metadata: Metadata = {
   title: {
-    default: "Praetorian Construction Management",
-    template: "%s | Praetorian Construction Management",
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Owner's team construction management for the global mining sector, with AI-powered cost intelligence built in.",
-  metadataBase: new URL("https://praetoriancm.com"),
+  description: DEFAULT_DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "./",
+  },
+  verification: {
+    google: "QI8JR4Es8p-RiRRruBxrefT4pXXntSI4ZV8nnyyU3yU",
+  },
   openGraph: {
-    title: "Praetorian Construction Management",
-    description:
-      "Owner's team construction management for the global mining sector, with AI-powered cost intelligence built in.",
-    url: "https://praetoriancm.com",
-    siteName: "Praetorian Construction Management",
+    title: SITE_NAME,
+    description: DEFAULT_DESCRIPTION,
+    url: "./",
+    siteName: SITE_NAME,
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Praetorian Construction Management",
+        alt: SITE_NAME,
       },
     ],
     locale: "en_CA",
@@ -46,17 +52,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Praetorian Construction Management",
-    description:
-      "Owner's team construction management for the global mining sector, with AI-powered cost intelligence built in.",
+    title: SITE_NAME,
+    description: DEFAULT_DESCRIPTION,
     images: ["/og-image.jpg"],
   },
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-CA" className={`${sora.variable} ${workSans.variable}`}>
-      <link rel="canonical" href="https://www.praetoriancm.com" />
-      <meta name="google-site-verification" content="QI8JR4Es8p-RiRRruBxrefT4pXXntSI4ZV8nnyyU3yU" />
       <style>{`*, *::before, *::after { box-sizing: border-box; } html, body { max-width: 100%; overflow-x: hidden; }`}</style>
       <body>
         <UtilityBar />
@@ -65,37 +68,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <Reveal />
         <Analytics />
-        <Script
-          id="schema-org"
+        <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": ["Organization", "LocalBusiness"],
-            "name": "Praetorian Construction Management",
-            "url": "https://praetoriancm.com",
-            "logo": "https://praetoriancm.com/pcml-logo-colour.svg",
-              "image": "https://praetoriancm.com/pcml-logo-colour.svg",
-            "description": "Owner's team construction management for the global mining sector, with AI-powered cost intelligence built in.",
-            "telephone": "+17809890289",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "201-10441 178 Street",
-              "addressLocality": "Edmonton",
-              "addressRegion": "AB",
-              "postalCode": "T5S 1R5",
-              "addressCountry": "CA"
-            },
-            "geo": { "@type": "GeoCoordinates", "latitude": 53.5461, "longitude": -113.6216 }, "sameAs": [
-              "https://www.linkedin.com/company/praetorian-construction-management",
-              "https://www.youtube.com/@PraetorianCM",
-              "https://x.com/PraetorianCMgmt",
-              "https://www.instagram.com/praetoriancm"
-            ]
-          })}}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </body>
     </html>
   );
 }
-
-
