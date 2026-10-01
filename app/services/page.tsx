@@ -3,9 +3,10 @@ import CTABanner from "@/app/components/CTABanner";
 import Link from "next/link";
 import { client } from "@/lib/sanity";
 import { AccordionItem } from "./AccordionItem";
+import { SERVICE_PAGES, servicePath } from "@/lib/service-pages";
 
 export const metadata: Metadata = {
-  title: "Owner's Team Services",
+  title: "Owner's Team Services for Mining Construction",
   description: "Embedded owner's team support, project controls, HSSE leadership, and cost intelligence. Four integrated service families for the global mining sector.",
 };
 
@@ -53,8 +54,8 @@ export default async function ServicesPage() {
               Home
             </Link>
             <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "12px", letterSpacing: ".2em", textTransform: "uppercase", color: "#e3ab7c", marginTop: "22px" }}>Services</div>
-            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(25px,3.45vw,43px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.04", maxWidth: "22ch" }}>Four service families, one integrated owner&apos;s team</h1>
-            <p style={{ fontSize: "16.5px", lineHeight: "1.62", maxWidth: "62ch", color: "#c3d0d4", margin: "18px 0 0" }}>Praetorian scales from a single embedded specialist to a full owner&apos;s project management office. Every engagement is staffed against your stage gates, not ours.</p>
+            <h1 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "800", fontSize: "clamp(25px,3.45vw,43px)", margin: "14px 0 0", color: "#fff", lineHeight: "1.04", maxWidth: "22ch" }}>Owner&apos;s Team Services for Mining Construction</h1>
+            <p style={{ fontSize: "16.5px", lineHeight: "1.62", maxWidth: "62ch", color: "#c3d0d4", margin: "18px 0 0" }}>Four service families, one integrated owner&apos;s team. Praetorian scales from a single embedded specialist to a full owner&apos;s project management office. Every engagement is staffed against your stage gates, not ours.</p>
           </div>
         </section>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
@@ -81,6 +82,12 @@ export default async function ServicesPage() {
                     <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "18px", letterSpacing: ".12em", textTransform: "uppercase", color: "#B06533", marginBottom: "12px" }}>{col.number}</div>
                     <h2 style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: "700", fontSize: "20px", margin: "0 0 12px", color: "#003E52", lineHeight: "1.2" }}>{col.title}</h2>
                     <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#555c60", margin: "0" }}>{col.subtitle}</p>
+                    {SERVICE_PAGES.find(s => s.columnKey === col._key) && (
+                      <Link href={servicePath(SERVICE_PAGES.find(s => s.columnKey === col._key)!.slug)} style={{ display: "inline-flex", alignItems: "center", gap: "6px", marginTop: "14px", color: "#B06533", fontFamily: "var(--font-sora), sans-serif", fontWeight: "600", fontSize: "14px", textDecoration: "none" }}>
+                        {SERVICE_PAGES.find(s => s.columnKey === col._key)!.title}
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                      </Link>
+                    )}
                   </div>
                   <div style={{ borderTop: "1px solid #e4e6e7" }}>
                     {(col.items ?? []).map(item => <AccordionItem key={item._key} title={item.title} body={item.body} />)}

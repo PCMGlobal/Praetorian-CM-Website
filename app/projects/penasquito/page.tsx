@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTABanner from "@/app/components/CTABanner";
+import { ProjectHeroImage, ProjectFactLine, ProjectRelatedServices } from "@/app/components/ProjectSeo";
 
 export const metadata: Metadata = {
   title: "Peñasquito Mine CLR Project, Mexico",
@@ -12,7 +13,7 @@ export default function ProjectPage() {
     <main>
       <div>
         <section style={{ position: "relative", overflow: "hidden", minHeight: "420px" }}>
-          <div style={{ position: "absolute", inset: "0", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundImage: "url(/images/photos/pcml-project-penasquito.jpg)" }}></div>
+          <ProjectHeroImage slug="penasquito" />
           <div style={{ position: "absolute", inset: "0", background: "linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.72) 48%,rgba(0,15,22,.4) 100%)" }}></div>
           <div style={{ position: "relative", maxWidth: "1400px", margin: "0 auto", padding: "clamp(40px,5vw,72px) clamp(16px,4vw,44px)" }}>
             <Link href="/projects" style={{ background: "none", border: "0", padding: "0", color: "#e3ab7c", fontSize: "13px", cursor: "pointer", display: "flex", alignItems: "center", gap: "6px", fontFamily: "var(--font-sora), sans-serif", fontWeight: "600" }}>
@@ -26,6 +27,7 @@ export default function ProjectPage() {
             <div style={{ display: "flex", gap: "28px", flexWrap: "wrap", marginTop: "18px", fontSize: "14px", color: "#c3d0d4" }}>
               <span>Goldcorp Inc.</span><span>Zacatecas, Mexico</span><span>2016 – 2019</span>
             </div>
+            <ProjectFactLine slug="penasquito" />
           </div>
         </section>
         <section style={{ maxWidth: "1400px", margin: "0 auto", padding: "clamp(44px,6vw,72px) clamp(16px,4vw,44px)" }}>
@@ -50,6 +52,7 @@ export default function ProjectPage() {
             </div>
           </div>
         </section>
+        <ProjectRelatedServices slug="penasquito" />
         <section style={{ background: "#003E52", padding: "clamp(36px,4vw,52px) 0" }}>
           <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 clamp(16px,4vw,44px)", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "20px" }}>
             <div>
