@@ -16,7 +16,7 @@ export type ProjectFacts = {
 export const PROJECT_FACTS: Record<string, ProjectFacts> = {
   cote: {
     name: "IAMGOLD Cote Gold Project",
-    factLine: ["Gold", "Greenfield mine and processing plant", "Ontario, Canada", "Project management support, construction advisory, commissioning and turnover"],
+    factLine: ["Gold", "Greenfield mine and processing plant", "Ontario, Canada", "Project management support, construction advisory, turnover and commissioning support"],
     image: "/images/photos/pcml-project-cote.jpg",
     imageAlt: "Aerial winter view of the Cote Gold processing plant under construction in Ontario, with the mill building, leach tanks and a large thickener",
     services: ["planning-and-execution", "project-services", "post-construction"],
@@ -44,7 +44,7 @@ export const PROJECT_FACTS: Record<string, ProjectFacts> = {
   },
   so2clean: {
     name: "Calabrian SO2Clean Production Facility",
-    factLine: ["Liquid sulphur dioxide", "100 tonne per day production plant", "Northern Ontario, Canada", "Project management and construction management"],
+    factLine: ["Liquid sulphur dioxide", "100 TPD production plant", "Northern Ontario, Canada", "Project management and construction management"],
     image: "/images/photos/pcml-project-so2clean.jpg",
     imageAlt: "The SO2Clean liquid sulphur dioxide production facility in Northern Ontario in winter, with the plant building, storage tanks and rail tank cars",
     services: ["pre-construction", "project-services", "planning-and-execution"],

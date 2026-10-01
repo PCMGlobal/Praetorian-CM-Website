@@ -44,19 +44,19 @@ export const SERVICE_PAGES: ServicePageContent[] = [
     serviceType: "Mining pre-construction and feasibility support",
     intro: [
       "The decisions made before construction begins set most of a mining project's final cost. By the time a project reaches detailed engineering, the vast majority of its cost is committed, and changes during construction cost more still.",
-      "Praetorian embeds experienced construction managers in the owner's team from concept through feasibility, so the scope, budget and schedule assumptions are set by people who will be accountable for execution.",
+      "Praetorian embeds study managers in the owner's team from concept through feasibility, so the scope, budget and schedule assumptions are set by people who will be accountable for execution.",
     ],
     whenToEngage: {
       lead: "Owners usually bring Praetorian in at one of three points:",
       points: [
         "At the study stage (PEA, PFS or feasibility study), for an independent review of the construction cost estimate, the contracting strategy and the project execution plan before the investment decision.",
         "During project definition, when the scope is firmed up, the execution strategy is set and contracts are structured. This is the highest-leverage period in the project lifecycle.",
-        "Ahead of financing, to build the financial and planning foundation that lenders and boards require. Praetorian has sat in interviews with clients and financing bodies, including the World Bank, to present and defend project plans.",
+        "Ahead of financing, to build the financial and planning foundation that lenders and boards require. Praetorian has sat in interviews alongside its clients with financing bodies, including the World Bank, to present and defend project plans.",
       ],
     },
     sections: [
       {
-        heading: "How it works alongside the engineering and EPCM teams",
+        heading: "How it works alongside the engineering team",
         paragraphs: [
           "Most feasibility studies are produced by engineering consultants whose primary expertise is technical: defining what needs to be built. Praetorian adds the construction view, covering what the project should cost, how it should be contracted and what the construction risks are in the jurisdiction where it will be built.",
           "We operate at arm's length from the engineering effort, so our recommendations on scope, constructability and cost are independent and made on the owner's behalf. We work with the owner's design team to improve quality and reduce construction risk, and our constructability reviews identify inefficiencies early, before ground is broken.",
@@ -65,7 +65,7 @@ export const SERVICE_PAGES: ServicePageContent[] = [
       },
     ],
     projects: [
-      { slug: "amulsar", note: "Feasibility review, support for financing, ESIA review and value engineering before construction." },
+      { slug: "amulsar", note: "Feasibility review, support for financing, ESIA review and value engineering." },
       { slug: "emigrant", note: "Feasibility support, management of engineering firms, constructability planning and feedback to designers to reduce construction costs." },
       { slug: "so2clean", note: "Feasibility data review and validation of budget and schedule, value engineering and constructability." },
       { slug: "conga", note: "Value engineering and constructability on a large earthworks program in the Peruvian Andes." },
@@ -132,6 +132,8 @@ export const SERVICE_PAGES: ServicePageContent[] = [
       { slug: "kiena", note: "Contract administration and daily coordination of HSE, project controls, engineering, procurement and construction deliverables." },
       { slug: "cote", note: "Commercial and contract management alongside planning and execution supervision." },
       { slug: "penasquito", note: "Cost control and scheduling as part of an integrated owner's team." },
+      { slug: "emigrant", note: "Cost control and scheduling as part of Newmont's owner's team." },
+      { slug: "diavik", note: "Cost control, scheduling and survey data management on the open pit to underground transition." },
     ],
     faqs: [
       {
@@ -189,6 +191,8 @@ export const SERVICE_PAGES: ServicePageContent[] = [
       { slug: "amulsar", note: "Overall project management and construction management of a greenfield heap leach gold mine." },
       { slug: "emigrant", note: "Owner's team project management, equipment installation sequencing and constructability planning." },
       { slug: "so2clean", note: "Overall project management and construction management, including local contractor engagement." },
+      { slug: "diavik", note: "Project and construction management in arctic conditions, with materials and equipment logistics planned around ice road constraints." },
+      { slug: "conga", note: "Earthworks project and construction management, survey data control and CADD modelling across about 6,000 ha in the Peruvian Andes." },
     ],
     faqs: [
       {
@@ -247,7 +251,7 @@ export const SERVICE_PAGES: ServicePageContent[] = [
     ],
     projects: [
       { slug: "cote", note: "Punch list and turnover supervision and commissioning support across the processing plant and facilities." },
-      { slug: "kiena", note: "Commissioning deliverables, then continued support for paste plant improvements and additional capital projects on site." },
+      { slug: "kiena", note: "Coordination of commissioning deliverables, then continued support for paste plant improvements and additional capital projects on site." },
       { slug: "amulsar", note: "Pre-commissioning and operations preparation support." },
     ],
     faqs: [

@@ -131,7 +131,7 @@ export default async function ServiceDetailPage({ params }: { params: { slug: st
           <div style={wrap}>
             <div style={eyebrowStyle}>What&apos;s included</div>
             <div style={{ width: "64px", height: "3px", background: "#B06533", margin: "18px 0 18px" }}></div>
-            <h2 style={h2Style}>{column?.title ?? page.navLabel} services</h2>
+            <h2 style={h2Style}>Services included</h2>
             {column?.subtitle && <p style={bodyStyle}>{column.subtitle}</p>}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "clamp(16px,2vw,24px)", marginTop: "12px" }}>
               {items.map((it) => (
