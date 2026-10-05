@@ -108,6 +108,17 @@ const DEFAULT_HOME: HomePageData = {
   },
 };
 
+// Sends each "What we do" card to the matching service page, matched on the card title so
+// the links stay correct if the cards are reordered in Sanity Studio.
+function serviceHrefFor(title: string): string {
+  const t = (title || "").toLowerCase();
+  if (/commissioning|turnover|quality/.test(t)) return "/services/post-construction";
+  if (/construction management|execution/.test(t)) return "/services/planning-and-execution";
+  if (/procurement|controls|logistics/.test(t)) return "/services/project-services";
+  if (/engineering|feasibility|planning/.test(t)) return "/services/pre-construction";
+  return "/services";
+}
+
 function formatHomeDate(dateStr: string): string {
   if (!dateStr) return "";
   const d = new Date(dateStr);
@@ -187,11 +198,15 @@ export default async function HomePage() {
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,2.6vw,26px)' }}>
                 {(home.whatWeDo?.cards ?? []).map((card, i) => (
-                  <div key={card._key ?? i} data-reveal="" style={{ background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
+                  <Link key={card._key ?? i} href={serviceHrefFor(card.title)} data-reveal="" style={{ display: 'block', textDecoration: 'none', color: 'inherit', background: '#fff', padding: '26px 24px', boxShadow: '0 2px 14px rgba(0,20,30,.06)', borderTop: '3px solid #B06533' }}>
                     {whatWeDoIcons[i]}
                     <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', margin: '16px 0 8px', color: '#003E52' }}>{card.title}</h4>
-                    <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0' }}>{card.description}</p>
-                  </div>
+                    <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#5b6266', margin: '0 0 12px' }}>{card.description}</p>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#B06533', fontFamily: 'var(--font-sora), sans-serif', fontWeight: '600', fontSize: '13.5px' }}>
+                      Learn more
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                    </span>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -28,10 +28,10 @@ const COL_COMPANY = [
 ];
 
 const COL_SERVICES = [
-  { label: "Pre-Construction", href: "/services#owners-team-support" },
-  { label: "Project Services", href: "/services#project-services" },
-  { label: "Construction Execution", href: "/services#construction-execution" },
-  { label: "Post-Construction", href: "/services#operational-consulting" },
+  { label: "Pre-Construction", href: "/services/pre-construction" },
+  { label: "Project Services", href: "/services/project-services" },
+  { label: "Construction Execution", href: "/services/planning-and-execution" },
+  { label: "Post-Construction", href: "/services/post-construction" },
   { label: "Our Approach", href: "/services#our-approach" },
 ];
 
