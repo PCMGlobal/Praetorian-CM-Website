@@ -46,8 +46,8 @@ type HomePageData = {
 const DEFAULT_HOME: HomePageData = {
   hero: {
     eyebrow: "Global Mining · Built Right",
-    headline: "Owner's Team Construction Management for Mining Projects",
-    subhead: "Construction management with a technology edge. Praetorian integrates directly into the client's owner's team, from scoping through commissioning, with AI-powered cost intelligence, global experience and an unwavering focus on successful project outcomes.",
+    headline: "Construction Management with a Technology Edge",
+    subhead: "Praetorian integrates directly into the client's ownership team, from scoping through commissioning. AI-powered cost intelligence, global experience, and an unwavering focus on successful project outcomes.",
     primaryCtaLabel: "Speak with Our Team",
     secondaryCtaLabel: "View Our Projects",
     stats: [
