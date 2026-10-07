@@ -96,10 +96,10 @@ export const SERVICE_PAGES: ServicePageContent[] = [
     number: "02",
     navLabel: "Project Services",
     title: "Mining Project Controls and Owner's Team Support",
-    metaDescription: "Owner-side project controls for mining construction: cost control and estimating, scheduling, procurement and contracts, and risk and change management.",
-    serviceType: "Mining project controls and owner's team support",
+    metaDescription: "Owner-side project controls for metals and mining construction: cost control and estimating, scheduling, procurement and contracts, and change management.",
+    serviceType: "Metals and mining project controls and owner's team support",
     intro: [
-      "On a large mining project, project controls are how the owner knows where the project really stands. Multiple contractors, long-lead procurement and remote logistics generate more information than any team can process through intuition alone.",
+      "On a large metals and mining project, project controls are how the owner knows where the project really stands. Multiple contractors, long-lead procurement and remote logistics generate more information than any team can process through intuition alone.",
       "Praetorian provides the technical and commercial controls across the full project lifecycle, embedded in the owner's team from day one, so cost, schedule and contract performance are visible, forecast and acted on before problems reach a monthly report.",
     ],
     whenToEngage: {
@@ -143,6 +143,10 @@ export const SERVICE_PAGES: ServicePageContent[] = [
       {
         q: "What does an owner's team controls function do that the EPCM contractor's does not?",
         a: "It works for the owner. It checks contractor reporting independently, forecasts the final cost in the owner's interest, and makes sure every change is evaluated and approved by the owner before work proceeds.",
+      },
+      {
+        q: "What makes project controls for metals and mining projects different?",
+        a: "Scale and contracting complexity. Capital spending on a major mining development can run into hundreds of millions or billions of dollars, so even a two or three percent overrun is a material financial impact. Mining projects also involve multiple prime contractors, significant subcontract packages and long-term procurement agreements, and each one generates its own stream of cost and schedule data that has to be brought into one picture.",
       },
       {
         q: "Which project controls systems does Praetorian work with?",
