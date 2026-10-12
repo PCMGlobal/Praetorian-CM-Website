@@ -6,6 +6,7 @@ import { ProjectHeroImage, ProjectFactLine, ProjectRelatedServices } from "@/app
 export const metadata: Metadata = {
   title: "Kiena Paste Plant, Quebec",
   description: "Tailings and paste backfill system at Kiena Mine, Quebec. Praetorian represented Wesdome with on-site construction management and contract administration.",
+  alternates: { canonical: "/projects/kiena" },
 };
 
 export default function ProjectPage() {

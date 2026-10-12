@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { client } from "@/lib/sanity";
 
 export const revalidate = 60;
@@ -242,14 +242,29 @@ async function getProject(slug: string): Promise<ProjectData | null> {
   }
 }
 
+// Projects that have their own page folder under app/projects/. Sanity stores some of their
+// slugs with capital letters (for example "Diavik"), which used to make the same project
+// load at two addresses. Those variants now redirect permanently to the lower-case page.
+const STATIC_PROJECT_SLUGS = ["cote", "kiena", "penasquito", "amulsar", "so2clean", "conga", "diavik", "emigrant"];
+
+function staticPathFor(slug: string): string | null {
+  const lower = slug.toLowerCase();
+  return lower !== slug && STATIC_PROJECT_SLUGS.includes(lower) ? `/projects/${lower}` : null;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const staticPath = staticPathFor(slug);
+  if (staticPath) {
+    return { alternates: { canonical: staticPath } };
+  }
   const data = (await getProject(slug)) ?? DEFAULT_PROJECTS[slug];
   if (!data) {
     return { title: "Project", robots: { index: false } };
   }
   return {
     title: data.title,
+    alternates: { canonical: `/projects/${slug}` },
     description: data.excerpt && data.excerpt.length > 155
       ? `${data.excerpt.slice(0, 152).replace(/\s+\S*$/, "")}...`
       : data.excerpt,
@@ -258,6 +273,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const staticPath = staticPathFor(slug);
+  if (staticPath) {
+    permanentRedirect(staticPath);
+  }
   const fetched = await getProject(slug);
   const data = fetched ?? DEFAULT_PROJECTS[slug];
 
