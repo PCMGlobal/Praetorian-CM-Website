@@ -6,6 +6,7 @@ import { ProjectHeroImage, ProjectFactLine, ProjectRelatedServices } from "@/app
 export const metadata: Metadata = {
   title: "Conga Mine, Peru",
   description: "Open pit copper/gold mine in the Peruvian Andes. Praetorian managed survey data, CADD modelling, as-builts and quantity control on 6,000 ha of earthworks.",
+  alternates: { canonical: "/projects/conga" },
 };
 
 export default function ProjectPage() {

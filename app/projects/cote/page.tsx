@@ -6,6 +6,7 @@ import { ProjectHeroImage, ProjectFactLine, ProjectRelatedServices } from "@/app
 export const metadata: Metadata = {
   title: "Cote Gold Project, Ontario",
   description: "Greenfield 495,000 oz/year gold mine in Ontario. Praetorian provided project management support, construction advisory, turnover and commissioning support.",
+  alternates: { canonical: "/projects/cote" },
 };
 
 export default function ProjectPage() {

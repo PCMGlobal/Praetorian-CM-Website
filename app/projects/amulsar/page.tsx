@@ -6,6 +6,7 @@ import { ProjectHeroImage, ProjectFactLine, ProjectRelatedServices } from "@/app
 export const metadata: Metadata = {
   title: "Amulsar Gold Project, Armenia",
   description: "Greenfield 225,000 oz/year gold mine in Armenia. Praetorian delivered feasibility review, project management, construction management and precommissioning.",
+  alternates: { canonical: "/projects/amulsar" },
 };
 
 export default function ProjectPage() {

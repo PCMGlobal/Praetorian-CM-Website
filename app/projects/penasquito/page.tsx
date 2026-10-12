@@ -6,6 +6,7 @@ import { ProjectHeroImage, ProjectFactLine, ProjectRelatedServices } from "@/app
 export const metadata: Metadata = {
   title: "Peñasquito Mine CLR Project, Mexico",
   description: "Brownfield tailings expansion at Peñasquito, Mexico. Praetorian provided owner's team project management, construction management and cost control.",
+  alternates: { canonical: "/projects/penasquito" },
 };
 
 export default function ProjectPage() {

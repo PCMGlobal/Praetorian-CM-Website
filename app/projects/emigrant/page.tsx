@@ -6,6 +6,7 @@ import { ProjectHeroImage, ProjectFactLine, ProjectRelatedServices } from "@/app
 export const metadata: Metadata = {
   title: "Emigrant Mine, Nevada",
   description: "Greenfield gold mine near Carlin, Nevada. Praetorian led owner's team project management, feasibility support, constructability planning and cost control.",
+  alternates: { canonical: "/projects/emigrant" },
 };
 
 export default function ProjectPage() {

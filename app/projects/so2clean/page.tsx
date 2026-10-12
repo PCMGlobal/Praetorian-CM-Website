@@ -6,6 +6,7 @@ import { ProjectHeroImage, ProjectFactLine, ProjectRelatedServices } from "@/app
 export const metadata: Metadata = {
   title: "SO2Clean Production Facility, Ontario",
   description: "100 TPD liquid sulphur dioxide plant in Northern Ontario. Praetorian led project management, construction management and contract administration.",
+  alternates: { canonical: "/projects/so2clean" },
 };
 
 export default function ProjectPage() {
