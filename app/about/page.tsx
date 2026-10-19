@@ -186,7 +186,11 @@ export default async function AboutPage() {
             <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533' }}>{about.whoWeAre.eyebrow}</div>
             <div style={{ width: '64px', height: '3px', background: '#B06533', margin: '18px 0 38px' }}></div>
             <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 18px' }}>{about.whoWeAre.paragraph1}</p>
-            <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 44px' }}>{about.whoWeAre.paragraph2}</p>
+            <p style={{ fontSize: '16px', lineHeight: '1.7', maxWidth: '72ch', color: '#555c60', margin: '0 0 24px' }}>{about.whoWeAre.paragraph2}</p>
+            <p style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', fontSize: '14.5px', lineHeight: '1.5', color: '#003E52', margin: '0 0 44px', padding: '10px 16px', border: '1px solid #d9dfe1', background: '#f7f7f7' }}>
+              <span aria-hidden="true" style={{ width: '6px', height: '6px', background: '#B06533', flexShrink: 0 }}></span>
+              <span>Proud Corporate Member of the <a href="https://www.cim.org/" target="_blank" rel="noopener noreferrer" style={{ color: '#003E52', fontWeight: 600 }}>Canadian Institute of Mining, Metallurgy and Petroleum (CIM)</a></span>
+            </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(20px,2.6vw,28px)' }}>
               <div data-reveal="" style={{ padding: '28px 26px', borderTop: '3px solid #003E52', background: '#f7f7f7' }}>
                 <h4 style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '20px', color: '#003E52', margin: '0 0 12px' }}>{about.whoWeAre.points[0]?.title}</h4>
