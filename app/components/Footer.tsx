@@ -108,6 +108,7 @@ export default function Footer() {
             </p>
             <a href="tel:7809890289" style={{ ...linkStyle, display: "block" }}>(780) 989-0289</a>
             <a href="mailto:info@praetoriancm.com" style={{ ...linkStyle, display: "block" }}>info@praetoriancm.com</a>
+            <a href="https://www.cim.org/" target="_blank" rel="noopener noreferrer" style={{ ...linkStyle, display: "block", marginTop: "12px" }}>CIM Corporate Member</a>
           </div>
 
         </div>

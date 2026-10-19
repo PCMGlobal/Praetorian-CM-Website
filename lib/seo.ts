@@ -55,6 +55,12 @@ export const organizationJsonLd = {
         "https://x.com/PraetorianCMgmt",
         "https://www.instagram.com/praetoriancm",
       ],
+      memberOf: {
+        "@type": "Organization",
+        name: "Canadian Institute of Mining, Metallurgy and Petroleum",
+        alternateName: "CIM",
+        url: "https://www.cim.org/",
+      },
     },
     {
       "@type": "WebSite",
