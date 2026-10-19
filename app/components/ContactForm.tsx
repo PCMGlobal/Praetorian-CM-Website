@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { CPS_PROMO, cpsPromoActive } from "@/lib/cpsPromo";
 
 const labelStyle = {
   display: "block",
@@ -44,14 +45,33 @@ export default function ContactForm() {
     stage: "",
     message: "",
     website: "", // honeypot, must stay empty
+    topic: "",
   });
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
 
+  // Visitors arriving from the CPS 2026 promotion get a pre-filled request
+  // that is routed to the attendee (see lib/cpsPromo.ts).
+  useEffect(() => {
+    try {
+      const topic = new URLSearchParams(window.location.search).get("topic");
+      if (topic === CPS_PROMO.topic && cpsPromoActive()) {
+        setForm((f) => ({
+          ...f,
+          topic: CPS_PROMO.topic,
+          message: f.message || CPS_PROMO.formMessage,
+        }));
+      }
+    } catch {
+      /* no-op */
+    }
+  }, []);
+  const isCps = form.topic === CPS_PROMO.topic;
+
   function reset() {
     setForm({
       firstName: "", lastName: "", company: "",
-      email: "", stage: "", message: "", website: "",
+      email: "", stage: "", message: "", website: "", topic: "",
     });
     setError("");
     setStatus("idle");
@@ -147,6 +167,14 @@ export default function ContactForm() {
 
   return (
     <div style={{ display: "grid", gap: 16 }}>
+      {isCps && (
+        <div style={{ background: "#003E52", color: "#ffffff", padding: "14px 18px", fontSize: 14, lineHeight: 1.5 }}>
+          <div style={{ fontFamily: "var(--font-sora), sans-serif", fontWeight: 600, fontSize: 11.5, letterSpacing: ".14em", textTransform: "uppercase", color: "#e3ab7c", marginBottom: 4 }}>
+            {CPS_PROMO.shortName} meeting request
+          </div>
+          Your request goes to {CPS_PROMO.attendeeName}, who will be at the {CPS_PROMO.eventName}, {CPS_PROMO.datesShort}, {CPS_PROMO.venueShort}.
+        </div>
+      )}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
         <div>
           <label htmlFor="firstName" style={labelStyle}>First name</label>
