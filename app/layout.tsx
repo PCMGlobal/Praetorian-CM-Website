@@ -5,11 +5,12 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import Reveal from "@/app/components/Reveal";
 import Analytics from "@/app/components/Analytics";
+import CpsPromo from "@/app/components/CpsPromo";
 import { SITE_URL, SITE_NAME, organizationJsonLd } from "@/lib/seo";
 import "./globals.css";
 const sora = Sora({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["300", "600", "700", "800"],
   variable: "--font-sora",
   display: "swap",
 });
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <UtilityBar />
         <Navbar />
+        <CpsPromo />
         {children}
         <Footer />
         <Reveal />

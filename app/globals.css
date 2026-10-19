@@ -89,3 +89,112 @@ a:hover { color: #8f5228; }
 @media (max-width: 640px) {
   [style*='text-align: justify'] { text-align: left !important; }
 }
+
+/* ---- CPS 2026 promotion (temporary; see lib/cpsPromo.ts) ---- */
+.pcml-cps-bar {
+  position: relative;
+  background: #8f5228;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 22px;
+  padding: 10px 68px;
+  min-height: 60px;
+  font-size: 15px;
+}
+.pcml-cps-bar-kicker {
+  font-family: var(--font-sora), sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #f6dcc6;
+}
+.pcml-cps-bar-btn {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+  background: #ffffff;
+  color: #003E52 !important;
+  text-decoration: none;
+  font-family: var(--font-sora), sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+.pcml-cps-bar-btn:hover { background: #f3e6dc; }
+
+.pcml-cps-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 15, 22, .62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.pcml-cps-modal {
+  position: relative;
+  width: 600px;
+  max-width: 100%;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  background: #ffffff;
+  color: #1c2226;
+  box-shadow: 0 24px 60px rgba(0, 10, 15, .45);
+}
+.pcml-cps-modal-head { position: relative; background: #003E52; padding: 30px 40px 26px; }
+.pcml-cps-modal-title {
+  font-family: var(--font-sora), sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  margin: 14px 0 0;
+  color: #ffffff;
+}
+.pcml-cps-modal-body { padding: 26px 40px 32px; display: flex; flex-direction: column; gap: 20px; font-size: 15.5px; }
+.pcml-cps-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.pcml-cps-btn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  font-family: var(--font-sora), sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+}
+.pcml-cps-btn-copper { background: #B06533; color: #ffffff !important; }
+.pcml-cps-btn-copper:hover { background: #8f5228; }
+.pcml-cps-btn-outline { border: 1px solid #003E52; color: #003E52 !important; background: #ffffff; }
+
+.pcml-cps-card {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 900;
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  background: #ffffff;
+  color: #1c2226;
+  border-top: 4px solid #B06533;
+  box-shadow: 0 18px 48px rgba(0, 10, 15, .4);
+}
+
+@media (max-width: 640px) {
+  .pcml-cps-bar { justify-content: flex-start; padding: 12px 56px 12px 16px; font-size: 14px; }
+  .pcml-cps-overlay { align-items: flex-end; padding: 0; }
+  .pcml-cps-modal { width: 100%; max-height: 92vh; }
+  .pcml-cps-modal-head { padding: 22px 20px 18px; }
+  .pcml-cps-modal-title { font-size: 22px; }
+  .pcml-cps-modal-body { padding: 18px 20px 22px; gap: 14px; font-size: 14.5px; }
+  .pcml-cps-actions .pcml-cps-btn { width: 100%; }
+  .pcml-cps-card { left: 16px; right: 16px; bottom: 16px; width: auto; }
+  .pcml-cps-card-extra { display: none; }
+}

@@ -101,7 +101,7 @@ export default async function ContactPage() {
           </section>
           <section style={{ maxWidth: '1400px', margin: '0 auto', padding: 'clamp(46px,6vw,84px) clamp(16px,4vw,44px)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(340px,1fr))', gap: 'clamp(40px,6vw,80px)' }}>
-              <div>
+              <div id="enquiry" style={{ scrollMarginTop: '140px' }}>
                 <div data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: '18px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B06533' }}>{data.formSection.eyebrow}</div>
                 <h2 data-reveal="" style={{ fontFamily: 'var(--font-sora), sans-serif', fontWeight: '700', fontSize: 'clamp(26px,3vw,36px)', margin: '12px 0 28px', color: '#003E52' }}>{data.formSection.heading}</h2>
                 <ContactForm />
