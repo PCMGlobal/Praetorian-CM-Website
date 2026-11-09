@@ -43,6 +43,16 @@ const LEGACY_REDIRECTS = [
   ["/services_project.html", "/services/project-services"],
   ["/brochure/index.html", "/"],
   ["/brochure_mining/index.html", "/"],
+  // WordPress author pages and RSS feeds still listed by Google as 404s (9 Nov 2026)
+  ["/author/:path*", "/about"],
+  ["/feed", "/news"],
+  ["/feed/:path*", "/news"],
+  ["/comments/feed", "/news"],
+  // Malformed address of an existing article picked up by Google (9 Nov 2026)
+  [
+    "/news/what-an-owner-s-team-construction-manager-actually-dirk-or-what-an-owner-s-team-construction-manager-actually-does",
+    "/news/what-an-owner-s-team-construction-manager-actually-does",
+  ],
 ];
 
 // Articles merged into a stronger article on the same topic (28 Sep 2026), so the two
