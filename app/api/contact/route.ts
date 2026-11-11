@@ -24,7 +24,6 @@ export async function POST(request: Request) {
       stage = "",
       message = "",
       website = "",
-      topic = "",
     } = body ?? {};
 
     // Honeypot tripped: pretend success, send nothing.
@@ -52,15 +51,6 @@ export async function POST(request: Request) {
     }
 
     const name = `${firstName} ${lastName}`.trim();
-
-    // CPS 2026 meeting requests go to the attendee's address, kept in the
-    // CPS_MEETING_TO environment variable so it never appears in the code or
-    // on the public site. If it is not set, requests fall back to the normal
-    // enquiry inboxes so nothing is lost.
-    const cpsTo = (process.env.CPS_MEETING_TO || "").trim();
-    const isCps = topic === "cps2026";
-    const recipients = isCps && cpsTo ? [cpsTo] : ["info@praetoriancm.com", "bd@praetoriancm.com"];
-    const label = isCps ? "CPS 2026 meeting request" : "Website enquiry";
     const rows: [string, string][] = [
       ["Name", name],
       ["Company", company || "Not provided"],
@@ -72,7 +62,7 @@ export async function POST(request: Request) {
       <div style="font-family:Arial,Helvetica,sans-serif;color:#1c2226;max-width:640px">
         <div style="background:#003E52;color:#fff;padding:18px 22px">
           <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#e3ab7c">
-            ${label}
+            Website enquiry
           </div>
           <div style="font-size:20px;font-weight:bold;margin-top:4px">
             Praetorian Construction Management
@@ -104,9 +94,9 @@ export async function POST(request: Request) {
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
       from: `Praetorian Website <${FROM}>`,
-      to: recipients,
+      to: ["info@praetoriancm.com", "bd@praetoriancm.com"],
       replyTo: email,
-      subject: `${label} from ${name}${company ? ` at ${company}` : ""}`,
+      subject: `Website enquiry from ${name}${company ? ` at ${company}` : ""}`,
       html,
     });
 
