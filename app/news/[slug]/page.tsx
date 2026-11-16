@@ -1,3 +1,4 @@
+import { ARTICLE_SEARCH_SNIPPETS } from "@/lib/seo-overrides";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -56,17 +57,20 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const article = await getArticle(params.slug);
   if (!article) return { title: "Article Not Found", robots: { index: false } };
+  const snippet = ARTICLE_SEARCH_SNIPPETS[params.slug];
+  const searchTitle = snippet ? snippet.title : article.title;
+  const searchDescription = snippet ? snippet.description : article.excerpt;
   return {
-    title: article.title,
-    description: article.excerpt,
+    title: snippet ? { absolute: snippet.title } : article.title,
+    description: searchDescription,
     alternates: { canonical: `/news/${params.slug}` },
     openGraph: {
       type: "article",
       url: `/news/${params.slug}`,
       siteName: SITE_NAME,
       locale: "en_CA",
-      title: article.title,
-      description: article.excerpt,
+      title: searchTitle,
+      description: searchDescription,
       publishedTime: article.publishedAt || undefined,
       images: article.coverImageUrl
         ? [{ url: article.coverImageUrl }]
@@ -74,8 +78,8 @@ export async function generateMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title: article.title,
-      description: article.excerpt,
+      title: searchTitle,
+      description: searchDescription,
       images: [article.coverImageUrl || "/og-image.jpg"],
     },
   };

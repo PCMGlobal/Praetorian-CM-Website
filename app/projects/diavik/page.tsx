@@ -4,8 +4,8 @@ import CTABanner from "@/app/components/CTABanner";
 import { ProjectHeroImage, ProjectFactLine, ProjectRelatedServices } from "@/app/components/ProjectSeo";
 
 export const metadata: Metadata = {
-  title: "Diavik Underground Project, NWT",
-  description: "Open pit to underground transition at Diavik, NWT. Praetorian provided survey data control, CADD modelling and site mapping in arctic conditions.",
+  title: { absolute: "Diavik Underground Project, NWT: Praetorian's Role" },
+  description: "Open pit to underground transition at the Diavik diamond mine, NWT: survey data control, earthworks quantities and site mapping in arctic conditions.",
   alternates: { canonical: "/projects/diavik" },
 };
 

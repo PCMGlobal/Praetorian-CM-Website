@@ -4,8 +4,8 @@ import CTABanner from "@/app/components/CTABanner";
 import { ProjectHeroImage, ProjectFactLine, ProjectRelatedServices } from "@/app/components/ProjectSeo";
 
 export const metadata: Metadata = {
-  title: "Amulsar Gold Project, Armenia",
-  description: "Greenfield 225,000 oz/year gold mine in Armenia. Praetorian delivered feasibility review, project management, construction management and precommissioning.",
+  title: { absolute: "Amulsar Gold Project, Armenia: Praetorian's Role" },
+  description: "How Praetorian supported the 225,000 oz/year Amulsar gold mine in Armenia: feasibility review, financing support, project and construction management.",
   alternates: { canonical: "/projects/amulsar" },
 };
 
