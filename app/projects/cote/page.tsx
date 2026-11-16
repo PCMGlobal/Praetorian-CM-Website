@@ -4,8 +4,8 @@ import CTABanner from "@/app/components/CTABanner";
 import { ProjectHeroImage, ProjectFactLine, ProjectRelatedServices } from "@/app/components/ProjectSeo";
 
 export const metadata: Metadata = {
-  title: "Cote Gold Project, Ontario",
-  description: "Greenfield 495,000 oz/year gold mine in Ontario. Praetorian provided project management support, construction advisory, turnover and commissioning support.",
+  title: { absolute: "Côté Gold Project, Ontario: Praetorian's Role" },
+  description: "Praetorian's role at the 495,000 oz/year Côté Gold mine in Sudbury District, Ontario: project management, construction advisory, turnover and commissioning.",
   alternates: { canonical: "/projects/cote" },
 };
 
