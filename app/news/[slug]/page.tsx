@@ -17,6 +17,7 @@ type Article = {
   publishedAt: string;
   readTime: number;
   coverImageUrl: string | null;
+  coverImageAlt: string | null;
   body: any[];
 };
 
@@ -32,6 +33,7 @@ async function getArticle(slug: string): Promise<Article | null> {
         publishedAt,
         readTime,
         "coverImageUrl": heroImage.asset->url,
+        "coverImageAlt": heroImage.alt,
         body
       }`,
       { slug }
@@ -73,7 +75,7 @@ export async function generateMetadata(
       description: searchDescription,
       publishedTime: article.publishedAt || undefined,
       images: article.coverImageUrl
-        ? [{ url: article.coverImageUrl }]
+        ? [{ url: article.coverImageUrl, ...(article.coverImageAlt ? { alt: article.coverImageAlt } : {}) }]
         : [{ url: "/og-image.jpg", width: 1200, height: 630, alt: SITE_NAME }],
     },
     twitter: {
@@ -156,7 +158,16 @@ export default async function ArticlePage({ params }: { params: { slug: string }
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
       <section style={{ position: "relative", overflow: "hidden", minHeight: "420px" }}>
-        <div style={{ position: "absolute", inset: "0", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", ...(article.coverImageUrl ? { backgroundImage: `url(${article.coverImageUrl})` } : { background: "#003E52" }) }} />
+        {article.coverImageUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={article.coverImageUrl}
+            alt={article.coverImageAlt || ""}
+            style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+          />
+        ) : (
+          <div style={{ position: "absolute", inset: "0", background: "#003E52" }} />
+        )}
         <div style={{ position: "absolute", inset: "0", background: "linear-gradient(100deg,rgba(0,15,22,.9) 0%,rgba(0,25,36,.82) 48%,rgba(0,15,22,.6) 100%)" }} />
         <div style={{ position: "relative", maxWidth: "1400px", margin: "0 auto", padding: "clamp(40px,5vw,72px) clamp(16px,4vw,44px)" }}>
           <Link href="/news" style={{ background: "none", border: "0", padding: "0", color: "#e3ab7c", fontSize: "13px", cursor: "pointer", display: "flex", alignItems: "center", gap: "6px", fontFamily: "var(--font-sora), sans-serif", fontWeight: "600", textDecoration: "none" }}>
